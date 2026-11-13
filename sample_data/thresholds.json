@@ -1,0 +1,40 @@
+{
+  "_note": "status=documented: value is stated in the National Cancer Strategy or roadmap. status=placeholder: invented for the prototype, must be replaced or justified.",
+
+  "screening_target": {
+    "value": 0.80, "status": "documented",
+    "source": "Strategy 2026-2035 p.5; Roadmap p.48 (80 % participation in every wellbeing services county)"
+  },
+  "distance_far_km": {
+    "value": 100, "status": "documented",
+    "source": "Roadmap p.13 (less palliative radiotherapy beyond 100 km; worse outcomes already beyond 50 km)"
+  },
+  "treatment_within_target_min": {
+    "value": 0.80, "status": "placeholder",
+    "source": "Strategy p.5 only says patients start treatment within target times; cancer-specific times are to be defined 2026-2028 (Roadmap p.57). The target days themselves are placeholders inside generate.py"
+  },
+  "delay_ratio": {
+    "value": 1.25, "status": "placeholder",
+    "source": "Stage delay counts as a gap when the regional median is this many times the national median"
+  },
+  "early_stage_gap_pp": {
+    "value": 0.05, "status": "placeholder",
+    "source": "Gap vs national median per cancer. The documented target (70 % stage I-II, Strategy p.5) is for all cancers combined"
+  },
+  "foreign_language_share_high": {
+    "value": 0.08, "status": "placeholder",
+    "source": "Roadmap p.11 documents lower screening participation among people born abroad, but gives no cut-off"
+  },
+  "education_gap_pp": {
+    "value": 0.08, "status": "placeholder",
+    "source": "Difference between high and low education groups"
+  },
+  "primary_care_wait_high_days": {
+    "value": 15, "status": "placeholder",
+    "source": "Separates a capacity problem from a referral-criteria problem"
+  },
+  "vacancy_high": {
+    "value": 0.12, "status": "placeholder",
+    "source": "Separates a workforce problem from a process problem"
+  }
+}
