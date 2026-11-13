@@ -1,0 +1,6 @@
+step,reason,source_file,source_row,source,indicator,year,region,value
+04 standardise,unknown region,cancer_stats_raw.csv.gz,58297,Sotkanet,"Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%)",2018,410,1.4
+04 standardise,unknown region,cancer_stats_raw.csv.gz,59225,Sotkanet,"Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%)",2017,410,1.5
+04 standardise,unknown region,cancer_stats_raw.csv.gz,59268,Sotkanet,"Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%)",2018,50,2.0
+04 standardise,unknown region,cancer_stats_raw.csv.gz,59878,Sotkanet,"Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%)",2019,50,2.2
+04 standardise,unknown region,cancer_stats_raw.csv.gz,60099,Sotkanet,"Erityiskorvattaviin lääkkeisiin syövän vuoksi oikeutetut 31.12., ikävakioitu väestöosuus (%)",2017,50,1.8

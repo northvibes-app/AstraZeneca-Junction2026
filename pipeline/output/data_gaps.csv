@@ -1,0 +1,51 @@
+gap_type,pathway_stage,indicator_key,year,region_code,region_name,description,fallback,fallback_value
+region_year_missing,,daily_smokers,2021,01,East Uusimaa,No value published for this region and year,temporal_mean,10.9
+region_year_missing,,daily_smokers,2021,02,Central Uusimaa,No value published for this region and year,temporal_mean,9.2
+region_year_missing,,daily_smokers,2021,03,West Uusimaa,No value published for this region and year,temporal_mean,9.6
+region_year_missing,,daily_smokers,2021,04,Vantaa and Kerava,No value published for this region and year,temporal_mean,12.7
+region_year_missing,,daily_smokers,2021,05,Southwest Finland,No value published for this region and year,temporal_mean,10.2
+region_year_missing,,daily_smokers,2021,06,Satakunta,No value published for this region and year,temporal_mean,11.2
+region_year_missing,,daily_smokers,2021,07,Kanta-Häme,No value published for this region and year,temporal_mean,12.6
+region_year_missing,,daily_smokers,2021,08,Pirkanmaa,No value published for this region and year,temporal_mean,7.7
+region_year_missing,,daily_smokers,2021,09,Päijät-Häme,No value published for this region and year,temporal_mean,11.1
+region_year_missing,,daily_smokers,2021,10,Kymenlaakso,No value published for this region and year,temporal_mean,11.4
+region_year_missing,,daily_smokers,2021,11,South Karelia,No value published for this region and year,temporal_mean,12.1
+region_year_missing,,daily_smokers,2021,12,South Savo,No value published for this region and year,temporal_mean,11.4
+region_year_missing,,daily_smokers,2021,13,North Savo,No value published for this region and year,temporal_mean,11.1
+region_year_missing,,daily_smokers,2021,14,North Karelia,No value published for this region and year,temporal_mean,9.8
+region_year_missing,,daily_smokers,2021,15,Central Finland,No value published for this region and year,temporal_mean,8.6
+region_year_missing,,daily_smokers,2021,16,South Ostrobothnia,No value published for this region and year,temporal_mean,10.8
+region_year_missing,,daily_smokers,2021,17,Ostrobothnia,No value published for this region and year,temporal_mean,7.5
+region_year_missing,,daily_smokers,2021,18,Central Ostrobothnia,No value published for this region and year,temporal_mean,12.9
+region_year_missing,,daily_smokers,2021,19,North Ostrobothnia,No value published for this region and year,temporal_mean,9.2
+region_year_missing,,daily_smokers,2021,20,Kainuu,No value published for this region and year,temporal_mean,11.4
+region_year_missing,,daily_smokers,2021,21,Lapland,No value published for this region and year,temporal_mean,12.8
+region_year_missing,,daily_smokers,2021,90,City of Helsinki,No value published for this region and year,temporal_mean,9.9
+region_year_missing,,daily_smokers,2023,01,East Uusimaa,No value published for this region and year,temporal_mean,10.3
+region_year_missing,,daily_smokers,2023,02,Central Uusimaa,No value published for this region and year,temporal_mean,9.2
+region_year_missing,,daily_smokers,2023,03,West Uusimaa,No value published for this region and year,temporal_mean,8.8
+region_year_missing,,daily_smokers,2023,04,Vantaa and Kerava,No value published for this region and year,temporal_mean,11.1
+region_year_missing,,daily_smokers,2023,05,Southwest Finland,No value published for this region and year,temporal_mean,10.3
+region_year_missing,,daily_smokers,2023,06,Satakunta,No value published for this region and year,temporal_mean,12.1
+region_year_missing,,daily_smokers,2023,07,Kanta-Häme,No value published for this region and year,temporal_mean,12.1
+region_year_missing,,daily_smokers,2023,08,Pirkanmaa,No value published for this region and year,temporal_mean,7.3
+region_year_missing,,daily_smokers,2023,09,Päijät-Häme,No value published for this region and year,temporal_mean,10.5
+region_year_missing,,daily_smokers,2023,10,Kymenlaakso,No value published for this region and year,temporal_mean,11.5
+region_year_missing,,daily_smokers,2023,11,South Karelia,No value published for this region and year,temporal_mean,11.4
+region_year_missing,,daily_smokers,2023,12,South Savo,No value published for this region and year,temporal_mean,9.3
+region_year_missing,,daily_smokers,2023,13,North Savo,No value published for this region and year,temporal_mean,9.8
+region_year_missing,,daily_smokers,2023,14,North Karelia,No value published for this region and year,temporal_mean,9.5
+region_year_missing,,daily_smokers,2023,15,Central Finland,No value published for this region and year,temporal_mean,7.3
+region_year_missing,,daily_smokers,2023,16,South Ostrobothnia,No value published for this region and year,temporal_mean,8.6
+region_year_missing,,daily_smokers,2023,17,Ostrobothnia,No value published for this region and year,temporal_mean,8.1
+region_year_missing,,daily_smokers,2023,18,Central Ostrobothnia,No value published for this region and year,temporal_mean,10.3
+region_year_missing,,daily_smokers,2023,19,North Ostrobothnia,No value published for this region and year,temporal_mean,9.0
+region_year_missing,,daily_smokers,2023,20,Kainuu,No value published for this region and year,temporal_mean,9.8
+region_year_missing,,daily_smokers,2023,21,Lapland,No value published for this region and year,temporal_mean,11.1
+region_year_missing,,daily_smokers,2023,90,City of Helsinki,No value published for this region and year,temporal_mean,8.2
+no_open_data,referral,,,,,Time from first primary care contact to specialist referral by region and cancer type. One of the three bottlenecks named in the challenge,none,
+no_open_data,diagnosis,,,,,Time from referral to diagnosis by region and cancer type. Needed to locate delays along the pathway,none,
+no_open_data,treatment_start,,,,,Time from diagnosis to treatment start and share within target time. Goal 3 indicator of the National Cancer Strategy,none,
+no_open_data,early_detection,,,,,Stage at diagnosis by region and by education or income. Strategy target of 70 % diagnosed at stage I-II cannot be monitored,none,
+no_open_data,early_detection,,,,,Breast and colorectal screening participation by education and native language. Only cervical screening is published by group,none,
+no_open_data,early_detection,,,,,Screening participation by income group. Income is only available as a regional rate,none,

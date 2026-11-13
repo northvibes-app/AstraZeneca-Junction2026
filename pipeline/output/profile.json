@@ -1,0 +1,188 @@
+{
+ "Sotkanet": {
+  "rows": 134740,
+  "year_min": "1991",
+  "year_max": "2025",
+  "empty_share": {
+   "source": 0.0,
+   "source_url": 0.0,
+   "dataset": 0.0,
+   "indicator": 0.0,
+   "year": 0.0,
+   "region": 0.0,
+   "sex": 0.0,
+   "age_group": 1.0,
+   "cancer_site": 1.0,
+   "measure": 0.0,
+   "value": 0.0,
+   "unit": 1.0,
+   "extra": 0.0,
+   "scraped_at": 0.0
+  },
+  "distinct_values": {
+   "dataset": "23 values",
+   "sex": [
+    "female",
+    "male",
+    "total"
+   ],
+   "measure": [
+    "value"
+   ],
+   "unit": [
+    ""
+   ]
+  }
+ },
+ "StatFin/Tilastokeskus": {
+  "rows": 76950,
+  "year_min": "1969",
+  "year_max": "2025",
+  "empty_share": {
+   "source": 0.0,
+   "source_url": 0.0,
+   "dataset": 0.0,
+   "indicator": 0.0,
+   "year": 0.0,
+   "region": 1.0,
+   "sex": 0.0,
+   "age_group": 0.0,
+   "cancer_site": 0.0,
+   "measure": 0.0,
+   "value": 0.0,
+   "unit": 0.0,
+   "extra": 0.0,
+   "scraped_at": 0.0
+  },
+  "distinct_values": {
+   "dataset": [
+    "11az Kuolleet peruskuolemansyyn mukaan"
+   ],
+   "sex": [
+    "Miehet",
+    "Naiset",
+    "Yhteensä"
+   ],
+   "measure": [
+    "deaths"
+   ],
+   "unit": [
+    "persons"
+   ]
+  }
+ },
+ "Kela/avoindata.fi": {
+  "rows": 593065,
+  "year_min": "1986",
+  "year_max": "2025",
+  "empty_share": {
+   "source": 0.0,
+   "source_url": 0.0,
+   "dataset": 0.0,
+   "indicator": 0.0,
+   "year": 0.0,
+   "region": 0.0,
+   "sex": 0.0,
+   "age_group": 0.0,
+   "cancer_site": 1.0,
+   "measure": 0.0,
+   "value": 0.0,
+   "unit": 0.0,
+   "extra": 0.0,
+   "scraped_at": 0.0
+  },
+  "distinct_values": {
+   "dataset": [
+    "voimassa-olleet-alkaneet-ja-paattyneet-laakekorvausoikeudet"
+   ],
+   "sex": [
+    "Mies",
+    "Nainen"
+   ],
+   "measure": [
+    "alkanut_lkm",
+    "kokovuosi_lkm",
+    "kuolema_lkm",
+    "voimassaolleet_lkm",
+    "vuodenlopussa_lkm"
+   ],
+   "unit": [
+    "count"
+   ]
+  }
+ },
+ "Finnish Cancer Registry": {
+  "rows": 28,
+  "year_min": "2024",
+  "year_max": "2025",
+  "empty_share": {
+   "source": 0.0,
+   "source_url": 0.0,
+   "dataset": 0.0,
+   "indicator": 0.0,
+   "year": 0.0,
+   "region": 0.0,
+   "sex": 0.0,
+   "age_group": 1.0,
+   "cancer_site": 1.0,
+   "measure": 0.0,
+   "value": 0.0,
+   "unit": 0.0,
+   "extra": 0.0,
+   "scraped_at": 1.0
+  },
+  "distinct_values": {
+   "dataset": [
+    "curated breast_screening_by_region",
+    "curated cervical_screening_equity"
+   ],
+   "sex": [
+    "total"
+   ],
+   "measure": [
+    "value"
+   ],
+   "unit": [
+    "percent"
+   ]
+  }
+ },
+ "Team curated": {
+  "rows": 21,
+  "year_min": "2021",
+  "year_max": "2035",
+  "empty_share": {
+   "source": 0.0,
+   "source_url": 0.0,
+   "dataset": 0.0,
+   "indicator": 0.0,
+   "year": 0.0,
+   "region": 0.0,
+   "sex": 0.0,
+   "age_group": 1.0,
+   "cancer_site": 1.0,
+   "measure": 0.0,
+   "value": 0.0,
+   "unit": 0.0,
+   "extra": 0.0,
+   "scraped_at": 1.0
+  },
+  "distinct_values": {
+   "dataset": [
+    "curated national_key_statistics"
+   ],
+   "sex": [
+    "total"
+   ],
+   "measure": [
+    "value"
+   ],
+   "unit": [
+    "EUR_billion",
+    "EUR_million",
+    "count",
+    "percent"
+   ]
+  }
+ }
+}

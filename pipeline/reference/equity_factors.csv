@@ -1,0 +1,7 @@
+factor,context_indicator_key,disadvantaged_when,label,note
+income,low_income_rate,high,Lower income,Share of residents below the low-income threshold
+employment,unemployment_rate,high,Unemployment,Second measure of economic disadvantage
+education,education_level_index,low,Lower education,Index of the average length of education
+language,other_language_per_1000,high,Language barrier,Residents whose native language is not Finnish Swedish or Sami
+smoking,daily_smokers,high,Smoking,Behavioural factor that itself follows education; shown as context not as a patient lifestyle score
+primary_care_access,primary_care_wait_over_7_days,high,Slow access to primary care,All patients not only cancer patients

@@ -1,0 +1,541 @@
+region_id,category,code,name_fi,name_en
+2,KUNTA,005,Alajärvi,Alajärvi
+4,KUNTA,009,Alavieska,Alavieska
+5,KUNTA,010,Alavus,Alavus
+9,KUNTA,016,Asikkala,Asikkala
+11,KUNTA,018,Askola,Askola
+12,KUNTA,019,Aura,Aura
+13,KUNTA,035,Brändö,Brändö
+15,KUNTA,043,Eckerö,Eckerö
+18,KUNTA,046,Enonkoski,Enonkoski
+19,KUNTA,047,Enontekiö,Enontekiö
+20,KUNTA,049,Espoo,Espoo
+21,KUNTA,050,Eura,Eura
+22,KUNTA,051,Eurajoki,Eurajoki
+23,KUNTA,052,Evijärvi,Evijärvi
+24,KUNTA,060,Finström,Finström
+25,KUNTA,061,Forssa,Forssa
+26,KUNTA,062,Föglö,Föglö
+27,KUNTA,065,Geta,Geta
+28,KUNTA,069,Haapajärvi,Haapajärvi
+29,KUNTA,071,Haapavesi,Haapavesi
+30,KUNTA,072,Hailuoto,Hailuoto
+32,KUNTA,074,Halsua,Halsua
+33,KUNTA,075,Hamina,Hamina
+34,KUNTA,076,Hammarland,Hammarland
+35,KUNTA,077,Hankasalmi,Hankasalmi
+36,KUNTA,078,Hanko,Hanko
+37,KUNTA,079,Harjavalta,Harjavalta
+38,KUNTA,081,Hartola,Hartola
+39,KUNTA,082,Hattula,Hattula
+43,KUNTA,086,Hausjärvi,Hausjärvi
+44,KUNTA,111,Heinola,Heinola
+45,KUNTA,090,Heinävesi,Heinävesi
+46,KUNTA,091,Helsinki,Helsinki
+48,KUNTA,097,Hirvensalmi,Hirvensalmi
+49,KUNTA,098,Hollola,Hollola
+52,KUNTA,102,Huittinen,Huittinen
+53,KUNTA,103,Humppila,Humppila
+54,KUNTA,105,Hyrynsalmi,Hyrynsalmi
+55,KUNTA,106,Hyvinkää,Hyvinkää
+57,KUNTA,108,Hämeenkyrö,Hämeenkyrö
+58,KUNTA,109,Hämeenlinna,Hämeenlinna
+59,KUNTA,139,Ii,Ii
+60,KUNTA,140,Iisalmi,Iisalmi
+61,KUNTA,142,Iitti,Iitti
+62,KUNTA,143,Ikaalinen,Ikaalinen
+63,KUNTA,145,Ilmajoki,Ilmajoki
+64,KUNTA,146,Ilomantsi,Ilomantsi
+65,KUNTA,153,Imatra,Imatra
+66,KUNTA,148,Inari,Inari
+68,KUNTA,149,Inkoo,Ingå
+69,KUNTA,151,Isojoki,Isojoki
+70,KUNTA,152,Isokyrö,Isokyrö
+73,KUNTA,165,Janakkala,Janakkala
+74,KUNTA,167,Joensuu,Joensuu
+75,KUNTA,169,Jokioinen,Jokioinen
+76,KUNTA,170,Jomala,Jomala
+77,KUNTA,171,Joroinen,Joroinen
+78,KUNTA,172,Joutsa,Joutsa
+82,KUNTA,176,Juuka,Juuka
+83,KUNTA,177,Juupajoki,Juupajoki
+84,KUNTA,178,Juva,Juva
+85,KUNTA,179,Jyväskylä,Jyväskylä
+87,KUNTA,181,Jämijärvi,Jämijärvi
+88,KUNTA,182,Jämsä,Jämsä
+91,KUNTA,186,Järvenpää,Järvenpää
+92,KUNTA,202,Kaarina,Kaarina
+93,KUNTA,204,Kaavi,Kaavi
+94,KUNTA,205,Kajaani,Kajaani
+95,KUNTA,208,Kalajoki,Kalajoki
+97,KUNTA,211,Kangasala,Kangasala
+99,KUNTA,213,Kangasniemi,Kangasniemi
+100,KUNTA,214,Kankaanpää,Kankaanpää
+101,KUNTA,216,Kannonkoski,Kannonkoski
+102,KUNTA,217,Kannus,Kannus
+103,KUNTA,218,Karijoki,Karijoki
+107,KUNTA,224,Karkkila,Karkkila
+108,KUNTA,226,Karstula,Karstula
+110,KUNTA,230,Karvia,Karvia
+111,KUNTA,231,Kaskinen,Kaskinen
+112,KUNTA,232,Kauhajoki,Kauhajoki
+113,KUNTA,233,Kauhava,Kauhava
+114,KUNTA,235,Kauniainen,Kauniainen
+115,KUNTA,236,Kaustinen,Kaustinen
+116,KUNTA,239,Keitele,Keitele
+117,KUNTA,240,Kemi,Kemi
+118,KUNTA,320,Kemijärvi,Kemijärvi
+119,KUNTA,241,Keminmaa,Keminmaa
+121,KUNTA,244,Kempele,Kempele
+122,KUNTA,245,Kerava,Kerava
+126,KUNTA,249,Keuruu,Keuruu
+127,KUNTA,250,Kihniö,Kihniö
+132,KUNTA,256,Kinnula,Kinnula
+133,KUNTA,257,Kirkkonummi,Kirkkonummi
+135,KUNTA,260,Kitee,Kitee
+136,KUNTA,261,Kittilä,Kittilä
+138,KUNTA,263,Kiuruvesi,Kiuruvesi
+139,KUNTA,265,Kivijärvi,Kivijärvi
+141,KUNTA,271,Kokemäki,Kokemäki
+142,KUNTA,272,Kokkola,Kokkola
+143,KUNTA,273,Kolari,Kolari
+144,KUNTA,275,Konnevesi,Konnevesi
+145,KUNTA,276,Kontiolahti,Kontiolahti
+148,KUNTA,280,Korsnäs,Korsnäs
+150,KUNTA,284,Koski Tl,Koski Tl
+151,KUNTA,285,Kotka,Kotka
+152,KUNTA,286,Kouvola,Kouvola
+153,KUNTA,287,Kristiinankaupunki,Kristinestad
+154,KUNTA,288,Kruunupyy,Kronoby
+156,KUNTA,290,Kuhmo,Kuhmo
+157,KUNTA,291,Kuhmoinen,Kuhmoinen
+160,KUNTA,295,Kumlinge,Kumlinge
+161,KUNTA,297,Kuopio,Kuopio
+163,KUNTA,300,Kuortane,Kuortane
+164,KUNTA,301,Kurikka,Kurikka
+166,KUNTA,304,Kustavi,Kustavi
+167,KUNTA,305,Kuusamo,Kuusamo
+171,KUNTA,312,Kyyjärvi,Kyyjärvi
+173,KUNTA,316,Kärkölä,Kärkölä
+174,KUNTA,317,Kärsämäki,Kärsämäki
+175,KUNTA,318,Kökar,Kökar
+177,KUNTA,398,Lahti,Lahti
+178,KUNTA,399,Laihia,Laihia
+179,KUNTA,400,Laitila,Laitila
+181,KUNTA,407,Lapinjärvi,Lapinjärvi
+182,KUNTA,402,Lapinlahti,Lapinlahti
+183,KUNTA,403,Lappajärvi,Lappajärvi
+184,KUNTA,405,Lappeenranta,Lappeenranta
+186,KUNTA,408,Lapua,Lapua
+187,KUNTA,410,Laukaa,Laukaa
+191,KUNTA,416,Lemi,Lemi
+192,KUNTA,417,Lemland,Lemland
+193,KUNTA,418,Lempäälä,Lempäälä
+195,KUNTA,420,Leppävirta,Leppävirta
+196,KUNTA,421,Lestijärvi,Lestijärvi
+197,KUNTA,422,Lieksa,Lieksa
+198,KUNTA,423,Lieto,Lieto
+200,KUNTA,425,Liminka,Liminka
+201,KUNTA,426,Liperi,Liperi
+202,KUNTA,444,Lohja,Lohja
+204,KUNTA,430,Loimaa,Loimaa
+206,KUNTA,433,Loppi,Loppi
+207,KUNTA,434,Loviisa,Loviisa
+208,KUNTA,435,Luhanka,Luhanka
+209,KUNTA,436,Lumijoki,Lumijoki
+210,KUNTA,438,Lumparland,Lumparland
+212,KUNTA,440,Luoto,Larsmo
+213,KUNTA,441,Luumäki,Luumäki
+216,KUNTA,475,Maalahti,Malax
+219,KUNTA,478,Maarianhamina - Mariehamn,Mariehamn
+220,KUNTA,480,Marttila,Marttila
+221,KUNTA,481,Masku,Masku
+223,KUNTA,483,Merijärvi,Merijärvi
+224,KUNTA,484,Merikarvia,Merikarvia
+226,KUNTA,489,Miehikkälä,Miehikkälä
+228,KUNTA,491,Mikkeli,Mikkeli
+231,KUNTA,494,Muhos,Muhos
+232,KUNTA,495,Multia,Multia
+233,KUNTA,498,Muonio,Muonio
+234,KUNTA,499,Mustasaari,Korsholm
+235,KUNTA,500,Muurame,Muurame
+237,KUNTA,503,Mynämäki,Mynämäki
+238,KUNTA,504,Myrskylä,Myrskylä
+239,KUNTA,505,Mäntsälä,Mäntsälä
+241,KUNTA,507,Mäntyharju,Mäntyharju
+242,KUNTA,529,Naantali,Naantali
+243,KUNTA,531,Nakkila,Nakkila
+247,KUNTA,535,Nivala,Nivala
+248,KUNTA,536,Nokia,Nokia
+250,KUNTA,538,Nousiainen,Nousiainen
+252,KUNTA,541,Nurmes,Nurmes
+253,KUNTA,543,Nurmijärvi,Nurmijärvi
+255,KUNTA,545,Närpiö,Närpes
+257,KUNTA,560,Orimattila,Orimattila
+258,KUNTA,561,Oripää,Oripää
+259,KUNTA,562,Orivesi,Orivesi
+260,KUNTA,563,Oulainen,Oulainen
+261,KUNTA,564,Oulu,Oulu
+263,KUNTA,309,Outokumpu,Outokumpu
+264,KUNTA,576,Padasjoki,Padasjoki
+265,KUNTA,577,Paimio,Paimio
+266,KUNTA,578,Paltamo,Paltamo
+268,KUNTA,580,Parikkala,Parikkala
+269,KUNTA,581,Parkano,Parkano
+271,KUNTA,599,Pedersören kunta,Pedersöre
+272,KUNTA,583,Pelkosenniemi,Pelkosenniemi
+273,KUNTA,854,Pello,Pello
+274,KUNTA,584,Perho,Perho
+280,KUNTA,592,Petäjävesi,Petäjävesi
+282,KUNTA,593,Pieksämäki,Pieksämäki
+283,KUNTA,595,Pielavesi,Pielavesi
+284,KUNTA,598,Pietarsaari,Jakobstad
+285,KUNTA,601,Pihtipudas,Pihtipudas
+288,KUNTA,604,Pirkkala,Pirkkala
+290,KUNTA,607,Polvijärvi,Polvijärvi
+291,KUNTA,608,Pomarkku,Pomarkku
+292,KUNTA,609,Pori,Pori
+293,KUNTA,611,Pornainen,Pornainen
+294,KUNTA,638,Porvoo,Porvoo
+295,KUNTA,614,Posio,Posio
+296,KUNTA,615,Pudasjärvi,Pudasjärvi
+297,KUNTA,616,Pukkila,Pukkila
+300,KUNTA,619,Punkalaidun,Punkalaidun
+301,KUNTA,620,Puolanka,Puolanka
+302,KUNTA,623,Puumala,Puumala
+303,KUNTA,624,Pyhtää,Pyhtää
+304,KUNTA,625,Pyhäjoki,Pyhäjoki
+305,KUNTA,626,Pyhäjärvi,Pyhäjärvi
+306,KUNTA,630,Pyhäntä,Pyhäntä
+307,KUNTA,631,Pyhäranta,Pyhäranta
+310,KUNTA,635,Pälkäne,Pälkäne
+311,KUNTA,636,Pöytyä,Pöytyä
+312,KUNTA,678,Raahe,Raahe
+313,KUNTA,680,Raisio,Raisio
+314,KUNTA,681,Rantasalmi,Rantasalmi
+316,KUNTA,683,Ranua,Ranua
+317,KUNTA,684,Rauma,Rauma
+318,KUNTA,686,Rautalampi,Rautalampi
+319,KUNTA,687,Rautavaara,Rautavaara
+320,KUNTA,689,Rautjärvi,Rautjärvi
+321,KUNTA,691,Reisjärvi,Reisjärvi
+323,KUNTA,694,Riihimäki,Riihimäki
+325,KUNTA,697,Ristijärvi,Ristijärvi
+327,KUNTA,698,Rovaniemi,Rovaniemi
+328,KUNTA,700,Ruokolahti,Ruokolahti
+330,KUNTA,702,Ruovesi,Ruovesi
+331,KUNTA,704,Rusko,Rusko
+334,KUNTA,707,Rääkkylä,Rääkkylä
+336,KUNTA,729,Saarijärvi,Saarijärvi
+338,KUNTA,732,Salla,Salla
+339,KUNTA,734,Salo,Salo
+340,KUNTA,736,Saltvik,Saltvik
+342,KUNTA,738,Sauvo,Sauvo
+343,KUNTA,739,Savitaipale,Savitaipale
+344,KUNTA,740,Savonlinna,Savonlinna
+346,KUNTA,742,Savukoski,Savukoski
+347,KUNTA,743,Seinäjoki,Seinäjoki
+348,KUNTA,746,Sievi,Sievi
+349,KUNTA,747,Siikainen,Siikainen
+350,KUNTA,748,Siikajoki,Siikajoki
+351,KUNTA,749,Siilinjärvi,Siilinjärvi
+352,KUNTA,751,Simo,Simo
+353,KUNTA,753,Sipoo,Sipoo
+354,KUNTA,755,Siuntio,Siuntio
+355,KUNTA,758,Sodankylä,Sodankylä
+356,KUNTA,759,Soini,Soini
+357,KUNTA,761,Somero,Somero
+358,KUNTA,762,Sonkajärvi,Sonkajärvi
+359,KUNTA,765,Sotkamo,Sotkamo
+360,KUNTA,766,Sottunga,Sottunga
+361,KUNTA,768,Sulkava,Sulkava
+363,KUNTA,771,Sund,Sund
+368,KUNTA,777,Suomussalmi,Suomussalmi
+369,KUNTA,778,Suonenjoki,Suonenjoki
+370,KUNTA,781,Sysmä,Sysmä
+371,KUNTA,783,Säkylä,Säkylä
+373,KUNTA,831,Taipalsaari,Taipalsaari
+374,KUNTA,832,Taivalkoski,Taivalkoski
+375,KUNTA,833,Taivassalo,Taivassalo
+376,KUNTA,834,Tammela,Tammela
+378,KUNTA,837,Tampere,Tampere
+381,KUNTA,844,Tervo,Tervo
+382,KUNTA,845,Tervola,Tervola
+383,KUNTA,846,Teuva,Teuva
+384,KUNTA,848,Tohmajärvi,Tohmajärvi
+385,KUNTA,849,Toholampi,Toholampi
+387,KUNTA,850,Toivakka,Toivakka
+388,KUNTA,851,Tornio,Tornio
+389,KUNTA,853,Turku,Turku
+392,KUNTA,857,Tuusniemi,Tuusniemi
+393,KUNTA,858,Tuusula,Tuusula
+394,KUNTA,859,Tyrnävä,Tyrnävä
+397,KUNTA,886,Ulvila,Ulvila
+398,KUNTA,887,Urjala,Urjala
+399,KUNTA,889,Utajärvi,Utajärvi
+400,KUNTA,890,Utsjoki,Utsjoki
+402,KUNTA,892,Uurainen,Uurainen
+403,KUNTA,893,Uusikaarlepyy,Nykarleby
+404,KUNTA,895,Uusikaupunki,Uusikaupunki
+405,KUNTA,785,Vaala,Vaala
+406,KUNTA,905,Vaasa,Vaasa
+408,KUNTA,908,Valkeakoski,Valkeakoski
+413,KUNTA,092,Vantaa,Vantaa
+414,KUNTA,915,Varkaus,Varkaus
+417,KUNTA,918,Vehmaa,Vehmaa
+420,KUNTA,921,Vesanto,Vesanto
+421,KUNTA,922,Vesilahti,Vesilahti
+422,KUNTA,924,Veteli,Veteli
+423,KUNTA,925,Vieremä,Vieremä
+425,KUNTA,927,Vihti,Vihti
+427,KUNTA,931,Viitasaari,Viitasaari
+430,KUNTA,934,Vimpeli,Vimpeli
+431,KUNTA,935,Virolahti,Virolahti
+432,KUNTA,936,Virrat,Virrat
+435,KUNTA,941,Vårdö,Vårdö
+444,KUNTA,976,Ylitornio,Ylitornio
+445,KUNTA,977,Ylivieska,Ylivieska
+448,KUNTA,980,Ylöjärvi,Ylöjärvi
+449,KUNTA,981,Ypäjä,Ypäjä
+451,KUNTA,989,Ähtäri,Ähtäri
+452,KUNTA,992,Äänekoski,Äänekoski
+488,MAAKUNTA,01,Uusimaa,Uusimaa
+489,MAAKUNTA,02,Varsinais-Suomi,Southwest Finland
+490,MAAKUNTA,04,Satakunta,Satakunta
+491,MAAKUNTA,05,Kanta-Häme,Kanta-Häme
+492,MAAKUNTA,06,Pirkanmaa,Pirkanmaa
+493,MAAKUNTA,07,Päijät-Häme,Päijät-Häme
+494,MAAKUNTA,08,Kymenlaakso,Kymenlaakso
+495,MAAKUNTA,09,Etelä-Karjala,South Karelia
+496,MAAKUNTA,10,Etelä-Savo,South Savo
+497,MAAKUNTA,11,Pohjois-Savo,North Savo
+498,MAAKUNTA,12,Pohjois-Karjala,North Karelia
+499,MAAKUNTA,13,Keski-Suomi,Central Finland
+500,MAAKUNTA,14,Etelä-Pohjanmaa,South Ostrobothnia
+501,MAAKUNTA,15,Pohjanmaa,Ostrobothnia
+502,MAAKUNTA,16,Keski-Pohjanmaa,Central Ostrobothnia
+503,MAAKUNTA,17,Pohjois-Pohjanmaa,North Ostrobothnia
+504,MAAKUNTA,18,Kainuu,Kainuu
+505,MAAKUNTA,19,Lappi,Lapland
+506,MAAKUNTA,21,Ahvenanmaa,Åland
+510,SEUTUKUNTA,011,Helsingin seutukunta,Sub-region of Helsinki
+514,SEUTUKUNTA,015,Porvoon seutukunta,Sub-region of Porvoo
+515,SEUTUKUNTA,016,Loviisan seutukunta,Sub-region of Loviisa
+516,SEUTUKUNTA,021,Åboland-Turunmaan seutukunta,Sub-region of Åboland-Turunmaa
+517,SEUTUKUNTA,022,Salon seutukunta,Sub-region of Salo
+518,SEUTUKUNTA,023,Turun seutukunta,Sub-region of Turku
+519,SEUTUKUNTA,024,Vakka-Suomen seutukunta,Sub-region of Vakka-Suomi
+520,SEUTUKUNTA,025,Loimaan seutukunta,Sub-region of Loimaa
+521,SEUTUKUNTA,041,Rauman seutukunta,Sub-region of Rauma
+523,SEUTUKUNTA,043,Porin seutukunta,Sub-region of Pori
+524,SEUTUKUNTA,044,Pohjois-Satakunnan seutukunta,Sub-region of Pohjois-Satakunta
+525,SEUTUKUNTA,051,Hämeenlinnan seutukunta,Sub-region of Hämeenlinna
+526,SEUTUKUNTA,052,Riihimäen seutukunta,Sub-region of Riihimäki
+527,SEUTUKUNTA,053,Forssan seutukunta,Sub-region of Forssa
+528,SEUTUKUNTA,061,Luoteis-Pirkanmaan seutukunta,Sub-region of Luoteis-Pirkanmaa
+530,SEUTUKUNTA,063,Etelä-Pirkanmaan seutukunta,Sub-region of Etelä Pirkanmaa
+531,SEUTUKUNTA,064,Tampereen seutukunta,Sub-region of Tampere
+535,SEUTUKUNTA,068,Lounais-Pirkanmaan seutukunta,Sub-region of Lounais-Pirkanmaa
+536,SEUTUKUNTA,071,Lahden seutukunta,Sub-region of Lahti
+539,SEUTUKUNTA,081,Kouvolan seutukunta,Sub-region of Kouvola
+540,SEUTUKUNTA,082,Kotka-Haminan seutukunta,Sub-region of Kotka-Hamina
+541,SEUTUKUNTA,091,Lappeenrannan seutukunta,Sub-region of Lappeenranta
+543,SEUTUKUNTA,093,Imatran seutukunta,Sub-region of Imatra
+545,SEUTUKUNTA,101,Mikkelin seutukunta,Sub-region of Mikkeli
+547,SEUTUKUNTA,103,Savonlinnan seutukunta,Sub-region of Savonlinna
+549,SEUTUKUNTA,105,Pieksämäen seutukunta,Sub-region of Pieksämäki
+550,SEUTUKUNTA,111,Ylä-Savon seutukunta,Sub-region of Ylä-Savo
+551,SEUTUKUNTA,112,Kuopion seutukunta,Sub-region of Kuopio
+552,SEUTUKUNTA,113,Koillis-Savon seutukunta,Sub-region of Koillis-Savo
+553,SEUTUKUNTA,114,Varkauden seutukunta,Sub-region of Varkaus
+554,SEUTUKUNTA,115,Sisä-Savon seutukunta,Sub-region of Sisä-Savo
+556,SEUTUKUNTA,122,Joensuun seutukunta,Sub-region of Joensuu
+558,SEUTUKUNTA,124,Keski-Karjalan seutukunta,Sub-region of Keski-Karjala
+559,SEUTUKUNTA,125,Pielisen Karjalan seutukunta,Sub-region of Pielisen Karjala
+560,SEUTUKUNTA,131,Jyväskylän seutukunta,Sub-region of Jyväskylä
+561,SEUTUKUNTA,132,Joutsan seutukunta,Sub-region of Joutsa
+562,SEUTUKUNTA,133,Keuruun seutukunta,Sub-region of Keuruu
+563,SEUTUKUNTA,134,Jämsän seutukunta,Sub-region of Jämsä
+564,SEUTUKUNTA,135,Äänekosken seutukunta,Sub-region of Äänekoski
+567,SEUTUKUNTA,141,Suupohjan seutukunta,Sub-region of Suupohja
+568,SEUTUKUNTA,142,Seinäjoen seutukunta,Sub-region of Seinäjoki
+570,SEUTUKUNTA,144,Kuusiokuntien seutukunta,Sub-region of Kuusiokunnat
+572,SEUTUKUNTA,146,Järviseudun seutukunta,Sub-region of Järviseutu
+574,SEUTUKUNTA,152,Vaasan seutukunta,Sub-region of Vaasa
+575,SEUTUKUNTA,153,Suupohjan rannikkoseutu,Sub-region of Sydösterbotten
+576,SEUTUKUNTA,154,Jakobstadsregionen,Sub-region of Jakobstadsregionen
+577,SEUTUKUNTA,161,Kaustisen seutukunta,Sub-region of Kaustinen
+578,SEUTUKUNTA,162,Kokkolan seutukunta,Sub-region of Kokkola
+579,SEUTUKUNTA,171,Oulun seutukunta,Sub-region of Oulu
+581,SEUTUKUNTA,173,Oulunkaaren seutukunta,Sub-region of Oulunkaari
+582,SEUTUKUNTA,174,Raahen seutukunta,Sub-region of Raahe
+583,SEUTUKUNTA,175,Haapavesi-Siikalatvan seutukunta,Sub-region of Haapavesi-Siikalatva
+584,SEUTUKUNTA,176,Nivala-Haapajärven seutukunta,Sub-region of Nivala-Haapajärvi
+585,SEUTUKUNTA,177,Ylivieskan seutukunta,Sub-region of Ylivieska
+586,SEUTUKUNTA,178,Koillismaan seutukunta,Sub-region of Koillismaa
+587,SEUTUKUNTA,181,Kehys-Kainuun seutukunta,Sub-region of Kehys-Kainuu
+588,SEUTUKUNTA,182,Kajaanin seutukunta,Sub-region of Kajaani
+589,SEUTUKUNTA,191,Rovaniemen seutukunta,Sub-region of Rovaniemi
+590,SEUTUKUNTA,192,Kemi-Tornion seutukunta,Sub-region of Kemi-Tornio
+591,SEUTUKUNTA,193,Torniolaakson seutukunta,Sub-region of Torniolaakso
+592,SEUTUKUNTA,194,Itä-Lapin seutukunta,Sub-region of Itä-Lappi
+594,SEUTUKUNTA,196,Tunturi-Lapin seutukunta,Sub-region of Tunturi-Lappi
+595,SEUTUKUNTA,197,Pohjois-Lapin seutukunta,Sub-region of Pohjois-Lappi
+596,SEUTUKUNTA,211,Mariehamns stad,Sub-region of Mariehamns stad
+597,SEUTUKUNTA,212,Ålands landsbygd,Sub-region of Ålands landsbygd
+601,SAIRAANHOITOPIIRI,03,Varsinais-Suomen sairaanhoitopiiri,Southwest Finland Hospital District
+602,SAIRAANHOITOPIIRI,04,Satakunnan sairaanhoitopiiri,Satakunta hospital district
+603,SAIRAANHOITOPIIRI,05,Kanta-Hämeen sairaanhoitopiiri,Kanta-Häme hospital district
+604,SAIRAANHOITOPIIRI,06,Pirkanmaan sairaanhoitopiiri,Pirkanmaa hospital district
+605,SAIRAANHOITOPIIRI,07,Päijät-Hämeen sairaanhoitopiiri,Päijät-Häme hospital district
+606,SAIRAANHOITOPIIRI,08,Kymenlaakson sairaanhoitopiiri,Kymenlaakso hospital district
+607,SAIRAANHOITOPIIRI,09,Etelä-Karjalan sairaanhoitopiiri,South Karelia hospital district
+608,SAIRAANHOITOPIIRI,11,Itä-Savon sairaanhoitopiiri,Itä-Savo hospital district
+609,SAIRAANHOITOPIIRI,10,Etelä-Savon sairaanhoitopiiri,South Savo Hospital District
+610,SAIRAANHOITOPIIRI,12,Pohjois-Karjalan sairaanhoitopiiri,North Karelia hospital district
+611,SAIRAANHOITOPIIRI,13,Pohjois-Savon sairaanhoitopiiri,North Savo Hospital District
+612,SAIRAANHOITOPIIRI,14,Keski-Suomen sairaanhoitopiiri,Central Finland hospital district
+613,SAIRAANHOITOPIIRI,15,Etelä-Pohjanmaan sairaanhoitopiiri,South Ostrobothnia hospital district
+614,SAIRAANHOITOPIIRI,16,Vaasan sairaanhoitopiiri,Vaasa hospital district
+615,SAIRAANHOITOPIIRI,17,Keski-Pohjanmaan sairaanhoitopiiri,Central Ostrobothnia hospital district
+616,SAIRAANHOITOPIIRI,18,Pohjois-Pohjanmaan sairaanhoitopiiri,North Ostrobothnia hospital district
+617,SAIRAANHOITOPIIRI,19,Kainuun sairaanhoitopiiri,Kainuu hospital district
+618,SAIRAANHOITOPIIRI,20,Länsi-Pohjan sairaanhoitopiiri,Länsi-Pohja hospital district
+619,SAIRAANHOITOPIIRI,21,Lapin sairaanhoitopiiri,Lapland hospital district
+620,SAIRAANHOITOPIIRI,22,Ahvenanmaan sairaanhoitopiiri,Åland hospital district
+629,SAIRAANHOITOPIIRI,25,Helsingin ja Uudenmaan sairaanhoitopiiri,Helsinki and Uusimaa hospital district
+658,MAA,358,Koko maa,Whole country
+698,SEUTUKUNTA,069,Ylä-Pirkanmaan seutukunta,Sub-region of Ylä-Pirkanmaa
+699,SEUTUKUNTA,213,Ålands skärgård,Sub-region of Ålands skärgård
+721,SEUTUKUNTA,138,Saarijärvi-Viitasaaren seutukunta,Sub-region of Saarijärvi-Viitasaari
+727,NUTS1,1,Manner-Suomi,Mainland Finland
+728,NUTS1,2,Ahvenanmaa,Åland
+732,KUNTA,020,Akaa,Akaa
+793,KUNTA,322,Kemiönsaari,Kimitoön
+794,KUNTA,445,Parainen,Pargas
+795,KUNTA,508,Mänttä-Vilppula,Mänttä-Vilppula
+796,KUNTA,710,Raasepori,Raasepori
+797,KUNTA,790,Sastamala,Sastamala
+798,KUNTA,791,Siikalatva,Siikalatva
+799,SEUTUKUNTA,014,Raaseporin seutukunta,Sub-region of Raseborg
+833,ALUEHALLINTOVIRASTO,1,Etelä-Suomen AVIn alue,Area for Southern Finland AVI
+834,ALUEHALLINTOVIRASTO,2,Lounais-Suomen AVIn alue,Area for Southwestern Finland AVI
+835,ALUEHALLINTOVIRASTO,3,Itä-Suomen AVIn alue,Area for Eastern Finland AVI
+836,ALUEHALLINTOVIRASTO,4,Länsi- ja Sisä-Suomen AVIn alue,Area for Western and Inland Finland AVI
+837,ALUEHALLINTOVIRASTO,5,Pohjois-Suomen AVIn alue,Area for Northern Finland AVI
+838,ALUEHALLINTOVIRASTO,6,Lapin AVIn alue,Area for Lapland AVI
+839,ALUEHALLINTOVIRASTO,7,Ahvenanmaan valtionviraston alue,Area for the State Department of Åland
+840,SUURALUE,1,Helsingin-Uudenmaan suuralue,Major region of Helsinki-Uusimaa
+841,SUURALUE,2,Etelä-Suomen suuralue,Major region of Southern Finland
+842,SUURALUE,3,Länsi-Suomen suuralue,Major region of Western Finland
+843,SUURALUE,4,Pohjois- ja Itä-Suomen suuralue,Major region of Northern and Eastern Finland
+844,SUURALUE,5,Ahvenanmaa,Åland
+845,YTA,1,Etelä-Suomen yhteistyöalue,Southern Finland collaborative area
+846,YTA,2,Itä-Suomen yhteistyöalue,Eastern Finland collaborative area
+847,YTA,3,Sisä-Suomen yhteistyöalue,Inland Finland collaborative area
+848,YTA,4,Länsi-Suomen yhteistyöalue,Western Finland collaborative area
+849,YTA,5,Pohjois-Suomen yhteistyöalue,Northern Finland collaborative area
+850,YTA,6,Ahvenanmaa,Åland
+854,KUNTA,946,Vöyri,Vöyri
+901,ERVA,1,Helsingin Yliopistosairaalan erityisvastuualue,Helsinki University hospital special responsibility area
+902,ERVA,2,Turun Yliopistosairaalan erityisvastuualue,Turku University hospital special responsibility area
+903,ERVA,3,Tampereen Yliopistosairaalan erityisvastuualue,Tampere University hospital special responsibility area
+904,ERVA,4,Kuopion Yliopistosairaalan erityisvastuualue,Kuopio University hospital special responsibility area
+905,ERVA,5,Oulun Yliopistosairaalan erityisvastuualue,Oulu University hospital special responsibility area
+921,ELY-KESKUS,01,Uudenmaan ELY-keskus,Uusimaa ELY Centre
+922,ELY-KESKUS,02,Varsinais-Suomen ELY-keskus,Southwest Finland ELY Centre
+923,ELY-KESKUS,03,Satakunnan ELY-keskus,Satakunta ELY Centre
+924,ELY-KESKUS,04,Hämeen ELY-keskus,Häme ELY Centre
+925,ELY-KESKUS,05,Pirkanmaan ELY-keskus,Pirkanmaa ELY Centre
+926,ELY-KESKUS,06,Kaakkois-Suomen ELY-keskus,Southeast Finland ELY Centre
+927,ELY-KESKUS,07,Etelä-Savon ELY-keskus,South Savo ELY Centre
+928,ELY-KESKUS,08,Pohjois-Savon ELY-keskus,North Savo ELY Centre
+929,ELY-KESKUS,09,Pohjois-Karjalan ELY-keskus,North Karelia ELY Centre
+930,ELY-KESKUS,10,Keski-Suomen ELY-keskus,Central Finland ELY Centre
+931,ELY-KESKUS,11,Etelä-Pohjanmaan ELY-keskus,South Ostrobothnia ELY Centre
+932,ELY-KESKUS,12,Pohjanmaan ELY-keskus,Ostrobothnia ELY Centre
+933,ELY-KESKUS,13,Pohjois-Pohjanmaan ELY-keskus,North Ostrobothnia ELY Centre
+934,ELY-KESKUS,14,Kainuun ELY-keskus,Kainuu ELY Centre
+935,ELY-KESKUS,15,Lapin ELY-keskus,Lapland ELY Centre
+936,ELY-KESKUS,16,Ahvenanmaa,Åland
+956,HYVINVOINTIALUE,91,Ahvenanmaa,Åland
+957,HYVINVOINTIALUE,11,Etelä-Karjalan hyvinvointialue,South Karelia wellbeing services county
+958,HYVINVOINTIALUE,16,Etelä-Pohjanmaan hyvinvointialue,South Ostrobothnia wellbeing services county
+959,HYVINVOINTIALUE,12,Etelä-Savon hyvinvointialue,South Savo wellbeing services county
+960,HYVINVOINTIALUE,90,Helsingin kaupunki,City of Helsinki
+961,HYVINVOINTIALUE,01,Itä-Uudenmaan hyvinvointialue,East Uusimaa wellbeing services county
+962,HYVINVOINTIALUE,20,Kainuun hyvinvointialue,Kainuu wellbeing services county
+963,HYVINVOINTIALUE,07,Kanta-Hämeen hyvinvointialue,Kanta-Häme wellbeing services county
+964,HYVINVOINTIALUE,18,Keski-Pohjanmaan hyvinvointialue,Central Ostrobothnia wellbeing services county
+965,HYVINVOINTIALUE,15,Keski-Suomen hyvinvointialue,Central Finland wellbeing services county
+966,HYVINVOINTIALUE,02,Keski-Uudenmaan hyvinvointialue,Central Uusimaa wellbeing services county
+967,HYVINVOINTIALUE,10,Kymenlaakson hyvinvointialue,Kymenlaakso wellbeing services county
+968,HYVINVOINTIALUE,21,Lapin hyvinvointialue,Lapland wellbeing services county
+969,HYVINVOINTIALUE,03,Länsi-Uudenmaan hyvinvointialue,West Uusimaa wellbeing services county
+970,HYVINVOINTIALUE,08,Pirkanmaan hyvinvointialue,Pirkanmaa wellbeing services county
+971,HYVINVOINTIALUE,17,Pohjanmaan hyvinvointialue,Ostrobothnia wellbeing services county
+972,HYVINVOINTIALUE,14,Pohjois-Karjalan hyvinvointialue,North Karelia wellbeing services county
+973,HYVINVOINTIALUE,19,Pohjois-Pohjanmaan hyvinvointialue,North Ostrobothnia wellbeing services county
+974,HYVINVOINTIALUE,13,Pohjois-Savon hyvinvointialue,North Savo wellbeing services county
+975,HYVINVOINTIALUE,09,Päijät-Hämeen hyvinvointialue,Päijät-Häme wellbeing services county
+976,HYVINVOINTIALUE,06,Satakunnan hyvinvointialue,Satakunta wellbeing services county
+977,HYVINVOINTIALUE,04,Vantaan ja Keravan hyvinvointialue,Vantaa and Kerava wellbeing services county
+978,HYVINVOINTIALUE,05,Varsinais-Suomen hyvinvointialue,Southwest Finland wellbeing services county
+1001,EUROOPPA,528,Alankomaat,Netherlands
+1002,EUROOPPA,056,Belgia,Belgium
+1003,EUROOPPA,100,Bulgaria,Bulgaria
+1004,EUROOPPA,724,Espanja,Spain
+1005,EUROOPPA,372,Irlanti,Ireland
+1006,EUROOPPA,380,Italia,Italy
+1007,EUROOPPA,040,Itävalta,Austria
+1008,EUROOPPA,300,Kreikka,Greece
+1009,EUROOPPA,196,Kypros,Cyprus
+1010,EUROOPPA,428,Latvia,Latvia
+1011,EUROOPPA,440,Liettua,Lithuania
+1012,EUROOPPA,442,Luxemburg,Luxembourg
+1013,EUROOPPA,470,Malta,Malta
+1014,EUROOPPA,620,Portugali,Portugal
+1015,EUROOPPA,616,Puola,Poland
+1016,EUROOPPA,250,Ranska,France
+1017,EUROOPPA,642,Romania,Romania
+1018,EUROOPPA,752,Ruotsi,Sweden
+1019,EUROOPPA,276,Saksa,Germany
+1020,EUROOPPA,703,Slovakia,Slovakia
+1021,EUROOPPA,705,Slovenia,Slovenia
+1022,EUROOPPA,246,Suomi,Finland
+1023,EUROOPPA,208,Tanska,Denmark
+1024,EUROOPPA,203,Tsekki,Czech Republic
+1025,EUROOPPA,348,Unkari,Hungary
+1026,EUROOPPA,233,Viro,Estonia
+1027,EUROOPPA,826,Yhdistynyt Kuningaskunta,United Kingdom
+1028,EUROOPPA,352,Islanti,Iceland
+1029,EUROOPPA,578,Norja,Norway
+1030,EUROOPPA,30,EU-15,EU-15
+1031,EUROOPPA,31,EU-25,EU-25
+1032,EUROOPPA,32,EU-27,EU-27
+1033,EURALUEET,33,Pohjoismaat,Nordic countries
+1034,EUROOPPA,438,Liechtenstein,Liechtenstein
+1035,EUROOPPA,756,Sveitsi,Switzerland
+1036,EUROOPPA,813,Grönlanti,Greenland
+1041,POHJOISMAAT,813,Grönlanti,Greenland
+1042,POHJOISMAAT,352,Islanti,Iceland
+1043,POHJOISMAAT,578,Norja,Norway
+1044,POHJOISMAAT,752,Ruotsi,Sweden
+1045,POHJOISMAAT,246,Suomi,Finland
+1046,POHJOISMAAT,208,Tanska,Denmark
+1047,POHJOISMAAT,33,Pohjoismaat,Nordic countries
+1060,EUROOPPA,5,EU-28,EU-28
+1061,EUROOPPA,827,Kroatia,Croatia
+1062,EUROOPPA,70,Bosnia ja Hertsegovina,Bosnia and Herzegovina
+1063,EUROOPPA,807,Makedonia,Macedonia
+1064,EUROOPPA,499,Montenegro,Montenegro
+1065,EUROOPPA,688,Serbia,Serbia
+1066,EUROOPPA,792,Turkki,Turkey
+1067,EUROOPPA,828,Georgia,Georgia
+1068,EUROOPPA,829,Kosovo,Kosovo
+1069,EUROOPPA,830,Moldova,Moldova
+1070,EUROOPPA,831,Ukraina,Ukraine
+1071,EUROOPPA,832,Azerbaidzan,Azerbaijan
+1072,EUROOPPA,833,Valko-Venäjä,Belarus
+1073,EUROOPPA,835,Albania,Albania
+1074,EUROOPPA,836,Venäjä,Russia

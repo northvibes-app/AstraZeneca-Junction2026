@@ -1,0 +1,7 @@
+pathway_stage,missing_information,why_it_matters
+referral,Time from first primary care contact to specialist referral by region and cancer type,One of the three bottlenecks named in the challenge
+diagnosis,Time from referral to diagnosis by region and cancer type,Needed to locate delays along the pathway
+treatment_start,Time from diagnosis to treatment start and share within target time,Goal 3 indicator of the National Cancer Strategy
+early_detection,Stage at diagnosis by region and by education or income,Strategy target of 70 % diagnosed at stage I-II cannot be monitored
+early_detection,Breast and colorectal screening participation by education and native language,Only cervical screening is published by group
+early_detection,Screening participation by income group,Income is only available as a regional rate

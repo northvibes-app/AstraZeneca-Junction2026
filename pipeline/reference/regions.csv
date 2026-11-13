@@ -1,0 +1,25 @@
+region_code,level,name_fi,name_en,sotkanet_id,kela_name,aliases
+FI,country,Koko maa,Finland,658,,Finland|Finland (excluding Åland)|Koko maa|Suomi
+01,wellbeing_county,Itä-Uusimaa,East Uusimaa,961,Itä-Uusimaa,East Uusimaa
+02,wellbeing_county,Keski-Uusimaa,Central Uusimaa,966,Keski-Uusimaa,Central Uusimaa
+03,wellbeing_county,Länsi-Uusimaa,West Uusimaa,969,Länsi-Uusimaa,West Uusimaa
+04,wellbeing_county,Vantaa ja Kerava,Vantaa and Kerava,977,Vantaa ja Kerava,Vantaa and Kerava
+05,wellbeing_county,Varsinais-Suomi,Southwest Finland,978,Varsinais-Suomi,Southwest Finland
+06,wellbeing_county,Satakunta,Satakunta,976,Satakunta,Satakunta
+07,wellbeing_county,Kanta-Häme,Kanta-Häme,963,Kanta-Häme,Kanta-Häme
+08,wellbeing_county,Pirkanmaa,Pirkanmaa,970,Pirkanmaa,Pirkanmaa
+09,wellbeing_county,Päijät-Häme,Päijät-Häme,975,Päijät-Häme,Päijät-Häme
+10,wellbeing_county,Kymenlaakso,Kymenlaakso,967,Kymenlaakso,Kymenlaakso
+11,wellbeing_county,Etelä-Karjala,South Karelia,957,Etelä-Karjala,South Karelia
+12,wellbeing_county,Etelä-Savo,South Savo,959,Etelä-Savo,South Savo
+13,wellbeing_county,Pohjois-Savo,North Savo,974,Pohjois-Savo,North Savo
+14,wellbeing_county,Pohjois-Karjala,North Karelia,972,Pohjois-Karjala,North Karelia
+15,wellbeing_county,Keski-Suomi,Central Finland,965,Keski-Suomi,Central Finland
+16,wellbeing_county,Etelä-Pohjanmaa,South Ostrobothnia,958,Etelä-Pohjanmaa,South Ostrobothnia
+17,wellbeing_county,Pohjanmaa,Ostrobothnia,971,Pohjanmaa,Ostrobothnia
+18,wellbeing_county,Keski-Pohjanmaa,Central Ostrobothnia,964,Keski-Pohjanmaa,Central Ostrobothnia
+19,wellbeing_county,Pohjois-Pohjanmaa,North Ostrobothnia,973,Pohjois-Pohjanmaa,North Ostrobothnia
+20,wellbeing_county,Kainuu,Kainuu,962,Kainuu,Kainuu
+21,wellbeing_county,Lappi,Lapland,968,Lappi,Lapland
+90,wellbeing_county,Helsinki,City of Helsinki,960,Helsinki,City of Helsinki
+91,autonomous_region,Ahvenanmaa,Åland,956,Ahvenanmaa,Åland

@@ -1,7 +1,7 @@
 # Data Pipeline
 
 **Project:** Equal Care Navigator Across Finland
-**Status:** Proposal. The cleaning and categorising steps are not built yet.
+**Status:** Working prototype in [pipeline/](pipeline/). Sections 1–3 describe the design; section 7 describes what the prototype does.
 **Purpose:** Turn the public statistics we have into one clean table, and tag every number by the equity factor it tells us about.
 
 ## 1. What we mean by "risk factor"
@@ -59,7 +59,7 @@ Each row must pass these checks. A row that fails goes to a rejected list with t
 | Unit | Percent, count, per 1,000 or index. Stored with the value |
 | Arithmetic | Where invited and attended counts exist, attended ÷ invited must match the published percent within rounding |
 | Status | One of: observed, preliminary, projection, strategy_target, estimate |
-| Missing values | Stay empty. Never zero, never filled in |
+| Missing values | Never zero and never filled silently. A labelled fallback value may be added later, see section 7 |
 | Duplicates | Same indicator, region, period and group may appear only once per source version |
 | Source | Every row has a URL |
 
@@ -128,7 +128,8 @@ Write one file for the app with observations, gaps and DATA GAP entries. Each fi
 | National trend 2021–2024 | `Statistics/screening_participation_national_trend.csv` | on branch `Lukas_ARK` |
 | Regional context 2024 (income, education, language, primary care wait) | `Statistics/region_context_2024.csv` | on branch `Lukas_ARK` |
 | Download script for the Sotkanet files | `Statistics/fetch_sotkanet.py` | on branch `Lukas_ARK` |
-| Cleaning checks, long table, factor tagging, gap measures | – | not built |
+| Cleaning checks, long table, factor tagging, gap measures | `pipeline/` | prototype, see section 7 |
+| Income, education, language, smoking and primary care wait by region | `Statistics/equity_context_raw.csv.gz` | written by `pipeline/fetch_context.py` |
 
 The existing CSV files do not share one layout. Some have invited and attended counts, the Sotkanet files have attended counts only, and the context file is already in long format. Step 3 exists to remove these differences.
 
@@ -142,7 +143,97 @@ The existing CSV files do not share one layout. Some have invited and attended c
 ## 6. Rules that apply to every step
 
 - Use published aggregates only. No patient-level data.
-- Do not fill gaps with simulated or estimated values.
+- Do not fill gaps silently. A fallback value is allowed only if it is labelled `imputed`, names its method and the values it was built from, and stays out of the gap measures.
 - Keep preliminary figures labelled as preliminary wherever they appear.
 - Do not compare programmes as if they shared a definition; target ages and invitation rules differ.
 - State differences, not causes.
+
+## 7. Prototype
+
+The prototype splits the six design steps into 14 smaller ones. It uses only the Python standard library.
+
+```
+python3 pipeline/fetch_context.py    # optional: refresh income, education, language and smoking data from Sotkanet
+python3 pipeline/run_pipeline.py     # run all 14 steps, about 20 seconds
+python3 pipeline/tests/test_impute.py   # check the fallback rules
+```
+
+| # | Step | Design step | What it does |
+| ---: | --- | --- | --- |
+| 1 | ingest | Collect | Reads five source files into one raw layout; records file checksum and line number of every row |
+| 2 | profile | Collect | Describes the input per source: rows, empty fields, vocabularies, year range |
+| 3 | validate_schema | Clean | Required fields, year format, numeric value, valid JSON; trims text and unifies Unicode |
+| 4 | standardise | Clean | One vocabulary for regions, sex, age groups, units and indicators; Sotkanet regions are resolved by id because names repeat |
+| 5 | scope_filter | Clean | Keeps country, wellbeing services county, Åland and municipality level |
+| 6 | deduplicate | Clean | Same observation, same value: keep the more complete row. Different value: keep the preferred source, quarantine the other |
+| 7 | quality_checks | Clean | Range, date and arithmetic rules reject impossible values; outliers and small cells are flagged, not removed |
+| 8 | completeness | Clean | Lists missing region-year cells and information no open source provides |
+| 9 | impute | Clean | Adds a labelled fallback value for missing region-year cells, see below |
+| 10 | integrate | Tidy | Final long table with stable ids, plus a small analysis subset |
+| 11 | enrich | Categorise | One profile per region: low-income rate, unemployment, education index, other native language, daily smokers, primary care wait |
+| 12 | categorise | Categorise | Ranks the 22 regions per factor into disadvantaged, middle and advantaged thirds; tags every outcome with factor and evidence type |
+| 13 | measure | Measure | Gap per factor: group comparison (A), regional comparison with rank correlation (B), documented barriers (C) |
+| 14 | publish | Publish | Writes all outputs, lineage and a run report; fails if any input row is unaccounted for |
+
+Rejected rows go to `quarantine.csv` with the step and reason. They are never repaired.
+
+### Fallback values for missing data (step 9)
+
+A region-year cell is missing when an indicator has no value for one of the 22 regions in a year between its first and last published year. Step 9 fills such a cell with the first rule that applies:
+
+| Order | Method | When | Fallback value |
+| ---: | --- | --- | --- |
+| 1 | `temporal_mean` | The region has a value within two years before **and** after | Average of those two values |
+| 2 | `nearest_year` | The region has a value within two years on one side only | That value |
+| 3 | `regional_mean` | The region has nothing nearby, but at least five other regions reported that year | Unweighted average of those regions |
+| – | none | Otherwise | The cell stays empty |
+
+The region's own neighbouring years come first because a region resembles itself more than it resembles other regions.
+
+Every fallback row has `status = imputed`, the method, and the values it was built from (`imputation_basis`). It has no numerator or denominator and is never used as the basis for another fallback. Information that no source publishes at all, such as waiting times, is never filled.
+
+Fallback values are published in the observation tables but are **not** used in the gap measures. Set `USE_IMPUTED_IN_MEASURES = True` in `pipeline/common.py` to change that.
+
+### Inputs
+
+| File | Content |
+| --- | --- |
+| `Statistics/cancer_stats_raw.csv.gz` | Kela reimbursement entitlements, Statistics Finland cancer deaths, Sotkanet cancer indicators |
+| `Statistics/equity_context_raw.csv.gz` | Income, unemployment, education, language, smoking and primary care wait from Sotkanet, written by `fetch_context.py` |
+| `Statistics/breast_screening_by_region_2024.csv` | Breast screening with invited and attended counts |
+| `Statistics/cervical_screening_equity_2025_preliminary.csv` | Cervical screening by education and native language |
+| `Statistics/national_key_statistics.csv` | National figures, targets and projections |
+
+Lookup tables for regions, indicators, equity factors, documented barriers and known data gaps are in `pipeline/reference/`.
+
+### Outputs in `pipeline/output/`
+
+| File | Content |
+| --- | --- |
+| `observations_clean.csv.gz` | Every observation that passed all checks. Not in git; regenerate with the pipeline |
+| `observations_analysis.csv` | National and regional outcome and context figures |
+| `region_profile.csv` | Context values per region |
+| `region_factor_levels.csv` | Category of each region per equity factor |
+| `observations_by_factor.csv` | Outcome figures tagged with factor, level and evidence type |
+| `equity_gaps.csv` | Measured gaps and documented barriers |
+| `data_gaps.csv` | What is missing |
+| `quarantine.csv` | Rejected rows with reason |
+| `profile.json`, `lineage.json`, `run_report.md` | Input profile, provenance and step counts of the run |
+
+### First run
+
+| Rows read | Published | of which fallback values | Quarantined | Out of scope | Duplicates removed |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 804,804 | 756,185 | 44 | 5 | 48,635 | 23 |
+
+- The 5 quarantined rows carry a number where the region name should be.
+- The 23 duplicates are the 2024 breast screening figures, present in both the raw file and the team file with identical values. The team file's rows were kept because they include invited and attended counts.
+- The 44 fallback values are daily smokers for 2021 and 2023 in all 22 regions. The survey behind this indicator runs every second year, so each value is the average of the two neighbouring surveys. The other two fallback rules were not needed by the current data and are covered by the test.
+- 1,278 values are flagged as outliers and 1,368 as small cells, mostly at municipality level.
+
+### Limits of the prototype
+
+- Region categories are thirds of 22 regions. The split is relative; it does not say a region is disadvantaged in absolute terms.
+- Regional averages are unweighted, so Kainuu counts as much as Helsinki.
+- Smoking is included as regional context and by education level. It is a behavioural factor, unlike the other five.
+- Type B results rest on 22 data points. Treat a rank correlation below about 0.4 in size as no pattern.

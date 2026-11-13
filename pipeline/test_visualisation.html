@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pipeline Test View</title>
+<style>
+:root{
+  color-scheme:light;
+  --page:#f3f6f8; --surface:#fcfcfb; --line:#dfe6ea; --line-strong:#c3ced5; --track:#edf1f3;
+  --text:#0b2341; --text-2:#4a5b6b; --text-3:#6f7f8d;
+  --accent:#047080; --accent-soft:#e2f5f2;
+  --s1:#2a78d6; --s2:#eb6834;
+  --lvl-mid:#cde2fb; --lvl-low:#86b6ef;
+  --neg-1:#f8d5d4; --neg-2:#ee9c9b; --neg-3:#e06261; --pos-1:#cde2fb; --pos-2:#86b6ef; --pos-3:#3987e5; --zero:#f0efec;
+  --note-bg:#fff4d6; --note-line:#e6c25a; --note-text:#5c4300;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --page:#111312; --surface:#1a1a19; --line:#2e3231; --line-strong:#454a49; --track:#262827;
+    --text:#f0efec; --text-2:#c3c2b7; --text-3:#9a9990;
+    --accent:#4fc3c9; --accent-soft:#17302f;
+    --s1:#3987e5; --s2:#d95926;
+    --lvl-mid:#104281; --lvl-low:#1c5cab;
+    --neg-1:#4a2322; --neg-2:#7d302f; --neg-3:#b84140; --pos-1:#0d366b; --pos-2:#184f95; --pos-3:#2a78d6; --zero:#383835;
+    --note-bg:#3a2f0c; --note-line:#7a6420; --note-text:#f6e3a4;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#111312; --surface:#1a1a19; --line:#2e3231; --line-strong:#454a49; --track:#262827;
+  --text:#f0efec; --text-2:#c3c2b7; --text-3:#9a9990;
+  --accent:#4fc3c9; --accent-soft:#17302f;
+  --s1:#3987e5; --s2:#d95926;
+  --lvl-mid:#104281; --lvl-low:#1c5cab;
+  --neg-1:#4a2322; --neg-2:#7d302f; --neg-3:#b84140; --pos-1:#0d366b; --pos-2:#184f95; --pos-3:#2a78d6; --zero:#383835;
+  --note-bg:#3a2f0c; --note-line:#7a6420; --note-text:#f6e3a4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--text);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 48px}
+.banner{background:var(--note-bg);border-bottom:1px solid var(--note-line);color:var(--note-text);padding:8px 16px;text-align:center;font-size:14px;font-weight:600}
+header{padding:22px 0 4px}
+h1{font-size:26px;line-height:1.15;margin:0 0 6px;letter-spacing:-.3px}
+header p{margin:0;color:var(--text-2);max-width:780px}
+h2{font-size:18px;margin:0 0 4px}
+.sub{color:var(--text-3);font-size:13px;margin:0 0 14px;max-width:860px}
+section{margin-top:16px}
+.card,.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.card{padding:18px}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}
+.tile{padding:14px 16px}
+.tile b{display:block;font-size:26px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile span{display:block;font-size:13px;color:var(--text-2);margin-top:4px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.two>*{min-width:0}
+.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.step{border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:12.5px;min-width:0}
+.step b{display:block;font-size:13px;overflow-wrap:anywhere}
+.step i{font-style:normal;color:var(--text-3);font-size:11.5px}
+.step span{display:block;color:var(--text-2);margin-top:3px;line-height:1.3}
+.pair{margin:0 0 16px}
+.pair h3{font-size:14.5px;margin:0 0 2px}
+.pair p{font-size:12.5px;color:var(--text-3);margin:0 0 6px}
+.row{display:grid;grid-template-columns:minmax(110px,190px) 1fr 58px;align-items:center;gap:10px;min-height:26px}
+.row .lab{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .val{font-size:13px;font-variant-numeric:tabular-nums;text-align:right}
+.track{position:relative;height:26px}
+.bartrack{position:absolute;left:0;right:0;top:7px;height:12px;border-radius:4px;background:var(--track)}
+.bar{position:absolute;left:0;top:7px;height:12px;border-radius:0 4px 4px 0;background:var(--s1)}
+.bar.worse{background:var(--s2)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--text-2);margin:0 0 10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--note-bg);color:var(--note-text);border:1px solid var(--note-line);margin-left:6px;vertical-align:1px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:separate;border-spacing:2px;font-size:13px}
+th{font-size:12px;color:var(--text-3);font-weight:600;padding:4px 6px;text-align:center;vertical-align:bottom;line-height:1.25}
+th.l,td.l{text-align:left;white-space:nowrap;padding-left:0;color:var(--text);font-weight:500;font-size:13px}
+td{padding:6px;text-align:center;border-radius:4px;font-variant-numeric:tabular-nums}
+td.m{background:var(--zero)} td.n1{background:var(--neg-1)} td.n2{background:var(--neg-2)} td.n3{background:var(--neg-3)}
+td.p1{background:var(--pos-1)} td.p2{background:var(--pos-2)} td.p3{background:var(--pos-3)}
+td.mid{background:var(--lvl-mid)} td.dis{background:var(--lvl-low);font-weight:700}
+table.plain{border-spacing:0;min-width:560px}
+table.plain th{text-align:left;border-bottom:1px solid var(--line-strong);padding:6px 10px 6px 0}
+table.plain td{text-align:left;border-bottom:1px solid var(--line);border-radius:0;padding:7px 10px 7px 0;vertical-align:top}
+.finding{font-size:14px;margin:12px 0 0;padding:10px 12px;border-radius:10px;background:var(--accent-soft)}
+.tip{position:fixed;z-index:10;pointer-events:none;background:var(--text);color:var(--surface);padding:7px 10px;border-radius:8px;font-size:12.5px;line-height:1.4;max-width:300px;display:none;white-space:pre-line}
+@media (max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="banner">Test view of the data pipeline output. Not the product interface.</div>
+<div class="wrap">
+  <header>
+    <h1>Data pipeline: what came out</h1>
+    <p id="runinfo"></p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section class="card">
+    <h2>The 14 steps</h2>
+    <p class="sub">What each step did in this run.</p>
+    <div class="steps" id="steps"></div>
+  </section>
+
+  <section class="card">
+    <h2>Gaps measured directly between groups <span class="tag">evidence A</span></h2>
+    <p class="sub">The source publishes these figures per group. National values, latest year available.</p>
+    <div class="legend"><span><i style="background:var(--s2)"></i>Worse-off group</span><span><i style="background:var(--s1)"></i>Better-off group</span></div>
+    <div class="two" id="pairs"></div>
+  </section>
+
+  <section class="card">
+    <h2>Patterns between regions <span class="tag">evidence B</span></h2>
+    <p class="sub">Rank correlation across the 22 regions between a region's disadvantage on a factor and its result. Negative: the more disadvantaged the region, the lower the value. For the cancer index a lower value is better; for everything else higher is better. Values between −0.4 and 0.4 are no pattern.</p>
+    <div class="legend">
+      <span><i style="background:var(--neg-3)"></i>−0.6 or below</span><span><i style="background:var(--neg-2)"></i>−0.4 to −0.6</span><span><i style="background:var(--neg-1)"></i>−0.2 to −0.4</span>
+      <span><i style="background:var(--zero)"></i>−0.2 to 0.2</span>
+      <span><i style="background:var(--pos-1)"></i>0.2 to 0.4</span><span><i style="background:var(--pos-2)"></i>0.4 to 0.6</span><span><i style="background:var(--pos-3)"></i>0.6 or above</span>
+    </div>
+    <div class="scroll"><table id="matrix"></table></div>
+    <p class="finding" id="matrixFinding"></p>
+  </section>
+
+  <section class="card">
+    <h2>How each region was categorised</h2>
+    <p class="sub">Per factor the 22 regions are ranked and split into thirds. The number is the region's value on the factor's measure. The split is relative to the other regions.</p>
+    <div class="legend"><span><i style="background:var(--lvl-low)"></i>Disadvantaged third</span><span><i style="background:var(--lvl-mid)"></i>Middle third</span><span><i style="border:1px solid var(--line-strong)"></i>Advantaged third</span></div>
+    <div class="scroll"><table id="regions"></table></div>
+  </section>
+
+  <section class="two">
+    <div class="card">
+      <h2>Fallback values</h2>
+      <p class="sub" id="impSub"></p>
+      <div class="scroll"><table class="plain" id="imputed"></table></div>
+    </div>
+    <div class="card">
+      <h2>Data that no open source provides</h2>
+      <p class="sub">These gaps are never filled by the pipeline.</p>
+      <div class="scroll"><table class="plain" id="gaps"></table></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Barriers documented but not measured <span class="tag">evidence C</span></h2>
+    <div class="scroll"><table class="plain" id="barriers"></table></div>
+  </section>
+</div>
+<div class="tip" id="tip"></div>
+
+<script src="output/pipeline-data.js"></script>
+<script>
+(function(){
+const P=window.PIPELINE;
+if(!P){document.querySelector('.wrap').innerHTML='<p style="padding:24px 0">No pipeline output found. Run <code>python3 pipeline/run_pipeline.py</code> first.</p>';return;}
+const el=(tag,attrs,...kids)=>{const e=document.createElement(tag);
+  for(const k in attrs||{}){if(k==='class')e.className=attrs[k];else if(k==='style')e.style.cssText=attrs[k];else e.setAttribute(k,attrs[k]);}
+  kids.flat().forEach(c=>{if(c!=null)e.append(c);});return e;};
+const int=v=>Number(v).toLocaleString('en-GB');
+const words=s=>String(s).replace(/_/g,' ');
+const cap=s=>{s=words(s);return s[0].toUpperCase()+s.slice(1);};
+const tip=document.getElementById('tip');
+const hover=(node,text)=>{node.addEventListener('mousemove',e=>{tip.textContent=text;tip.style.display='block';
+  tip.style.left=Math.min(e.clientX+14,window.innerWidth-310)+'px';tip.style.top=(e.clientY+16)+'px';});
+  node.addEventListener('mouseleave',()=>tip.style.display='none');};
+const FACTOR={income:'Lower income',employment:'Unemployment',education:'Lower education',language:'Language barrier',
+  smoking:'Smoking',primary_care_access:'Slow primary care access',sex:'Sex'};
+const rec=P.lineage.reconciliation,steps=P.lineage.steps;
+
+/* run info and tiles */
+document.getElementById('runinfo').textContent='Run finished '+P.lineage.run_finished_utc.replace('T',' ').slice(0,16)+' UTC from '+P.lineage.inputs.length+' input files. Analysis year '+P.lineage.analysis_year+'.';
+const tiles=[[int(rec.rows_read),'rows read'],[int(rec.published),'observations published'],[int(rec.filtered_out_of_scope),'out of scope'],
+  [int(rec.duplicates_removed)+' / '+int(rec.quarantined),'duplicates removed / rows quarantined'],[int(rec.of_which_imputed),'fallback values added']];
+document.getElementById('tiles').replaceChildren(...tiles.map(t=>el('div',{class:'tile'},el('b',{},t[0]),el('span',{},t[1]))));
+
+/* steps */
+const first=o=>{const k=Object.keys(o).filter(k=>!k.includes(':'));return k.map(x=>cap(x)+': '+int(o[x])).slice(0,2).join(' · ');};
+document.getElementById('steps').replaceChildren(...Object.entries(steps).map(([name,counts])=>{
+  const node=el('div',{class:'step'},el('i',{},'Step '+Number(name.slice(0,2))),el('b',{},words(name.slice(3))),el('span',{},first(counts)||'–'));
+  hover(node,Object.entries(counts).map(([k,v])=>k+': '+int(v)).join('\n'));return node;}));
+
+/* evidence A: latest national comparison per factor and indicator */
+const A={};
+P.equity_gaps.filter(g=>g.evidence_type==='A'&&g.region==='Finland').forEach(g=>{const k=g.factor+'|'+g.indicator_key;if(!A[k]||g.year>A[k].year)A[k]=g;});
+const unit=g=>g.unit==='percent'?' %':'';
+document.getElementById('pairs').replaceChildren(...Object.values(A).sort((a,b)=>b.gap-a.gap).map(g=>{
+  const bar=(label,value,cls)=>el('div',{class:'row'},el('div',{class:'lab',title:words(label)},cap(label)),
+    el('div',{class:'track'},el('div',{class:'bartrack'}),el('div',{class:'bar '+cls,style:'width:'+Math.min(value,100)+'%'})),
+    el('div',{class:'val'},Number(value).toFixed(1)+unit(g)));
+  const extra=g.potential_additional!==''?' · '+int(g.people_in_worse_group)+' people in the worse-off group; '+int(g.potential_additional)+' more would take part at the level of the best group':'';
+  const node=el('div',{class:'pair'},el('h3',{},(FACTOR[g.factor]||cap(g.factor))+': '+g.indicator_name+' '+g.year,g.status!=='observed'?el('span',{class:'tag'},g.status):null),
+    el('p',{},'Gap '+Number(g.gap).toFixed(1)+' points'+extra),bar(g.worse_group,g.worse_value,'worse'),bar(g.better_group,g.better_value,''));
+  hover(node,g.note+'\nSource: '+g.source_url);return node;}));
+
+/* evidence B: factor x outcome matrix */
+const B=P.equity_gaps.filter(g=>g.evidence_type==='B');
+const factors=[...new Set(B.map(g=>g.factor))],outcomes=[...new Set(B.map(g=>g.indicator_key))];
+const cls=r=>{const a=Math.abs(r);if(a<0.2)return 'm';const s=a<0.4?1:a<0.6?2:3;return (r<0?'n':'p')+s;};
+document.getElementById('matrix').replaceChildren(
+  el('tr',{},el('th',{class:'l'},''),factors.map(f=>el('th',{},FACTOR[f]||cap(f)))),
+  ...outcomes.map(o=>{const any=B.find(g=>g.indicator_key===o);
+    return el('tr',{},el('td',{class:'l'},any.indicator_name.replace(' (Finland = 100)','')+' '+any.year),factors.map(f=>{
+      const g=B.find(x=>x.indicator_key===o&&x.factor===f);if(!g)return el('td',{},'–');
+      const td=el('td',{class:cls(Number(g.spearman_rho))},Number(g.spearman_rho).toFixed(2));
+      hover(td,(FACTOR[f]||f)+' · '+g.indicator_name+'\nDisadvantaged third: '+g.worse_value+'\nAdvantaged third: '+g.better_value+'\nDifference: '+g.gap+'\nRank correlation: '+g.spearman_rho+' ('+g.n_regions+' regions)');
+      return td;}));}));
+const strong=B.filter(g=>Math.abs(g.spearman_rho)>=0.4).sort((a,b)=>Math.abs(b.spearman_rho)-Math.abs(a.spearman_rho));
+document.getElementById('matrixFinding').textContent=strong.length+' of '+B.length+' combinations reach 0.4 in size. Strongest: '+
+  strong.slice(0,3).map(g=>(FACTOR[g.factor]||g.factor).toLowerCase()+' and '+g.indicator_name.toLowerCase()+' ('+g.spearman_rho+')').join('; ')+'.';
+
+/* region categories */
+const L=P.region_factor_levels,rf=[...new Set(L.map(r=>r.factor))],regs=[...new Set(L.map(r=>r.region_name))].sort();
+const count=n=>L.filter(r=>r.region_name===n&&r.factor_level==='disadvantaged').length;
+regs.sort((a,b)=>count(b)-count(a)||a.localeCompare(b));
+document.getElementById('regions').replaceChildren(
+  el('tr',{},el('th',{class:'l'},'Region'),rf.map(f=>el('th',{},FACTOR[f]||cap(f))),el('th',{},'Factors in disadvantaged third')),
+  ...regs.map(n=>el('tr',{},el('td',{class:'l'},n),rf.map(f=>{const r=L.find(x=>x.region_name===n&&x.factor===f);
+    const td=el('td',{class:r.factor_level==='disadvantaged'?'dis':r.factor_level==='middle'?'mid':''},Number(r.context_value).toFixed(1));
+    hover(td,n+'\n'+words(r.context_indicator)+': '+r.context_value+' ('+r.context_year+')\nCategory: '+r.factor_level);return td;}),
+    el('td',{},String(count(n))))));
+
+/* fallback values */
+const methods={};P.imputed.forEach(i=>methods[i.imputation_method]=(methods[i.imputation_method]||0)+1);
+document.getElementById('impSub').textContent=P.imputed.length+' missing region-year cells received a labelled fallback value ('+
+  Object.entries(methods).map(([m,n])=>n+' by '+words(m)).join(', ')+'). They are not used in the gap figures above. First six shown.';
+document.getElementById('imputed').replaceChildren(el('tr',{},['Indicator','Region','Year','Fallback','Built from'].map(h=>el('th',{},h))),
+  ...P.imputed.slice(0,6).map(i=>el('tr',{},el('td',{},i.indicator_name),el('td',{},i.region_name),el('td',{},String(i.year)),el('td',{},String(i.value)),el('td',{},i.imputation_basis))));
+
+/* data gaps and documented barriers */
+document.getElementById('gaps').replaceChildren(el('tr',{},['Pathway stage','Missing'].map(h=>el('th',{},h))),
+  ...P.data_gaps.filter(g=>g.gap_type==='no_open_data').map(g=>el('tr',{},el('td',{},cap(g.pathway_stage)),el('td',{},g.description.split('. ')[0]))));
+document.getElementById('barriers').replaceChildren(el('tr',{},['Factor','Pathway stage','Barrier','Source'].map(h=>el('th',{},h))),
+  ...P.equity_gaps.filter(g=>g.evidence_type==='C').map(g=>el('tr',{},el('td',{},cap(g.factor)),el('td',{},cap(g.pathway_stage)),el('td',{},g.note),el('td',{},g.source_url))));
+})();
+</script>
+</body>
+</html>
