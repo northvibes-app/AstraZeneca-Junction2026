@@ -72,7 +72,12 @@ def publish(ctx, started):
         for r in res["analysis"]
         if r["kind"] in ("outcome", "context") and r["factor"] == "" and r["status"] != "imputed"
         and r["year"] == latest.get(r["indicator_key"])]
-    bundle = {"lineage": lineage, "region_facts": region_facts, "equity_gaps": res["equity_gaps"],
+    indicator_sources = {}
+    for r in res["analysis"]:
+        if r["source_url"] and r["sex"] == "total" and r["factor"] == "":
+            indicator_sources.setdefault(r["indicator_key"], r["source_url"])
+    bundle = {"lineage": lineage, "region_facts": region_facts,
+              "indicator_sources": indicator_sources, "equity_gaps": res["equity_gaps"],
               "region_factor_levels": res["region_factor_levels"],
               "data_gaps": res["data_gaps"], "quarantine": ctx.quarantine,
               "imputed": [{k: r[k] for k in ("indicator_name", "region_name", "year", "value",

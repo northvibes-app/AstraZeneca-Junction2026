@@ -70,6 +70,9 @@ ul.notes li{position:relative;padding:8px 0 8px 22px;border-bottom:1px solid var
 ul.notes li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
 .fact{display:grid;grid-template-columns:minmax(120px,1.25fr) minmax(90px,1.4fr) 70px 96px;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 .fact .name small{display:block;color:var(--text-3);font-size:12px}
+a.srcl{display:inline-block;font-size:11.5px;font-weight:600;color:var(--text-3);text-decoration:none;border-bottom:1px solid var(--card-line);margin-top:2px}
+a.srcl:hover,a.srcl:focus-visible{color:var(--accent);border-color:var(--accent)}
+a.srcl:focus-visible{outline:2px solid var(--text);outline-offset:2px}
 .fact .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;font-size:15px}
 .fact .rank{text-align:right;color:var(--text-3);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .fact .rank.low{color:var(--accent);font-weight:700}
@@ -138,6 +141,12 @@ const SHORT={screening_participation_breast:'Breast screening',screening_partici
 const SCREENING=['screening_participation_breast','screening_participation_colorectal','screening_participation_cervical'];
 const fmt=(v,unit)=>unit==='percent'?Number(v).toFixed(1)+' %':unit==='per_1000'?Number(v).toFixed(0)+' per 1,000':Number(v).toFixed(1);
 const ordinal=n=>n===2?'Second-':n===3?'Third-':'';
+// Small link to the page a figure comes from, named after the publisher.
+function sourceLink(url){
+  if(!url)return null;
+  const id=(url.match(/indicators\/(\d+)/)||[])[1];
+  const name=id?'Sotkanet indicator '+id:url.includes('cancerregistry')?'Finnish Cancer Registry':'Source';
+  return el('a',{class:'srcl',href:url,target:'_blank',rel:'noopener','aria-label':'Source: '+name+' (opens in a new tab)'},name+' ↗');}
 const label=k=>(SHORT[k]+(k.startsWith('survival')?' five-year survival':k.startsWith('screening')?' participation':'')).toLowerCase();
 
 /* ---------- data lookups ---------- */
@@ -211,6 +220,8 @@ function factRow(code,key,opts){
     if(opts&&opts.target)track.append(el('div',{class:'target',style:'left:'+TARGET+'%'}));}
   const name=el('div',{class:'name'},SHORT[key]||f.indicator_name);
   if(opts&&opts.sub)name.append(el('small',{},opts.sub));
+  if(!(opts&&opts.sub))name.append(el('br'));   // a sub-line is a block and already ends the line
+  const link=sourceLink(f.source_url);if(link)name.append(link);
   const rk=isRegion?rank(code,key):null;
   return el('div',{class:'fact'},name,track,el('div',{class:'num'},fmt(f.value,f.unit)),
     el('div',{class:'rank'+(rk&&rk.pos>rk.of-3?' low':'')},isRegion?'rank '+rk.pos+' of '+rk.of:''));}
@@ -268,7 +279,7 @@ function renderPanel(code){
     Object.keys(FACTOR).forEach(f=>{const r=levels[code][f];if(!r)return;
       const all=counties.map(x=>Number(levels[x][f].context_value));
       const unit=r.context_indicator==='other_language_per_1000'?'per_1000':r.context_indicator==='education_level_index'?'index':'percent';
-      kids.push(el('div',{class:'factor'},el('div',{},FACTOR[f],el('br'),el('small',{},MEASURE[r.context_indicator]+' '+r.context_year)),
+      kids.push(el('div',{class:'factor'},el('div',{},FACTOR[f],el('br'),el('small',{},MEASURE[r.context_indicator]+' '+r.context_year),el('br'),sourceLink(P.indicator_sources[r.context_indicator])),
         el('div',{class:'num'},fmt(r.context_value,unit)),el('div',{class:'med'},'median of regions '+fmt(median(all),unit)),
         el('div',{class:'c'},el('span',{class:'chip '+r.factor_level},r.factor_level))));});
   }

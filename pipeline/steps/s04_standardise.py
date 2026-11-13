@@ -96,6 +96,12 @@ def standardise(ctx, rows):
         if extra.get("group") in GROUPS:
             factor, level = GROUPS[extra["group"]]
 
+        # The raw files only carry the address of the Sotkanet home page. The indicator
+        # id lets us link each figure to the page that defines exactly that indicator.
+        source_url = row["source_url"]
+        if row["source"] == "Sotkanet" and extra.get("indicator_id"):
+            source_url = f"https://sotkanet.fi/sotkanet/en/metadata/indicators/{extra['indicator_id']}"
+
         def number(key):
             v = extra.get(key)
             try:
@@ -121,7 +127,7 @@ def standardise(ctx, rows):
             "numerator": number("attended_n") if "attended_n" in extra else number("n"),
             "denominator": number("invited_n"),
             "status": intern(extra.get("status") or "observed"), "flags": "",
-            "source": intern(row["source"]), "source_url": intern(row["source_url"]),
+            "source": intern(row["source"]), "source_url": intern(source_url),
             "source_file": intern(row["_file"]), "source_row": row["_row"], "also_in": "",
             "imputation_method": "", "imputation_basis": "",
         }
