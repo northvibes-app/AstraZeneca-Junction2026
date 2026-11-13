@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Equal Care Navigator Across Finland — Wireframe</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#0b2341;background:#eef6fa;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100dvh}.app{width:100%;max-width:440px;min-height:100dvh;margin:auto;background:#fff;box-shadow:0 0 30px #24547516;display:flex;flex-direction:column}.screen{display:none;flex:1;flex-direction:column;min-height:100dvh}.screen.active{display:flex}.status{display:flex;justify-content:space-between;padding:11px 22px 6px;font-size:12px;font-weight:bold}.topbar{display:flex;align-items:center;justify-content:center;height:55px;padding:0 17px;border-bottom:1px solid #e5edf2;position:relative;text-align:center;font-size:17px;font-weight:750}.topbar button{position:absolute;left:12px;top:7px;width:44px;height:44px;font-size:27px;border:0;background:transparent;color:#143b61}.content{padding:22px 20px 25px;flex:1}h1{font-size:31px;line-height:1.1;letter-spacing:-.9px;margin:4px 0 14px}h2{font-size:26px;line-height:1.13;margin:8px 0 12px}p{font-size:17px;line-height:1.4;margin:0 0 20px}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #026e93;outline-offset:3px}.btn{width:100%;min-height:55px;padding:12px 15px;border-radius:10px;border:1px solid #aed4e5;background:#fff;color:#0b2341;font-size:18px;font-weight:700;text-align:center}.btn.primary{background:linear-gradient(105deg,#178c9c,#047080);color:white;border-color:#047080}.btn+.btn{margin-top:12px}.buttonline{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left}.buttonline .left{display:flex;align-items:center;gap:13px}.iconbox{width:46px;height:46px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:#e2f5f2;color:#007d79;font-size:25px;flex:none}.iconbox.blue{background:#e9f6fc;color:#047ba6}.menu{display:grid;gap:12px;margin-top:24px}.menu .btn{min-height:74px;padding:10px 12px}.menu .btn .left{font-size:19px}.arrow{color:#1685ad;font-size:25px}.logo{display:flex;align-items:center;gap:11px;padding:12px 18px;font-weight:800;font-size:15px;line-height:1.15}.cross{position:relative;width:37px;height:39px;flex:none}.cross:before,.cross:after{content:"";position:absolute;border-radius:5px;background:linear-gradient(145deg,#50d0cc,#0878a8)}.cross:before{width:15px;height:39px;left:11px}.cross:after{height:15px;width:37px;top:12px}.landscape{height:148px;position:relative;overflow:hidden;background:linear-gradient(#e1f4fc,#effbfd 72%,#a4dfe2 73%,#dbf2f4);margin-top:4px}.landscape:before{content:"";position:absolute;width:150%;height:90px;left:-20%;bottom:10px;background:#b4dbe3;border-radius:50% 50% 0 0}.landscape:after{content:"♠  ♠     ♠      ♠";position:absolute;bottom:16px;left:3%;width:94%;color:#398f91;font-size:54px;letter-spacing:12px;opacity:.7}.welcome .content{padding-top:24px}.welcome p{margin-bottom:17px}.welcome .btn{margin-bottom:10px}.welcome .primary{margin-top:11px}.privacy{font-size:13px;line-height:1.35;display:flex;gap:9px;margin:15px 4px;color:#1a4468}.nav{display:flex;min-height:65px;align-items:center;justify-content:space-around;border-top:1px solid #e5edf2;margin-top:auto;background:white}.nav button{display:grid;place-items:center;gap:4px;border:0;background:transparent;color:#244a67;font-size:12px;min-width:74px;padding:7px}.nav .symbol{font-size:23px}.nav button.selected{color:#00858d;font-weight:800}.step{text-align:center;font-size:15px;margin:4px 0 13px}.dots{display:flex;justify-content:center;gap:13px}.dots i{width:13px;height:13px;background:#d9eaf3;border-radius:50%}.dots i:first-child{background:#08a79e}.heroicon{margin:25px auto 18px;width:83px;height:83px;border-radius:50%;background:#e8f9fa;display:flex;align-items:center;justify-content:center;font-size:44px;color:#008e9f}.screening h2{text-align:center;margin-bottom:25px}.screening .btn{margin-bottom:0}.hint{margin:18px 0;background:#f0f7fa;padding:12px;border-radius:10px;font-size:14px;display:flex;gap:10px}.success{font-size:31px;background:#d7f5e6;color:#067c69;width:53px;height:53px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:10px}.steps{display:grid;gap:10px}.stepitem{padding:11px 9px;border:1px solid #dfe9ee;border-radius:11px;display:flex;align-items:center;gap:12px;font-weight:bold;font-size:16px}.number{display:flex;align-items:center;justify-content:center;border-radius:50%;background:#c7f2df;color:#00796f;font-size:22px;font-weight:bold;width:36px;height:36px;flex:none}.support{padding:15px;background:#e8f8ef;border-radius:15px;margin-top:23px}.support h3{font-size:19px;margin:0 0 14px}.support .btn{font-size:16px}.decision .content{padding-top:20px}.decision h1{font-size:29px}.decision p{font-size:16px}.metric{min-height:100px;border:1px solid #dfe8ee;border-radius:12px;margin:10px 0;padding:15px;display:flex;align-items:center;justify-content:space-between;font-size:17px;font-weight:800}.donut{width:69px;height:69px;border-radius:50%;background:conic-gradient(#0c9fba 0 78%,#d0edf1 78%);display:grid;place-items:center}.donut:before{content:"78%";background:white;border-radius:50%;width:51px;height:51px;display:grid;place-items:center;font-size:15px}.bars{display:flex;align-items:flex-end;height:53px;gap:7px}.bars b{width:13px;background:#56d3c9;border-radius:3px 3px 0 0}.bars b:nth-child(1){height:22%}.bars b:nth-child(2){height:38%}.bars b:nth-child(3){height:56%}.bars b:nth-child(4){height:75%}.bars b:nth-child(5){height:95%}.finland{font-size:45px;color:#008d9a}.insight{background:#e7f6fc;padding:15px;border-radius:12px;display:flex;align-items:center;gap:12px;font-weight:bold;margin:19px 0 12px}.rec h1{font-size:30px}.rec-card{display:flex;gap:13px;align-items:flex-start;border:1px solid #e0e9ec;padding:13px 10px;border-radius:12px;margin:12px 0}.rec-card h3{margin:2px 0 7px;font-size:18px}.rec-card p{font-size:15px;margin:0}.rec-card ul{font-size:15px;padding-left:18px;margin:6px 0;line-height:1.35}.rec-card li+li{margin-top:8px}.badge{padding:13px;background:#e2f8ee;border-radius:12px;text-align:center;font-size:15px;font-weight:bold;margin-top:14px}@media(min-width:600px){body{padding:26px 0}.app,.screen{min-height:820px}.app{border-radius:28px;overflow:hidden;border:6px solid #dce6ea}.screen{min-height:810px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <section class="screen welcome active" id="entry">
+    <div class="status"><span>9:41</span><span>▂▃▅  Wi-Fi  ▰</span></div>
+    <div class="logo"><span class="cross"></span><span>Equal Care Navigator<br>Across Finland</span></div>
+    <div class="landscape" aria-hidden="true"></div>
+    <div class="content">
+      <h1>Welcome to<br>Equal Care<br>Navigator</h1><p>Choose the path that fits you.</p>
+      <button class="btn buttonline" data-to="citizens"><span class="left"><span class="iconbox blue">♟</span>Citizens</span><span class="arrow">›</span></button>
+      <button class="btn buttonline" data-to="decision"><span class="left"><span class="iconbox">✚</span>Decision-Makers</span><span class="arrow">›</span></button>
+      <button class="btn primary" data-to="citizens">Start →</button>
+      <div class="privacy"><span>🔒</span><span>Your data is private. We use trusted public data from Finnish sources.</span></div>
+    </div>
+  </section>
+  <section class="screen" id="citizens">
+    <div class="status"><span>9:41</span><span>▂▃▅  Wi-Fi  ▰</span></div><div class="topbar"><button data-to="entry" aria-label="Back">‹</button>Citizens</div>
+    <div class="content"><h1>Citizens</h1><p>Simple guidance for<br>your next step.</p>
+      <div class="menu">
+      <button class="btn buttonline" data-to="screening"><span class="left"><span class="iconbox">♧</span>Prevention</span><span class="arrow">›</span></button>
+      <button class="btn buttonline" data-to="screening"><span class="left"><span class="iconbox blue">▦</span>Screening</span><span class="arrow">›</span></button>
+      <button class="btn buttonline" data-to="care"><span class="left"><span class="iconbox">♡</span>Care Navigation</span><span class="arrow">›</span></button>
+      <button class="btn buttonline" data-to="care"><span class="left"><span class="iconbox blue">♧</span>Support</span><span class="arrow">›</span></button>
+      </div></div>
+    <nav class="nav"><button data-to="citizens" class="selected"><span class="symbol">⌂</span>Home</button><button data-to="screening"><span class="symbol">▤</span>Guide</button><button data-to="entry"><span class="symbol">♙</span>Profile</button></nav>
+  </section>
+  <section class="screen screening" id="screening">
+    <div class="status"><span>9:41</span><span>▂▃▅  Wi-Fi  ▰</span></div><div class="topbar"><button data-to="citizens" aria-label="Back">‹</button>Screening</div>
+    <div class="content"><div class="step">Step 1 of 4</div><div class="dots"><i></i><i></i><i></i><i></i></div><div class="heroicon">☷</div>
+      <h2>Would you like help finding the right screening information?</h2>
+      <button class="btn primary" data-to="care">✓ &nbsp; Yes, guide me →</button><button class="btn" data-to="care">I already know</button>
+      <div class="hint"><span>ⓘ</span>We will ask only a few simple questions.</div>
+    </div>
+    <nav class="nav"><button data-to="citizens" class="selected"><span class="symbol">⌂</span>Home</button><button data-to="screening"><span class="symbol">▤</span>Guide</button><button data-to="entry"><span class="symbol">♙</span>Profile</button></nav>
+  </section>
+  <section class="screen" id="care">
+    <div class="status"><span>9:41</span><span>▂▃▅  Wi-Fi  ▰</span></div><div class="topbar"><button data-to="citizens" aria-label="Back">‹</button>Care Navigation</div>
+    <div class="content"><span class="success">✓</span><h1>Your next steps</h1>
+      <div class="steps"><div class="stepitem"><span class="number">1</span>Contact primary care</div><div class="stepitem"><span class="number">2</span>Ask about referral</div><div class="stepitem"><span class="number">3</span>Prepare documents</div><div class="stepitem"><span class="number">4</span>Follow treatment guidance</div></div>
+      <div class="support"><h3>☏ &nbsp; Need help understanding the process?</h3><button class="btn primary" data-to="screening">Get easy guidance →</button></div>
+    </div><nav class="nav"><button data-to="citizens" class="selected"><span class="symbol">⌂</span>Home</button><button data-to="screening"><span class="symbol">▤</span>Guide</button><button data-to="entry"><span class="symbol">♙</span>Profile</button></nav>
+  </section>
+  <section class="screen decision" id="decision">
+    <div class="status"><span>9:41</span><span>▂▃▅  Wi-Fi  ▰</span></div><div class="topbar"><button data-to="entry" aria-label="Back">‹</button>Decision-Makers</div>
+    <div class="content"><h1>Decision-Makers</h1><p>Key insights for more equitable care across Finland.</p>
+      <div class="metric"><span>Screening<br>Coverage</span><span class="donut" aria-label="78 percent"></span></div>
+      <div class="metric"><span>Access<br>Delays</span><span class="bars"><b></b><b></b><b></b><b></b><b></b></span></div>
+      <div class="metric"><span>Regional<br>Equity</span><span class="finland">◈</span></div>
+      <div class="insight"><span style="font-size:27px;color:#009e9b">✧</span>AI detected a possible screening gap in two regions.</div>
+      <button class="btn primary" data-to="recommendations">View recommendations →</button>
+    </div><nav class="nav"><button data-to="decision" class="selected"><span class="symbol">⌂</span>Home</button><button data-to="recommendations"><span class="symbol">▥</span>Insights</button><button data-to="entry"><span class="symbol">♙</span>Profile</button></nav>
+  </section>
+  <section class="screen rec" id="recommendations">
+    <div class="status"><span>9:41</span><span>▂▃▅  Wi-Fi  ▰</span></div><div class="topbar"><button data-to="decision" aria-label="Back">‹</button>Recommended Actions</div>
+    <div class="content"><h1>Recommended<br>Actions</h1>
+      <div class="rec-card"><span class="iconbox">⌕</span><div><h3>Detected gap</h3><p>Lower screening coverage than the national average.</p></div></div>
+      <div class="rec-card"><span class="iconbox">♧</span><div><h3>Where it occurs</h3><p>Two regions in Finland.</p></div></div>
+      <div class="rec-card"><span class="iconbox blue">▦</span><div><h3>What to do next</h3><ul><li>Organise mobile screening outreach.</li><li>Make referrals clearer and easier to use.</li><li>Provide information in multiple languages.</li></ul></div></div>
+      <button class="btn" data-to="decision">▤ &nbsp; View evidence</button><div class="badge">♧ &nbsp; Human oversight required</div>
+    </div>
+  </section>
+</div>
+<script>
+const screens=[...document.querySelectorAll('.screen')];
+function show(id){const el=document.getElementById(id);if(!el)return;screens.forEach(s=>s.classList.toggle('active',s===el));window.scrollTo(0,0);history.replaceState(null,'','#'+id)}
+document.addEventListener('click',event=>{const b=event.target.closest('[data-to]');if(b)show(b.dataset.to)});
+const initial=decodeURIComponent(location.hash.slice(1));if(initial&&document.getElementById(initial))show(initial);
+</script>
+</body>
+</html>
