@@ -1,0 +1,70 @@
+year,region,sex,attended_n,participation_percent,source_url
+2024,Finland,total,309871,73.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Finland,male,141922,69.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Finland,female,167949,77.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Finland,total,16219,76.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Finland,male,7530,71.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Finland,female,8689,81.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Ostrobothnia,total,3612,73.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Ostrobothnia,male,1686,68.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Ostrobothnia,female,1926,78.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Uusimaa,total,11236,74.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Uusimaa,male,5219,70.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Central Uusimaa,female,6017,77.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,City of Helsinki,total,29226,69.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,City of Helsinki,male,12604,65.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,City of Helsinki,female,16622,73.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,East Uusimaa,total,5679,72.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,East Uusimaa,male,2651,67.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,East Uusimaa,female,3028,76.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kainuu,total,5362,76.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kainuu,male,2552,72.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kainuu,female,2810,81.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kanta-Häme,total,10705,74.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kanta-Häme,male,4939,69.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kanta-Häme,female,5766,78.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kymenlaakso,total,10098,70.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kymenlaakso,male,4618,65.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Kymenlaakso,female,5480,74.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Lapland,total,11925,73.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Lapland,male,5616,68.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Lapland,female,6309,78.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Karelia,total,10833,73.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Karelia,male,5006,68.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Karelia,female,5827,78.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Ostrobothnia,total,22423,75.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Ostrobothnia,male,10507,71.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Ostrobothnia,female,11916,80.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Savo,total,16465,75.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Savo,male,7664,70.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,North Savo,female,8801,79.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Ostrobothnia,total,9334,75.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Ostrobothnia,male,4458,72.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Ostrobothnia,female,4876,79.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Pirkanmaa,total,28058,74.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Pirkanmaa,male,12740,70.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Pirkanmaa,female,15318,78.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Päijät-Häme,total,12996,75.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Päijät-Häme,male,5833,70.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Päijät-Häme,female,7163,80.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Satakunta,total,13115,72.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Satakunta,male,6035,67.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Satakunta,female,7080,77.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Karelia,total,8241,74.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Karelia,male,3768,69.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Karelia,female,4473,78.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Ostrobothnia,total,11899,74.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Ostrobothnia,male,5518,70.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Ostrobothnia,female,6381,79.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Savo,total,10093,76.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Savo,male,4799,72.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,South Savo,female,5294,81.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Southwest Finland,total,26943,73.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Southwest Finland,male,12099,68.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Southwest Finland,female,14844,77.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Vantaa and Kerava,total,12433,71.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Vantaa and Kerava,male,5556,67.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,Vantaa and Kerava,female,6877,74.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,West Uusimaa,total,22976,71.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,West Uusimaa,male,10524,67.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103
+2024,West Uusimaa,female,12452,74.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6103

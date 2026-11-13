@@ -11,6 +11,12 @@ This folder contains **verified, source-linked public statistics** and official 
 | [national_key_statistics.csv](national_key_statistics.csv) | Observed national counts, screening indicators, strategy targets and projections with clear status labels |
 | [breast_screening_by_region_2024.csv](breast_screening_by_region_2024.csv) | Real 2024 regional invitations, attendance and participation for 22 regions plus national total |
 | [cervical_screening_equity_2025_preliminary.csv](cervical_screening_equity_2025_preliminary.csv) | Preliminary 2025 cervical-screening participation by education and native-language category |
+| [colorectal_screening_by_region_2024.csv](colorectal_screening_by_region_2024.csv) | Real 2024 colorectal-screening participation for 22 regions plus national total, for men, women and both (Sotkanet 6103) |
+| [cervical_screening_by_region_2024.csv](cervical_screening_by_region_2024.csv) | Real 2024 cervical-screening participation for 22 regions plus national total (Sotkanet 3620) |
+| [screening_participation_national_trend.csv](screening_participation_national_trend.csv) | National participation 2021–2024 for the three programmes (colorectal from 2022) |
+| [region_context_2024.csv](region_context_2024.csv) | Regional context 2024: low-income rate, education level index, other native language per 1,000, primary care doctor wait over 7 days |
+| [fetch_sotkanet.py](fetch_sotkanet.py) | Downloads the four Sotkanet-based files above from the open THL API |
+| [build_overview_data.py](build_overview_data.py) | Bundles all CSVs into `overview-data.js` for `statistics-overview.html` in the repository root |
 | [EQUITY_GAPS.md](EQUITY_GAPS.md) | Evidence-supported gap statements, analytical cautions, and potential interventions |
 | [DATA_SOURCES.md](DATA_SOURCES.md) | Official portals, licensing/access notes and remaining extraction work |
 

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cancer Statistics Finland – Overview</title>
+<style>
+:root{
+  color-scheme:light;
+  --page:#f3f6f8; --surface:#fcfcfb; --line:#dfe6ea; --line-strong:#c3ced5; --track:#edf1f3;
+  --text:#0b2341; --text-2:#4a5b6b; --text-3:#6f7f8d;
+  --accent:#047080; --accent-soft:#e2f5f2;
+  --s1:#2a78d6; --s2:#eb6834; --neutral:#8a97a3;
+  --note-bg:#fff4d6; --note-line:#e6c25a; --note-text:#5c4300;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --page:#111312; --surface:#1a1a19; --line:#2e3231; --line-strong:#454a49; --track:#262827;
+    --text:#f0efec; --text-2:#c3c2b7; --text-3:#9a9990;
+    --accent:#4fc3c9; --accent-soft:#17302f;
+    --s1:#3987e5; --s2:#d95926; --neutral:#8b8f8d;
+    --note-bg:#3a2f0c; --note-line:#7a6420; --note-text:#f6e3a4;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#111312; --surface:#1a1a19; --line:#2e3231; --line-strong:#454a49; --track:#262827;
+  --text:#f0efec; --text-2:#c3c2b7; --text-3:#9a9990;
+  --accent:#4fc3c9; --accent-soft:#17302f;
+  --s1:#3987e5; --s2:#d95926; --neutral:#8b8f8d;
+  --note-bg:#3a2f0c; --note-line:#7a6420; --note-text:#f6e3a4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--text);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 48px}
+header{padding:24px 0 6px}
+h1{font-size:26px;line-height:1.15;margin:0 0 6px;letter-spacing:-.3px}
+header p{margin:0;color:var(--text-2);max-width:760px}
+h2{font-size:18px;margin:0 0 4px}
+.sub{color:var(--text-3);font-size:13px;margin:0 0 14px;max-width:820px}
+a{color:var(--accent)}
+section{margin-top:16px}
+.card,.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.card{padding:18px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.tile{padding:14px 16px}
+.tile b{display:block;font-size:28px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile span{display:block;font-size:13px;color:var(--text-2);margin-top:4px}
+.tile small{display:block;font-size:12px;color:var(--text-3);margin-top:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.seg{border:1px solid var(--line-strong);background:var(--surface);color:var(--text);padding:8px 14px;border-radius:8px;font:inherit;font-weight:600;cursor:pointer;min-height:40px}
+.seg[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+
+/* meters and bars share one row layout: label | track | value */
+.row{display:grid;grid-template-columns:minmax(120px,210px) 1fr 62px;align-items:center;gap:10px;min-height:28px}
+.row .lab{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .lab small{color:var(--text-3);font-size:12px}
+.row .val{font-size:13.5px;font-variant-numeric:tabular-nums;text-align:right}
+.track{position:relative;height:28px}
+.bar{position:absolute;left:0;top:8px;height:12px;border-radius:0 4px 4px 0;background:var(--s1)}
+.bartrack{position:absolute;left:0;right:0;top:8px;height:12px;border-radius:4px;background:var(--track)}
+.target{position:absolute;top:0;bottom:0;width:0;border-left:2px dashed var(--text-2)}
+.natl{position:absolute;top:4px;bottom:4px;width:0;border-left:2px solid var(--neutral)}
+.rail{position:absolute;left:0;right:0;top:13.5px;height:1px;background:var(--line)}
+.link{position:absolute;top:12.5px;height:3px;background:var(--line-strong);border-radius:2px}
+.dot{position:absolute;top:8px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--s1);box-shadow:0 0 0 2px var(--surface)}
+.dot.f{background:var(--s2)}
+.rows .row:hover .lab{color:var(--accent);font-weight:600}
+.axis{position:relative;height:20px;font-size:11.5px;color:var(--text-3)}
+.axis span{position:absolute;transform:translateX(-50%);top:4px;white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--text-2);margin-bottom:8px}
+.legend i{display:inline-block;vertical-align:-1px;margin-right:6px}
+.legend .d{width:10px;height:10px;border-radius:50%;background:var(--s1)}
+.legend .d.f{background:var(--s2)}
+.legend .t{height:12px;border-left:2px dashed var(--text-2)}
+.legend .n{height:12px;border-left:2px solid var(--neutral)}
+.grp{font-size:12px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.4px;margin:12px 0 2px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--note-bg);color:var(--note-text);border:1px solid var(--note-line);margin-left:6px;vertical-align:2px}
+.finding{font-size:14px;margin:12px 0 0;padding:10px 12px;border-radius:10px;background:var(--accent-soft)}
+.tip{position:fixed;z-index:10;pointer-events:none;background:var(--text);color:var(--surface);padding:7px 10px;border-radius:8px;font-size:12.5px;line-height:1.4;max-width:280px;display:none;white-space:pre-line}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px}
+th{font-size:12px;text-align:right;color:var(--text-3);font-weight:600;padding:6px 0 6px 12px;border-bottom:1px solid var(--line-strong);vertical-align:bottom;cursor:pointer;user-select:none}
+th:first-child,td:first-child{text-align:left;padding-left:0;white-space:nowrap}
+td{padding:7px 0 7px 12px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+td.low{font-weight:700}
+tr.natl-row td{border-bottom:1px solid var(--line-strong);font-weight:600}
+ul.plain{margin:0;padding-left:18px}
+ul.plain li{margin:5px 0}
+.src{font-size:13px;columns:2;column-gap:28px}
+.src li{break-inside:avoid;overflow-wrap:anywhere}
+@media (max-width:860px){.tiles{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.src{columns:1}}
+@media (max-width:520px){.row{grid-template-columns:118px 1fr 48px;gap:8px}.row .lab{font-size:12.5px}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Cancer statistics in Finland: what the public data shows</h1>
+    <p>Published aggregate figures only. Every number comes from the files in the <code>Statistics</code> folder and is listed with its source at the end.</p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section class="card">
+    <h2>Screening participation against the 80 % target</h2>
+    <p class="sub">The National Cancer Strategy sets 80 % participation in every programme and every region by 2035. National participation, 2024.</p>
+    <div id="meters"></div>
+  </section>
+
+  <section class="card">
+    <h2>Participation by region, 2024</h2>
+    <p class="sub">22 regions: the 21 wellbeing services counties and the City of Helsinki. Sorted from lowest to highest.</p>
+    <div class="filters" id="progFilter"></div>
+    <div class="legend" id="regLegend"></div>
+    <div class="rows" id="regRows"></div>
+    <p class="finding" id="regFinding"></p>
+  </section>
+
+  <section class="two">
+    <div class="card">
+      <h2>Cervical screening by education <span class="tag">preliminary 2025</span></h2>
+      <p class="sub">National figures. “Primary” includes people whose education is unknown.</p>
+      <div id="eduRows"></div>
+    </div>
+    <div class="card">
+      <h2>Cervical screening by native language <span class="tag">preliminary 2025</span></h2>
+      <p class="sub">National figures. “Other” includes people whose language is not recorded.</p>
+      <div id="langRows"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>All regions in one table</h2>
+    <p class="sub">Screening participation in percent, with regional context from Statistics Finland and THL. Bold marks participation below 80 %. Select a column heading to sort.</p>
+    <div class="scroll"><table id="table"></table></div>
+  </section>
+
+  <section class="two">
+    <div class="card">
+      <h2>What this data cannot show</h2>
+      <ul class="plain">
+        <li>No open, comparable data on the time from referral to diagnosis or from diagnosis to treatment start by region and cancer type.</li>
+        <li>Primary care waiting times are for all patients, not cancer patients.</li>
+        <li>Differences between regions are unadjusted. They show where participation is lower, not why.</li>
+        <li>Education and language figures are national and preliminary; they are not available by region.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Strategy targets and projections</h2>
+      <p class="sub">Targets and forecasts from the National Cancer Strategy 2026–2035. These are not observed results.</p>
+      <ul class="plain" id="targets"></ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Sources</h2>
+    <ul class="plain src" id="sources"></ul>
+  </section>
+</div>
+<div class="tip" id="tip"></div>
+
+<script src="Statistics/overview-data.js"></script>
+<script>
+(function(){
+const S=window.STATISTICS;
+if(!S){document.querySelector('.wrap').innerHTML='<p style="padding:24px 0">Data file not found. Run <code>python3 Statistics/build_overview_data.py</code> first.</p>';return;}
+const TARGET=80;
+const el=(tag,attrs,...kids)=>{const e=document.createElement(tag);
+  for(const k in attrs||{}){if(k==='class')e.className=attrs[k];else if(k==='style')e.style.cssText=attrs[k];else if(k.startsWith('on'))e.addEventListener(k.slice(2),attrs[k]);else e.setAttribute(k,attrs[k]);}
+  kids.flat().forEach(c=>{if(c!=null)e.append(c);});return e;};
+const num=v=>Number(v);
+const int=v=>Number(v).toLocaleString('en-GB');
+const pct=v=>Number(v).toFixed(1)+' %';
+const isNat=r=>r.region.startsWith('Finland');
+const tip=document.getElementById('tip');
+const hover=(node,text)=>{node.addEventListener('mousemove',e=>{tip.textContent=text;tip.style.display='block';
+  tip.style.left=Math.min(e.clientX+14,window.innerWidth-290)+'px';tip.style.top=(e.clientY+16)+'px';});
+  node.addEventListener('mouseleave',()=>tip.style.display='none');};
+
+/* ---------- national tiles ---------- */
+const nat=(ind,period)=>S.national.find(r=>r.indicator===ind&&(!period||r.period===period));
+const tiles=[
+  [int(nat('new_cancer_cases','2024').value),'new cancer cases','2024'],
+  [int(nat('cancer_deaths','2024').value),'cancer deaths','2024'],
+  [nat('five_year_relative_survival').value+' %','five-year relative survival','patients followed 2021–2023'],
+  [int(nat('people_living_with_or_after_cancer').value),'people living with or after cancer','end of 2023']];
+document.getElementById('tiles').replaceChildren(...tiles.map(t=>el('div',{class:'tile'},el('b',{},t[0]),el('span',{},t[1]),el('small',{},t[2]))));
+
+/* ---------- programmes ---------- */
+const PROG={
+  breast:{name:'Breast',rows:S.breast.map(r=>({region:r.region,total:num(r.participation_percent)}))},
+  colorectal:{name:'Colorectal',rows:[...new Set(S.colorectal.map(r=>r.region))].map(region=>{
+    const g=sex=>num(S.colorectal.find(r=>r.region===region&&r.sex===sex).participation_percent);
+    return {region,total:g('total'),male:g('male'),female:g('female')};})},
+  cervical:{name:'Cervical',rows:S.cervical.map(r=>({region:r.region,total:num(r.participation_percent)}))}};
+const regional=p=>PROG[p].rows.filter(r=>!isNat(r));
+const national=p=>PROG[p].rows.find(isNat);
+const trend=p=>S.trend.filter(r=>r.programme===p).sort((a,b)=>a.year-b.year);
+
+/* ---------- meters (bars from zero, target tick) ---------- */
+document.getElementById('meters').replaceChildren(...Object.keys(PROG).map(p=>{
+  const v=national(p).total,below=regional(p).filter(r=>r.total<TARGET).length,t=trend(p);
+  const row=el('div',{class:'row'},
+    el('div',{class:'lab'},el('b',{},PROG[p].name),el('br'),el('small',{},below+' of '+regional(p).length+' regions below target')),
+    el('div',{class:'track'},el('div',{class:'bartrack'}),el('div',{class:'bar',style:'width:'+v+'%'}),el('div',{class:'target',style:'left:'+TARGET+'%'})),
+    el('div',{class:'val'},pct(v)));
+  row.style.minHeight='44px';
+  hover(row,PROG[p].name+' screening\n'+t.map(x=>x.year+': '+pct(x.participation_percent)).join('\n'));
+  return row;}),
+  el('div',{class:'row'},el('div',{}),el('div',{class:'axis'},[0,20,40,60,80,100].map(x=>el('span',{style:'left:'+x+'%'},x===80?'80 % target':x+''))),el('div',{})));
+
+/* ---------- regional dot plot ---------- */
+let prog='breast';
+function renderRegions(){
+  const f=document.getElementById('progFilter');
+  f.replaceChildren(...Object.keys(PROG).map(p=>el('button',{class:'seg','aria-pressed':String(p===prog),onclick:()=>{prog=p;renderRegions();}},PROG[p].name)));
+  const rows=regional(prog).slice().sort((a,b)=>a.total-b.total),n=national(prog),sex=prog==='colorectal';
+  const all=rows.flatMap(r=>sex?[r.male,r.female,r.total]:[r.total]);
+  const lo=Math.floor(Math.min(...all,TARGET)/5)*5-5,hi=Math.ceil(Math.max(...all,TARGET)/5)*5;
+  const x=v=>(v-lo)/(hi-lo)*100;
+  document.getElementById('regLegend').replaceChildren(
+    ...(sex?[el('span',{},el('i',{class:'d'}),'Men'),el('span',{},el('i',{class:'d f'}),'Women')]:[el('span',{},el('i',{class:'d'}),'Participation')]),
+    el('span',{},el('i',{class:'t'}),'80 % target'),el('span',{},el('i',{class:'n'}),'National: '+pct(n.total)));
+  const out=rows.map(r=>{
+    const track=el('div',{class:'track'},el('div',{class:'rail'}),el('div',{class:'natl',style:'left:'+x(n.total)+'%'}),el('div',{class:'target',style:'left:'+x(TARGET)+'%'}));
+    if(sex){track.append(el('div',{class:'link',style:'left:'+x(r.male)+'%;width:'+(x(r.female)-x(r.male))+'%'}),
+      el('div',{class:'dot',style:'left:'+x(r.male)+'%'}),el('div',{class:'dot f',style:'left:'+x(r.female)+'%'}));}
+    else track.append(el('div',{class:'dot',style:'left:'+x(r.total)+'%'}));
+    const row=el('div',{class:'row',tabindex:'0'},el('div',{class:'lab',title:r.region},r.region),track,el('div',{class:'val'},pct(r.total)));
+    hover(row,r.region+'\n'+PROG[prog].name+' screening: '+pct(r.total)+(sex?'\nMen '+pct(r.male)+' · Women '+pct(r.female):'')+'\n'+(r.total<TARGET?(TARGET-r.total).toFixed(1)+' points below target':'At or above target'));
+    return row;});
+  const ticks=[];for(let t=lo;t<=hi;t+=5)ticks.push(t);
+  out.push(el('div',{class:'row'},el('div',{}),el('div',{class:'axis'},ticks.map(t=>el('span',{style:'left:'+x(t)+'%'},t+' %'))),el('div',{class:'val',style:'font-size:11.5px;color:var(--text-3)'},'all')));
+  document.getElementById('regRows').replaceChildren(...out);
+  const below=rows.filter(r=>r.total<TARGET),first=rows[0],last=rows[rows.length-1];
+  let text=below.length+' of '+rows.length+' regions are below 80 %. Lowest: '+first.region+' ('+pct(first.total)+'), highest: '+last.region+' ('+pct(last.total)+'), a spread of '+(last.total-first.total).toFixed(1)+' points.';
+  if(sex)text+=' Nationally, men take part less often than women: '+pct(n.male)+' against '+pct(n.female)+', a larger gap than the spread between regions.';
+  document.getElementById('regFinding').textContent=text;
+}
+renderRegions();
+
+/* ---------- cervical equity bars ---------- */
+function bars(id,grouping,labels){
+  const rows=S.cervical_equity.filter(r=>r.grouping===grouping);
+  document.getElementById(id).replaceChildren(...rows.map(r=>{
+    const row=el('div',{class:'row'},el('div',{class:'lab',title:r.group},labels[r.group]||r.group),
+      el('div',{class:'track'},el('div',{class:'bartrack'}),el('div',{class:'bar',style:'width:'+r.participation_percent+'%'}),el('div',{class:'target',style:'left:'+TARGET+'%'})),
+      el('div',{class:'val'},pct(r.participation_percent)));
+    row.style.minHeight='36px';
+    hover(row,r.group+'\n'+int(r.attended_n)+' of '+int(r.invited_n)+' invited took part');
+    return row;}),
+    el('div',{class:'row'},el('div',{}),el('div',{class:'axis'},[0,40,80,100].map(x=>el('span',{style:'left:'+x+'%'},x===80?'80 % target':x+''))),el('div',{})));
+  const v=rows.map(r=>num(r.participation_percent));
+  document.getElementById(id).append(el('p',{class:'finding'},'Gap between highest and lowest group: '+(Math.max(...v)-Math.min(...v)).toFixed(1)+' points.'));
+}
+bars('eduRows','education',{'Primary education / unknown':'Primary / unknown','Intermediate / secondary education':'Secondary','Tertiary / higher education':'Tertiary'});
+bars('langRows','native_language',{'Domestic':'Finnish, Swedish or Sámi','Other / missing':'Other / not recorded'});
+
+/* ---------- table ---------- */
+const ctx=(region,ind)=>{const r=S.context.find(c=>c.region===region&&c.indicator===ind);return r?num(r.value):null;};
+const COLS=[['region','Region'],['breast','Breast'],['colorectal','Colorectal'],['men','Colorectal, men'],['women','Colorectal, women'],['cervical','Cervical'],
+  ['income','Low-income rate, %'],['edu','Education level index'],['lang','Other native language per 1,000'],['wait','Primary care doctor wait over 7 days, %']];
+const natName=r=>isNat({region:r})?'Finland':r;
+const tableRows=PROG.breast.rows.map(b=>{const name=natName(b.region);
+  const c=PROG.colorectal.rows.find(r=>r.region===name),v=PROG.cervical.rows.find(r=>r.region===name);
+  return {region:name,breast:b.total,colorectal:c&&c.total,men:c&&c.male,women:c&&c.female,cervical:v&&v.total,
+    income:ctx(name,'low_income_rate_percent'),edu:ctx(name,'education_level_index'),lang:ctx(name,'other_native_language_per_1000'),wait:ctx(name,'primary_care_doctor_wait_over_7_days_percent')};});
+let sortKey='breast',sortDir=1;
+function renderTable(){
+  const natRow=tableRows.find(r=>r.region==='Finland');
+  const rest=tableRows.filter(r=>r!==natRow).sort((a,b)=>sortKey==='region'?sortDir*a.region.localeCompare(b.region):sortDir*((a[sortKey]??-1)-(b[sortKey]??-1)));
+  const screening=['breast','colorectal','men','women','cervical'];
+  const cell=(r,k)=>k==='region'?el('td',{},r.region):el('td',{class:screening.includes(k)&&r[k]!=null&&r[k]<TARGET?'low':''},r[k]==null?'–':r[k].toFixed(1));
+  document.getElementById('table').replaceChildren(
+    el('tr',{},COLS.map(([k,l])=>el('th',{tabindex:'0',onclick:()=>{if(sortKey===k)sortDir=-sortDir;else{sortKey=k;sortDir=1;}renderTable();},
+      onkeydown:e=>{if(e.key==='Enter')e.target.click();}},l+(sortKey===k?(sortDir>0?' ↑':' ↓'):'')))),
+    el('tr',{class:'natl-row'},COLS.map(([k])=>cell(natRow,k))),
+    ...rest.map(r=>el('tr',{},COLS.map(([k])=>cell(r,k)))));
+}
+renderTable();
+
+/* ---------- targets ---------- */
+const T=[['screening_participation_each_programme_each_county','Screening participation in every programme and region: at least 80 % by 2035'],
+  ['cancers_diagnosed_stages_I_II','Cancers diagnosed at stage I–II: at least 70 % by 2035'],
+  ['cancer_mortality_reduction','Cancer mortality: 10 % lower by 2035'],
+  ['annual_cancer_care_costs','Annual cost of cancer care: €1.5 billion in 2023, projected €2.6 billion in 2035 without specific measures'],
+  ['roadmap_additional_investment','Additional investment estimated in the roadmap: €140 million for 2026–2031']];
+document.getElementById('targets').replaceChildren(...T.filter(([k])=>nat(k)).map(([,text])=>el('li',{},text)));
+
+/* ---------- sources ---------- */
+const NAMES={'stats.cancerregistry.fi/joukkistilastot/breast.html':'Finnish Cancer Registry – breast screening statistics 2024',
+  'cervix_preliminary':'Finnish Cancer Registry – cervical screening, preliminary statistics 2025',
+  'annual-report-on-cancer-in-finland':'Finnish Cancer Registry – annual report on cancer in Finland',
+  'cancer_in_finland_2023':'Finnish Cancer Registry – Cancer in Finland 2023',
+  'indicators/3621':'Sotkanet 3621 – breast screening participation (Finnish Cancer Registry)',
+  'indicators/6103':'Sotkanet 6103 – colorectal screening participation (Finnish Cancer Registry)',
+  'indicators/3620':'Sotkanet 3620 – cervical screening participation (Finnish Cancer Registry)',
+  'indicators/3099':'Sotkanet 3099 – general low-income rate (Statistics Finland)',
+  'indicators/180':'Sotkanet 180 – education level index (Statistics Finland)',
+  'indicators/187':'Sotkanet 187 – native language other than Finnish, Swedish or Sámi per 1,000 (Statistics Finland)',
+  'indicators/6411':'Sotkanet 6411 – primary care doctor wait over 7 days (THL)',
+  'Kansallinen_syopastrategia_2026_2035':'National Cancer Strategy 2026–2035',
+  'tiekartta':'Implementation Roadmap 2026–2031'};
+const urls=[...new Set(Object.values(S).flat().map(r=>r.source_url).filter(Boolean))];
+document.getElementById('sources').replaceChildren(...urls.map(u=>{const k=Object.keys(NAMES).find(k=>u.includes(k));
+  return el('li',{},el('a',{href:u,target:'_blank',rel:'noopener'},k?NAMES[k]:u));}));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+year,region,indicator,value,source_url
+2024,Finland,low_income_rate_percent,14.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Central Finland,low_income_rate_percent,17.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Central Ostrobothnia,low_income_rate_percent,12.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Central Uusimaa,low_income_rate_percent,9.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,City of Helsinki,low_income_rate_percent,14.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,East Uusimaa,low_income_rate_percent,9.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Kainuu,low_income_rate_percent,15.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Kanta-Häme,low_income_rate_percent,13.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Kymenlaakso,low_income_rate_percent,15.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Lapland,low_income_rate_percent,13.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,North Karelia,low_income_rate_percent,19.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,North Ostrobothnia,low_income_rate_percent,14.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,North Savo,low_income_rate_percent,15.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Ostrobothnia,low_income_rate_percent,13.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Pirkanmaa,low_income_rate_percent,14.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Päijät-Häme,low_income_rate_percent,16.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Satakunta,low_income_rate_percent,14.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,South Karelia,low_income_rate_percent,17.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,South Ostrobothnia,low_income_rate_percent,13.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,South Savo,low_income_rate_percent,16.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Southwest Finland,low_income_rate_percent,14.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Vantaa and Kerava,low_income_rate_percent,13.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,West Uusimaa,low_income_rate_percent,11.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/3099
+2024,Finland,education_level_index,398.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Central Finland,education_level_index,394.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Central Ostrobothnia,education_level_index,358.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Central Uusimaa,education_level_index,388.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,City of Helsinki,education_level_index,482.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,East Uusimaa,education_level_index,384.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Kainuu,education_level_index,349.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Kanta-Häme,education_level_index,363.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Kymenlaakso,education_level_index,347.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Lapland,education_level_index,368.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,North Karelia,education_level_index,367.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,North Ostrobothnia,education_level_index,402.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,North Savo,education_level_index,379.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Ostrobothnia,education_level_index,384.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Pirkanmaa,education_level_index,416.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Päijät-Häme,education_level_index,354.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Satakunta,education_level_index,347.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,South Karelia,education_level_index,361.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,South Ostrobothnia,education_level_index,351.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,South Savo,education_level_index,347.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Southwest Finland,education_level_index,393.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Vantaa and Kerava,education_level_index,366.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,West Uusimaa,education_level_index,456.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/180
+2024,Finland,other_native_language_per_1000,108.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Central Finland,other_native_language_per_1000,54.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Central Ostrobothnia,other_native_language_per_1000,48.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Central Uusimaa,other_native_language_per_1000,83.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,City of Helsinki,other_native_language_per_1000,204.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,East Uusimaa,other_native_language_per_1000,79.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Kainuu,other_native_language_per_1000,58.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Kanta-Häme,other_native_language_per_1000,65.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Kymenlaakso,other_native_language_per_1000,78.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Lapland,other_native_language_per_1000,47.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,North Karelia,other_native_language_per_1000,65.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,North Ostrobothnia,other_native_language_per_1000,46.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,North Savo,other_native_language_per_1000,52.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Ostrobothnia,other_native_language_per_1000,106.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Pirkanmaa,other_native_language_per_1000,74.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Päijät-Häme,other_native_language_per_1000,78.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Satakunta,other_native_language_per_1000,59.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,South Karelia,other_native_language_per_1000,94.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,South Ostrobothnia,other_native_language_per_1000,43.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,South Savo,other_native_language_per_1000,58.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Southwest Finland,other_native_language_per_1000,110.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Vantaa and Kerava,other_native_language_per_1000,272.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,West Uusimaa,other_native_language_per_1000,190.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/187
+2024,Finland,primary_care_doctor_wait_over_7_days_percent,43.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Central Finland,primary_care_doctor_wait_over_7_days_percent,55.2,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Central Ostrobothnia,primary_care_doctor_wait_over_7_days_percent,65.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Central Uusimaa,primary_care_doctor_wait_over_7_days_percent,32.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,City of Helsinki,primary_care_doctor_wait_over_7_days_percent,66.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,East Uusimaa,primary_care_doctor_wait_over_7_days_percent,49.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Kainuu,primary_care_doctor_wait_over_7_days_percent,27.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Kanta-Häme,primary_care_doctor_wait_over_7_days_percent,50.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Kymenlaakso,primary_care_doctor_wait_over_7_days_percent,47.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Lapland,primary_care_doctor_wait_over_7_days_percent,39.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,North Karelia,primary_care_doctor_wait_over_7_days_percent,21.1,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,North Ostrobothnia,primary_care_doctor_wait_over_7_days_percent,60.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,North Savo,primary_care_doctor_wait_over_7_days_percent,57.9,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Ostrobothnia,primary_care_doctor_wait_over_7_days_percent,43.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Pirkanmaa,primary_care_doctor_wait_over_7_days_percent,38.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Päijät-Häme,primary_care_doctor_wait_over_7_days_percent,34.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Satakunta,primary_care_doctor_wait_over_7_days_percent,31.8,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,South Karelia,primary_care_doctor_wait_over_7_days_percent,47.7,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,South Ostrobothnia,primary_care_doctor_wait_over_7_days_percent,38.6,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,South Savo,primary_care_doctor_wait_over_7_days_percent,50.0,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Southwest Finland,primary_care_doctor_wait_over_7_days_percent,39.5,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,Vantaa and Kerava,primary_care_doctor_wait_over_7_days_percent,70.4,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411
+2024,West Uusimaa,primary_care_doctor_wait_over_7_days_percent,36.3,https://sotkanet.fi/sotkanet/en/metadata/indicators/6411

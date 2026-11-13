@@ -19,9 +19,9 @@ This is a **source and access catalogue**, not a claim that every listed source 
 | Finnish Cancer Registry — preliminary cervical screening | https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html | **2025 subgroup indicators extracted** |
 | Finnish Cancer Registry — statistics portal | https://syoparekisteri.fi/tilastot/ | Further cancer-type/region extraction pending |
 | Finnish Cancer Registry — screening portal | https://cancerregistry.fi/statistics/screening-statistics/ | Additional programmes and tables pending |
-| Colorectal screening statistics | https://stats.cancerregistry.fi/joukkistilastot/colorectal.html | Portal identified; regional tables not yet ingested |
+| Colorectal screening statistics | https://stats.cancerregistry.fi/joukkistilastot/colorectal.html | **2024 regional participation by sex extracted via Sotkanet indicator 6103** |
 | THL data and statistics | https://thl.fi/data-ja-tilastot | Indicator selection pending |
-| Sotkanet indicator bank | https://sotkanet.fi/sotkanet/fi/index | Specific indicator ID, period and API format pending |
+| Sotkanet indicator bank | https://sotkanet.fi/sotkanet/fi/index | **Extracted via `fetch_sotkanet.py`: indicators 3621, 6103, 3620 (screening), 3099, 180, 187, 6411 (regional context); REST API at `https://sotkanet.fi/rest/1.1`** |
 | Statistics Finland, causes of death | https://stat.fi/fi/tilasto/ksyyt | Table selection pending |
 | Kela open data | https://tietotarjotin.fi/tilastodata/2242438/avoin-data | Cancer-specific measure selection pending |
 | Kela reimbursement rights | https://vip.avoindata.fi/data/fi/dataset/voimassa-olleet-alkaneet-ja-paattyneet-laakekorvausoikeudet | Eligibility, scope and aggregation checks pending |
