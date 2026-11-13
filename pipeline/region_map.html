@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equal Care Region Map</title>
+<style>
+/* Dark, high-contrast look: near-black surfaces, one vivid accent, large type.
+   The page is dark in every colour scheme by design. */
+:root{
+  color-scheme:dark;
+  --page:#050505; --card:rgba(255,255,255,.035); --card-line:rgba(255,255,255,.09); --line:rgba(255,255,255,.08);
+  --text:#f5f5f2; --text-2:#b4b4ad; --text-3:#85857f;
+  --accent:#d4ff3f; --accent-ink:#0a0d00; --accent-soft:rgba(212,255,63,.10); --accent-line:rgba(212,255,63,.35);
+  --track:rgba(255,255,255,.08); --mark:#ffffff;
+  /* map ramp: one hue, brighter = disadvantaged on more factors */
+  --c0:#1d201b; --c1:#35400f; --c2:#5f7618; --c3:#97bf24; --c4:#d4ff3f; --na:#161616; --sea:#0a0a0a;
+}
+*{box-sizing:border-box}
+html{background:var(--page)}
+body{margin:0;min-height:100vh;color:var(--text);font:15px/1.45 "Inter","SF Pro Display",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  background:
+    radial-gradient(900px 520px at 12% -8%,rgba(212,255,63,.10),transparent 62%),
+    radial-gradient(760px 520px at 104% 18%,rgba(120,90,255,.10),transparent 60%),
+    var(--page);
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1320px;margin:0 auto;padding:0 20px 48px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:30px 0 22px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+h1{font-size:clamp(30px,4.4vw,54px);line-height:1;margin:0;letter-spacing:-1.8px;font-weight:800}
+h1 em{font-style:normal;color:var(--accent)}
+header p{margin:0;color:var(--text-2);max-width:340px;font-size:14px}
+.layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:18px;align-items:start}
+.card{background:var(--card);border:1px solid var(--card-line);border-radius:22px;padding:20px;min-width:0;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.mapcard{position:sticky;top:14px}
+.maphead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;min-height:42px}
+.maphead b{font-size:19px;letter-spacing:-.4px}
+button{font:inherit;cursor:pointer}
+.btn{border:0;background:var(--accent);color:var(--accent-ink);padding:9px 16px;border-radius:999px;font-weight:700;font-size:13.5px;min-height:40px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(212,255,63,.35)}
+.btn[hidden]{display:none}
+button:focus-visible,select:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+.mapbox{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+  background:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.2px) 0 0/18px 18px,var(--sea)}
+svg.map{display:block;width:100%;height:auto;max-height:76vh}
+.region{stroke:#050505;stroke-width:1;stroke-linejoin:round;vector-effect:non-scaling-stroke;shape-rendering:geometricPrecision;cursor:pointer;transition:opacity .3s,filter .3s}
+.region.f0{fill:var(--c0)}.region.f1{fill:var(--c1)}.region.f2{fill:var(--c2)}.region.f3{fill:var(--c3)}.region.f4{fill:var(--c4)}.region.na{fill:var(--na)}
+.region:hover{filter:brightness(1.35)}
+.region:focus-visible{outline:none;stroke:var(--text);stroke-width:2.5}
+svg.zoomed .region{opacity:.16}
+svg.zoomed .region.sel{opacity:1;stroke:var(--text);stroke-width:1.25;filter:drop-shadow(0 0 10px rgba(212,255,63,.55))}
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;font-size:12px;color:var(--text-2);margin-top:14px}
+.legend i{display:inline-block;width:22px;height:8px;border-radius:999px;vertical-align:1px;margin-right:6px}
+.pick{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-3)}
+select{font:inherit;font-size:14px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--text);background:#111;border:1px solid var(--card-line);border-radius:999px;padding:9px 14px;min-height:42px;flex:1;min-width:0}
+.src{font-size:11.5px;color:var(--text-3);margin:12px 0 0;line-height:1.5}
+h2{font-size:clamp(30px,3.6vw,46px);line-height:1;margin:0 0 8px;letter-spacing:-1.4px;font-weight:800}
+.lead{color:var(--text-2);margin:0 0 16px;font-size:14px}
+.hero{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:6px}
+.stat{border:1px solid var(--line);border-radius:16px;padding:14px 14px 12px;background:rgba(255,255,255,.025)}
+.stat b{display:block;font-size:34px;line-height:1;letter-spacing:-1.2px;font-weight:800;font-variant-numeric:tabular-nums}
+.stat b small{font-size:16px;font-weight:700;color:var(--text-3);letter-spacing:0}
+.stat.hot{border-color:var(--accent-line);background:var(--accent-soft)}
+.stat.hot b{color:var(--accent)}
+.stat span{display:block;font-size:12.5px;color:var(--text-2);margin-top:8px;line-height:1.3}
+h3{font-size:11.5px;text-transform:uppercase;letter-spacing:1.4px;color:var(--text-3);margin:24px 0 8px;font-weight:700}
+ul.notes{margin:0;padding:0;list-style:none;font-size:14px}
+ul.notes li{position:relative;padding:8px 0 8px 22px;border-bottom:1px solid var(--line)}
+ul.notes li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.fact{display:grid;grid-template-columns:minmax(120px,1.25fr) minmax(90px,1.4fr) 70px 96px;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.fact .name small{display:block;color:var(--text-3);font-size:12px}
+.fact .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;font-size:15px}
+.fact .rank{text-align:right;color:var(--text-3);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.fact .rank.low{color:var(--accent);font-weight:700}
+.track{position:relative;height:22px}
+.bartrack{position:absolute;left:0;right:0;top:7px;height:8px;border-radius:999px;background:var(--track)}
+.bar{position:absolute;left:0;top:7px;height:8px;border-radius:999px;background:linear-gradient(90deg,#7ea11c,var(--accent))}
+.mark{position:absolute;top:2px;bottom:2px;width:0;border-left:2px solid var(--mark)}
+.target{position:absolute;top:0;bottom:0;width:0;border-left:2px dashed var(--text-2)}
+.key{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12px;color:var(--text-3);margin:0 0 2px}
+.key i{display:inline-block;height:11px;vertical-align:-1px;margin-right:6px}
+.chip{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid var(--card-line);color:var(--text-3)}
+.chip.disadvantaged{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chip.middle{border-color:var(--accent-line);color:var(--accent)}
+.factor{display:grid;grid-template-columns:minmax(120px,1.3fr) 108px minmax(90px,1fr) 112px;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.factor small{color:var(--text-3);font-size:12px}
+.factor .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;font-size:15px}
+.factor .med{color:var(--text-3);font-size:12.5px}
+.factor .c{text-align:right}
+ul.gaps{margin:0;padding:0;list-style:none;font-size:13.5px;color:var(--text-2)}
+ul.gaps li{padding:6px 0 6px 22px;position:relative}
+ul.gaps li:before{content:"";position:absolute;left:3px;top:14px;width:9px;height:2px;background:var(--text-3)}
+.tip{position:fixed;z-index:10;pointer-events:none;background:#fff;color:#0a0a0a;padding:7px 11px;border-radius:10px;font-size:12.5px;font-weight:600;line-height:1.4;display:none;white-space:pre-line;max-width:260px}
+@media (max-width:960px){.layout{grid-template-columns:minmax(0,1fr)}.mapcard{position:static}svg.map{max-height:62vh}}
+@media (max-width:560px){.wrap{padding:0 16px 40px}.hero{grid-template-columns:minmax(0,1fr)}.fact{grid-template-columns:minmax(0,1fr) 66px 92px}.fact .track{display:none}
+  .factor{grid-template-columns:minmax(0,1fr) 96px 108px}.factor .med{display:none}.card{padding:16px;border-radius:18px}}
+@media (prefers-reduced-motion:reduce){.region,.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Equal Care Navigator</div>
+      <h1>Cancer equity,<br><em>region by region</em></h1>
+    </div>
+    <p>Select a region on the map or from the list to see what the public data says about it.</p>
+  </header>
+  <div class="layout">
+    <div class="card mapcard">
+      <div class="maphead"><b id="maptitle">Finland</b><button class="btn" id="back" hidden>Show all of Finland</button></div>
+      <div class="mapbox"><svg class="map" id="map" role="group" aria-label="Map of Finland by wellbeing services county"></svg></div>
+      <div class="legend" id="legend"></div>
+      <label class="pick">Region <select id="select" aria-label="Select a region"></select></label>
+      <p class="src" id="mapsrc"></p>
+    </div>
+    <div class="card" id="panel"></div>
+  </div>
+</div>
+<div class="tip" id="tip"></div>
+
+<script src="reference/region_shapes.js"></script>
+<script src="output/pipeline-data.js"></script>
+<script>
+(function(){
+const P=window.PIPELINE,G=window.REGION_SHAPES;
+if(!P||!G){document.querySelector('.layout').innerHTML='<p>Data not found. Run <code>python3 pipeline/fetch_region_shapes.py</code> and <code>python3 pipeline/run_pipeline.py</code> first.</p>';return;}
+const NS='http://www.w3.org/2000/svg',TARGET=80,PAD=40;
+const el=(tag,attrs,...kids)=>{const e=document.createElement(tag);
+  for(const k in attrs||{}){if(k==='class')e.className=attrs[k];else if(k==='style')e.style.cssText=attrs[k];else e.setAttribute(k,attrs[k]);}
+  kids.flat().forEach(c=>{if(c!=null)e.append(c);});return e;};
+const tip=document.getElementById('tip');
+const FACTOR={income:'Lower income',employment:'Unemployment',education:'Lower education',language:'Language barrier',smoking:'Smoking',primary_care_access:'Slow primary care access'};
+const MEASURE={low_income_rate:'low-income rate',unemployment_rate:'unemployed',education_level_index:'education index',other_language_per_1000:'other native language',daily_smokers:'daily smokers',primary_care_wait_over_7_days:'doctor wait over 7 days'};
+const SHORT={screening_participation_breast:'Breast screening',screening_participation_cervical:'Cervical screening',screening_participation_colorectal:'Colorectal screening',
+  survival_5y_breast:'Breast cancer',survival_5y_cervical:'Cervical cancer',survival_5y_colon:'Colon cancer',cancer_index_age_standardised:'Cancer index, age-standardised'};
+const SCREENING=['screening_participation_breast','screening_participation_colorectal','screening_participation_cervical'];
+const fmt=(v,unit)=>unit==='percent'?Number(v).toFixed(1)+' %':unit==='per_1000'?Number(v).toFixed(0)+' per 1,000':Number(v).toFixed(1);
+const ordinal=n=>n===2?'Second-':n===3?'Third-':'';
+const label=k=>(SHORT[k]+(k.startsWith('survival')?' five-year survival':k.startsWith('screening')?' participation':'')).toLowerCase();
+
+/* ---------- data lookups ---------- */
+const facts={};                       // region code -> indicator key -> sex -> fact
+P.region_facts.forEach(f=>{((facts[f.region_code]=facts[f.region_code]||{})[f.indicator_key]=facts[f.region_code][f.indicator_key]||{})[f.sex]=f;});
+const levels={};                      // region code -> factor -> level row
+P.region_factor_levels.forEach(r=>{(levels[r.region_code]=levels[r.region_code]||{})[r.factor]=r;});
+const counties=Object.keys(levels);
+const disCount=code=>Object.values(levels[code]||{}).filter(r=>r.factor_level==='disadvantaged').length;
+const val=(code,key,sex)=>{const f=facts[code]&&facts[code][key]&&facts[code][key][sex||'total'];return f?f.value:null;};
+// Rank among the 22 regions, 1 = best. "Best" depends on whether higher is better for the indicator.
+function rank(code,key){const f=facts[code][key].total,all=counties.map(c=>val(c,key)).filter(v=>v!=null);
+  const better=f.higher_is==='better'?all.filter(v=>v>f.value).length:all.filter(v=>v<f.value).length;return {pos:better+1,of:all.length};}
+const median=a=>{a=a.slice().sort((x,y)=>x-y);const m=a.length>>1;return a.length%2?a[m]:(a[m-1]+a[m])/2;};
+
+/* ---------- map ---------- */
+const svg=document.getElementById('map'),full=[-PAD/2,-PAD/2,G.width+PAD,G.height+PAD];
+let view=full.slice(),anim=0;
+svg.setAttribute('viewBox',full.join(' '));
+G.regions.forEach(r=>{
+  const p=document.createElementNS(NS,'path'),inData=!!levels[r.code];
+  p.setAttribute('d',r.d);p.setAttribute('class','region '+(inData?'f'+Math.min(disCount(r.code),4):'na'));
+  p.setAttribute('tabindex','0');p.setAttribute('role','button');p.dataset.code=r.code;
+  p.setAttribute('aria-label',r.name+(inData?', disadvantaged third on '+disCount(r.code)+' of 6 factors':', not part of the 22 regions'));
+  p.addEventListener('click',()=>select(r.code));
+  p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(r.code);}});
+  p.addEventListener('mousemove',e=>{tip.textContent=r.name+(inData?'\nDisadvantaged third on '+disCount(r.code)+' of 6 factors':'');tip.style.display='block';
+    tip.style.left=Math.min(e.clientX+14,window.innerWidth-270)+'px';tip.style.top=(e.clientY+16)+'px';});
+  p.addEventListener('mouseleave',()=>tip.style.display='none');
+  svg.append(p);});
+document.getElementById('legend').replaceChildren(el('span',{},'Factors in the disadvantaged third'),
+  ...[['c0','0'],['c1','1'],['c2','2'],['c3','3'],['c4','4+'],['na','not covered']].map(([c,l])=>el('span',{},el('i',{style:'background:var(--'+c+');'+(c==='na'?'border:1px solid var(--card-line)':'')}),l)));
+document.getElementById('mapsrc').textContent='Boundaries: '+G.source+'. Colour: number of the six equity factors on which the region falls in the most disadvantaged third of regions.';
+
+// Animate the viewBox from the current view to the target view.
+function zoomTo(target){
+  cancelAnimationFrame(anim);
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){view=target.slice();svg.setAttribute('viewBox',view.join(' '));return;}
+  const from=view.slice(),start=performance.now(),dur=650;
+  const tick=now=>{const t=Math.min((now-start)/dur,1),e=1-Math.pow(1-t,4);
+    view=from.map((v,i)=>v+(target[i]-v)*e);svg.setAttribute('viewBox',view.map(v=>v.toFixed(2)).join(' '));
+    if(t<1)anim=requestAnimationFrame(tick);};
+  anim=requestAnimationFrame(tick);}
+// View that shows one region large, keeping the map's aspect ratio so nothing is cropped.
+function regionView(r){
+  const [x,y,w,h]=r.bbox,ratio=full[2]/full[3],m=Math.max(w,h)*0.14+4;
+  let vw=w+2*m,vh=h+2*m;if(vw/vh<ratio)vw=vh*ratio;else vh=vw/ratio;
+  return [x+w/2-vw/2,y+h/2-vh/2,vw,vh];}
+
+/* ---------- selection ---------- */
+const sel=document.getElementById('select'),back=document.getElementById('back');
+sel.append(el('option',{value:''},'All of Finland'),...G.regions.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(r=>el('option',{value:r.code},r.name)));
+sel.addEventListener('change',()=>select(sel.value||null));
+back.addEventListener('click',()=>select(null));
+function select(code){
+  sel.value=code||'';back.hidden=!code;
+  svg.classList.toggle('zoomed',!!code);
+  svg.querySelectorAll('.region').forEach(p=>p.classList.toggle('sel',p.dataset.code===code));
+  const r=code&&G.regions.find(x=>x.code===code);
+  document.getElementById('maptitle').textContent=r?r.name:'Finland';
+  zoomTo(r?regionView(r):full);
+  renderPanel(code);
+  if(code&&window.innerWidth<=960)document.getElementById('panel').scrollIntoView({behavior:'smooth',block:'start'});}
+
+/* ---------- facts panel ---------- */
+function factRow(code,key,opts){
+  const f=facts[code][key].total,nat=val('FI',key),isRegion=code!=='FI';
+  const track=el('div',{class:'track'});
+  if(f.unit==='percent'){track.append(el('div',{class:'bartrack'}),el('div',{class:'bar',style:'width:'+Math.min(f.value,100)+'%'}));
+    if(isRegion&&nat!=null)track.append(el('div',{class:'mark',style:'left:'+nat+'%'}));
+    if(opts&&opts.target)track.append(el('div',{class:'target',style:'left:'+TARGET+'%'}));}
+  const name=el('div',{class:'name'},SHORT[key]||f.indicator_name);
+  if(opts&&opts.sub)name.append(el('small',{},opts.sub));
+  const rk=isRegion?rank(code,key):null;
+  return el('div',{class:'fact'},name,track,el('div',{class:'num'},fmt(f.value,f.unit)),
+    el('div',{class:'rank'+(rk&&rk.pos>rk.of-3?' low':'')},isRegion?'rank '+rk.pos+' of '+rk.of:''));}
+
+function notes(code){
+  const out=[],n=disCount(code),dis=Object.values(levels[code]).filter(r=>r.factor_level==='disadvantaged').map(r=>FACTOR[r.factor].toLowerCase());
+  out.push(n?'In the most disadvantaged third of regions on '+dis.join(', ')+'.':'Not in the most disadvantaged third on any of the six factors.');
+  Object.keys(SHORT).forEach(k=>{if(!facts[code][k])return;const r=rank(code,k),f=facts[code][k].total,fromEnd=r.of-r.pos+1;
+    const worst=f.higher_is==='better'?'lowest':'highest',best=f.higher_is==='better'?'highest':'lowest';
+    if(fromEnd<=3){const w=ordinal(fromEnd)+worst;out.push(w[0].toUpperCase()+w.slice(1)+' '+label(k)+' of the '+r.of+' regions ('+fmt(f.value,f.unit)+').');}
+    else if(r.pos===1)out.push(best[0].toUpperCase()+best.slice(1)+' '+label(k)+' of the '+r.of+' regions ('+fmt(f.value,f.unit)+').');});
+  return out.slice(0,5);}
+
+// The indicator on which the region ranks worst, for the headline tile.
+function worstRank(code){
+  return Object.keys(SHORT).filter(k=>facts[code][k]).map(k=>({k,r:rank(code,k)})).sort((a,b)=>b.r.pos-a.r.pos)[0];}
+
+function renderPanel(code){
+  const panel=document.getElementById('panel'),kids=[];
+  const gaps=P.data_gaps.filter(g=>g.gap_type==='no_open_data').map(g=>g.description.split('. ')[0]);
+  if(code&&!levels[code]){
+    const r=G.regions.find(x=>x.code===code);
+    panel.replaceChildren(el('h2',{},r.name),el('p',{class:'lead'},'This region is not one of the 22 regions covered by the equity analysis, so no categories or rankings are shown.'));return;}
+  const c=code||'FI',name=code?G.regions.find(x=>x.code===code).name:'Finland';
+  const below=SCREENING.filter(k=>val(c,k)<TARGET).length;
+  kids.push(el('h2',{},name),el('p',{class:'lead'},code?'Latest published figures, compared with Finland and the other 21 regions.':'National figures. Select a region for its profile.'));
+
+  const stat=(big,small,text,hot)=>el('div',{class:'stat'+(hot?' hot':'')},el('b',{},big,el('small',{},small)),el('span',{},text));
+  if(code){const n=disCount(code),w=worstRank(code);
+    kids.push(el('div',{class:'hero'},
+      stat(String(n),' / 6','equity factors in the most disadvantaged third',n>=3),
+      stat(String(below),' / 3','screening programmes below the 80 % target',below===3),
+      stat(String(w.r.pos),' / '+w.r.of,'weakest rank: '+label(w.k),w.r.pos>w.r.of-3)));
+    kids.push(el('h3',{},'At a glance'),el('ul',{class:'notes'},notes(code).map(t=>el('li',{},t))));}
+  else{
+    const regionsBelow=k=>counties.filter(x=>val(x,k)<TARGET).length;
+    kids.push(el('div',{class:'hero'},
+      stat(String(below),' / 3','screening programmes below the 80 % target nationally',below>=2),
+      stat(String(regionsBelow('screening_participation_colorectal')),' / '+counties.length,'regions below target in colorectal screening',true),
+      stat(String(regionsBelow('screening_participation_breast')),' / '+counties.length,'regions below target in breast screening',false)));}
+
+  const year=k=>facts[c][k].total.year;
+  kids.push(el('h3',{},'Screening participation '+year('screening_participation_breast')),
+    el('div',{class:'key'},el('span',{},el('i',{style:'border-left:2px dashed var(--text-2)'}),'80 % target'),code?el('span',{},el('i',{style:'border-left:2px solid var(--mark)'}),'Finland'):null),
+    factRow(c,'screening_participation_breast',{target:1}),
+    factRow(c,'screening_participation_colorectal',{target:1,sub:'men '+fmt(val(c,'screening_participation_colorectal','male'),'percent')+' · women '+fmt(val(c,'screening_participation_colorectal','female'),'percent')}),
+    factRow(c,'screening_participation_cervical',{target:1}));
+  kids.push(el('h3',{},'Five-year relative survival '+year('survival_5y_breast')),
+    factRow(c,'survival_5y_breast'),factRow(c,'survival_5y_colon'),factRow(c,'survival_5y_cervical'));
+  if(code)kids.push(el('h3',{},'Disease burden '+year('cancer_index_age_standardised')),
+    factRow(c,'cancer_index_age_standardised',{sub:'Finland = 100, lower is better'}));
+
+  if(code){
+    kids.push(el('h3',{},'Equity factors'));
+    Object.keys(FACTOR).forEach(f=>{const r=levels[code][f];if(!r)return;
+      const all=counties.map(x=>Number(levels[x][f].context_value));
+      const unit=r.context_indicator==='other_language_per_1000'?'per_1000':r.context_indicator==='education_level_index'?'index':'percent';
+      kids.push(el('div',{class:'factor'},el('div',{},FACTOR[f],el('br'),el('small',{},MEASURE[r.context_indicator]+' '+r.context_year)),
+        el('div',{class:'num'},fmt(r.context_value,unit)),el('div',{class:'med'},'median of regions '+fmt(median(all),unit)),
+        el('div',{class:'c'},el('span',{class:'chip '+r.factor_level},r.factor_level))));});
+  }
+  kids.push(el('h3',{},code?'Not published for this or any region':'Not published for any region'),el('ul',{class:'gaps'},gaps.slice(0,4).map(g=>el('li',{},g))));
+  kids.push(el('p',{class:'src'},'Figures: Finnish Cancer Registry, Statistics Finland and THL via Sotkanet, processed by the data pipeline (run '+P.lineage.run_finished_utc.slice(0,10)+'). Regional differences are unadjusted and do not show causes.'));
+  panel.replaceChildren(...kids);}
+
+select(null);
+})();
+</script>
+</body>
+</html>

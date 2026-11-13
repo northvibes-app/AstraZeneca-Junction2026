@@ -58,9 +58,21 @@ def publish(ctx, started):
     (OUT / "lineage.json").write_text(json.dumps(lineage, ensure_ascii=False, indent=1),
                                       encoding="utf-8")
 
-    # Bundle for pipeline/test_visualisation.html. A .js file loads straight from
+    # Bundle for pipeline/test_visualisation.html and pipeline/region_map.html. A .js file loads straight from
     # disk (file://), so the page works with a double click and no local server.
-    bundle = {"lineage": lineage, "equity_gaps": res["equity_gaps"],
+    # Latest observed figure per region and indicator, for the region map page.
+    latest, catalogue = res["latest_year"], ctx.ref.indicator_by_key
+    region_facts = [
+        {"region_code": r["region_code"], "region_name": r["region_name"],
+         "indicator_key": r["indicator_key"], "indicator_name": r["indicator_name"],
+         "kind": r["kind"], "pathway_stage": r["pathway_stage"],
+         "higher_is": catalogue[r["indicator_key"]]["higher_is"], "sex": r["sex"],
+         "year": r["year"], "value": r["value"], "unit": r["unit"], "flags": r["flags"],
+         "source_url": r["source_url"]}
+        for r in res["analysis"]
+        if r["kind"] in ("outcome", "context") and r["factor"] == "" and r["status"] != "imputed"
+        and r["year"] == latest.get(r["indicator_key"])]
+    bundle = {"lineage": lineage, "region_facts": region_facts, "equity_gaps": res["equity_gaps"],
               "region_factor_levels": res["region_factor_levels"],
               "data_gaps": res["data_gaps"], "quarantine": ctx.quarantine,
               "imputed": [{k: r[k] for k in ("indicator_name", "region_name", "year", "value",
