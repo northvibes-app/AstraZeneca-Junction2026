@@ -133,3 +133,43 @@ curl -sS -X POST \
     "question": "Which source records were quarantined, why were they quarantined, and at which processing step?",
     "topK": 5
   }'
+
+curl -sS -X POST "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+     -H "Content-Type: application/json" \
+     --data '{
+       "question": "What was breast-screening participation in Helsinki in 2024? Answer with the exact percentage. Dont give me text.",
+       "topK": 5
+     }'
+
+
+ ```bash
+   # 1. Teilnahme an Brustkrebs-Screening nach Region
+   "What were the breast-screening participation rates by Finnish region in 2024?"
+
+   # 2. Größte regionale Lücke
+   "What was the percentage-point difference between the highest and lowest breast-screening participation rate in Finland in 2024?"
+
+   # 3. Helsinki gegenüber nationalem Wert
+   "Compare breast-screening participation in Helsinki with the national Finnish rate in 2024."
+
+   # 4. Zervix-Screening nach Bildungsniveau
+   "What were the preliminary 2025 cervical-screening participation rates by education level?"
+
+   # 5. Bildungslücke
+   "What was the percentage-point gap between the lowest and highest education groups in preliminary cervical-screening participation data for 2025?"
+
+   # 6. Sprachbezogene Teilnahmeunterschiede
+   "What were the preliminary cervical-screening participation rates for domestic-language and other-or-missing-language groups in 2025?"
+
+   # 7. Quellen und Datenlücken
+   "What evidence gaps and limitations are documented for cancer screening equity data in Finland?"
+
+   # 8. Verfügbare nationale Kennzahlen
+   "What national cancer and screening key statistics are available, including indicator, period, value and unit?"
+
+   # 9. Krebsindikatoren nach Region
+   "Which cancer indicators and regional breakdowns are available in the cancer statistics dataset?"
+
+   # 10. Faktoren und regionale Beobachtungen
+   "What equity factors and regional observations are available for cancer prevention and screening?"
+ ```
