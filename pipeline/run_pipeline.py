@@ -2,7 +2,8 @@
 
 Runs the 14 steps in order and writes the results to pipeline/output/.
 
-    python3 pipeline/run_pipeline.py
+    python3 pipeline/run_pipeline.py             # run the pipeline
+    python3 pipeline/run_pipeline.py --upload    # run it, then upload the CSV results to Azure
 
      1 ingest            read every source into one common raw layout
      2 profile           measure the data before anything is changed
@@ -66,6 +67,14 @@ def main():
         for key, value in counter.items():
             print(f"    {key}: {value:,}")
     print("\nOutputs written to pipeline/output/")
+
+    # Optional last stage: copy the CSV results to the team's Azure Blob Storage.
+    # It is opt-in so that a normal run never needs a network connection.
+    if "--upload" in sys.argv:
+        import upload_to_azure
+        print()
+        if not upload_to_azure.upload():
+            sys.exit("Upload incomplete, see the messages above.")
 
 
 if __name__ == "__main__":
