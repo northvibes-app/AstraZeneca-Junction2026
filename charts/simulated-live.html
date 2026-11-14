@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live charts — Equal Care Navigator</title>
+<link rel="stylesheet" href="live-charts.css">
+<style>
+  :root { font-family: system-ui, -apple-system, "Segoe UI", Arial, Helvetica, sans-serif; background: #eef6fa; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { background: #0a141c; } }
+  :root[data-theme="dark"] { background: #0a141c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .page { max-width: 1120px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 20px; }
+  h1 { flex: 1 1 260px; margin: 0; font-size: 24px; letter-spacing: -0.02em; text-wrap: balance; }
+  .status { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 13px; color: var(--lc-ink-2); }
+  .live { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; color: var(--lc-ink); }
+  .live i { width: 8px; height: 8px; border-radius: 50%; background: var(--lc-s2); animation: pulse 1.6s ease-out infinite; }
+  .paused .live i { animation: none; background: var(--lc-muted); }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--lc-s2) 55%, transparent); }
+    100% { box-shadow: 0 0 0 9px transparent; }
+  }
+  .demo-note { padding: 3px 9px; border: 1px solid var(--lc-axis); border-radius: 999px; }
+  button.toggle {
+    font: inherit; font-weight: 600; min-height: 36px; padding: 6px 14px; cursor: pointer;
+    color: var(--lc-ink); background: var(--lc-surface);
+    border: 1px solid var(--lc-axis); border-radius: 8px;
+  }
+  button.toggle:hover { border-color: var(--lc-muted); }
+  button.toggle:focus-visible { outline: 2px solid var(--lc-s2); outline-offset: 2px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 14px; }
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  @media (max-width: 820px) { .tiles { grid-template-columns: repeat(2, 1fr); } .cards { grid-template-columns: minmax(0, 1fr); } }
+
+  .card {
+    padding: 16px 18px 18px;
+    background: var(--lc-surface);
+    border: 1px solid var(--lc-grid);
+    border-radius: 12px;
+    animation: rise .5s cubic-bezier(.2, .7, .2, 1) both;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+  .card h2 { margin: 0 0 2px; font-size: 16px; }
+  .card .sub { margin: 0 0 14px; font-size: 13px; color: var(--lc-ink-2); }
+  @media (prefers-reduced-motion: reduce) { .card, .live i { animation: none; } }
+</style>
+</head>
+<body>
+<div class="page lc" id="page">
+  <header>
+    <h1>Patients and doctors, right now</h1>
+    <div class="status">
+      <span class="live"><i></i><span id="live-text">Live</span></span>
+      <span class="demo-note">Simulated demo data</span>
+      <button class="toggle" id="toggle" type="button">Pause</button>
+    </div>
+  </header>
+
+  <section class="tiles" aria-label="Key figures">
+    <div class="card" style="--i:0" id="tile-waiting"></div>
+    <div class="card" style="--i:1" id="tile-doctors"></div>
+    <div class="card" style="--i:2" id="tile-match"></div>
+    <div class="card" style="--i:3" id="tile-consults"></div>
+  </section>
+
+  <section class="cards">
+    <div class="card" style="--i:4">
+      <h2>Requests and matches per minute</h2>
+      <p class="sub">Patients asking for a doctor, and patients matched with one.</p>
+      <div id="chart-stream"></div>
+    </div>
+    <div class="card" style="--i:5">
+      <h2>Wait for a first specialist appointment</h2>
+      <p class="sub">Median days by region, longest wait first.</p>
+      <div id="chart-regions"></div>
+    </div>
+    <div class="card" style="--i:6">
+      <h2>From request to treatment, today</h2>
+      <p class="sub">How many patients have reached each step.</p>
+      <div id="chart-funnel"></div>
+    </div>
+    <div class="card" style="--i:7">
+      <h2>Doctors by specialty</h2>
+      <p class="sub">Who can take a new patient at the moment.</p>
+      <div id="chart-doctors"></div>
+    </div>
+  </section>
+</div>
+
+<script src="lib/core.js"></script>
+<script src="lib/stat-tile.js"></script>
+<script src="lib/stream-chart.js"></script>
+<script src="lib/ranked-bars.js"></script>
+<script src="lib/funnel.js"></script>
+<script src="lib/stacked-bars.js"></script>
+<script>
+/* ---- Charts ---- */
+
+const S1 = 'var(--lc-s1)', S2 = 'var(--lc-s2)';
+const STREAM_MS = 1500;
+
+const tiles = {
+  waiting: LiveCharts.statTile(document.getElementById('tile-waiting'),
+    { label: 'Patients waiting for a match' }),
+  doctors: LiveCharts.statTile(document.getElementById('tile-doctors'),
+    { label: 'Doctors online' }),
+  match: LiveCharts.statTile(document.getElementById('tile-match'),
+    { label: 'Median time to match', unit: 'min', decimals: 1 }),
+  consults: LiveCharts.statTile(document.getElementById('tile-consults'),
+    { label: 'Consultations today' })
+};
+
+const stream = LiveCharts.streamChart(document.getElementById('chart-stream'), {
+  label: 'Requests and matches per minute, last minute',
+  interval: STREAM_MS,
+  window: 41,
+  minMax: 20,
+  series: [
+    { key: 'requests', label: 'Requests', color: S1 },
+    { key: 'matched', label: 'Matched', color: S2 }
+  ]
+});
+
+const regions = LiveCharts.rankedBars(document.getElementById('chart-regions'), {
+  max: 16, unit: 'd', decimals: 1, valueLabel: 'median wait',
+  target: { value: 7, label: 'Target 7 d' }
+});
+
+const funnel = LiveCharts.funnel(document.getElementById('chart-funnel'), { valueLabel: 'patients' });
+
+const doctors = LiveCharts.stackedBars(document.getElementById('chart-doctors'), {
+  segments: [
+    { key: 'free', label: 'Available', color: S2 },
+    { key: 'busy', label: 'In consultation', color: S1 },
+    { key: 'off', label: 'Offline', color: 'var(--lc-neutral)', ink: 'var(--lc-on-neutral)' }
+  ],
+  summary: (v) => v.free + ' available'
+});
+
+/* ---- Simulated feed ----
+   Everything below invents numbers so the charts have something to show.
+   To go live, delete it and call the same update()/push() methods from
+   your real source, for example:
+
+     const ws = new WebSocket('wss://…/live');
+     ws.onmessage = (e) => {
+       const msg = JSON.parse(e.data);
+       if (msg.type === 'throughput') stream.push({ t: new Date(msg.t), values: msg.values });
+       if (msg.type === 'regions') regions.update(msg.rows);
+     };
+*/
+
+const rand = (a, b) => a + Math.random() * (b - a);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const walk = (v, step, a, b) => clamp(v + rand(-step, step), a, b);
+
+const sim = {
+  waiting: 38, online: 46, matchMin: 7.4, consults: 212,
+  requests: 13, matched: 11, phase: 0,
+  regions: [
+    ['helsinki', 'City of Helsinki', 5.1], ['pirkanmaa', 'Pirkanmaa', 6.2],
+    ['southwest', 'Southwest Finland', 6.8], ['central', 'Central Finland', 7.9],
+    ['north-savo', 'North Savo', 8.6], ['north-ostro', 'North Ostrobothnia', 9.3],
+    ['kainuu', 'Kainuu', 11.2], ['lapland', 'Lapland', 12.4]
+  ].map(([id, label, value]) => ({ id, label, value, base: value })),
+  funnel: [412, 371, 318, 204, 131],
+  doctors: [
+    ['Medical oncology', 14], ['Radiation oncology', 9], ['Surgical oncology', 8],
+    ['Haematology', 7], ['Oncology nursing', 12]
+  ].map(([label, total]) => {
+    const off = Math.round(total * rand(.15, .3));
+    const busy = Math.round((total - off) * rand(.4, .7));
+    return { label, values: { free: total - off - busy, busy, off } };
+  })
+};
+const FUNNEL_STEPS = ['Request sent', 'Matched with a doctor', 'First consultation', 'Diagnostics done', 'Treatment started'];
+
+function tickStream() {
+  sim.phase += 0.16;
+  sim.requests = clamp(13 + 5 * Math.sin(sim.phase) + rand(-3, 3), 2, 30);
+  sim.matched = clamp(sim.matched + (sim.requests - sim.matched) * 0.35 + rand(-2, 1.5), 1, 30);
+  stream.push({ t: new Date(), values: { requests: Math.round(sim.requests), matched: Math.round(sim.matched) } });
+}
+
+function tickTiles() {
+  sim.waiting = Math.round(walk(sim.waiting, 4, 12, 70));
+  sim.online = Math.round(walk(sim.online, 2, 30, 58));
+  sim.matchMin = walk(sim.matchMin, 0.6, 3, 14);
+  sim.consults += Math.round(rand(0, 3));
+  tiles.waiting.update(sim.waiting);
+  tiles.doctors.update(sim.online);
+  tiles.match.update(sim.matchMin);
+  tiles.consults.update(sim.consults);
+}
+
+function tickRegions() {
+  sim.regions.forEach((r) => { r.value = walk(r.value + (r.base - r.value) * 0.15, 1.1, 2, 15.5); });
+  regions.update(sim.regions.map(({ id, label, value }) => ({ id, label, value: Math.round(value * 10) / 10 })));
+}
+
+function tickFunnel() {
+  const f = sim.funnel;
+  f[0] += Math.round(rand(0, 4));
+  for (let i = 1; i < f.length; i++) {
+    if (Math.random() < 0.7) f[i] = Math.min(f[i - 1], f[i] + Math.round(rand(0, 3 - i * 0.4)));
+  }
+  funnel.update(FUNNEL_STEPS.map((label, i) => ({ label, value: f[i] })));
+}
+
+function tickDoctors() {
+  sim.doctors.forEach((d) => {
+    const v = d.values, roll = Math.random();
+    if (roll < 0.35 && v.free > 0) { v.free--; v.busy++; }
+    else if (roll < 0.7 && v.busy > 0) { v.busy--; v.free++; }
+    else if (roll < 0.8 && v.off > 1) { v.off--; v.free++; }
+    else if (roll < 0.9 && v.free > 1) { v.free--; v.off++; }
+  });
+  doctors.update(sim.doctors);
+}
+
+const feeds = [[tickStream, STREAM_MS], [tickTiles, 3000], [tickRegions, 4000], [tickFunnel, 2500], [tickDoctors, 3500]];
+let timers = [];
+
+function start() {
+  timers = feeds.map(([fn, ms]) => setInterval(fn, ms));
+}
+function stop() {
+  timers.forEach(clearInterval);
+  timers = [];
+}
+
+// Pre-fill the line so the chart does not start empty, then draw everything once.
+for (let i = 0; i < 41; i++) tickStream();
+[tickTiles, tickRegions, tickFunnel, tickDoctors].forEach((fn) => fn());
+start();
+
+const page = document.getElementById('page');
+const toggle = document.getElementById('toggle');
+toggle.addEventListener('click', () => {
+  const paused = page.classList.toggle('paused');
+  paused ? stop() : start();
+  toggle.textContent = paused ? 'Resume' : 'Pause';
+  document.getElementById('live-text').textContent = paused ? 'Paused' : 'Live';
+});
+</script>
+</body>
+</html>
