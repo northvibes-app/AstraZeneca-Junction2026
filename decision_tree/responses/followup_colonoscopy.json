@@ -1,0 +1,50 @@
+{
+  "status": "grounded",
+  "answer": "The provided evidence does not contain specific data or statistics identifying which groups are less likely to attend colonoscopy after a positive colorectal screening test. The documents mainly describe data sources, organizational resources, and general principles for data integration and equity gap analysis in cancer care across Finland, but do not include observed subgroup attendance rates or disparities for colonoscopy follow-up after positive colorectal screening.\n\nIn particular:\n\n- The data sources listed (S1, S2) include Finnish Cancer Registry statistics and other cancer-related data portals but do not specify attendance by subgroup.\n- The README (S4) explains the contents of the repository and cautions about data limitations but does not provide subgroup attendance data.\n- The EQUITY_GAPS.md (S5) notes missing data on referral and treatment delays and emphasizes that certain detailed subgroup data are not yet supplied as public validated statistics.\n- No direct evidence or statistics on attendance disparities by demographic or other groups after positive colorectal screening are present in the supplied texts.\n\nTherefore, based on the current evidence, no conclusion can be drawn about which groups are less likely to attend colonoscopy after a positive colorectal screening test. There is a data gap in this area as per the available documentation.",
+  "sources": [
+    {
+      "id": "S1",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "n-europe_fi) — EU framework.\n- [EU Mission on Cancer](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/eu-mission-cancer_en) — research framework.\n\n\n## Public statistics and potential exports\n\n| Source | URL | Extraction status |\n| --- | --- | --- |\n| Finnish Cancer Registry — annual national cancer report | https://cancerregistry.fi/reports-and-publications/annual-report-on-cancer-in-finland/ | **Selected national outcomes extracted (2023/2024)** |\n| Finnish Cancer Registry — breast screening | https://stats.cancerregistry.fi/joukkistilastot/breast.html | **2024 county participation table e"
+    },
+    {
+      "id": "S2",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "tion checks pending |\n| Finnish Statistics on Medicines 2025 | https://www.julkari.fi/items/3dfdc48f-2d1a-416e-9795-eca4d3df72ad | Review publication and definitions |\n| NORDCAN | https://nordcan.iarc.who.int/en | Nordic comparable series pending |\n\n\n## Organisational sources and research access\n\n- [FICAN quality registries](https://fican.fi/toiminta/arviointi-ja-seuranta/syopien-laaturekisterit/)\n- [FICAN national centre](https://fican.fi/tietoa-meista/fican/)\n- [Cancer Society of Finland](https://www.cancersociety.fi/)\n- [iCAN](https://ican.fi/flagship-project/) — research project; not assumed open patient-level data\n- [FinRegistry](https://www.finregistry.fi/finnish-registry-data) — resea"
+    },
+    {
+      "id": "S3",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "rchers/biobank-borealis-of-northern-finland/)\n- [Blood Service Biobank](https://www.veripalvelu.fi/biopankki/)\n- [Hematological Biobank](https://www.hematologinenbiopankki.fi/)\n- [THL Biobank](https://thl.fi/en/research-and-development/thl-biobank)\n\n\n## Integration principles\n\n1. Import only aggregate, publishable data with a valid reuse basis.\n2. Preserve source URL, reference year, capture date, numerator/denominator, geography, rate definition and revision status.\n3. Respect programme differences, reporting delays and possible small-cell suppression.\n4. Never fabricate missing source statistics or claim that restricted data are public.\n5. For all cancer types: represent available evidence"
+    },
+    {
+      "id": "S4",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "# Statistics — Equal Care Navigator Across Finland\n\n**Repository:** AstraZeneca Junction 2026 | **Language:** English | **Coverage:** Cancer prevention, screening and selected cancer outcome statistics.\n\nThis folder contains **verified, source-linked public statistics** and official strategy targets for exploring inequities in cancer care across Finland. These datasets **do not represent all data in the 36 linked source portals**, and do not imply access to individual patient records or restricted research datasets.\n\n\n## Contents\n\n| File | Description |\n| --- | --- |\n| [national_key_statistics.csv](national_key_statistics.csv) | Observed national counts, screening indicators, strategy target"
+    },
+    {
+      "id": "S5",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "\n**Data still needed:** comparable referral dates, specialist assessment dates, diagnosis dates, treatment start dates, cancer type, region, denominators and case mix. Without these, the application must show **DATA GAP**, not invented delay rates.\n\n\n## Recommended Decision Tree logic\n\n1. Select domain: prevention / screening / referral / diagnosis / treatment.\n2. Select geography, period, measure and (where available) cancer type.\n3. Verify source, year, population, subgroup denominator, confidence interval and comparable definitions.\n4. Calculate a descriptive difference only if the measures are comparable.\n5. State **Observed Difference**, **Potential Contributing Factors (not established"
+    }
+  ],
+  "retrieval": {
+    "provider": "azure_ai_search",
+    "documentsFound": 5
+  },
+  "model": {
+    "provider": "azure_openai",
+    "deployment": "rag-chat",
+    "status": "invoked"
+  }
+}

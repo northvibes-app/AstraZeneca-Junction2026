@@ -1,0 +1,50 @@
+{
+  "status": "grounded",
+  "answer": "The supplied evidence does not provide direct observed statistics or detailed data on how daily smoking prevalence differs by level of education in Finland, nor explicit explanations on why this matters for cancer prevention. The repository described in [S1] contains verified, source-linked public statistics related to cancer prevention and screening, including some data by education level (e.g., cervical screening participation by education in [S1]), but no specific smoking data by education is included or summarized.\n\nThe equity gaps documentation ([S3], [S4]) highlights the importance of subgroup analyses (including by education) for cancer prevention measures such as screening participation, and suggests that differences in participation by education level are relevant for targeting interventions. However, it does not explicitly discuss smoking behavior differences by education or their impact on cancer prevention.\n\nIn summary, while education-related disparities in cancer prevention behaviors (like screening) are recognized as important, the current evidence set does not provide observed data or detailed analysis on daily smoking differences by education level or the implications for cancer prevention. This represents a data gap that would need to be addressed with additional sources or future data releases.\n\nTherefore, based on the supplied evidence:\n\n- There is no direct observed data on daily smoking prevalence by education level.\n- The importance of education-related disparities is acknowledged in cancer prevention contexts, but specific smoking-related differences and their cancer prevention implications are not detailed.\n- This gap limits the ability to draw conclusions or make evidence-based statements on how daily smoking differs by education and why it matters for cancer prevention in Finland.\n\n(Sources: S1, S3, S4)",
+  "sources": [
+    {
+      "id": "S1",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "# Statistics — Equal Care Navigator Across Finland\n\n**Repository:** AstraZeneca Junction 2026 | **Language:** English | **Coverage:** Cancer prevention, screening and selected cancer outcome statistics.\n\nThis folder contains **verified, source-linked public statistics** and official strategy targets for exploring inequities in cancer care across Finland. These datasets **do not represent all data in the 36 linked source portals**, and do not imply access to individual patient records or restricted research datasets.\n\n\n## Contents\n\n| File | Description |\n| --- | --- |\n| [national_key_statistics.csv](national_key_statistics.csv) | Observed national counts, screening indicators, strategy target"
+    },
+    {
+      "id": "S2",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "rchers/biobank-borealis-of-northern-finland/)\n- [Blood Service Biobank](https://www.veripalvelu.fi/biopankki/)\n- [Hematological Biobank](https://www.hematologinenbiopankki.fi/)\n- [THL Biobank](https://thl.fi/en/research-and-development/thl-biobank)\n\n\n## Integration principles\n\n1. Import only aggregate, publishable data with a valid reuse basis.\n2. Preserve source URL, reference year, capture date, numerator/denominator, geography, rate definition and revision status.\n3. Respect programme differences, reporting delays and possible small-cell suppression.\n4. Never fabricate missing source statistics or claim that restricted data are public.\n5. For all cancer types: represent available evidence"
+    },
+    {
+      "id": "S3",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "\n**Data still needed:** comparable referral dates, specialist assessment dates, diagnosis dates, treatment start dates, cancer type, region, denominators and case mix. Without these, the application must show **DATA GAP**, not invented delay rates.\n\n\n## Recommended Decision Tree logic\n\n1. Select domain: prevention / screening / referral / diagnosis / treatment.\n2. Select geography, period, measure and (where available) cancer type.\n3. Verify source, year, population, subgroup denominator, confidence interval and comparable definitions.\n4. Calculate a descriptive difference only if the measures are comparable.\n5. State **Observed Difference**, **Potential Contributing Factors (not established"
+    },
+    {
+      "id": "S4",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "risk score.\n\n**Potential action to assess:** accessible educational materials and screening-outreach designs co-developed with residents, considering digital exclusion. **Measure:** participation by education subgroup, with data-quality monitoring.\n\n\n## 3. Native-language-associated cervical-screening gap — preliminary 2025\n\nThe same 2025 preliminary reporting shows **76.5%** participation in the *domestic-language* group and **56.8%** in the *other/missing* group, a **19.7 percentage-point difference**.\n\n**Source:** [Cervical screening preliminary statistics](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html).\n\n**Potential action to evaluate:** professi"
+    },
+    {
+      "id": "S5",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "# Finnish Cancer Data — Source Inventory and Access Notes\n\nThis is a **source and access catalogue**, not a claim that every listed source has been downloaded or transformed into statistics. The primary challenge source list has **36 distinct embedded URLs**, including institutional pages and research-only services.\n\n\n## National strategy and implementation\n\n- [National Cancer Strategy 2026–2035](https://files.hackjunction.app/resources/Kansallinen_syopastrategia_2026_2035_FINAL.pdf) — official goals, forecasts and targets; extracted selected values into `national_key_statistics.csv`.\n- [Implementation Roadmap 2026–2031](https://files.hackjunction.app/resources/Kansallinen_syopastrategia_toi"
+    }
+  ],
+  "retrieval": {
+    "provider": "azure_ai_search",
+    "documentsFound": 5
+  },
+  "model": {
+    "provider": "azure_openai",
+    "deployment": "rag-chat",
+    "status": "invoked"
+  }
+}

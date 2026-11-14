@@ -5,9 +5,9 @@ name: Data pipeline
 
 on:
   push:
-    paths: ["pipeline/**", "Statistics/**", ".github/workflows/pipeline.yml"]
+    paths: ["pipeline/**", "decision_tree/**", "Statistics/**", ".github/workflows/pipeline.yml"]
   pull_request:
-    paths: ["pipeline/**", "Statistics/**", ".github/workflows/pipeline.yml"]
+    paths: ["pipeline/**", "decision_tree/**", "Statistics/**", ".github/workflows/pipeline.yml"]
 
 jobs:
   run:

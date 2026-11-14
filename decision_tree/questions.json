@@ -1,0 +1,506 @@
+{
+  "endpoint": "https://api-dev.northvibes.app/api/v1/rag/public/query",
+  "topK": 5,
+  "questions": [
+    {
+      "id": "screening_inequalities",
+      "task": "identify",
+      "question": "What does the evidence say about cancer screening inequalities in Finland?"
+    },
+    {
+      "id": "largest_gap",
+      "task": "identify",
+      "question": "Which population group has the largest gap in cancer screening participation in Finland, and how large is it?"
+    },
+    {
+      "id": "education_breast",
+      "task": "identify",
+      "question": "How does breast cancer screening participation differ by level of education in Finland?"
+    },
+    {
+      "id": "education_cervical",
+      "task": "identify",
+      "question": "How large is the difference in cervical cancer screening participation between people with primary education and people with tertiary education?"
+    },
+    {
+      "id": "language_all_programmes",
+      "task": "identify",
+      "question": "How does screening participation of people whose native language is not Finnish or Swedish compare with domestic-language speakers across the breast, cervical and colorectal programmes?"
+    },
+    {
+      "id": "sex_colorectal",
+      "task": "identify",
+      "question": "Do men and women take part in colorectal cancer screening at different rates in Finland?"
+    },
+    {
+      "id": "below_target_regions",
+      "task": "identify",
+      "question": "Which wellbeing services counties are below the 80 % participation target for breast cancer screening?"
+    },
+    {
+      "id": "helsinki_breast",
+      "task": "identify",
+      "question": "Why should a decision-maker pay attention to breast screening participation in the City of Helsinki, and what does the evidence show?"
+    },
+    {
+      "id": "regional_patterns_robust",
+      "task": "identify",
+      "question": "Which regional patterns between social factors and screening participation are statistically robust, and which are not?"
+    },
+    {
+      "id": "smoking_education",
+      "task": "identify",
+      "question": "How does daily smoking differ by level of education, and why does that matter for cancer prevention?"
+    },
+    {
+      "id": "education_colorectal",
+      "task": "identify",
+      "question": "How does colorectal cancer screening participation differ between people with primary education and people with tertiary education?"
+    },
+    {
+      "id": "secondary_education_position",
+      "task": "identify",
+      "question": "Where does the group with secondary education stand in screening participation compared with the primary and tertiary education groups?"
+    },
+    {
+      "id": "education_vs_language",
+      "task": "identify",
+      "question": "Is the screening participation gap larger by level of education or by native language?"
+    },
+    {
+      "id": "programme_most_unequal",
+      "task": "identify",
+      "question": "Which of the three national screening programmes shows the largest inequality between population groups?"
+    },
+    {
+      "id": "gap_trend_education",
+      "task": "identify",
+      "question": "Has the screening participation gap by level of education widened or narrowed between 2020 and 2024?"
+    },
+    {
+      "id": "gap_trend_language",
+      "task": "identify",
+      "question": "How has screening participation among other-language speakers developed since 2020?"
+    },
+    {
+      "id": "men_colorectal_education",
+      "task": "identify",
+      "question": "Among men, how does colorectal screening participation differ by level of education?"
+    },
+    {
+      "id": "unknown_education_group",
+      "task": "identify",
+      "question": "What does it mean for interpretation that the lowest education group also includes people whose education is unknown?"
+    },
+    {
+      "id": "group_sizes",
+      "task": "identify",
+      "question": "How many people were invited to breast screening in the group with primary or unknown education and in the group with another native language?"
+    },
+    {
+      "id": "income_screening",
+      "task": "identify",
+      "question": "What is known about screening participation by income group in Finland?"
+    },
+    {
+      "id": "preliminary_2025",
+      "task": "identify",
+      "question": "What do the preliminary 2025 statistics show about screening participation by population group compared with 2024?"
+    },
+    {
+      "id": "breast_lowest_highest_region",
+      "task": "identify",
+      "question": "Which wellbeing services county has the lowest breast cancer screening participation and which has the highest?"
+    },
+    {
+      "id": "national_target_status",
+      "task": "identify",
+      "question": "Does Finland as a whole reach the 80 % participation target in the breast, cervical and colorectal screening programmes?"
+    },
+    {
+      "id": "uusimaa_comparison",
+      "task": "identify",
+      "question": "How do the Uusimaa counties and the City of Helsinki compare in screening participation with the rest of Finland?"
+    },
+    {
+      "id": "vantaa_kerava_language",
+      "task": "identify",
+      "question": "Vantaa and Kerava has a high share of residents with another native language; how does its screening participation compare with the national figure?"
+    },
+    {
+      "id": "multiple_factors_regions",
+      "task": "identify",
+      "question": "Which wellbeing services counties combine several unfavourable social factors, such as low income, high unemployment and a low level of education?"
+    },
+    {
+      "id": "language_share_regions",
+      "task": "identify",
+      "question": "In which wellbeing services counties is the share of residents with a native language other than Finnish or Swedish highest?"
+    },
+    {
+      "id": "smoking_regions",
+      "task": "identify",
+      "question": "In which wellbeing services counties is daily smoking most common?"
+    },
+    {
+      "id": "language_breast_correlation",
+      "task": "identify",
+      "question": "How strong is the relationship between the share of other-language residents in a county and its breast screening participation?"
+    },
+    {
+      "id": "income_region_correlation",
+      "task": "identify",
+      "question": "Do counties with more low-income residents have lower screening participation?"
+    },
+    {
+      "id": "municipality_patterns",
+      "task": "identify",
+      "question": "What do municipality-level data show about the link between social factors and screening participation that county-level data do not?"
+    },
+    {
+      "id": "ranking_consistency",
+      "task": "identify",
+      "question": "Are the same wellbeing services counties at the bottom of the participation ranking in all three screening programmes?"
+    },
+    {
+      "id": "survival_breast_regions",
+      "task": "identify",
+      "question": "How does five-year survival for breast cancer differ between wellbeing services counties?"
+    },
+    {
+      "id": "survival_cervical_reliability",
+      "task": "identify",
+      "question": "What is known about five-year survival for cervical cancer by region, and how reliable are those figures?"
+    },
+    {
+      "id": "cancer_index_regions",
+      "task": "identify",
+      "question": "Which counties have the highest age-standardised cancer index, and what does the index measure?"
+    },
+    {
+      "id": "survival_social_factors",
+      "task": "identify",
+      "question": "Are regional differences in cancer survival associated with income, education or language?"
+    },
+    {
+      "id": "mortality_trends",
+      "task": "identify",
+      "question": "How has cancer mortality in Finland developed over the last ten years, and for which cancer sites is it rising or falling?"
+    },
+    {
+      "id": "drug_entitlement_regions",
+      "task": "identify",
+      "question": "How does the share of residents entitled to reimbursed cancer medicines differ between counties?"
+    },
+    {
+      "id": "eu_mortality_comparison",
+      "task": "identify",
+      "question": "How does cancer mortality in Finland compare with other EU countries?"
+    },
+    {
+      "id": "screening_survival_link",
+      "task": "identify",
+      "question": "Do counties with lower screening participation also have worse cancer survival?"
+    },
+    {
+      "id": "followup_colonoscopy",
+      "task": "locate",
+      "question": "After a positive colorectal screening test, which groups are less likely to attend the colonoscopy?"
+    },
+    {
+      "id": "pathway_stage",
+      "task": "locate",
+      "question": "At which stage of the cancer care pathway do the measured inequalities appear: prevention, screening, diagnostic follow-up or treatment?"
+    },
+    {
+      "id": "data_gaps_pathway",
+      "task": "locate",
+      "question": "Which data on waiting times from referral to diagnosis and start of treatment are missing, and what does that mean for decisions?"
+    },
+    {
+      "id": "followup_colposcopy",
+      "task": "locate",
+      "question": "After an abnormal cervical screening result, which groups are less likely to attend the colposcopy?"
+    },
+    {
+      "id": "followup_language_robustness",
+      "task": "locate",
+      "question": "Does attendance at colonoscopy after a positive screening test differ by native language, and is the difference statistically robust?"
+    },
+    {
+      "id": "invitation_vs_followup",
+      "task": "locate",
+      "question": "Is the inequality between education groups larger at the invitation stage or at the follow-up examination stage of screening?"
+    },
+    {
+      "id": "followup_sex",
+      "task": "locate",
+      "question": "Do men and women attend colonoscopy after a positive screening test at different rates?"
+    },
+    {
+      "id": "primary_care_first_contact",
+      "task": "locate",
+      "question": "What does the evidence show about access to primary care as the first contact point on the cancer care pathway?"
+    },
+    {
+      "id": "primary_care_wait_regions",
+      "task": "locate",
+      "question": "In which wellbeing services counties do most patients wait more than seven days for a non-urgent primary care doctor's appointment?"
+    },
+    {
+      "id": "occupational_health_route",
+      "task": "locate",
+      "question": "How does access to occupational health care create unequal routes to a cancer diagnosis?"
+    },
+    {
+      "id": "cost_barriers",
+      "task": "locate",
+      "question": "How do client fees, medicine costs and travel costs affect whether people seek or continue cancer care?"
+    },
+    {
+      "id": "distance_barrier",
+      "task": "locate",
+      "question": "What is documented about distance to the treating unit and cancer outcomes?"
+    },
+    {
+      "id": "health_literacy_delays",
+      "task": "locate",
+      "question": "What role does health literacy play in delays on the cancer care pathway?"
+    },
+    {
+      "id": "stage_at_diagnosis",
+      "task": "locate",
+      "question": "Is there data on cancer stage at diagnosis by region or by education, and what does the national strategy aim for?"
+    },
+    {
+      "id": "treatment_start_monitoring",
+      "task": "locate",
+      "question": "Can it be monitored today whether patients start cancer treatment within the target time in every region?"
+    },
+    {
+      "id": "referral_time",
+      "task": "locate",
+      "question": "What is known about the time from the first primary care contact to specialist referral for suspected cancer?"
+    },
+    {
+      "id": "measured_vs_documented",
+      "task": "locate",
+      "question": "For which stages of the cancer care pathway is the evidence measured in open statistics, and for which is it only described in strategy documents?"
+    },
+    {
+      "id": "prevention_stage",
+      "task": "locate",
+      "question": "Which inequalities are visible at the prevention stage, before screening begins?"
+    },
+    {
+      "id": "measures_language",
+      "task": "recommend",
+      "question": "Which measures from the national implementation roadmap address lower screening participation among other-language speakers, and what do they cost?"
+    },
+    {
+      "id": "measures_education",
+      "task": "recommend",
+      "question": "Which measures from the national implementation roadmap address lower screening participation among people with primary education?"
+    },
+    {
+      "id": "measure_followup",
+      "task": "recommend",
+      "question": "What can be done to raise attendance at follow-up examinations after a positive screening result?"
+    },
+    {
+      "id": "potential_people",
+      "task": "recommend",
+      "question": "How many additional people would take part in screening if the participation gap by education were closed?"
+    },
+    {
+      "id": "priority_limited_budget",
+      "task": "recommend",
+      "question": "With a limited budget, which screening inequality should a wellbeing services county address first, and on what evidence?"
+    },
+    {
+      "id": "success_indicators",
+      "task": "recommend",
+      "question": "Which indicators should be monitored to see whether a measure against screening inequality is working?"
+    },
+    {
+      "id": "measure_below_target",
+      "task": "recommend",
+      "question": "Which measure from the national implementation roadmap applies to counties below the 80 % screening target, and what is its budget?"
+    },
+    {
+      "id": "measure_primary_care",
+      "task": "recommend",
+      "question": "Which roadmap measure addresses long waits for a primary care doctor's appointment?"
+    },
+    {
+      "id": "measure_care_pathways",
+      "task": "recommend",
+      "question": "What does the roadmap propose for national care pathways with agreed access times, and what will it cost?"
+    },
+    {
+      "id": "care_coordinator_model",
+      "task": "recommend",
+      "question": "What is the named care coordinator model, and which measured gap could it address?"
+    },
+    {
+      "id": "codesign_practice",
+      "task": "recommend",
+      "question": "What does co-designing screening services with residents mean in practice, and which group is it intended for?"
+    },
+    {
+      "id": "lowest_cost_measure",
+      "task": "recommend",
+      "question": "Which of the roadmap measures relevant to screening inequality has the lowest cost, and what gap does it target?"
+    },
+    {
+      "id": "combined_budget",
+      "task": "recommend",
+      "question": "What is the combined budget of the roadmap measures linked to the measured screening inequalities?"
+    },
+    {
+      "id": "cost_against_group_size",
+      "task": "recommend",
+      "question": "How does the cost of a measure compare with the number of people in the group it is meant to reach?"
+    },
+    {
+      "id": "potential_language_breast",
+      "task": "recommend",
+      "question": "How many additional people would take part in breast screening if other-language speakers reached the participation of domestic-language speakers?"
+    },
+    {
+      "id": "potential_colonoscopy",
+      "task": "recommend",
+      "question": "How many additional colonoscopies would take place if the group with primary education attended follow-up at the same rate as the tertiary education group?"
+    },
+    {
+      "id": "helsinki_measures",
+      "task": "recommend",
+      "question": "Which measures should the City of Helsinki evaluate first, given its screening participation and population profile?"
+    },
+    {
+      "id": "regional_recommendation_basis",
+      "task": "recommend",
+      "question": "For which wellbeing services counties does the evidence support a region-specific recommendation, and for which only a national one?"
+    },
+    {
+      "id": "national_or_county_level",
+      "task": "recommend",
+      "question": "Should measures against screening inequality be organised nationally or by each wellbeing services county?"
+    },
+    {
+      "id": "men_colorectal_measure",
+      "task": "recommend",
+      "question": "What could be done to raise colorectal screening participation among men?"
+    },
+    {
+      "id": "multilingual_invitations",
+      "task": "recommend",
+      "question": "Is there evidence that invitations and information in more languages raise screening participation?"
+    },
+    {
+      "id": "expected_effect",
+      "task": "recommend",
+      "question": "What is known about how much of a participation gap each proposed measure can be expected to close?"
+    },
+    {
+      "id": "waiting_time_data_needed",
+      "task": "recommend",
+      "question": "Which data would have to be collected to monitor waiting times on the cancer care pathway by region?"
+    },
+    {
+      "id": "roadmap_timeframe",
+      "task": "recommend",
+      "question": "Over which period are the roadmap measures planned, and when could first results be expected in the statistics?"
+    },
+    {
+      "id": "actions_without_new_funding",
+      "task": "recommend",
+      "question": "Which actions could a wellbeing services county start within a year without new national funding?"
+    },
+    {
+      "id": "cost_of_inaction",
+      "task": "recommend",
+      "question": "What is projected to happen to cancer care costs in Finland by 2035 without specific interventions?"
+    },
+    {
+      "id": "strategy_equity_goals",
+      "task": "recommend",
+      "question": "Which goals of the National Cancer Strategy 2026-2035 concern equity, and which indicators belong to them?"
+    },
+    {
+      "id": "language_or_education_first",
+      "task": "recommend",
+      "question": "If only one of two measures can be funded, communication for language groups or co-design for people with primary education, what does the evidence say about the size of each gap?"
+    },
+    {
+      "id": "general_campaign_risk",
+      "task": "recommend",
+      "question": "Could a general campaign to raise screening participation widen the gap between groups, and how can that be checked?"
+    },
+    {
+      "id": "digital_exclusion",
+      "task": "recommend",
+      "question": "How should digital exclusion be considered when screening invitations and information move online?"
+    },
+    {
+      "id": "smoking_measures",
+      "task": "recommend",
+      "question": "Which measures does the roadmap contain to reduce smoking in the groups where it is most common?"
+    },
+    {
+      "id": "causation_limits",
+      "task": "evidence",
+      "question": "What can and what can not be concluded about the causes of lower screening participation in some groups?"
+    },
+    {
+      "id": "data_sources",
+      "task": "evidence",
+      "question": "Which public data sources are the figures based on, and how current are they?"
+    },
+    {
+      "id": "gap_certainty",
+      "task": "evidence",
+      "question": "How certain are the measured gaps between population groups, and what do the 95 % confidence intervals show?"
+    },
+    {
+      "id": "multiple_comparisons",
+      "task": "evidence",
+      "question": "Why do most regional correlations not count as robust after correction for multiple comparisons?"
+    },
+    {
+      "id": "fallback_values",
+      "task": "evidence",
+      "question": "Which figures are fallback values filled in for missing data, and are they used when gaps are measured?"
+    },
+    {
+      "id": "regions_not_individuals",
+      "task": "evidence",
+      "question": "Why can a pattern between regions not be read as a statement about individual people?"
+    },
+    {
+      "id": "evidence_types",
+      "task": "evidence",
+      "question": "What is the difference between evidence from group comparisons and evidence from regional comparisons?"
+    },
+    {
+      "id": "small_county_reliability",
+      "task": "evidence",
+      "question": "How reliable are the screening figures for small wellbeing services counties such as Central Ostrobothnia or Kainuu?"
+    },
+    {
+      "id": "individual_patient_data",
+      "task": "evidence",
+      "question": "Does the analysis use any data on individual patients?"
+    },
+    {
+      "id": "most_valuable_missing_data",
+      "task": "evidence",
+      "question": "Which missing dataset would most improve decisions on cancer care equity if it became available?"
+    },
+    {
+      "id": "expert_review_needed",
+      "task": "evidence",
+      "question": "Which decisions should not be taken from these figures alone without expert review?"
+    }
+  ]
+}

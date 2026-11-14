@@ -156,7 +156,7 @@ The prototype splits the six design steps into 18 smaller ones. It uses only the
 ```
 python3 pipeline/run_pipeline.py                      # run all 18 steps, about 25 seconds
 python3 pipeline/run_pipeline.py --upload             # run, then upload fact sheets and CSVs to Azure
-python3 -m unittest discover -s pipeline/tests -v     # 17 unit tests
+python3 -m unittest discover -s pipeline/tests -v     # 29 unit tests
 ```
 
 Refreshing the inputs needs a network connection and is separate from the run:
@@ -185,7 +185,7 @@ Each fetch script retries on network errors and reports per source whether the d
 | 12 | derive | Measure | Base of each percentage, 95 % confidence interval, three-year average, position against the 80 % screening target |
 | 13 | categorise | Categorise | Per factor: thirds of regions (relative) and worse or better than Finland (absolute); tags every outcome with factor and evidence type |
 | 14 | measure | Measure | Gaps between groups with confidence interval (A); regional comparison, population-weighted, with permutation test and correction for multiple comparisons (B); the same across municipalities; documented barriers (C) |
-| 15 | recommend | Measure | Links each gap to a measure from the national roadmap, with cost, page and success indicator |
+| 15 | recommend | Measure | Asks the decision tree (`decision_tree/rules.json`) which roadmap measure applies to each gap; adds cost, page, success indicator and the rule that decided |
 | 16 | trends | Measure | Deaths by cancer site and year; new treatment entitlements per region |
 | 17 | compare_runs | Publish | Lists every analysis figure that is new, gone or different since the previous run |
 | 18 | publish | Publish | Writes all outputs, fact sheets, lineage and a run report; fails if any input row is unaccounted for |
@@ -215,17 +215,26 @@ Every fallback row has `status = imputed`, the method, and the values it was bui
 
 ### Recommendation rules (step 15)
 
-| Trigger | Measure | Fit |
-| --- | --- | --- |
-| National gap by education in screening participation | 1.1.1 Co-design screening and prevention services with residents | direct |
-| National gap by native language in screening participation | 1.3.1 Targeted communication for language groups | direct |
-| National gap between men and women | 2.4.1 Screening quality manuals | closest match |
-| National gap in attendance at the follow-up examination | 1.2.3 Named care coordinator | closest match |
-| No open data on referral, diagnosis and treatment times | 3.1.2 National care pathways with public monitoring | direct |
-| Region clearly below 80 % and in the disadvantaged third for language | 1.3.1 | direct |
-| Region clearly below 80 % and in the disadvantaged third for education | 1.1.1 | direct |
-| Region clearly below 80 %, neither of the two | 2.4.1 | direct |
-| Region in the disadvantaged third for primary care waits | 2.5.1 More physician capacity in primary care | direct |
+The rules are data, not code. They are stored in `decision_tree/rules.json` and evaluated by `decision_tree/tree.py`, so the pipeline, the API and a human reviewer read the same file. Step 15 describes each gap or region as a set of facts and asks the tree which measures apply. Every recommendation carries the `rule_id` and `rule_version` that produced it.
+
+```
+python3 decision_tree/tree.py                                    # print all rules
+python3 decision_tree/tree.py region_below_target language_level=disadvantaged education_level=middle
+```
+
+The second command shows, rule by rule, why each one did or did not apply.
+
+| Rule | Trigger | Measure | Fit |
+| --- | --- | --- | --- |
+| N1 | National gap by education in screening participation | 1.1.1 Co-design screening and prevention services with residents | direct |
+| N2 | National gap by native language in screening participation | 1.3.1 Targeted communication for language groups | direct |
+| N3 | National gap between men and women | 2.4.1 Screening quality manuals | closest match |
+| N4 | National gap in attendance at the follow-up examination | 1.2.3 Named care coordinator | closest match |
+| N5 | No open data on referral, diagnosis and treatment times | 3.1.2 National care pathways with public monitoring | direct |
+| R1 | Region clearly below 80 % and in the disadvantaged third for language | 1.3.1 | direct |
+| R2 | Region clearly below 80 % and in the disadvantaged third for education | 1.1.1 | direct |
+| R3 | Region clearly below 80 %, neither of the two | 2.4.1 | direct |
+| R4 | Region in the disadvantaged third for primary care waits | 2.5.1 More physician capacity in primary care | direct |
 
 A national gap leads to a recommendation only if the newest full year shows it and its confidence interval lies above zero. "Closest match" means the roadmap has no measure aimed exactly at that gap. Costs are the roadmap's national estimates for 2026–2031, not regional budgets. Every recommendation is a proposal to evaluate; the effect of a measure is not known from this data.
 

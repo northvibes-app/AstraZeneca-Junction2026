@@ -1,0 +1,50 @@
+{
+  "status": "grounded",
+  "answer": "The supplied evidence does not provide direct data on breast cancer screening participation by level of education in Finland. The available information includes:\n\n- Breast cancer screening participation rates by region in 2024, showing variation from 74.3% in the City of Helsinki to 85.6% in North Ostrobothnia, with a national average of 81.6% (excluding Åland) [S1, S2].\n\n- Education-associated participation gaps are reported only for cervical cancer screening (preliminary 2025 data), showing a large difference of 30.5 percentage points between primary/unknown education (50.3%) and tertiary/higher education (80.8%) [S1, S2].\n\nNo analogous education-stratified participation rates for breast cancer screening are presented in the evidence. Therefore, no conclusion can be drawn about how breast cancer screening participation differs by education level in Finland based on the supplied documents.\n\nLimitations: The data on education-related gaps is preliminary and only available for cervical screening, not breast screening. Regional differences in breast screening participation are documented but not linked to education or other socioeconomic factors [S1, S2].",
+  "sources": [
+    {
+      "id": "S1",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:"
+    },
+    {
+      "id": "S2",
+      "document": "Evidence-Based Equity Gaps and Decision Support Candidates",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:*"
+    },
+    {
+      "id": "S3",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "# Statistics — Equal Care Navigator Across Finland\n\n**Repository:** AstraZeneca Junction 2026 | **Language:** English | **Coverage:** Cancer prevention, screening and selected cancer outcome statistics.\n\nThis folder contains **verified, source-linked public statistics** and official strategy targets for exploring inequities in cancer care across Finland. These datasets **do not represent all data in the 36 linked source portals**, and do not imply access to individual patient records or restricted research datasets.\n\n\n## Contents\n\n| File | Description |\n| --- | --- |\n| [national_key_statistics.csv](national_key_statistics.csv) | Observed national counts, screening indicators, strategy target"
+    },
+    {
+      "id": "S4",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "Vs are snapshots. Check reporting dates, revisions and reuse terms before publication or automated ingestion.\n- Do not join aggregates to identify individuals. Keep small-cell privacy protections, public-data licensing and human oversight in place.\n\n\n## Primary sources\n\n1. [Finnish Cancer Registry — annual report 2024](https://cancerregistry.fi/reports-and-publications/annual-report-on-cancer-in-finland/)\n2. [Finnish Cancer Registry — breast screening 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html)\n3. [Finnish Cancer Registry — preliminary cervical screening 2025](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html)\n4. [National Cancer S"
+    },
+    {
+      "id": "S5",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "n-europe_fi) — EU framework.\n- [EU Mission on Cancer](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/eu-mission-cancer_en) — research framework.\n\n\n## Public statistics and potential exports\n\n| Source | URL | Extraction status |\n| --- | --- | --- |\n| Finnish Cancer Registry — annual national cancer report | https://cancerregistry.fi/reports-and-publications/annual-report-on-cancer-in-finland/ | **Selected national outcomes extracted (2023/2024)** |\n| Finnish Cancer Registry — breast screening | https://stats.cancerregistry.fi/joukkistilastot/breast.html | **2024 county participation table e"
+    }
+  ],
+  "retrieval": {
+    "provider": "azure_ai_search",
+    "documentsFound": 5
+  },
+  "model": {
+    "provider": "azure_openai",
+    "deployment": "rag-chat",
+    "status": "invoked"
+  }
+}

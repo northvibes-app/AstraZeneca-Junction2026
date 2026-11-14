@@ -1,0 +1,50 @@
+{
+  "status": "grounded",
+  "answer": "The data missing on waiting times from referral to diagnosis and start of treatment include:\n\n- Comparable referral dates\n- Specialist assessment dates\n- Diagnosis dates\n- Treatment start dates\n- Cancer type\n- Region\n- Denominators and case mix\n\nWithout these data, it is not possible to calculate or present reliable delay rates or waiting time statistics. Consequently, any application or analysis must explicitly show a **DATA GAP** rather than invent or simulate delay rates as facts. This lack of comparable, validated data means that decisions regarding delays in cancer diagnosis and treatment cannot be evidence-based or automated. Instead, decision-making should rely on observed differences where data are comparable, state potential contributing factors without assuming causation, identify missing evidence, and propose specific interventions to evaluate with human review and oversight (S1, S2).\n\nIn summary, the absence of these key data elements means that:\n\n- Nationwide, cancer-specific referral-to-specialist delays by region are not available.\n- Comparable time-from-diagnosis-to-treatment data for every cancer type and region are lacking.\n- Without these, no verified national statistics on waiting times exist.\n- Automated individual patient triage or treatment decisions based on incomplete data should be avoided.\n- Human review and evidence-based evaluation of interventions are required (S1, S2).\n\nThis data gap limits the ability to identify and address equity issues in cancer care pathways related to waiting times (S1, S2).",
+  "sources": [
+    {
+      "id": "S1",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "\n**Data still needed:** comparable referral dates, specialist assessment dates, diagnosis dates, treatment start dates, cancer type, region, denominators and case mix. Without these, the application must show **DATA GAP**, not invented delay rates.\n\n\n## Recommended Decision Tree logic\n\n1. Select domain: prevention / screening / referral / diagnosis / treatment.\n2. Select geography, period, measure and (where available) cancer type.\n3. Verify source, year, population, subgroup denominator, confidence interval and comparable definitions.\n4. Calculate a descriptive difference only if the measures are comparable.\n5. State **Observed Difference**, **Potential Contributing Factors (not established"
+    },
+    {
+      "id": "S2",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "risk score.\n\n**Potential action to assess:** accessible educational materials and screening-outreach designs co-developed with residents, considering digital exclusion. **Measure:** participation by education subgroup, with data-quality monitoring.\n\n\n## 3. Native-language-associated cervical-screening gap — preliminary 2025\n\nThe same 2025 preliminary reporting shows **76.5%** participation in the *domestic-language* group and **56.8%** in the *other/missing* group, a **19.7 percentage-point difference**.\n\n**Source:** [Cervical screening preliminary statistics](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html).\n\n**Potential action to evaluate:** professi"
+    },
+    {
+      "id": "S3",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "Vs are snapshots. Check reporting dates, revisions and reuse terms before publication or automated ingestion.\n- Do not join aggregates to identify individuals. Keep small-cell privacy protections, public-data licensing and human oversight in place.\n\n\n## Primary sources\n\n1. [Finnish Cancer Registry — annual report 2024](https://cancerregistry.fi/reports-and-publications/annual-report-on-cancer-in-finland/)\n2. [Finnish Cancer Registry — breast screening 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html)\n3. [Finnish Cancer Registry — preliminary cervical screening 2025](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html)\n4. [National Cancer S"
+    },
+    {
+      "id": "S4",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "rchers/biobank-borealis-of-northern-finland/)\n- [Blood Service Biobank](https://www.veripalvelu.fi/biopankki/)\n- [Hematological Biobank](https://www.hematologinenbiopankki.fi/)\n- [THL Biobank](https://thl.fi/en/research-and-development/thl-biobank)\n\n\n## Integration principles\n\n1. Import only aggregate, publishable data with a valid reuse basis.\n2. Preserve source URL, reference year, capture date, numerator/denominator, geography, rate definition and revision status.\n3. Respect programme differences, reporting delays and possible small-cell suppression.\n4. Never fabricate missing source statistics or claim that restricted data are public.\n5. For all cancer types: represent available evidence"
+    },
+    {
+      "id": "S5",
+      "document": "Evidence-Based Equity Gaps and Decision Support Candidates",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:*"
+    }
+  ],
+  "retrieval": {
+    "provider": "azure_ai_search",
+    "documentsFound": 5
+  },
+  "model": {
+    "provider": "azure_openai",
+    "deployment": "rag-chat",
+    "status": "invoked"
+  }
+}

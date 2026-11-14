@@ -1,0 +1,50 @@
+{
+  "status": "grounded",
+  "answer": "With a limited budget, the wellbeing services county should consider addressing the education-associated cervical-screening participation gap first. The evidence shows a substantial preliminary 2025 participation difference of 30.5 percentage points between women with primary/unknown education (50.3%) and those with tertiary/higher education (80.8%) (S3, S5). This gap is larger than the regional breast-screening participation gap (9.5 percentage points) and the native-language-associated cervical-screening gap (19.7 percentage points) reported in the same sources (S3, S5).\n\nThe education-associated gap is notable because it reflects a large disparity in screening participation that could be targeted with specific interventions such as accessible educational materials and outreach co-developed with residents, considering digital exclusion (S3, S5). Although these data are preliminary and association does not prove causation, the size of the gap and the potential for tailored educational interventions provide a strong rationale for prioritizing this inequality.\n\nIn contrast, the regional breast-screening gap and native-language cervical-screening gap, while important, show smaller differences in participation rates (9.5 and 19.7 percentage points respectively) (S3, S5). Additionally, data on access and treatment pathway differences are currently qualitative and lack measured nationwide statistics, representing a data gap rather than actionable evidence (S1, S4).\n\nTherefore, based on the magnitude of the observed participation difference and the availability of preliminary evidence-supported interventions, the education-associated cervical-screening gap should be addressed first within a limited budget, with evaluation of participation changes by education subgroup as the outcome measure (S3, S5).",
+  "sources": [
+    {
+      "id": "S1",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "\n**Data still needed:** comparable referral dates, specialist assessment dates, diagnosis dates, treatment start dates, cancer type, region, denominators and case mix. Without these, the application must show **DATA GAP**, not invented delay rates.\n\n\n## Recommended Decision Tree logic\n\n1. Select domain: prevention / screening / referral / diagnosis / treatment.\n2. Select geography, period, measure and (where available) cancer type.\n3. Verify source, year, population, subgroup denominator, confidence interval and comparable definitions.\n4. Calculate a descriptive difference only if the measures are comparable.\n5. State **Observed Difference**, **Potential Contributing Factors (not established"
+    },
+    {
+      "id": "S2",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "# Statistics — Equal Care Navigator Across Finland\n\n**Repository:** AstraZeneca Junction 2026 | **Language:** English | **Coverage:** Cancer prevention, screening and selected cancer outcome statistics.\n\nThis folder contains **verified, source-linked public statistics** and official strategy targets for exploring inequities in cancer care across Finland. These datasets **do not represent all data in the 36 linked source portals**, and do not imply access to individual patient records or restricted research datasets.\n\n\n## Contents\n\n| File | Description |\n| --- | --- |\n| [national_key_statistics.csv](national_key_statistics.csv) | Observed national counts, screening indicators, strategy target"
+    },
+    {
+      "id": "S3",
+      "document": "Evidence-Based Equity Gaps and Decision Support Candidates",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:*"
+    },
+    {
+      "id": "S4",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "risk score.\n\n**Potential action to assess:** accessible educational materials and screening-outreach designs co-developed with residents, considering digital exclusion. **Measure:** participation by education subgroup, with data-quality monitoring.\n\n\n## 3. Native-language-associated cervical-screening gap — preliminary 2025\n\nThe same 2025 preliminary reporting shows **76.5%** participation in the *domestic-language* group and **56.8%** in the *other/missing* group, a **19.7 percentage-point difference**.\n\n**Source:** [Cervical screening preliminary statistics](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html).\n\n**Potential action to evaluate:** professi"
+    },
+    {
+      "id": "S5",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:"
+    }
+  ],
+  "retrieval": {
+    "provider": "azure_ai_search",
+    "documentsFound": 5
+  },
+  "model": {
+    "provider": "azure_openai",
+    "deployment": "rag-chat",
+    "status": "invoked"
+  }
+}

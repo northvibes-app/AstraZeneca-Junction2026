@@ -1,0 +1,50 @@
+{
+  "status": "grounded",
+  "answer": "The national implementation roadmap addresses the lower screening participation among people with primary education through the following measures:\n\n- **Potential action to assess:** Develop accessible educational materials and screening-outreach designs co-developed with residents, taking into account digital exclusion.  \n- **Measure:** Monitor participation by education subgroup, with data-quality monitoring to track improvements.\n\nThis is based on the observed education-associated cervical-screening gap where participation is 50.3% for primary education/unknown versus 80.8% for tertiary/higher education, a 30.5 percentage-point difference (preliminary 2025 data). The roadmap suggests these interventions to help reduce this gap (S1, S3, S4).\n\nNo other specific measures targeting the education-associated gap are detailed in the provided evidence. The emphasis is on co-development of accessible materials and outreach, and monitoring participation by education level to evaluate impact.",
+  "sources": [
+    {
+      "id": "S1",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "risk score.\n\n**Potential action to assess:** accessible educational materials and screening-outreach designs co-developed with residents, considering digital exclusion. **Measure:** participation by education subgroup, with data-quality monitoring.\n\n\n## 3. Native-language-associated cervical-screening gap — preliminary 2025\n\nThe same 2025 preliminary reporting shows **76.5%** participation in the *domestic-language* group and **56.8%** in the *other/missing* group, a **19.7 percentage-point difference**.\n\n**Source:** [Cervical screening preliminary statistics](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html).\n\n**Potential action to evaluate:** professi"
+    },
+    {
+      "id": "S2",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "Vs are snapshots. Check reporting dates, revisions and reuse terms before publication or automated ingestion.\n- Do not join aggregates to identify individuals. Keep small-cell privacy protections, public-data licensing and human oversight in place.\n\n\n## Primary sources\n\n1. [Finnish Cancer Registry — annual report 2024](https://cancerregistry.fi/reports-and-publications/annual-report-on-cancer-in-finland/)\n2. [Finnish Cancer Registry — breast screening 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html)\n3. [Finnish Cancer Registry — preliminary cervical screening 2025](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html)\n4. [National Cancer S"
+    },
+    {
+      "id": "S3",
+      "document": "Evidence-Based Equity Gaps and Decision Support Candidates",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:*"
+    },
+    {
+      "id": "S4",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:"
+    },
+    {
+      "id": "S5",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "# Statistics — Equal Care Navigator Across Finland\n\n**Repository:** AstraZeneca Junction 2026 | **Language:** English | **Coverage:** Cancer prevention, screening and selected cancer outcome statistics.\n\nThis folder contains **verified, source-linked public statistics** and official strategy targets for exploring inequities in cancer care across Finland. These datasets **do not represent all data in the 36 linked source portals**, and do not imply access to individual patient records or restricted research datasets.\n\n\n## Contents\n\n| File | Description |\n| --- | --- |\n| [national_key_statistics.csv](national_key_statistics.csv) | Observed national counts, screening indicators, strategy target"
+    }
+  ],
+  "retrieval": {
+    "provider": "azure_ai_search",
+    "documentsFound": 5
+  },
+  "model": {
+    "provider": "azure_openai",
+    "deployment": "rag-chat",
+    "status": "invoked"
+  }
+}

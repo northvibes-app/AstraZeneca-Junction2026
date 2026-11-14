@@ -1,0 +1,50 @@
+{
+  "status": "grounded",
+  "answer": "The national implementation roadmap addresses the lower cervical screening participation among other-language speakers (the \"other/missing\" native-language group with 56.8% participation vs. 76.5% in the domestic-language group, a 19.7 percentage-point gap) by proposing the following measures:\n\n- Professionally translated invitations\n- Clear, accessible care navigation\n\nThese measures are intended to improve participation by other-language speakers and are to be evaluated by measuring participation by native-language group after implementation, with appropriate privacy protections (S1, S5).\n\nRegarding costs, the provided evidence does not specify any cost estimates or resource requirements for these measures in the national implementation roadmap or related documents (S1, S4, S5). Therefore, no cost information is available from the supplied evidence.",
+  "sources": [
+    {
+      "id": "S1",
+      "document": "EQUITY_GAPS.md",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "risk score.\n\n**Potential action to assess:** accessible educational materials and screening-outreach designs co-developed with residents, considering digital exclusion. **Measure:** participation by education subgroup, with data-quality monitoring.\n\n\n## 3. Native-language-associated cervical-screening gap — preliminary 2025\n\nThe same 2025 preliminary reporting shows **76.5%** participation in the *domestic-language* group and **56.8%** in the *other/missing* group, a **19.7 percentage-point difference**.\n\n**Source:** [Cervical screening preliminary statistics](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html).\n\n**Potential action to evaluate:** professi"
+    },
+    {
+      "id": "S2",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "Vs are snapshots. Check reporting dates, revisions and reuse terms before publication or automated ingestion.\n- Do not join aggregates to identify individuals. Keep small-cell privacy protections, public-data licensing and human oversight in place.\n\n\n## Primary sources\n\n1. [Finnish Cancer Registry — annual report 2024](https://cancerregistry.fi/reports-and-publications/annual-report-on-cancer-in-finland/)\n2. [Finnish Cancer Registry — breast screening 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html)\n3. [Finnish Cancer Registry — preliminary cervical screening 2025](https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html)\n4. [National Cancer S"
+    },
+    {
+      "id": "S3",
+      "document": "README.md",
+      "blobPath": "Statistics/README.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/README.md",
+      "excerpt": "# Statistics — Equal Care Navigator Across Finland\n\n**Repository:** AstraZeneca Junction 2026 | **Language:** English | **Coverage:** Cancer prevention, screening and selected cancer outcome statistics.\n\nThis folder contains **verified, source-linked public statistics** and official strategy targets for exploring inequities in cancer care across Finland. These datasets **do not represent all data in the 36 linked source portals**, and do not imply access to individual patient records or restricted research datasets.\n\n\n## Contents\n\n| File | Description |\n| --- | --- |\n| [national_key_statistics.csv](national_key_statistics.csv) | Observed national counts, screening indicators, strategy target"
+    },
+    {
+      "id": "S4",
+      "document": "DATA_SOURCES.md",
+      "blobPath": "Statistics/DATA_SOURCES.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/DATA_SOURCES.md",
+      "excerpt": "# Finnish Cancer Data — Source Inventory and Access Notes\n\nThis is a **source and access catalogue**, not a claim that every listed source has been downloaded or transformed into statistics. The primary challenge source list has **36 distinct embedded URLs**, including institutional pages and research-only services.\n\n\n## National strategy and implementation\n\n- [National Cancer Strategy 2026–2035](https://files.hackjunction.app/resources/Kansallinen_syopastrategia_2026_2035_FINAL.pdf) — official goals, forecasts and targets; extracted selected values into `national_key_statistics.csv`.\n- [Implementation Roadmap 2026–2031](https://files.hackjunction.app/resources/Kansallinen_syopastrategia_toi"
+    },
+    {
+      "id": "S5",
+      "document": "Evidence-Based Equity Gaps and Decision Support Candidates",
+      "blobPath": "Statistics/EQUITY_GAPS.md",
+      "sourceUrl": "azureblob://northvibesrag/rag-documents/Statistics/EQUITY_GAPS.md",
+      "excerpt": "# Evidence-Based Equity Gaps and Decision Support Candidates\n\n## 1. Regional breast-screening participation gap — observed 2024\n\nThe Finnish Cancer Registry reports **81.6%** breast screening participation nationwide (excluding Åland), compared with **74.3% in the City of Helsinki**, **76.1% in West Uusimaa** and **85.6% in North Ostrobothnia**. The difference between these last two regional observations is **9.5 percentage points**.\n\n**Source:** [Breast cancer screening programme: annual statistics 2024](https://stats.cancerregistry.fi/joukkistilastot/breast.html).\n\n**What is demonstrated:** differences in screening-programme participation rates across regions.\n\n**What is not demonstrated:*"
+    }
+  ],
+  "retrieval": {
+    "provider": "azure_ai_search",
+    "documentsFound": 5
+  },
+  "model": {
+    "provider": "azure_openai",
+    "deployment": "rag-chat",
+    "status": "invoked"
+  }
+}

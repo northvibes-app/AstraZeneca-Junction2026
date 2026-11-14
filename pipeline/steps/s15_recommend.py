@@ -2,47 +2,65 @@
 
 Link each gap to a measure from the national implementation roadmap.
 
-The rules are deliberately simple and written out, so that anyone can check why a
-measure was proposed. Every proposal is something to evaluate, not a proven remedy:
-the data shows where a gap is, not what causes it.
+The rules are not written in this file. They are in decision_tree/rules.json and are
+evaluated by decision_tree/tree.py, so that the pipeline, the API and a human reviewer
+all read the same rules. This step only describes each gap or region as a set of
+facts and asks the decision tree which measures apply.
+
+Every proposal is something to evaluate, not a proven remedy: the data shows where a
+gap is, not what causes it.
 """
+import sys
 from collections import defaultdict
+
+from common import ROOT
+
+sys.path.insert(0, str(ROOT / "decision_tree"))
+from tree import decide, load_rules      # noqa: E402
 
 SCREENING = {"screening_participation_breast": "breast", "screening_participation_colorectal": "colorectal",
              "screening_participation_cervical": "cervical"}
 
 
+def indicator_family(indicator_key):
+    """The group of indicators a rule can refer to."""
+    if indicator_key in SCREENING:
+        return "screening_participation"
+    if indicator_key.startswith("followup_attendance"):
+        return "followup_attendance"
+    return "other"
+
+
 def recommend(ctx):
     """Create national and regional recommendations.
 
-    National, from gaps measured directly between groups (evidence A, latest full year):
-        education gap in screening participation   -> 1.1.1
-        language gap in screening participation    -> 1.3.1
-        gap between men and women                  -> 2.4.1 (closest match)
-        gap in follow-up attendance                -> 1.2.3 (closest match)
-        pathway stages without any open data       -> 3.1.2
-    Regional, for each region that is clearly below the 80 % screening target:
-        region in the disadvantaged third for language   -> 1.3.1
-        region in the disadvantaged third for education  -> 1.1.1
-        neither                                          -> 2.4.1
-    and independently, slow access to primary care       -> 2.5.1
-
-    "closest match" means the roadmap has no measure aimed exactly at this gap.
+    Facts handed to the decision tree (subjects in rules.json):
+        group_gap            each gap measured directly between groups for Finland
+                             (evidence A), newest full year only
+        pathway_data         whether referral, diagnosis or treatment start lack open data
+        region_below_target  each region clearly below the 80 % screening target
+        region_access        each region, for access to primary care
     """
     step, ref, out = "15 recommend", ctx.ref, []
     measures = {m["measure_id"]: m for m in ref.measures}
+    tree = load_rules(known_measures=measures)
 
-    def add(scope, region_code, region, measure_id, fit, trigger, evidence, gap=None):
-        m = measures[measure_id]
-        out.append({"scope": scope, "region_code": region_code, "region": region,
-                    "measure_id": measure_id, "measure": m["title"], "fit": fit,
-                    "trigger": trigger, "evidence_type": evidence,
-                    "pathway_stage": m["pathway_stage"], "cost_eur": m["cost_eur"],
-                    "cost_note": m["cost_note"], "success_kpi": m["kpi"],
-                    "people_in_worse_group": gap["people_in_worse_group"] if gap else "",
-                    "potential_additional": gap["potential_additional"] if gap else "",
-                    "source": f"Implementation Roadmap 2026-2031, p. {m['roadmap_page']}"})
-        ctx.count(step, f"{scope} recommendations")
+    def apply(subject, fact, scope, region_code, region, gap=None):
+        """Ask the decision tree and record one recommendation per rule that applies."""
+        fired, _ = decide(tree, subject, fact)
+        for hit in fired:
+            rule, m = hit["rule"], measures[hit["rule"]["measure_id"]]
+            out.append({"scope": scope, "region_code": region_code, "region": region,
+                        "measure_id": rule["measure_id"], "measure": m["title"], "fit": rule["fit"],
+                        "trigger": hit["trigger"], "evidence_type": rule["evidence_type"],
+                        "pathway_stage": m["pathway_stage"], "cost_eur": m["cost_eur"],
+                        "cost_note": m["cost_note"], "success_kpi": m["kpi"],
+                        "people_in_worse_group": gap["people_in_worse_group"] if gap else "",
+                        "potential_additional": gap["potential_additional"] if gap else "",
+                        "source": f"Implementation Roadmap 2026-2031, p. {m['roadmap_page']}",
+                        "rule_id": rule["rule_id"], "rule_version": rule["version"]})
+            ctx.count(step, f"{scope} recommendations")
+        return fired
 
     # --- national ----------------------------------------------------------------
     observed = [g for g in ctx.results["equity_gaps"]
@@ -53,30 +71,21 @@ def recommend(ctx):
         if k not in newest or g["year"] > newest[k]["year"]:
             newest[k] = g
     for (key, factor), g in sorted(newest.items()):
-        # Only the newest full year counts, and only if its gap is clearly larger than
-        # chance (confidence interval above zero). An older year must not stand in for it.
-        if g["robust"] != "yes":
+        # Only the newest full year is handed over. An older year must not stand in for it.
+        fact = {"indicator_family": indicator_family(key), "factor": factor, "robust": g["robust"],
+                "base": (f"{g['indicator_name']} {g['year']}: {g['worse_value']} % in the group "
+                         f"'{g['worse_group']}' against {g['better_value']} % in '{g['better_group']}', "
+                         f"a gap of {g['gap']} points")}
+        if not apply("group_gap", fact, "national", "FI", "Finland", g) and g["robust"] != "yes":
             ctx.count(step, "gaps without a recommendation: not clearly above zero")
-            continue
-        trigger = (f"{g['indicator_name']} {g['year']}: {g['worse_value']} % in the group "
-                   f"'{g['worse_group']}' against {g['better_value']} % in '{g['better_group']}', "
-                   f"a gap of {g['gap']} points")
-        if key in SCREENING and factor == "education":
-            add("national", "FI", "Finland", "1.1.1", "direct", trigger, "A", g)
-        elif key in SCREENING and factor == "language":
-            add("national", "FI", "Finland", "1.3.1", "direct", trigger, "A", g)
-        elif key in SCREENING and factor == "sex":
-            add("national", "FI", "Finland", "2.4.1", "closest match", trigger, "A", g)
-        elif key.startswith("followup_attendance") and factor in ("education", "language"):
-            add("national", "FI", "Finland", "1.2.3", "closest match", trigger, "A", g)
     missing = [g["description"].split(". ")[0] for g in ctx.results["data_gaps"]
                if g["gap_type"] == "no_open_data" and g["pathway_stage"] in ("referral", "diagnosis", "treatment_start")]
-    if missing:
-        add("national", "FI", "Finland", "3.1.2", "direct",
-            "No open data exists for: " + "; ".join(missing), "data gap")
+    apply("pathway_data", {"pathway_data_missing": "yes" if missing else "no", "missing": "; ".join(missing)},
+          "national", "FI", "Finland")
 
     # --- regional ----------------------------------------------------------------
     level_of = ctx.results["level_of"]
+    level = lambda factor, code: level_of.get((factor, code), ("", 0))[0]
     below = defaultdict(list)
     for s in ctx.results["outcome_stats"]:
         if (s["indicator_key"] in SCREENING and s["sex"] == "total" and not s["factor"]
@@ -84,23 +93,12 @@ def recommend(ctx):
             below[(s["region_code"], s["region_name"])].append(
                 f"{SCREENING[s['indicator_key']]} {s['value']} %")
     for (code, name), programmes in sorted(below.items()):
-        trigger = "Clearly below the 80 % target in " + ", ".join(sorted(programmes))
-        level = lambda factor: level_of.get((factor, code), ("", 0))[0]
-        matched = False
-        if level("language") == "disadvantaged":
-            add("regional", code, name, "1.3.1", "direct",
-                trigger + "; in the third of regions with the most other-language speakers", "B")
-            matched = True
-        if level("education") == "disadvantaged":
-            add("regional", code, name, "1.1.1", "direct",
-                trigger + "; in the third of regions with the lowest education level", "B")
-            matched = True
-        if not matched:
-            add("regional", code, name, "2.4.1", "direct",
-                trigger + "; no language or education disadvantage in the regional data", "B")
+        apply("region_below_target",
+              {"language_level": level("language", code), "education_level": level("education", code),
+               "base": "Clearly below the 80 % target in " + ", ".join(sorted(programmes))},
+              "regional", code, name)
     for region in ref.counties:
         code = region["region_code"]
-        if level_of.get(("primary_care_access", code), ("", 0))[0] == "disadvantaged":
-            add("regional", code, region["name_en"], "2.5.1", "direct",
-                "In the third of regions with the longest waits for a non-urgent doctor appointment", "B")
+        apply("region_access", {"primary_care_access_level": level("primary_care_access", code)},
+              "regional", code, region["name_en"])
     ctx.results["recommendations"] = out
