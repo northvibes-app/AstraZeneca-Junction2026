@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cancer care gaps in Finland — charts</title>
+<link rel="stylesheet" href="live-charts.css">
+<style>
+  :root { font-family: system-ui, -apple-system, "Segoe UI", Arial, Helvetica, sans-serif; background: #eef6fa; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { background: #0a141c; } }
+  :root[data-theme="dark"] { background: #0a141c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .page { max-width: 1120px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  header { margin-bottom: 16px; }
+  h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: -0.02em; text-wrap: balance; }
+  .runinfo { margin: 0; font-size: 13px; color: var(--lc-ink-2); }
+
+  .filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 16px; }
+  .filters-label { font-size: 13px; font-weight: 600; color: var(--lc-ink-2); }
+  .factors { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 320px; }
+  .filters button {
+    font: inherit; font-size: 13px; font-weight: 600; min-height: 34px; padding: 5px 12px; cursor: pointer;
+    color: var(--lc-ink); background: var(--lc-surface);
+    border: 1px solid var(--lc-axis); border-radius: 999px;
+    transition: background-color .2s, color .2s, border-color .2s;
+  }
+  .filters button:hover { border-color: var(--lc-muted); }
+  .filters button:focus-visible { outline: 2px solid var(--lc-s2); outline-offset: 2px; }
+  .filters button[aria-pressed="true"] { background: var(--lc-ink); color: var(--lc-surface); border-color: var(--lc-ink); }
+  .filters .autoplay { border-radius: 8px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 14px; }
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: start; }
+  .tall { grid-column: 2; grid-row: 1 / span 3; }
+  @media (max-width: 820px) {
+    .tiles { grid-template-columns: repeat(2, 1fr); }
+    .cards { grid-template-columns: minmax(0, 1fr); }
+    .tall { grid-column: auto; grid-row: auto; }
+  }
+
+  .card {
+    padding: 16px 18px 18px;
+    background: var(--lc-surface);
+    border: 1px solid var(--lc-grid);
+    border-radius: 12px;
+    animation: rise .5s cubic-bezier(.2, .7, .2, 1) both;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+  .card h2 { margin: 0 0 2px; font-size: 16px; }
+  .card .sub { margin: 0 0 14px; font-size: 13px; color: var(--lc-ink-2); }
+  .wide-labels { --lc-label-col: minmax(84px, 44%); }
+  #graph-gaps { --lc-label-col: minmax(84px, 34%); }
+  @media (prefers-reduced-motion: reduce) { .card { animation: none; } .filters button { transition: none; } }
+</style>
+</head>
+<body>
+<div class="page lc" id="page">
+  <header>
+    <h1>Cancer care gaps in Finland</h1>
+    <p class="runinfo" id="runinfo"></p>
+  </header>
+
+  <div class="filters">
+    <span class="filters-label" id="factor-label">Equity factor</span>
+    <div class="factors" id="factors" role="group" aria-labelledby="factor-label"></div>
+    <button class="autoplay" id="autoplay" type="button"></button>
+  </div>
+
+  <section class="tiles" id="graph-figures" aria-label="Pipeline run in numbers"></section>
+
+  <section class="cards">
+    <div class="card" style="--i:5">
+      <h2>Gaps measured between groups <span class="lc-tag">evidence A</span></h2>
+      <p class="sub">National figures the source publishes per group, latest year available. Largest gap first.</p>
+      <div id="graph-gaps" class="wide-labels"></div>
+    </div>
+
+    <div class="card tall" style="--i:6">
+      <h2>Regions on this factor</h2>
+      <div id="graph-regions"></div>
+    </div>
+
+    <div class="card" style="--i:7">
+      <h2>Patterns between regions <span class="lc-tag">evidence B</span></h2>
+      <p class="sub">Rank correlation across the 22 regions between a region's disadvantage on this factor and each result. Negative: the more disadvantaged the region, the lower the value. For the cancer index lower is better; for the rest higher is better. This is a pattern between regions, not between people.</p>
+      <div id="graph-patterns" class="wide-labels"></div>
+    </div>
+
+    <div class="card" style="--i:8">
+      <h2>Rows through the pipeline</h2>
+      <p class="sub">What was left of the input rows after each kind of check.</p>
+      <div id="graph-rows" class="wide-labels"></div>
+    </div>
+  </section>
+</div>
+
+<!-- chart types: one file each -->
+<script src="lib/core.js"></script>
+<script src="lib/stat-tile.js"></script>
+<script src="lib/paired-bars.js"></script>
+<script src="lib/ranked-bars.js"></script>
+<script src="lib/diverging-bars.js"></script>
+<script src="lib/funnel.js"></script>
+<!-- graphs: one file each -->
+<script src="graphs/shared.js"></script>
+<script src="graphs/run-figures.js"></script>
+<script src="graphs/group-gaps.js"></script>
+<script src="graphs/region-ranking.js"></script>
+<script src="graphs/region-patterns.js"></script>
+<script src="graphs/pipeline-rows.js"></script>
+<!-- data -->
+<script src="../pipeline/output/pipeline-data.js"></script>
+<script>
+/* This page only wires things together: the factor buttons, auto-play and
+   the check for a newer pipeline run. Each graph lives in graphs/<name>.js. */
+(function () {
+  const DATA_URL = '../pipeline/output/pipeline-data.js';
+  const REFRESH_MS = 30000;   // look for a new pipeline run
+  const AUTOPLAY_MS = 9000;   // step to the next factor
+  const $ = (id) => document.getElementById(id);
+
+  if (!window.PIPELINE) {
+    $('page').textContent = 'No pipeline output found. Run python3 pipeline/run_pipeline.py first.';
+    return;
+  }
+
+  const graphs = [
+    Graphs.runFigures($('graph-figures'), { tileClass: 'card' }),
+    Graphs.groupGaps($('graph-gaps')),
+    Graphs.regionRanking($('graph-regions')),
+    Graphs.regionPatterns($('graph-patterns')),
+    Graphs.pipelineRows($('graph-rows'))
+  ];
+
+  let factor = Graphs.FACTORS[0][0];
+  let shownRun = null;
+
+  function draw() {
+    const P = window.PIPELINE;
+    if (P.lineage.run_finished_utc !== shownRun) {
+      shownRun = P.lineage.run_finished_utc;
+      $('runinfo').textContent = 'Pipeline run finished ' + shownRun.replace('T', ' ').slice(0, 16) +
+        ' UTC from ' + P.lineage.inputs.length + ' input files. Analysis year ' + P.lineage.analysis_year +
+        '. This page checks for a newer run every ' + REFRESH_MS / 1000 + ' seconds.';
+    }
+    document.querySelectorAll('#factors button').forEach((b) => {
+      b.setAttribute('aria-pressed', String(b.dataset.factor === factor));
+    });
+    graphs.forEach((g) => g.draw(P, factor));
+  }
+
+  /* ---- factor buttons and auto-play ---- */
+
+  Graphs.FACTORS.forEach(([key, label]) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.dataset.factor = key;
+    b.textContent = label;
+    b.addEventListener('click', () => { setAutoplay(false); factor = key; draw(); });
+    $('factors').appendChild(b);
+  });
+
+  const autoplayBtn = $('autoplay');
+  let autoplayTimer = 0;
+  function setAutoplay(on) {
+    clearInterval(autoplayTimer);
+    autoplayTimer = on ? setInterval(() => {
+      const i = Graphs.FACTORS.findIndex((f) => f[0] === factor);
+      factor = Graphs.FACTORS[(i + 1) % Graphs.FACTORS.length][0];
+      draw();
+    }, AUTOPLAY_MS) : 0;
+    autoplayBtn.textContent = on ? 'Pause auto-play' : 'Auto-play factors';
+    autoplayBtn.setAttribute('aria-pressed', String(on));
+  }
+  autoplayBtn.addEventListener('click', () => setAutoplay(!autoplayTimer));
+
+  /* ---- keep up with new pipeline runs ---- */
+
+  setInterval(() => {
+    const s = document.createElement('script');
+    s.src = DATA_URL + '?t=' + Date.now();
+    s.onload = () => {
+      s.remove();
+      if (window.PIPELINE.lineage.run_finished_utc !== shownRun) draw();
+    };
+    s.onerror = () => s.remove();
+    document.head.appendChild(s);
+  }, REFRESH_MS);
+
+  draw();
+  setAutoplay(!matchMedia('(prefers-reduced-motion: reduce)').matches);
+})();
+</script>
+</body>
+</html>
