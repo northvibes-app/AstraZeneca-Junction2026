@@ -1,12 +1,135 @@
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What socioeconomic and contextual profile indicators are available for each region?",
+    "topK": 5
+  }'
 
 curl -sS -X POST \
   "https://api-dev.northvibes.app/api/v1/rag/public/query" \
   -H "Content-Type: application/json" \
   -d '{
-    "question": "What does the evidence say about cancer screening inequalities in Finland?",
+    "question": "Which source records were quarantined, why were they quarantined, and at which processing step?",
     "topK": 5
-  }' \
-  -o rag_response.json
+  }' 
 
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What evidence is available about cancer screening equity gaps in Finland?",
+    "topK": 5
+  }'
 
-cat rag_response.json
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Which equity gaps are listed in the pipeline equity gaps dataset, and which indicators and regions are affected?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What were the 2024 breast-screening participation rates by Finnish region, and which region had the highest and lowest rate?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What preliminary 2025 cervical-screening participation differences are reported by group?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What national cancer and screening key statistics are available, including period, unit, value and source?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Which cancer indicators, years, regions, sex groups and age groups are available in the raw cancer statistics dataset?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Which original data sources are documented for the Equal Care Navigator evidence base?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What does the Statistics knowledge-base README say about the available evidence and its limitations?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Which cancer strategy and cancer data resources are listed in the extracted English link collection?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What data gaps are identified, for which pathway stages, indicators, years and regions?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What observations are available for cancer pathway stages, indicators and regions in the observations analysis dataset?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What evidence is available by equity factor and factor level across cancer indicators and regions?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Which contextual factors and factor levels are reported for each region?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What socioeconomic and contextual profile indicators are available for each region?",
+    "topK": 5
+  }'
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "Which source records were quarantined, why were they quarantined, and at which processing step?",
+    "topK": 5
+  }'
