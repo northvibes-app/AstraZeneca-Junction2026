@@ -1,0 +1,12 @@
+
+curl -sS -X POST \
+  "https://api-dev.northvibes.app/api/v1/rag/public/query" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What does the evidence say about cancer screening inequalities in Finland?",
+    "topK": 5
+  }' \
+  -o rag_response.json
+
+
+cat rag_response.json
