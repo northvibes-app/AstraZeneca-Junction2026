@@ -11,7 +11,7 @@ import shutil
 from collections import defaultdict
 from datetime import datetime, timezone
 
-from common import ANALYSIS_YEAR, OBS_COLUMNS, OUT, SCREENING_TARGET, write_csv
+from common import ANALYSIS_YEAR, OBS_COLUMNS, OUT, REF, SCREENING_TARGET, write_csv
 
 from .s14_measure import GAP_COLUMNS
 
@@ -134,7 +134,28 @@ def _write_facts(ctx):
     lines += [f"- {g['pathway_stage'].replace('_', ' ').capitalize()}: {g['description']}"
               for g in res["data_gaps"] if g["gap_type"] == "no_open_data"]
     (facts / "data_gaps.md").write_text("\n".join(lines) + "\n" + footer, encoding="utf-8")
+    # Goal 3 fact sheet, written from pipeline/reference/goal3_targets.csv (single source of truth).
+    g3 = load_goal3_targets()
+    lines = ["# Goal 3: equal and effective cancer treatment", "",
+             "Goal 3 of the National Cancer Strategy 2026-2035 asks for better survival, lower cancer "
+             "mortality and treatment within target times. No open data shows time from diagnosis to "
+             "treatment start by region, so that indicator cannot be measured here.", "",
+             "Targets and baselines set by the strategy:", ""]
+    for r in g3:
+        value = f"{r['target_value']} {r['unit'].replace('_', ' ')}" if r["target_value"] else "no numeric target"
+        lines.append(f"- Goal {r['goal']}, {r['indicator'].replace('_', ' ')}: {value} ({r['source']}, p. {r['page']}). {r['note']}.")
+    deaths = [x for x in res["national_trends"] if x["cancer_site"].startswith("All cancers")]
+    if deaths:
+        lines += ["", "Observed cancer deaths per year, all cancers:", ""]
+        lines += [f"- {x['year']}: {x['deaths']}" for x in deaths]
+    (facts / "goal3.md").write_text("\n".join(lines) + "\n" + footer, encoding="utf-8")
     ctx.count("18 publish", "fact sheets written", len(list(facts.glob("*.md"))))
+
+
+def load_goal3_targets():
+    """Strategy targets typed once, in a CSV, with page numbers."""
+    with open(REF / "goal3_targets.csv", encoding="utf-8", newline="") as f:
+        return list(csv.DictReader(f))
 
 
 def publish(ctx, started):
@@ -218,6 +239,7 @@ def publish(ctx, started):
               "recommendations": res["recommendations"],
               "region_factor_levels": res["region_factor_levels"],
               "data_gaps": res["data_gaps"], "quarantine": ctx.quarantine,
+              "goal3_targets": load_goal3_targets(), "national_trends": res["national_trends"],
               "imputed": [{k: r[k] for k in ("indicator_name", "region_name", "year", "value",
                                              "unit", "imputation_method", "imputation_basis")}
                           for r in res["analysis"] if r["status"] == "imputed"]}

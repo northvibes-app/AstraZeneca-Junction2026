@@ -115,3 +115,22 @@ This is precisely where *Cancer Equity Intelligence* offers an opportunity: by c
 - [National Cancer Strategy 2026–2035 (Finnish)](https://files.hackjunction.app/resources/Kansallinen_syopastrategia_2026_2035_FINAL.pdf)
 - [Implementation Roadmap 2026–2031 (Finnish)](https://files.hackjunction.app/resources/Kansallinen_syopastrategia_toimeenpanon_tiekartta_2026_2031.pdf)
 - [Cancer Strategies and Data – Source Collection](https://files.hackjunction.app/resources/Sy%C3%B6p%C3%A4strategiat%20ja%20sy%C3%B6p%C3%A4data_linkkikokoelma.pdf)
+
+
+---
+
+## Run the demo (decision view)
+
+```bash
+python3 pipeline/run_pipeline.py          # builds pipeline/output/ (about 25 s, standard library only)
+python3 -m unittest discover -s pipeline/tests
+node app/test_checker.js                  # number checker test
+node app/test_page.js                     # page smoke test with a stub DOM
+# then double-click app/index.html
+```
+
+`app/index.html` reads `pipeline/output/pipeline-data.js`. The AI analyst calls the document search service; if the
+browser blocks the call (CORS) or you are offline, use "Check any text" on the page.
+
+**Secrets:** `data.txt` and `get-raw-data.txt` hold access tokens. They are listed in `.gitignore`. Never commit them.
+Create new tokens after the event.

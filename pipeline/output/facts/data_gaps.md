@@ -8,5 +8,7 @@ No open, comparable data exists for the following. The pipeline reports these as
 - Early detection: Stage at diagnosis by region and by education or income. Strategy target of 70 % diagnosed at stage I-II cannot be monitored
 - Early detection: Breast and colorectal screening participation by education and native language. Only cervical screening is published by group
 - Early detection: Screening participation by income group. Income is only available as a regional rate
+- Diagnosis: Date of first symptom or first contact before diagnosis. Strategy p. 30: this information is not collected systematically
+- Early detection: Stage at diagnosis for the 60 % of cases without a clinical notification. Strategy p. 30: stage data covers only about 40 % of cases
 
 Sources: Finnish Cancer Registry, Statistics Finland and THL via Sotkanet, processed by the Equal Care Navigator data pipeline. Regional differences are unadjusted and do not show causes.

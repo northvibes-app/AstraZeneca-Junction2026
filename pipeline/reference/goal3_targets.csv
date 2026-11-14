@@ -1,0 +1,7 @@
+goal,indicator,target_value,unit,baseline_value,baseline_year,source,page,note
+3,five_year_survival_lung_increase,14,percentage_points,,,National Cancer Strategy 2026-2035,5,Increase above the NORDCAN 2023 level; Nordic level = average of Sweden and Norway
+3,five_year_survival_pancreas_increase,6,percentage_points,,,National Cancer Strategy 2026-2035,5,Increase above the NORDCAN 2023 level
+3,five_year_survival_liver_increase,14,percentage_points,,,National Cancer Strategy 2026-2035,5,Increase above the NORDCAN 2023 level
+3,cancer_deaths_reduction,10,percent,13300,,National Cancer Strategy 2026-2035,5,Baseline of about 13 300 deaths a year is stated in the strategy
+3,treatment_within_target_times,,,,,National Cancer Strategy 2026-2035,5,Tracking rules: THL guidance 21/2016; no open regional data exists
+2,diagnosed_stage_I_II_share,70,percent,,,National Cancer Strategy 2026-2035,5,This is a Goal 2 target; stage data covers only about 40 % of cases (p. 30)

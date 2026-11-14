@@ -1,2 +1,8 @@
 # Python bytecode caches, recreated on every run
 __pycache__/
+
+# Secrets: never commit
+data.txt
+get-raw-data.txt
+.env
+*.sas

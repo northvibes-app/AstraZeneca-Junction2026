@@ -1,6 +1,6 @@
 # Pipeline run report
 
-Run finished 2026-11-14T03:06:28+00:00 (23 s). Analysis year 2024.
+Run finished 2026-11-14T04:42:53+00:00 (68 s). Analysis year 2024.
 
 ## Reconciliation
 
@@ -58,7 +58,7 @@ Run finished 2026-11-14T03:06:28+00:00 (23 s). Analysis year 2024.
 ### 08 completeness
 - indicators checked for region-year coverage: 13
 - gaps: region-year missing: 44
-- gaps: no open data: 6
+- gaps: no open data: 8
 
 ### 09 impute
 - values imputed: 44
@@ -91,7 +91,7 @@ Run finished 2026-11-14T03:06:28+00:00 (23 s). Analysis year 2024.
 - evidence B patterns that survive correction: 1
 - gaps measured, evidence B-municipality: 15
 - municipality patterns that survive correction: 9
-- barriers listed, evidence C: 5
+- barriers listed, evidence C: 6
 
 ### 15 recommend
 - gaps without a recommendation: not clearly above zero: 5
@@ -106,6 +106,6 @@ Run finished 2026-11-14T03:06:28+00:00 (23 s). Analysis year 2024.
 - figures unchanged: 6,600
 
 ### 18 publish
-- fact sheets written: 25
+- fact sheets written: 26
 - rows read: 833,394
 - rows accounted for: 833,394

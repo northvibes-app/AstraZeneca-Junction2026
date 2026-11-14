@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equal Care Navigator – Decision view</title>
+<style>
+  :root { --plum:#830051; --gold:#EFAB00; --navy:#003865; --ink:#1f2328; --mute:#5b6470; --line:#e3e6ea;
+          --ok:#1a7f4b; --warn:#b26a00; --bad:#b3261e; --bg:#f6f4f1; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--ink); background:var(--bg); }
+  header { background:var(--plum); color:#fff; padding:18px 24px; border-bottom:4px solid var(--gold); }
+  header h1 { margin:0; font-size:22px; } header p { margin:4px 0 0; opacity:.9; font-size:13px; }
+  main { max-width:1100px; margin:0 auto; padding:20px; display:grid; gap:18px; }
+  section { background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px; }
+  h2 { margin:0 0 4px; font-size:17px; color:var(--plum); } h3 { margin:14px 0 4px; font-size:14px; }
+  .sub { margin:0 0 12px; color:var(--mute); font-size:13px; }
+  .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .card { border:1px solid var(--line); border-left:5px solid var(--plum); border-radius:8px; padding:10px 12px; }
+  .card .k { font-size:12px; color:var(--mute); text-transform:uppercase; letter-spacing:.04em; }
+  .card .v { font-size:22px; font-weight:700; color:var(--plum); } .card .d { font-size:13px; color:var(--mute); }
+  .strip { display:grid; grid-template-columns:repeat(6,1fr); gap:8px; }
+  .stage { border:1px solid var(--line); border-top:5px solid var(--line); border-radius:8px; padding:10px; font-size:13px; }
+  .stage.measured { border-top-color:var(--ok); } .stage.partial { border-top-color:var(--gold); }
+  .stage.documented { border-top-color:var(--warn); } .stage.none { border-top-color:var(--bad); }
+  .stage b { display:block; font-size:14px; } .tag { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; }
+  .measured .tag { color:var(--ok); } .partial .tag { color:#8a6500; } .documented .tag { color:var(--warn); } .none .tag { color:var(--bad); }
+  .stage ul { margin:6px 0 0; padding-left:16px; color:var(--mute); } .stage li { margin-bottom:3px; } .stage .miss { color:var(--bad); }
+  table { width:100%; border-collapse:collapse; font-size:14px; } th,td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); }
+  th { font-size:12px; color:var(--mute); text-transform:uppercase; }
+  .badge { display:inline-block; padding:1px 8px; border-radius:10px; font-size:12px; font-weight:600; color:#fff; white-space:nowrap; }
+  .b-below_target,.b-untested { background:var(--bad); } .b-near_target,.b-limited { background:var(--warn); }
+  .b-at_or_above_target,.b-strong { background:var(--ok); } .b-data { background:#6b7280; }
+  .rec { border-left:4px solid var(--gold); padding:6px 12px; margin:8px 0; background:#fffaf0; }
+  .rec small { color:var(--mute); display:block; }
+  select, input[type=text], textarea, button { font:inherit; padding:8px 10px; border:1px solid #c9ced6; border-radius:6px; }
+  button { background:var(--plum); color:#fff; border:0; cursor:pointer; } button:disabled { opacity:.5; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; } .grow { flex:1; min-width:220px; }
+  .big { font-size:30px; font-weight:700; color:var(--plum); } .note { font-size:12px; color:var(--mute); }
+  .box { border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin-top:10px; white-space:pre-wrap; }
+  .ok { color:var(--ok); font-weight:600; } .warn { color:var(--warn); font-weight:600; }
+  .scroll { overflow-x:auto; } svg text { font:11px system-ui,sans-serif; fill:#5b6470; }
+  @media (max-width:900px){ .strip{grid-template-columns:1fr 1fr;} .cards{grid-template-columns:1fr 1fr;} }
+</style>
+</head>
+<body>
+<header>
+  <h1>Equal Care Navigator – Decision view</h1>
+  <p id="status">Loading data…</p>
+</header>
+<main id="app" hidden>
+
+  <section>
+    <h2>In two minutes</h2>
+    <p class="sub">Built from the pipeline output. Every figure below has a source on screen or in the run report.</p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section>
+    <h2>1. Where along the care pathway can we see the gap?</h2>
+    <p class="sub">Each stage is labelled by what public data can show today. Red means no open data. We do not fill gaps with guesses.</p>
+    <div class="strip" id="strip"></div>
+  </section>
+
+  <section>
+    <h2>2. Region check</h2>
+    <div class="row"><label for="region">Region</label><select id="region"></select></div>
+    <div class="scroll"><table id="regionTable"></table></div>
+    <h3>Context of the region (social and economic)</h3>
+    <div class="scroll"><table id="ctxTable"></table></div>
+    <p class="note">Regional differences are unadjusted and do not show causes. Screening target: 80 % in every programme and county (Strategy p. 5).</p>
+  </section>
+
+  <section>
+    <h2>3. What to do: recommendations</h2>
+    <p class="sub">Each recommendation comes from a rule file with a measure from the national roadmap, a cost, a KPI and a source page.
+      <b>Strong</b> = gap measured between groups. <b>Limited</b> = pattern across regions, not proof of cause. <b>Untested</b> = barrier documented or data missing.</p>
+    <div id="recs"></div>
+  </section>
+
+  <section>
+    <h2>4. Scenario: how many more people could take part?</h2>
+    <p class="sub">A scenario, not a forecast. It assumes the lower group closes part of the gap to the higher group.</p>
+    <div class="row"><select id="gapSel" class="grow"></select></div>
+    <div class="row" style="margin-top:10px"><label for="share">Share of the gap closed:</label>
+      <input id="share" type="range" min="0" max="100" value="50"><b id="shareOut">50 %</b></div>
+    <div class="big" id="scenOut"></div><div class="note" id="scenFormula"></div>
+  </section>
+
+  <section>
+    <h2>5. Goal 3: equal and effective cancer treatment</h2>
+    <p class="sub">Strategy Goal 3: better five-year survival, 10 % lower cancer mortality, treatment within target times.</p>
+    <h3>Measured: cancer deaths per year against the Goal 3 target</h3>
+    <div class="scroll" id="deathChart"></div><div class="note" id="deathNote"></div>
+    <h3>Not measurable with open data: time from diagnosis to treatment start</h3>
+    <div id="goal3gap"></div>
+    <h3>Targets set by the strategy</h3>
+    <div class="scroll"><table id="goal3table"></table></div>
+  </section>
+
+  <section>
+    <h2>6. AI analyst with number check</h2>
+    <p class="sub">The answer comes from the document search service. Every number is checked against our tables. The check shows that a number exists in our data, not that the sentence around it is correct.</p>
+    <div class="row"><input id="q" type="text" class="grow" value="Which population group has the largest gap in cancer screening participation in Finland, and how large is it?">
+      <button id="ask">Ask</button></div>
+    <div class="box" id="answer" hidden></div><div id="check" class="note" style="margin-top:8px"></div>
+    <details style="margin-top:10px"><summary>Check any text (works offline)</summary>
+      <textarea id="paste" rows="4" style="width:100%;margin-top:6px"></textarea>
+      <button id="pasteBtn" style="margin-top:6px">Check numbers</button></details>
+  </section>
+
+</main>
+<script src="../pipeline/output/pipeline-data.js"></script>
+<script src="checker.js"></script>
+<script>
+const RAG_URL = "https://api-dev.northvibes.app/api/v1/rag/public/query";
+const TARGET = Checker.TARGET;
+const P = window.PIPELINE;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = n => Number(n).toLocaleString("en-US");
+const num = v => (v === "" || v == null) ? null : Number(v);
+const SCREENING = ["screening_participation_breast", "screening_participation_cervical", "screening_participation_colorectal"];
+const OUTCOMES = ["survival_5y_breast", "survival_5y_cervical", "survival_5y_colon"];
+
+// Pathway stages. "indicators" are region-level indicators in the pipeline; "gapStages" match equity_gaps rows;
+// "missingStage" matches no_open_data rows.
+const STAGES = [
+  {label:"Early detection", indicators:SCREENING, gapStages:["early_detection"], missingStage:"early_detection"},
+  {label:"First contact (primary care)", indicators:["primary_care_wait_over_7_days"], gapStages:[], missingStage:null, documented:true},
+  {label:"Referral to specialist", indicators:[], gapStages:[], missingStage:"referral"},
+  {label:"Diagnosis", indicators:[], gapStages:["diagnostic_follow_up"], missingStage:"diagnosis"},
+  {label:"Treatment start (Goal 3)", indicators:[], gapStages:[], missingStage:"treatment_start"},
+  {label:"Outcomes (Goal 3)", indicators:OUTCOMES, gapStages:["treatment_outcome"], missingStage:null}];
+
+const EVIDENCE = {
+  "A": ["strong", "Measured gap between groups"],
+  "B": ["limited", "Pattern across regions, not proof of cause"],
+  "B-municipality": ["limited", "Pattern across municipalities, not proof of cause"],
+  "C": ["untested", "Barrier documented, not measured"],
+  "data gap": ["untested", "Data gap: measure the pathway first"]};
+
+function latestByRegion(code, key) {
+  return P.region_facts.filter(r => r.region_code === code && r.indicator_key === key && r.sex === "total" && r.value !== "")
+    .sort((a, b) => b.year - a.year)[0];
+}
+function stageStatus(s) {
+  const hasInd = s.indicators.some(k => P.region_facts.some(r => r.indicator_key === k && r.value !== ""));
+  const hasGap = P.equity_gaps.some(g => s.gapStages.includes(g.pathway_stage) && (g.evidence_type === "A" || String(g.evidence_type).startsWith("B")));
+  const missing = P.data_gaps.filter(g => g.gap_type === "no_open_data" && g.pathway_stage === s.missingStage);
+  const hasDoc = !!s.documented;
+  let st = "none";
+  if (hasInd || hasGap) st = missing.length ? "partial" : "measured";
+  else if (hasDoc) st = "documented";
+  return {st, missing, hasInd, hasGap};
+}
+const STATUS_TEXT = {measured:"Measured", partial:"Partly measured", documented:"Documented only", none:"No open data"};
+
+if (!P) {
+  $("status").textContent = "No data found. Run: python3 pipeline/run_pipeline.py";
+} else {
+  const L = P.lineage, rec = L.reconciliation;
+  $("status").textContent = `Data run ${L.run_finished_utc.slice(0,16).replace("T"," ")} UTC · ${fmt(rec.rows_read)} rows read, ${rec.balanced ? "all accounted for" : "NOT balanced"} · analysis year ${L.analysis_year}`;
+  $("app").hidden = false;
+  const known = Checker.knownNumbers(P);
+  const goal3 = P.goal3_targets || [];
+  const deathsRows = (P.national_trends || []).filter(t => t.cancer_site.startsWith("All cancers")).sort((a, b) => a.year - b.year);
+  const deathsTarget = goal3.find(g => g.indicator === "cancer_deaths_reduction");
+  const targetDeaths = deathsTarget ? Number(deathsTarget.baseline_value) * (1 - Number(deathsTarget.target_value) / 100) : null;
+
+  // ---------- Two-minute cards
+  const regions = new Map(P.region_facts.map(r => [r.region_code, r.region_name]));
+  const regionCodes = [...regions.keys()].filter(c => c !== "FI");
+  const breast = regionCodes.map(c => latestByRegion(c, "screening_participation_breast")).filter(Boolean).sort((a, b) => a.value - b.value);
+  const latestScreen = [];
+  for (const k of SCREENING) for (const c of regionCodes) { const r = latestByRegion(c, k); if (r) latestScreen.push(r); }
+  const below = latestScreen.filter(r => r.target_status === "below_target").length;
+  const bigGap = P.equity_gaps.filter(g => g.evidence_type === "A" && g.region_code === "FI" && num(g.potential_additional) > 0)
+    .sort((a, b) => b.potential_additional - a.potential_additional)[0];
+  const lastDeaths = deathsRows[deathsRows.length - 1];
+  const cards = [];
+  if (breast[0]) cards.push(["Lowest breast screening", `${breast[0].value} %`, `${breast[0].region_name} ${breast[0].year}; target ${TARGET} %`]);
+  cards.push(["Below the 80 % target", `${below} of ${latestScreen.length}`, "region and programme results, newest year"]);
+  if (bigGap) cards.push(["Largest measured group gap", `${bigGap.gap} points`, `${bigGap.indicator_name} ${bigGap.year}: ${bigGap.worse_group.replace(/_/g, " ")} vs ${bigGap.better_group.replace(/_/g, " ")}`]);
+  if (lastDeaths && targetDeaths) cards.push(["Goal 3: cancer deaths", fmt(lastDeaths.deaths), `${lastDeaths.year}; strategy target about ${fmt(Math.round(targetDeaths))} a year`]);
+  $("cards").innerHTML = cards.map(c => `<div class="card"><div class="k">${esc(c[0])}</div><div class="v">${esc(c[1])}</div><div class="d">${esc(c[2])}</div></div>`).join("");
+
+  // ---------- 1. Pathway strip
+  $("strip").innerHTML = STAGES.map(s => {
+    const {st, missing} = stageStatus(s);
+    const names = s.indicators.map(k => (P.region_facts.find(r => r.indicator_key === k) || {}).indicator_name).filter(Boolean);
+    const gapNames = [...new Set(P.equity_gaps.filter(g => s.gapStages.includes(g.pathway_stage) && g.evidence_type === "A").map(g => g.indicator_name))];
+    const shown = [...new Set([...names, ...gapNames])].slice(0, 3);
+    return `<div class="stage ${st}"><span class="tag">${STATUS_TEXT[st]}</span><b>${esc(s.label)}</b>` +
+      (shown.length ? `<ul>${shown.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : "") +
+      (missing.length ? `<ul class="miss">${missing.slice(0, 2).map(m => `<li>Missing: ${esc(m.description.split(". ")[0])}</li>`).join("")}</ul>` : "") + `</div>`;
+  }).join("");
+
+  // ---------- 2. Region check
+  $("region").innerHTML = [...regions].sort((a, b) => a[0] === "FI" ? -1 : b[0] === "FI" ? 1 : a[1].localeCompare(b[1]))
+    .map(([c, n]) => `<option value="${esc(c)}">${esc(n)}</option>`).join("");
+  const natRecs = P.recommendations.filter(r => r.scope === "national");
+  const card = r => {
+    const [cls, label] = EVIDENCE[r.evidence_type] || ["data", r.evidence_type];
+    return `<div class="rec"><b>${esc(r.measure)}</b> <span class="badge b-${cls}">${cls[0].toUpperCase() + cls.slice(1)}</span> <span class="note">${esc(label)}</span>
+      <small>Why: ${esc(r.trigger)}</small>
+      <small>KPI: ${esc(r.success_kpi)} · Cost: ${r.cost_eur ? "€" + fmt(r.cost_eur) : "n/a"} (${esc(r.cost_note)}) · Source: ${esc(r.source)} · Rule ${esc(r.rule_id)}</small></div>`;
+  };
+  function drawRegion() {
+    const code = $("region").value;
+    const keys = [...SCREENING, ...OUTCOMES, "primary_care_wait_over_7_days"];
+    const nat = k => latestByRegion("FI", k);
+    const rows = keys.map(k => latestByRegion(code, k)).filter(Boolean);
+    $("regionTable").innerHTML = `<tr><th>Indicator</th><th>Year</th><th>Region</th><th>Finland</th><th>Status</th></tr>` +
+      rows.map(r => {
+        const n = nat(r.indicator_key), unit = r.unit === "percent" ? " %" : "";
+        const st = r.target_status ? `<span class="badge b-${r.target_status}">${r.target_status.replace(/_/g, " ")}</span>` : "";
+        const ci = r.ci_low !== "" ? ` <span class="note">(${r.ci_low}–${r.ci_high})</span>` : "";
+        return `<tr><td>${esc(r.indicator_name)}</td><td>${r.year}</td><td>${r.value}${unit}${ci}</td><td>${n ? n.value + unit : "–"}</td><td>${st}</td></tr>`;
+      }).join("");
+    const ctx = P.region_factor_levels.filter(r => r.region_code === code);
+    $("ctxTable").innerHTML = ctx.length ? `<tr><th>Factor</th><th>Indicator</th><th>Region</th><th>Finland</th><th>Level among regions</th></tr>` +
+      ctx.map(r => `<tr><td>${esc(r.factor_label)}</td><td>${esc(String(r.context_indicator).replace(/_/g, " "))} ${esc(r.context_year)}</td><td>${esc(r.context_value)}</td><td>${esc(r.national_value)}</td><td>${esc(r.factor_level)} third, ${esc(String(r.vs_national).replace(/_/g, " "))}</td></tr>`).join("")
+      : `<tr><td>Choose a region to see its context.</td></tr>`;
+    const regional = P.recommendations.filter(r => r.scope === "regional" && r.region_code === code);
+    $("recs").innerHTML = (regional.length ? `<h3>For ${esc(regions.get(code))}</h3>${regional.map(card).join("")}` : "") +
+      `<h3>National</h3>${natRecs.map(card).join("")}`;
+  }
+  $("region").onchange = drawRegion; drawRegion();
+
+  // ---------- 4. Scenario calculator (newest year per gap)
+  const newest = new Map();
+  for (const g of P.equity_gaps)
+    if (g.evidence_type === "A" && g.region_code === "FI" && num(g.potential_additional) > 0 && num(g.people_in_worse_group) > 0) {
+      const k = g.indicator_key + g.factor + g.worse_group + g.better_group;
+      if (!newest.has(k) || g.year > newest.get(k).year) newest.set(k, g);
+    }
+  const gapsA = [...newest.values()].sort((a, b) => b.potential_additional - a.potential_additional).slice(0, 15);
+  $("gapSel").innerHTML = gapsA.map((g, i) => `<option value="${i}">${esc(g.indicator_name)} ${g.year}: ${esc(g.worse_group.replace(/_/g, " "))} (${g.worse_value} %) vs ${esc(g.better_group.replace(/_/g, " "))} (${g.better_value} %)</option>`).join("");
+  function drawScenario() {
+    const g = gapsA[$("gapSel").value], s = Number($("share").value);
+    $("shareOut").textContent = s + " %";
+    if (!g) { $("scenOut").textContent = "No scenario data"; return; }
+    const extra = Math.round(Number(g.potential_additional) * s / 100);
+    $("scenOut").textContent = `+${fmt(extra)} people`;
+    $("scenFormula").textContent = `${fmt(g.potential_additional)} if the whole gap closes (${fmt(g.people_in_worse_group)} people × ${g.gap} points ÷ 100) × ${s} % = ${fmt(extra)}. Source: ${g.source_url || "pipeline equity_gaps"}`;
+  }
+  $("gapSel").onchange = drawScenario; $("share").oninput = drawScenario; drawScenario();
+
+  // ---------- 5. Goal 3
+  if (deathsRows.length && targetDeaths) {
+    const W = 640, H = 200, pad = 36, max = Math.max(...deathsRows.map(d => +d.deaths), +deathsTarget.baseline_value) * 1.05, min = 10000;
+    const bw = (W - pad * 2) / deathsRows.length, y = v => H - pad - (v - min) / (max - min) * (H - pad * 2);
+    $("deathChart").innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Cancer deaths per year against the Goal 3 target">` +
+      deathsRows.map((d, i) => `<rect x="${pad + i * bw + 4}" y="${y(d.deaths)}" width="${bw - 8}" height="${H - pad - y(d.deaths)}" fill="#830051"/>
+        <text x="${pad + i * bw + bw / 2}" y="${H - 18}" text-anchor="middle">${d.year}</text>
+        <text x="${pad + i * bw + bw / 2}" y="${y(d.deaths) - 4}" text-anchor="middle">${fmt(d.deaths)}</text>`).join("") +
+      `<line x1="${pad}" x2="${W - pad}" y1="${y(targetDeaths)}" y2="${y(targetDeaths)}" stroke="#1a7f4b" stroke-dasharray="5 4"/>
+       <text x="${W - pad}" y="${y(targetDeaths) - 4}" text-anchor="end" style="fill:#1a7f4b">Target about ${fmt(Math.round(targetDeaths))}</text></svg>`;
+    const last = deathsRows[deathsRows.length - 1], first = deathsRows[0];
+    $("deathNote").textContent = `Deaths in ${last.year}: ${fmt(last.deaths)}, a change of ${((last.deaths / first.deaths - 1) * 100).toFixed(1)} % since ${first.year}. ` +
+      `The strategy baseline is about ${fmt(deathsTarget.baseline_value)} a year; a 10 % cut means about ${fmt(Math.round(targetDeaths))}. ` +
+      `Counts are not age-standardised, and an ageing population raises counts. Source: Statistics Finland cause-of-death statistics via the pipeline; target: Strategy p. 5.`;
+  }
+  const tsGap = P.data_gaps.find(g => g.gap_type === "no_open_data" && g.pathway_stage === "treatment_start");
+  $("goal3gap").innerHTML = `<div class="box" style="white-space:normal"><span class="warn">Missing:</span> ${esc(tsGap ? tsGap.description : "Time from diagnosis to treatment start")}.
+    The official tracking rules are THL guidance 21/2016 (<a href="http://urn.fi/URN:ISBN:978-952-302-782-4" target="_blank" rel="noopener">link</a>).
+    <br><b>What would close it:</b> a regional extract of time from diagnosis to first treatment and the share within the target time, from THL or the hospital districts.</div>`;
+  $("goal3table").innerHTML = `<tr><th>Goal</th><th>Indicator</th><th>Target</th><th>Source</th></tr>` +
+    goal3.map(g => `<tr><td>${esc(g.goal)}</td><td>${esc(g.indicator.replace(/_/g, " "))}</td><td>${g.target_value ? esc(g.target_value) + " " + esc(g.unit.replace(/_/g, " ")) : "no numeric target"}</td><td>${esc(g.source)}, p. ${esc(g.page)}</td></tr>`).join("");
+
+  // ---------- 6. AI analyst
+  function showCheck(text) {
+    const r = Checker.checkNumbers(text, known);
+    $("check").innerHTML = r.missing.length
+      ? `<span class="warn">Check these numbers, they are not in our tables:</span> ${r.missing.map(esc).join(", ")}<br>Numbers found in our tables: ${r.found.length}`
+      : `<span class="ok">All ${r.found.length} numbers in this text were found in our tables.</span>`;
+  }
+  $("ask").onclick = async () => {
+    $("ask").disabled = true; $("check").textContent = "Asking…";
+    try {
+      const res = await fetch(RAG_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({question:$("q").value, topK:5})});
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const d = await res.json();
+      $("answer").hidden = false;
+      const src = (d.sources || []).map(s => `${s.id}: ${s.document}`).join("\n");
+      $("answer").textContent = d.answer + (src ? "\n\nSources:\n" + src : "");
+      showCheck(d.answer || "");
+    } catch (e) {
+      $("check").innerHTML = `<span class="warn">The AI service could not be reached (${esc(e.message)}).</span> You can still use "Check any text" below.`;
+    }
+    $("ask").disabled = false;
+  };
+  $("pasteBtn").onclick = () => showCheck($("paste").value);
+}
+</script>
+</body>
+</html>

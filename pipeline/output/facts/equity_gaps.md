@@ -33,5 +33,6 @@
 - Health literacy: Differences in health literacy and knowledge of services and rights; patients who cannot demand urgent care wait longer (Implementation Roadmap 2026-2031, p. 10 and 13).
 - Distance: Worse outcomes beyond 50 km from the treating unit; less palliative radiotherapy beyond 100 km (Implementation Roadmap 2026-2031, p. 13).
 - Language: Lower screening participation among people born abroad (Implementation Roadmap 2026-2031, p. 11).
+- Public vs private access: In an unpublished lymphoma study cited by the roadmap, getting a diagnosis took about twice as long in public care as in private care (Implementation Roadmap 2026-2031 (unpublished study), p. 11).
 
 Sources: Finnish Cancer Registry, Statistics Finland and THL via Sotkanet, processed by the Equal Care Navigator data pipeline. Regional differences are unadjusted and do not show causes.
