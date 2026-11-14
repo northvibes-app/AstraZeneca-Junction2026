@@ -1,6 +1,6 @@
 {
- "run_started_utc": "2026-11-14T00:14:22+00:00",
- "run_finished_utc": "2026-11-14T00:14:41+00:00",
+ "run_started_utc": "2026-11-14T00:58:47+00:00",
+ "run_finished_utc": "2026-11-14T00:59:08+00:00",
  "analysis_year": 2024,
  "inputs": [
   {
@@ -11,9 +11,9 @@
   },
   {
    "file": "equity_context_raw.csv.gz",
-   "rows": 59033,
-   "bytes": 865731,
-   "sha256": "e4ca955b60071d653886a282fcc15de9148ae152a488d88dd9f0b35d98777109"
+   "rows": 87412,
+   "bytes": 1278102,
+   "sha256": "0f3900ba3ddea95a35eeffa7083b725f71ff9d796a1789ad5c32751fa489e29c"
   },
   {
    "file": "breast_screening_by_region_2024.csv",
@@ -28,6 +28,12 @@
    "sha256": "53b072c5d07c64420f6cdcf30dd3e59a65346d725b37f114d63e4075edfeba49"
   },
   {
+   "file": "screening_by_population_group.csv",
+   "rows": 211,
+   "bytes": 40941,
+   "sha256": "225c982a125864012cd86be09263ee4e932ff1d35d922ef339ad50c3e7241e1e"
+  },
+  {
    "file": "national_key_statistics.csv",
    "rows": 21,
    "bytes": 4554,
@@ -35,58 +41,59 @@
   }
  ],
  "reconciliation": {
-  "rows_read": 804804,
-  "published": 756185,
+  "rows_read": 833394,
+  "published": 767332,
   "of_which_imputed": 44,
   "quarantined": 5,
-  "filtered_out_of_scope": 48635,
-  "duplicates_removed": 23,
+  "filtered_out_of_scope": 56772,
+  "duplicates_removed": 9329,
   "balanced": true
  },
  "steps": {
   "01 ingest": {
-   "rows read": 804804
+   "rows read": 833394,
+   "lines skipped by an adapter": 48
   },
   "02 profile": {
-   "rows profiled": 804804
+   "rows profiled": 833394
   },
   "03 validate_schema": {
-   "rows passed": 804804
+   "rows passed": 833394
   },
   "04 standardise": {
-   "rows standardised": 804799,
+   "rows standardised": 833389,
    "rejected": 5,
    "rejected: unknown region": 5
   },
   "05 scope_filter": {
-   "rows kept": 756164,
-   "filtered out": 48635,
-   "filtered out: level maakunta": 6129,
-   "filtered out: level sairaanhoitopiiri": 6438,
-   "filtered out: level erva": 1585,
-   "filtered out: level aluehallintovirasto": 2025,
-   "filtered out: level seutukunta": 16296,
-   "filtered out: level suuralue": 1183,
-   "filtered out: level nuts1": 418,
-   "filtered out: level yta": 1666,
+   "rows kept": 776617,
+   "filtered out": 56772,
+   "filtered out: level maakunta": 7288,
+   "filtered out: level sairaanhoitopiiri": 7721,
+   "filtered out: level erva": 1895,
+   "filtered out: level aluehallintovirasto": 2440,
+   "filtered out: level seutukunta": 20517,
+   "filtered out: level suuralue": 1474,
+   "filtered out: level nuts1": 523,
+   "filtered out: level yta": 2019,
    "filtered out: level pohjoismaat": 324,
    "filtered out: level eurooppa": 2091,
    "filtered out: level unknown": 10480
   },
   "06 deduplicate": {
-   "duplicates removed": 23,
-   "duplicates removed: across files": 23,
-   "rows kept": 756141
+   "duplicates removed": 9329,
+   "duplicates removed: across files": 9329,
+   "rows kept": 767288
   },
   "07 quality_checks": {
-   "flagged: outlier": 1278,
-   "flagged: small_cell": 1368,
-   "flagged: preliminary": 10,
+   "flagged: outlier": 749,
+   "flagged: small_cell": 368,
+   "flagged: preliminary": 28,
    "flagged: strategy_baseline": 1,
    "flagged: projection": 1,
    "flagged: strategy_target": 3,
    "flagged: roadmap_estimate": 1,
-   "rows passed": 756141
+   "rows passed": 767288
   },
   "08 completeness": {
    "indicators checked for region-year coverage": 13,
@@ -98,26 +105,50 @@
    "values imputed: temporal_mean": 44
   },
   "10 integrate": {
-   "observations in clean layer": 756185,
-   "observations in analysis subset": 5650
+   "observations in clean layer": 767332,
+   "observations in analysis subset": 6600
   },
   "11 enrich": {
    "context values attached": 138
   },
-  "12 categorise": {
+  "12 derive": {
+   "confidence intervals computed": 405,
+   "target status: at_or_above_target": 71,
+   "target status: below_target": 236,
+   "target status: near_target": 22,
+   "denominators derived from participants and percentage": 177,
+   "outcome figures with statistics": 865
+  },
+  "13 categorise": {
    "region categories assigned": 132,
    "observations tagged, evidence B": 924,
-   "observations tagged, evidence A": 321,
+   "observations tagged, evidence A": 400,
    "imputed observations left out of the measures": 44
   },
-  "13 measure": {
-   "gaps measured, evidence A": 99,
+  "14 measure": {
+   "gaps measured, evidence A": 151,
    "gaps measured, evidence B": 42,
+   "evidence B patterns that survive correction": 1,
+   "gaps measured, evidence B-municipality": 15,
+   "municipality patterns that survive correction": 9,
    "barriers listed, evidence C": 5
   },
-  "14 publish": {
-   "rows read": 804804,
-   "rows accounted for": 804804
+  "15 recommend": {
+   "gaps without a recommendation: not clearly above zero": 5,
+   "national recommendations": 9,
+   "regional recommendations": 29
+  },
+  "16 trends": {
+   "cancer sites with a mortality series": 18,
+   "region-entitlement figures": 110
+  },
+  "17 compare_runs": {
+   "figures unchanged": 6600
+  },
+  "18 publish": {
+   "fact sheets written": 25,
+   "rows read": 833394,
+   "rows accounted for": 833394
   }
  }
 }

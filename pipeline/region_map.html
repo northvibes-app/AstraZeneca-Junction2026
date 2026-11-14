@@ -91,6 +91,11 @@ a.srcl:focus-visible{outline:2px solid var(--text);outline-offset:2px}
 .factor .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;font-size:15px}
 .factor .med{color:var(--text-3);font-size:12.5px}
 .factor .c{text-align:right}
+.rec{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:8px;background:rgba(255,255,255,.025)}
+.rec b{display:block;font-size:14.5px;margin-bottom:4px}
+.rec b span{color:var(--accent)}
+.rec p{margin:0;font-size:13px;color:var(--text-2);line-height:1.45}
+.rec .meta{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:8px;font-size:12px;color:var(--text-3)}
 ul.gaps{margin:0;padding:0;list-style:none;font-size:13.5px;color:var(--text-2)}
 ul.gaps li{padding:6px 0 6px 22px;position:relative}
 ul.gaps li:before{content:"";position:absolute;left:3px;top:14px;width:9px;height:2px;background:var(--text-3)}
@@ -219,7 +224,11 @@ function factRow(code,key,opts){
     if(isRegion&&nat!=null)track.append(el('div',{class:'mark',style:'left:'+nat+'%'}));
     if(opts&&opts.target)track.append(el('div',{class:'target',style:'left:'+TARGET+'%'}));}
   const name=el('div',{class:'name'},SHORT[key]||f.indicator_name);
-  if(opts&&opts.sub)name.append(el('small',{},opts.sub));
+  // The interval shows how certain the percentage is; it is wide for small regions.
+  const ci=f.ci_low!==''&&f.ci_low!=null?'95 % interval '+Number(f.ci_low).toFixed(1)+'–'+Number(f.ci_high).toFixed(1)+' %':'';
+  const sub=[opts&&opts.sub,ci].filter(Boolean).join(' · ');
+  opts=Object.assign({},opts,{sub:sub});
+  if(opts.sub)name.append(el('small',{},opts.sub));
   if(!(opts&&opts.sub))name.append(el('br'));   // a sub-line is a block and already ends the line
   const link=sourceLink(f.source_url);if(link)name.append(link);
   const rk=isRegion?rank(code,key):null;
@@ -283,6 +292,21 @@ function renderPanel(code){
         el('div',{class:'num'},fmt(r.context_value,unit)),el('div',{class:'med'},'median of regions '+fmt(median(all),unit)),
         el('div',{class:'c'},el('span',{class:'chip '+r.factor_level},r.factor_level))));});
   }
+  // Measures the pipeline links to this region's gaps (or to the national gaps).
+  const recs=P.recommendations.filter(r=>r.region_code===c);
+  if(recs.length){
+    kids.push(el('h3',{},'Measures to evaluate'));
+    const seen=new Set();
+    recs.forEach(r=>{
+      // Nationally the same measure is triggered by several programmes; show it once.
+      if(seen.has(r.measure_id))return;seen.add(r.measure_id);
+      const all=recs.filter(x=>x.measure_id===r.measure_id);
+      const cost=r.cost_eur?'€'+Number(r.cost_eur).toLocaleString('en-GB')+' · '+r.cost_note:r.cost_note;
+      kids.push(el('div',{class:'rec'},el('b',{},el('span',{},r.measure_id+' '),r.measure),
+        el('p',{},all.map(x=>x.trigger).join(' · ')+'.'),
+        el('div',{class:'meta'},el('span',{},'Cost: '+cost),el('span',{},'Success: '+r.success_kpi),
+          el('span',{},r.source+(r.fit==='direct'?'':' · closest match in the roadmap')))));});
+    kids.push(el('p',{class:'src'},'Each measure is a proposal to evaluate. The data shows where a gap is, not what causes it. Costs are national estimates from the roadmap, not regional budgets.'));}
   kids.push(el('h3',{},code?'Not published for this or any region':'Not published for any region'),el('ul',{class:'gaps'},gaps.slice(0,4).map(g=>el('li',{},g))));
   kids.push(el('p',{class:'src'},'Figures: Finnish Cancer Registry, Statistics Finland and THL via Sotkanet, processed by the data pipeline (run '+P.lineage.run_finished_utc.slice(0,10)+'). Regional differences are unadjusted and do not show causes.'));
   panel.replaceChildren(...kids);}

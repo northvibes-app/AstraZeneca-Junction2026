@@ -1,2 +1,5 @@
 # Python bytecode caches, recreated on every run
 __pycache__/
+
+# Local file with the Azure access link. It is a secret and must never be committed.
+data.txt

@@ -25,6 +25,11 @@ GROUPS = {  # group labels of the cervical equity file -> (factor, factor_level)
     "Tertiary / higher education": ("education", "tertiary"),
     "Domestic": ("language", "domestic"),
     "Other / missing": ("language", "other_or_missing"),
+    # the Registry pages spell the same groups without spaces
+    "Primary education/unknown": ("education", "primary_or_unknown"),
+    "Intermediate/secondary": ("education", "secondary"),
+    "Tertiary/higher education": ("education", "tertiary"),
+    "Other/missing": ("language", "other_or_missing"),
 }
 
 
@@ -124,8 +129,8 @@ def standardise(ctx, rows):
             # The unit column is empty in the Sotkanet export, so the catalogue supplies it.
             "unit": intern(row["unit"] if row["unit"] not in ("", "persons") else cat["unit"]),
             # attended_n / n is the count behind a percentage; invited_n is its base.
-            "numerator": number("attended_n") if "attended_n" in extra else number("n"),
-            "denominator": number("invited_n"),
+            "numerator": next((number(k) for k in ("numerator_n", "attended_n", "n") if k in extra), None),
+            "denominator": next((number(k) for k in ("denominator_n", "invited_n") if k in extra), None),
             "status": intern(extra.get("status") or "observed"), "flags": "",
             "source": intern(row["source"]), "source_url": intern(source_url),
             "source_file": intern(row["_file"]), "source_row": row["_row"], "also_in": "",

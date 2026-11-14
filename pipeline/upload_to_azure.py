@@ -1,17 +1,19 @@
-"""Upload the pipeline's CSV results to the team's Azure Blob Storage container.
+"""Upload the pipeline's results to the team's Azure Blob Storage container.
 
 Run on its own:        python3 pipeline/upload_to_azure.py
 Or after the pipeline: python3 pipeline/run_pipeline.py --upload
 
-Where the access link comes from, first match wins:
-  1. the environment variable AZURE_BLOB_SAS_URL
-  2. the line after "Blob SAS URL" in data.txt in the repository root
+The access link (a SAS URL) is a secret: anyone who has it can write to the
+container. It must never be committed to git. It is read from
+  1. the environment variable AZURE_BLOB_SAS_URL, or
+  2. the line after "Blob SAS URL" in a local data.txt in the repository root.
+     data.txt is listed in .gitignore and stays on your machine.
+This script never prints the link.
 
-The link is a secret: anyone who has it can write to the container. This script
-never prints it. Prefer the environment variable and keep the link out of git.
-
-Each file is stored as  <container>/pipeline-output/<file name>  and replaces the
-previous upload of the same name. Only the Python standard library is used.
+What is uploaded is listed in pipeline/config.json under "upload". The fact sheets
+(output/facts/*.md) come first: a document search reads short texts well and rows
+of numbers badly. Each file is stored as <container>/pipeline-output/<path> and
+replaces the previous upload of the same name. Only the standard library is used.
 """
 import os
 import sys
@@ -23,13 +25,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "pipeline" / "output"
-PREFIX = "pipeline-output/"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common import CONFIG      # noqa: E402
 
-# The readable results. The 8 MB clean layer (observations_clean.csv.gz) is left out:
-# it is compressed, and everything needed for analysis is in the files below.
-FILES = ["equity_gaps.csv", "region_profile.csv", "region_factor_levels.csv",
-         "observations_by_factor.csv", "observations_analysis.csv", "data_gaps.csv",
-         "quarantine.csv"]
+PREFIX = CONFIG["upload"]["prefix"]
+
+
+def files_to_upload():
+    """Expand the patterns from config.json into paths relative to pipeline/output."""
+    found = []
+    for pattern in CONFIG["upload"]["files"]:
+        matches = sorted(OUT.glob(pattern))
+        found += [m.relative_to(OUT).as_posix() for m in matches] or [pattern]
+    return found
 
 
 def read_sas_url():
@@ -40,7 +48,7 @@ def read_sas_url():
             if line.lower() == "blob sas url" and i + 1 < len(lines):
                 url = lines[i + 1]
     if not url.startswith("https://") or "?" not in url:
-        sys.exit("No Azure access link found. Set AZURE_BLOB_SAS_URL or add it to data.txt.")
+        sys.exit("No Azure access link found. Set the environment variable AZURE_BLOB_SAS_URL.")
     return url
 
 
@@ -56,8 +64,8 @@ def upload():
     parts = urllib.parse.urlsplit(base)
     print(f"Target: {parts.netloc}{parts.path}/{PREFIX}")
 
-    failed = 0
-    for name in FILES:
+    names, failed = files_to_upload(), 0
+    for name in names:
         path = OUT / name
         if not path.exists():
             print(f"  skipped  {name} (not found; run the pipeline first)")
@@ -66,7 +74,9 @@ def upload():
         data = path.read_bytes()
         request = urllib.request.Request(
             f"{base}/{PREFIX}{urllib.parse.quote(name)}?{sas}", data=data, method="PUT",
-            headers={"x-ms-blob-type": "BlockBlob", "Content-Type": "text/csv; charset=utf-8"})
+            headers={"x-ms-blob-type": "BlockBlob",
+                     "Content-Type": ("text/markdown" if name.endswith(".md") else "text/csv")
+                     + "; charset=utf-8"})
         try:
             with urllib.request.urlopen(request, timeout=120):
                 print(f"  uploaded {name} ({len(data) / 1024:,.0f} KB)")
@@ -84,8 +94,8 @@ def upload():
         with urllib.request.urlopen(listing, timeout=60) as response:
             blobs = ET.fromstring(response.read()).iter("Blob")
             stored = {b.findtext("Name"): b.findtext("Properties/Content-Length") for b in blobs}
-        print(f"Stored under {PREFIX}: {len(stored)} files")
-        for name in FILES:
+        print(f"Stored under {PREFIX}: {len(stored)} files, {len(names)} of them from this upload")
+        for name in names:
             size = stored.get(PREFIX + name)
             local = (OUT / name).stat().st_size if (OUT / name).exists() else None
             state = "missing" if size is None else "ok" if int(size) == local else "SIZE DIFFERS"

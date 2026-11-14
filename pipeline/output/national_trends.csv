@@ -1,0 +1,199 @@
+cancer_site,year,deaths,change_since_2015_percent
+All cancers (C00-C97),2015,12168,0.0
+All cancers (C00-C97),2016,12494,2.7
+All cancers (C00-C97),2017,12573,3.3
+All cancers (C00-C97),2018,12558,3.2
+All cancers (C00-C97),2019,12899,6.0
+All cancers (C00-C97),2020,12998,6.8
+All cancers (C00-C97),2021,13159,8.1
+All cancers (C00-C97),2022,13072,7.4
+All cancers (C00-C97),2023,13472,10.7
+All cancers (C00-C97),2024,13316,9.4
+All cancers (C00-C97),2025,13424,10.3
+Bladder (C67),2015,261,0.0
+Bladder (C67),2016,280,7.3
+Bladder (C67),2017,277,6.1
+Bladder (C67),2018,291,11.5
+Bladder (C67),2019,317,21.5
+Bladder (C67),2020,310,18.8
+Bladder (C67),2021,313,19.9
+Bladder (C67),2022,295,13.0
+Bladder (C67),2023,310,18.8
+Bladder (C67),2024,291,11.5
+Bladder (C67),2025,299,14.6
+Breast (C50),2015,823,0.0
+Breast (C50),2016,881,7.0
+Breast (C50),2017,913,10.9
+Breast (C50),2018,859,4.4
+Breast (C50),2019,881,7.0
+Breast (C50),2020,951,15.6
+Breast (C50),2021,900,9.4
+Breast (C50),2022,866,5.2
+Breast (C50),2023,844,2.6
+Breast (C50),2024,899,9.2
+Breast (C50),2025,907,10.2
+Cervix (C53),2015,63,0.0
+Cervix (C53),2016,61,-3.2
+Cervix (C53),2017,55,-12.7
+Cervix (C53),2018,55,-12.7
+Cervix (C53),2019,45,-28.6
+Cervix (C53),2020,47,-25.4
+Cervix (C53),2021,58,-7.9
+Cervix (C53),2022,55,-12.7
+Cervix (C53),2023,46,-27.0
+Cervix (C53),2024,45,-28.6
+Cervix (C53),2025,40,-36.5
+Colon (C18-C19),2015,821,0.0
+Colon (C18-C19),2016,884,7.7
+Colon (C18-C19),2017,909,10.7
+Colon (C18-C19),2018,869,5.8
+Colon (C18-C19),2019,919,11.9
+Colon (C18-C19),2020,897,9.3
+Colon (C18-C19),2021,944,15.0
+Colon (C18-C19),2022,923,12.4
+Colon (C18-C19),2023,1004,22.3
+Colon (C18-C19),2024,961,17.1
+Colon (C18-C19),2025,986,20.1
+Kidney (C64),2015,367,0.0
+Kidney (C64),2016,399,8.7
+Kidney (C64),2017,324,-11.7
+Kidney (C64),2018,353,-3.8
+Kidney (C64),2019,341,-7.1
+Kidney (C64),2020,353,-3.8
+Kidney (C64),2021,330,-10.1
+Kidney (C64),2022,349,-4.9
+Kidney (C64),2023,340,-7.4
+Kidney (C64),2024,317,-13.6
+Kidney (C64),2025,338,-7.9
+"Larynx, trachea and lung (C32-C34)",2015,2275,0.0
+"Larynx, trachea and lung (C32-C34)",2016,2309,1.5
+"Larynx, trachea and lung (C32-C34)",2017,2310,1.5
+"Larynx, trachea and lung (C32-C34)",2018,2318,1.9
+"Larynx, trachea and lung (C32-C34)",2019,2383,4.7
+"Larynx, trachea and lung (C32-C34)",2020,2322,2.1
+"Larynx, trachea and lung (C32-C34)",2021,2400,5.5
+"Larynx, trachea and lung (C32-C34)",2022,2447,7.6
+"Larynx, trachea and lung (C32-C34)",2023,2256,-0.8
+"Larynx, trachea and lung (C32-C34)",2024,2317,1.8
+"Larynx, trachea and lung (C32-C34)",2025,2302,1.2
+"Lip, oral cavity and pharynx (C00-C14)",2015,232,0.0
+"Lip, oral cavity and pharynx (C00-C14)",2016,212,-8.6
+"Lip, oral cavity and pharynx (C00-C14)",2017,183,-21.1
+"Lip, oral cavity and pharynx (C00-C14)",2018,198,-14.7
+"Lip, oral cavity and pharynx (C00-C14)",2019,219,-5.6
+"Lip, oral cavity and pharynx (C00-C14)",2020,225,-3.0
+"Lip, oral cavity and pharynx (C00-C14)",2021,210,-9.5
+"Lip, oral cavity and pharynx (C00-C14)",2022,224,-3.4
+"Lip, oral cavity and pharynx (C00-C14)",2023,256,10.3
+"Lip, oral cavity and pharynx (C00-C14)",2024,264,13.8
+"Lip, oral cavity and pharynx (C00-C14)",2025,279,20.3
+Lymphoid and haematopoietic tissue (C81-C96),2015,1165,0.0
+Lymphoid and haematopoietic tissue (C81-C96),2016,1111,-4.6
+Lymphoid and haematopoietic tissue (C81-C96),2017,1144,-1.8
+Lymphoid and haematopoietic tissue (C81-C96),2018,1119,-3.9
+Lymphoid and haematopoietic tissue (C81-C96),2019,1227,5.3
+Lymphoid and haematopoietic tissue (C81-C96),2020,1184,1.6
+Lymphoid and haematopoietic tissue (C81-C96),2021,1232,5.8
+Lymphoid and haematopoietic tissue (C81-C96),2022,1170,0.4
+Lymphoid and haematopoietic tissue (C81-C96),2023,1165,0.0
+Lymphoid and haematopoietic tissue (C81-C96),2024,1258,8.0
+Lymphoid and haematopoietic tissue (C81-C96),2025,1275,9.4
+Oesophagus (C15),2015,233,0.0
+Oesophagus (C15),2016,290,24.5
+Oesophagus (C15),2017,296,27.0
+Oesophagus (C15),2018,317,36.1
+Oesophagus (C15),2019,315,35.2
+Oesophagus (C15),2020,356,52.8
+Oesophagus (C15),2021,347,48.9
+Oesophagus (C15),2022,355,52.4
+Oesophagus (C15),2023,393,68.7
+Oesophagus (C15),2024,379,62.7
+Oesophagus (C15),2025,338,45.1
+Other cancers,2015,1796,0.0
+Other cancers,2016,1818,1.2
+Other cancers,2017,1896,5.6
+Other cancers,2018,1883,4.8
+Other cancers,2019,1931,7.5
+Other cancers,2020,2048,14.0
+Other cancers,2021,2036,13.4
+Other cancers,2022,2003,11.5
+Other cancers,2023,2130,18.6
+Other cancers,2024,2128,18.5
+Other cancers,2025,2042,13.7
+Ovary (C56),2015,334,0.0
+Ovary (C56),2016,367,9.9
+Ovary (C56),2017,330,-1.2
+Ovary (C56),2018,310,-7.2
+Ovary (C56),2019,321,-3.9
+Ovary (C56),2020,277,-17.1
+Ovary (C56),2021,288,-13.8
+Ovary (C56),2022,312,-6.6
+Ovary (C56),2023,297,-11.1
+Ovary (C56),2024,262,-21.6
+Ovary (C56),2025,260,-22.2
+Pancreas (C25),2015,1137,0.0
+Pancreas (C25),2016,1191,4.7
+Pancreas (C25),2017,1168,2.7
+Pancreas (C25),2018,1298,14.2
+Pancreas (C25),2019,1199,5.5
+Pancreas (C25),2020,1312,15.4
+Pancreas (C25),2021,1287,13.2
+Pancreas (C25),2022,1272,11.9
+Pancreas (C25),2023,1371,20.6
+Pancreas (C25),2024,1337,17.6
+Pancreas (C25),2025,1391,22.3
+Primary liver (C22),2015,509,0.0
+Primary liver (C22),2016,527,3.5
+Primary liver (C22),2017,543,6.7
+Primary liver (C22),2018,533,4.7
+Primary liver (C22),2019,572,12.4
+Primary liver (C22),2020,563,10.6
+Primary liver (C22),2021,627,23.2
+Primary liver (C22),2022,596,17.1
+Primary liver (C22),2023,623,22.4
+Primary liver (C22),2024,644,26.5
+Primary liver (C22),2025,596,17.1
+Prostate (C61),2015,898,0.0
+Prostate (C61),2016,888,-1.1
+Prostate (C61),2017,898,0.0
+Prostate (C61),2018,895,-0.3
+Prostate (C61),2019,922,2.7
+Prostate (C61),2020,920,2.4
+Prostate (C61),2021,963,7.2
+Prostate (C61),2022,919,2.3
+Prostate (C61),2023,1012,12.7
+Prostate (C61),2024,957,6.6
+Prostate (C61),2025,1017,13.3
+Rectum and anus (C20-C21),2015,390,0.0
+Rectum and anus (C20-C21),2016,425,9.0
+Rectum and anus (C20-C21),2017,459,17.7
+Rectum and anus (C20-C21),2018,425,9.0
+Rectum and anus (C20-C21),2019,453,16.2
+Rectum and anus (C20-C21),2020,378,-3.1
+Rectum and anus (C20-C21),2021,415,6.4
+Rectum and anus (C20-C21),2022,474,21.5
+Rectum and anus (C20-C21),2023,552,41.5
+Rectum and anus (C20-C21),2024,456,16.9
+Rectum and anus (C20-C21),2025,541,38.7
+Stomach (C16),2015,441,0.0
+Stomach (C16),2016,434,-1.6
+Stomach (C16),2017,440,-0.2
+Stomach (C16),2018,377,-14.5
+Stomach (C16),2019,416,-5.7
+Stomach (C16),2020,412,-6.6
+Stomach (C16),2021,378,-14.3
+Stomach (C16),2022,363,-17.7
+Stomach (C16),2023,392,-11.1
+Stomach (C16),2024,356,-19.3
+Stomach (C16),2025,314,-28.8
+Uterus (C54-C55),2015,194,0.0
+Uterus (C54-C55),2016,202,4.1
+Uterus (C54-C55),2017,202,4.1
+Uterus (C54-C55),2018,216,11.3
+Uterus (C54-C55),2019,221,13.9
+Uterus (C54-C55),2020,215,10.8
+Uterus (C54-C55),2021,218,12.4
+Uterus (C54-C55),2022,219,12.9
+Uterus (C54-C55),2023,220,13.4
+Uterus (C54-C55),2024,212,9.3
+Uterus (C54-C55),2025,238,22.7

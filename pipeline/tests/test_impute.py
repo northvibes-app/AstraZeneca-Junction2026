@@ -4,8 +4,10 @@ The real data currently triggers only the first rule (temporal_mean), so the
 other two are exercised here.
 
 Run:  python3 pipeline/tests/test_impute.py
+      (or all tests: python3 -m unittest discover -s pipeline/tests -v)
 """
 import sys
+import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -57,6 +59,13 @@ def main():
     assert all(r["flags"] == "imputed" and r["numerator"] is None and r["source"] == "Pipeline fallback"
                for r in got.values())
     print(f"ok: {len(got)} fallback values, all three rules behave as specified")
+
+
+class FallbackRules(unittest.TestCase):
+    """Lets `python3 -m unittest discover` pick this file up as well."""
+
+    def test_all_three_rules(self):
+        main()
 
 
 if __name__ == "__main__":

@@ -16,7 +16,7 @@ def enrich(ctx):
     step, ref = "11 enrich", ctx.ref
     by_region = defaultdict(lambda: defaultdict(dict))    # region -> indicator -> year -> value
     for r in ctx.results["analysis"]:
-        if (r["kind"] == "context" and r["sex"] == "total" and r["factor"] == ""
+        if (r["kind"] in ("context", "population") and r["sex"] == "total" and r["factor"] == ""
                 and r["status"] != "imputed"):
             by_region[r["region_code"]][r["indicator_key"]][r["year"]] = r["value"]
 
@@ -36,5 +36,9 @@ def enrich(ctx):
             else:
                 row[key], row[key + "_year"] = "", ""
                 ctx.count(step, "context values missing")
+        # Population, used later to weight regional averages.
+        years = [y for y in by_region[region["region_code"]]["population"] if y <= ANALYSIS_YEAR]
+        row["population"] = by_region[region["region_code"]]["population"][max(years)] if years else ""
+        row["population_year"] = max(years) if years else ""
         profiles.append(row)
     ctx.results["region_profile"] = profiles

@@ -1,133 +1,133 @@
-factor,factor_label,region_code,region_name,context_indicator,context_value,context_year,factor_level
-income,Lower income,14,North Karelia,low_income_rate,19.0,2024,disadvantaged
-income,Lower income,11,South Karelia,low_income_rate,17.6,2024,disadvantaged
-income,Lower income,15,Central Finland,low_income_rate,17.3,2024,disadvantaged
-income,Lower income,09,Päijät-Häme,low_income_rate,16.1,2024,disadvantaged
-income,Lower income,12,South Savo,low_income_rate,16.0,2024,disadvantaged
-income,Lower income,10,Kymenlaakso,low_income_rate,15.5,2024,disadvantaged
-income,Lower income,13,North Savo,low_income_rate,15.4,2024,disadvantaged
-income,Lower income,20,Kainuu,low_income_rate,15.4,2024,middle
-income,Lower income,19,North Ostrobothnia,low_income_rate,14.8,2024,middle
-income,Lower income,05,Southwest Finland,low_income_rate,14.7,2024,middle
-income,Lower income,06,Satakunta,low_income_rate,14.6,2024,middle
-income,Lower income,08,Pirkanmaa,low_income_rate,14.6,2024,middle
-income,Lower income,90,City of Helsinki,low_income_rate,14.1,2024,middle
-income,Lower income,04,Vantaa and Kerava,low_income_rate,13.8,2024,middle
-income,Lower income,16,South Ostrobothnia,low_income_rate,13.7,2024,middle
-income,Lower income,21,Lapland,low_income_rate,13.6,2024,advantaged
-income,Lower income,07,Kanta-Häme,low_income_rate,13.2,2024,advantaged
-income,Lower income,17,Ostrobothnia,low_income_rate,13.1,2024,advantaged
-income,Lower income,18,Central Ostrobothnia,low_income_rate,12.2,2024,advantaged
-income,Lower income,03,West Uusimaa,low_income_rate,11.2,2024,advantaged
-income,Lower income,01,East Uusimaa,low_income_rate,9.8,2024,advantaged
-income,Lower income,02,Central Uusimaa,low_income_rate,9.2,2024,advantaged
-employment,Unemployment,14,North Karelia,unemployment_rate,13.8,2024,disadvantaged
-employment,Unemployment,09,Päijät-Häme,unemployment_rate,12.9,2024,disadvantaged
-employment,Unemployment,15,Central Finland,unemployment_rate,12.9,2024,disadvantaged
-employment,Unemployment,10,Kymenlaakso,unemployment_rate,12.5,2024,disadvantaged
-employment,Unemployment,11,South Karelia,unemployment_rate,12.5,2024,disadvantaged
-employment,Unemployment,04,Vantaa and Kerava,unemployment_rate,12.4,2024,disadvantaged
-employment,Unemployment,19,North Ostrobothnia,unemployment_rate,11.7,2024,disadvantaged
-employment,Unemployment,90,City of Helsinki,unemployment_rate,11.6,2024,middle
-employment,Unemployment,12,South Savo,unemployment_rate,11.0,2024,middle
-employment,Unemployment,13,North Savo,unemployment_rate,11.0,2024,middle
-employment,Unemployment,08,Pirkanmaa,unemployment_rate,10.9,2024,middle
-employment,Unemployment,06,Satakunta,unemployment_rate,10.3,2024,middle
-employment,Unemployment,05,Southwest Finland,unemployment_rate,10.1,2024,middle
-employment,Unemployment,20,Kainuu,unemployment_rate,10.1,2024,middle
-employment,Unemployment,07,Kanta-Häme,unemployment_rate,9.8,2024,middle
-employment,Unemployment,21,Lapland,unemployment_rate,9.7,2024,advantaged
-employment,Unemployment,03,West Uusimaa,unemployment_rate,9.5,2024,advantaged
-employment,Unemployment,02,Central Uusimaa,unemployment_rate,9.3,2024,advantaged
-employment,Unemployment,01,East Uusimaa,unemployment_rate,8.9,2024,advantaged
-employment,Unemployment,18,Central Ostrobothnia,unemployment_rate,8.5,2024,advantaged
-employment,Unemployment,16,South Ostrobothnia,unemployment_rate,7.6,2024,advantaged
-employment,Unemployment,17,Ostrobothnia,unemployment_rate,6.5,2024,advantaged
-education,Lower education,10,Kymenlaakso,education_level_index,347.5,2024,disadvantaged
-education,Lower education,12,South Savo,education_level_index,347.7,2024,disadvantaged
-education,Lower education,06,Satakunta,education_level_index,347.8,2024,disadvantaged
-education,Lower education,20,Kainuu,education_level_index,349.2,2024,disadvantaged
-education,Lower education,16,South Ostrobothnia,education_level_index,351.5,2024,disadvantaged
-education,Lower education,09,Päijät-Häme,education_level_index,354.6,2024,disadvantaged
-education,Lower education,18,Central Ostrobothnia,education_level_index,358.6,2024,disadvantaged
-education,Lower education,11,South Karelia,education_level_index,361.6,2024,middle
-education,Lower education,07,Kanta-Häme,education_level_index,363.7,2024,middle
-education,Lower education,04,Vantaa and Kerava,education_level_index,366.7,2024,middle
-education,Lower education,14,North Karelia,education_level_index,367.3,2024,middle
-education,Lower education,21,Lapland,education_level_index,368.2,2024,middle
-education,Lower education,13,North Savo,education_level_index,379.1,2024,middle
-education,Lower education,01,East Uusimaa,education_level_index,384.1,2024,middle
-education,Lower education,17,Ostrobothnia,education_level_index,384.8,2024,middle
-education,Lower education,02,Central Uusimaa,education_level_index,388.5,2024,advantaged
-education,Lower education,05,Southwest Finland,education_level_index,393.1,2024,advantaged
-education,Lower education,15,Central Finland,education_level_index,394.1,2024,advantaged
-education,Lower education,19,North Ostrobothnia,education_level_index,402.8,2024,advantaged
-education,Lower education,08,Pirkanmaa,education_level_index,416.3,2024,advantaged
-education,Lower education,03,West Uusimaa,education_level_index,456.6,2024,advantaged
-education,Lower education,90,City of Helsinki,education_level_index,482.5,2024,advantaged
-language,Language barrier,04,Vantaa and Kerava,other_language_per_1000,272.0,2024,disadvantaged
-language,Language barrier,90,City of Helsinki,other_language_per_1000,204.4,2024,disadvantaged
-language,Language barrier,03,West Uusimaa,other_language_per_1000,190.5,2024,disadvantaged
-language,Language barrier,05,Southwest Finland,other_language_per_1000,110.4,2024,disadvantaged
-language,Language barrier,17,Ostrobothnia,other_language_per_1000,106.9,2024,disadvantaged
-language,Language barrier,11,South Karelia,other_language_per_1000,94.3,2024,disadvantaged
-language,Language barrier,02,Central Uusimaa,other_language_per_1000,83.4,2024,disadvantaged
-language,Language barrier,01,East Uusimaa,other_language_per_1000,79.7,2024,middle
-language,Language barrier,10,Kymenlaakso,other_language_per_1000,78.7,2024,middle
-language,Language barrier,09,Päijät-Häme,other_language_per_1000,78.2,2024,middle
-language,Language barrier,08,Pirkanmaa,other_language_per_1000,74.0,2024,middle
-language,Language barrier,14,North Karelia,other_language_per_1000,65.8,2024,middle
-language,Language barrier,07,Kanta-Häme,other_language_per_1000,65.6,2024,middle
-language,Language barrier,06,Satakunta,other_language_per_1000,59.5,2024,middle
-language,Language barrier,20,Kainuu,other_language_per_1000,58.6,2024,middle
-language,Language barrier,12,South Savo,other_language_per_1000,58.3,2024,advantaged
-language,Language barrier,15,Central Finland,other_language_per_1000,54.8,2024,advantaged
-language,Language barrier,13,North Savo,other_language_per_1000,52.6,2024,advantaged
-language,Language barrier,18,Central Ostrobothnia,other_language_per_1000,48.5,2024,advantaged
-language,Language barrier,21,Lapland,other_language_per_1000,47.4,2024,advantaged
-language,Language barrier,19,North Ostrobothnia,other_language_per_1000,46.2,2024,advantaged
-language,Language barrier,16,South Ostrobothnia,other_language_per_1000,43.3,2024,advantaged
-smoking,Smoking,04,Vantaa and Kerava,daily_smokers,12.5,2024,disadvantaged
-smoking,Smoking,06,Satakunta,daily_smokers,12.5,2024,disadvantaged
-smoking,Smoking,10,Kymenlaakso,daily_smokers,12.0,2024,disadvantaged
-smoking,Smoking,21,Lapland,daily_smokers,11.4,2024,disadvantaged
-smoking,Smoking,01,East Uusimaa,daily_smokers,10.7,2024,disadvantaged
-smoking,Smoking,05,Southwest Finland,daily_smokers,10.2,2024,disadvantaged
-smoking,Smoking,07,Kanta-Häme,daily_smokers,10.2,2024,disadvantaged
-smoking,Smoking,11,South Karelia,daily_smokers,10.1,2024,middle
-smoking,Smoking,14,North Karelia,daily_smokers,10.0,2024,middle
-smoking,Smoking,09,Päijät-Häme,daily_smokers,9.9,2024,middle
-smoking,Smoking,19,North Ostrobothnia,daily_smokers,9.5,2024,middle
-smoking,Smoking,02,Central Uusimaa,daily_smokers,9.3,2024,middle
-smoking,Smoking,13,North Savo,daily_smokers,9.0,2024,middle
-smoking,Smoking,20,Kainuu,daily_smokers,8.9,2024,middle
-smoking,Smoking,18,Central Ostrobothnia,daily_smokers,8.7,2024,middle
-smoking,Smoking,03,West Uusimaa,daily_smokers,8.0,2024,advantaged
-smoking,Smoking,17,Ostrobothnia,daily_smokers,7.7,2024,advantaged
-smoking,Smoking,15,Central Finland,daily_smokers,7.6,2024,advantaged
-smoking,Smoking,16,South Ostrobothnia,daily_smokers,7.6,2024,advantaged
-smoking,Smoking,08,Pirkanmaa,daily_smokers,7.4,2024,advantaged
-smoking,Smoking,12,South Savo,daily_smokers,7.2,2024,advantaged
-smoking,Smoking,90,City of Helsinki,daily_smokers,6.8,2024,advantaged
-primary_care_access,Slow access to primary care,04,Vantaa and Kerava,primary_care_wait_over_7_days,70.4,2024,disadvantaged
-primary_care_access,Slow access to primary care,90,City of Helsinki,primary_care_wait_over_7_days,66.5,2024,disadvantaged
-primary_care_access,Slow access to primary care,18,Central Ostrobothnia,primary_care_wait_over_7_days,65.0,2024,disadvantaged
-primary_care_access,Slow access to primary care,19,North Ostrobothnia,primary_care_wait_over_7_days,60.9,2024,disadvantaged
-primary_care_access,Slow access to primary care,13,North Savo,primary_care_wait_over_7_days,57.9,2024,disadvantaged
-primary_care_access,Slow access to primary care,15,Central Finland,primary_care_wait_over_7_days,55.2,2024,disadvantaged
-primary_care_access,Slow access to primary care,07,Kanta-Häme,primary_care_wait_over_7_days,50.8,2024,disadvantaged
-primary_care_access,Slow access to primary care,12,South Savo,primary_care_wait_over_7_days,50.0,2024,middle
-primary_care_access,Slow access to primary care,01,East Uusimaa,primary_care_wait_over_7_days,49.7,2024,middle
-primary_care_access,Slow access to primary care,10,Kymenlaakso,primary_care_wait_over_7_days,47.8,2024,middle
-primary_care_access,Slow access to primary care,11,South Karelia,primary_care_wait_over_7_days,47.7,2024,middle
-primary_care_access,Slow access to primary care,17,Ostrobothnia,primary_care_wait_over_7_days,43.8,2024,middle
-primary_care_access,Slow access to primary care,05,Southwest Finland,primary_care_wait_over_7_days,39.5,2024,middle
-primary_care_access,Slow access to primary care,21,Lapland,primary_care_wait_over_7_days,39.5,2024,middle
-primary_care_access,Slow access to primary care,16,South Ostrobothnia,primary_care_wait_over_7_days,38.6,2024,middle
-primary_care_access,Slow access to primary care,08,Pirkanmaa,primary_care_wait_over_7_days,38.4,2024,advantaged
-primary_care_access,Slow access to primary care,03,West Uusimaa,primary_care_wait_over_7_days,36.3,2024,advantaged
-primary_care_access,Slow access to primary care,09,Päijät-Häme,primary_care_wait_over_7_days,34.3,2024,advantaged
-primary_care_access,Slow access to primary care,02,Central Uusimaa,primary_care_wait_over_7_days,32.8,2024,advantaged
-primary_care_access,Slow access to primary care,06,Satakunta,primary_care_wait_over_7_days,31.8,2024,advantaged
-primary_care_access,Slow access to primary care,20,Kainuu,primary_care_wait_over_7_days,27.1,2024,advantaged
-primary_care_access,Slow access to primary care,14,North Karelia,primary_care_wait_over_7_days,21.1,2024,advantaged
+factor,factor_label,region_code,region_name,context_indicator,context_value,context_year,national_value,factor_level,vs_national
+income,Lower income,14,North Karelia,low_income_rate,19.0,2024,14.2,disadvantaged,worse_than_finland
+income,Lower income,11,South Karelia,low_income_rate,17.6,2024,14.2,disadvantaged,worse_than_finland
+income,Lower income,15,Central Finland,low_income_rate,17.3,2024,14.2,disadvantaged,worse_than_finland
+income,Lower income,09,Päijät-Häme,low_income_rate,16.1,2024,14.2,disadvantaged,worse_than_finland
+income,Lower income,12,South Savo,low_income_rate,16.0,2024,14.2,disadvantaged,worse_than_finland
+income,Lower income,10,Kymenlaakso,low_income_rate,15.5,2024,14.2,disadvantaged,worse_than_finland
+income,Lower income,13,North Savo,low_income_rate,15.4,2024,14.2,disadvantaged,worse_than_finland
+income,Lower income,20,Kainuu,low_income_rate,15.4,2024,14.2,middle,worse_than_finland
+income,Lower income,19,North Ostrobothnia,low_income_rate,14.8,2024,14.2,middle,worse_than_finland
+income,Lower income,05,Southwest Finland,low_income_rate,14.7,2024,14.2,middle,worse_than_finland
+income,Lower income,06,Satakunta,low_income_rate,14.6,2024,14.2,middle,worse_than_finland
+income,Lower income,08,Pirkanmaa,low_income_rate,14.6,2024,14.2,middle,worse_than_finland
+income,Lower income,90,City of Helsinki,low_income_rate,14.1,2024,14.2,middle,same_or_better_than_finland
+income,Lower income,04,Vantaa and Kerava,low_income_rate,13.8,2024,14.2,middle,same_or_better_than_finland
+income,Lower income,16,South Ostrobothnia,low_income_rate,13.7,2024,14.2,middle,same_or_better_than_finland
+income,Lower income,21,Lapland,low_income_rate,13.6,2024,14.2,advantaged,same_or_better_than_finland
+income,Lower income,07,Kanta-Häme,low_income_rate,13.2,2024,14.2,advantaged,same_or_better_than_finland
+income,Lower income,17,Ostrobothnia,low_income_rate,13.1,2024,14.2,advantaged,same_or_better_than_finland
+income,Lower income,18,Central Ostrobothnia,low_income_rate,12.2,2024,14.2,advantaged,same_or_better_than_finland
+income,Lower income,03,West Uusimaa,low_income_rate,11.2,2024,14.2,advantaged,same_or_better_than_finland
+income,Lower income,01,East Uusimaa,low_income_rate,9.8,2024,14.2,advantaged,same_or_better_than_finland
+income,Lower income,02,Central Uusimaa,low_income_rate,9.2,2024,14.2,advantaged,same_or_better_than_finland
+employment,Unemployment,14,North Karelia,unemployment_rate,13.8,2024,10.8,disadvantaged,worse_than_finland
+employment,Unemployment,09,Päijät-Häme,unemployment_rate,12.9,2024,10.8,disadvantaged,worse_than_finland
+employment,Unemployment,15,Central Finland,unemployment_rate,12.9,2024,10.8,disadvantaged,worse_than_finland
+employment,Unemployment,10,Kymenlaakso,unemployment_rate,12.5,2024,10.8,disadvantaged,worse_than_finland
+employment,Unemployment,11,South Karelia,unemployment_rate,12.5,2024,10.8,disadvantaged,worse_than_finland
+employment,Unemployment,04,Vantaa and Kerava,unemployment_rate,12.4,2024,10.8,disadvantaged,worse_than_finland
+employment,Unemployment,19,North Ostrobothnia,unemployment_rate,11.7,2024,10.8,disadvantaged,worse_than_finland
+employment,Unemployment,90,City of Helsinki,unemployment_rate,11.6,2024,10.8,middle,worse_than_finland
+employment,Unemployment,12,South Savo,unemployment_rate,11.0,2024,10.8,middle,worse_than_finland
+employment,Unemployment,13,North Savo,unemployment_rate,11.0,2024,10.8,middle,worse_than_finland
+employment,Unemployment,08,Pirkanmaa,unemployment_rate,10.9,2024,10.8,middle,worse_than_finland
+employment,Unemployment,06,Satakunta,unemployment_rate,10.3,2024,10.8,middle,same_or_better_than_finland
+employment,Unemployment,05,Southwest Finland,unemployment_rate,10.1,2024,10.8,middle,same_or_better_than_finland
+employment,Unemployment,20,Kainuu,unemployment_rate,10.1,2024,10.8,middle,same_or_better_than_finland
+employment,Unemployment,07,Kanta-Häme,unemployment_rate,9.8,2024,10.8,middle,same_or_better_than_finland
+employment,Unemployment,21,Lapland,unemployment_rate,9.7,2024,10.8,advantaged,same_or_better_than_finland
+employment,Unemployment,03,West Uusimaa,unemployment_rate,9.5,2024,10.8,advantaged,same_or_better_than_finland
+employment,Unemployment,02,Central Uusimaa,unemployment_rate,9.3,2024,10.8,advantaged,same_or_better_than_finland
+employment,Unemployment,01,East Uusimaa,unemployment_rate,8.9,2024,10.8,advantaged,same_or_better_than_finland
+employment,Unemployment,18,Central Ostrobothnia,unemployment_rate,8.5,2024,10.8,advantaged,same_or_better_than_finland
+employment,Unemployment,16,South Ostrobothnia,unemployment_rate,7.6,2024,10.8,advantaged,same_or_better_than_finland
+employment,Unemployment,17,Ostrobothnia,unemployment_rate,6.5,2024,10.8,advantaged,same_or_better_than_finland
+education,Lower education,10,Kymenlaakso,education_level_index,347.5,2024,398.9,disadvantaged,worse_than_finland
+education,Lower education,12,South Savo,education_level_index,347.7,2024,398.9,disadvantaged,worse_than_finland
+education,Lower education,06,Satakunta,education_level_index,347.8,2024,398.9,disadvantaged,worse_than_finland
+education,Lower education,20,Kainuu,education_level_index,349.2,2024,398.9,disadvantaged,worse_than_finland
+education,Lower education,16,South Ostrobothnia,education_level_index,351.5,2024,398.9,disadvantaged,worse_than_finland
+education,Lower education,09,Päijät-Häme,education_level_index,354.6,2024,398.9,disadvantaged,worse_than_finland
+education,Lower education,18,Central Ostrobothnia,education_level_index,358.6,2024,398.9,disadvantaged,worse_than_finland
+education,Lower education,11,South Karelia,education_level_index,361.6,2024,398.9,middle,worse_than_finland
+education,Lower education,07,Kanta-Häme,education_level_index,363.7,2024,398.9,middle,worse_than_finland
+education,Lower education,04,Vantaa and Kerava,education_level_index,366.7,2024,398.9,middle,worse_than_finland
+education,Lower education,14,North Karelia,education_level_index,367.3,2024,398.9,middle,worse_than_finland
+education,Lower education,21,Lapland,education_level_index,368.2,2024,398.9,middle,worse_than_finland
+education,Lower education,13,North Savo,education_level_index,379.1,2024,398.9,middle,worse_than_finland
+education,Lower education,01,East Uusimaa,education_level_index,384.1,2024,398.9,middle,worse_than_finland
+education,Lower education,17,Ostrobothnia,education_level_index,384.8,2024,398.9,middle,worse_than_finland
+education,Lower education,02,Central Uusimaa,education_level_index,388.5,2024,398.9,advantaged,worse_than_finland
+education,Lower education,05,Southwest Finland,education_level_index,393.1,2024,398.9,advantaged,worse_than_finland
+education,Lower education,15,Central Finland,education_level_index,394.1,2024,398.9,advantaged,worse_than_finland
+education,Lower education,19,North Ostrobothnia,education_level_index,402.8,2024,398.9,advantaged,same_or_better_than_finland
+education,Lower education,08,Pirkanmaa,education_level_index,416.3,2024,398.9,advantaged,same_or_better_than_finland
+education,Lower education,03,West Uusimaa,education_level_index,456.6,2024,398.9,advantaged,same_or_better_than_finland
+education,Lower education,90,City of Helsinki,education_level_index,482.5,2024,398.9,advantaged,same_or_better_than_finland
+language,Language barrier,04,Vantaa and Kerava,other_language_per_1000,272.0,2024,108.3,disadvantaged,worse_than_finland
+language,Language barrier,90,City of Helsinki,other_language_per_1000,204.4,2024,108.3,disadvantaged,worse_than_finland
+language,Language barrier,03,West Uusimaa,other_language_per_1000,190.5,2024,108.3,disadvantaged,worse_than_finland
+language,Language barrier,05,Southwest Finland,other_language_per_1000,110.4,2024,108.3,disadvantaged,worse_than_finland
+language,Language barrier,17,Ostrobothnia,other_language_per_1000,106.9,2024,108.3,disadvantaged,same_or_better_than_finland
+language,Language barrier,11,South Karelia,other_language_per_1000,94.3,2024,108.3,disadvantaged,same_or_better_than_finland
+language,Language barrier,02,Central Uusimaa,other_language_per_1000,83.4,2024,108.3,disadvantaged,same_or_better_than_finland
+language,Language barrier,01,East Uusimaa,other_language_per_1000,79.7,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,10,Kymenlaakso,other_language_per_1000,78.7,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,09,Päijät-Häme,other_language_per_1000,78.2,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,08,Pirkanmaa,other_language_per_1000,74.0,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,14,North Karelia,other_language_per_1000,65.8,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,07,Kanta-Häme,other_language_per_1000,65.6,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,06,Satakunta,other_language_per_1000,59.5,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,20,Kainuu,other_language_per_1000,58.6,2024,108.3,middle,same_or_better_than_finland
+language,Language barrier,12,South Savo,other_language_per_1000,58.3,2024,108.3,advantaged,same_or_better_than_finland
+language,Language barrier,15,Central Finland,other_language_per_1000,54.8,2024,108.3,advantaged,same_or_better_than_finland
+language,Language barrier,13,North Savo,other_language_per_1000,52.6,2024,108.3,advantaged,same_or_better_than_finland
+language,Language barrier,18,Central Ostrobothnia,other_language_per_1000,48.5,2024,108.3,advantaged,same_or_better_than_finland
+language,Language barrier,21,Lapland,other_language_per_1000,47.4,2024,108.3,advantaged,same_or_better_than_finland
+language,Language barrier,19,North Ostrobothnia,other_language_per_1000,46.2,2024,108.3,advantaged,same_or_better_than_finland
+language,Language barrier,16,South Ostrobothnia,other_language_per_1000,43.3,2024,108.3,advantaged,same_or_better_than_finland
+smoking,Smoking,04,Vantaa and Kerava,daily_smokers,12.5,2024,9.1,disadvantaged,worse_than_finland
+smoking,Smoking,06,Satakunta,daily_smokers,12.5,2024,9.1,disadvantaged,worse_than_finland
+smoking,Smoking,10,Kymenlaakso,daily_smokers,12.0,2024,9.1,disadvantaged,worse_than_finland
+smoking,Smoking,21,Lapland,daily_smokers,11.4,2024,9.1,disadvantaged,worse_than_finland
+smoking,Smoking,01,East Uusimaa,daily_smokers,10.7,2024,9.1,disadvantaged,worse_than_finland
+smoking,Smoking,05,Southwest Finland,daily_smokers,10.2,2024,9.1,disadvantaged,worse_than_finland
+smoking,Smoking,07,Kanta-Häme,daily_smokers,10.2,2024,9.1,disadvantaged,worse_than_finland
+smoking,Smoking,11,South Karelia,daily_smokers,10.1,2024,9.1,middle,worse_than_finland
+smoking,Smoking,14,North Karelia,daily_smokers,10.0,2024,9.1,middle,worse_than_finland
+smoking,Smoking,09,Päijät-Häme,daily_smokers,9.9,2024,9.1,middle,worse_than_finland
+smoking,Smoking,19,North Ostrobothnia,daily_smokers,9.5,2024,9.1,middle,worse_than_finland
+smoking,Smoking,02,Central Uusimaa,daily_smokers,9.3,2024,9.1,middle,worse_than_finland
+smoking,Smoking,13,North Savo,daily_smokers,9.0,2024,9.1,middle,same_or_better_than_finland
+smoking,Smoking,20,Kainuu,daily_smokers,8.9,2024,9.1,middle,same_or_better_than_finland
+smoking,Smoking,18,Central Ostrobothnia,daily_smokers,8.7,2024,9.1,middle,same_or_better_than_finland
+smoking,Smoking,03,West Uusimaa,daily_smokers,8.0,2024,9.1,advantaged,same_or_better_than_finland
+smoking,Smoking,17,Ostrobothnia,daily_smokers,7.7,2024,9.1,advantaged,same_or_better_than_finland
+smoking,Smoking,15,Central Finland,daily_smokers,7.6,2024,9.1,advantaged,same_or_better_than_finland
+smoking,Smoking,16,South Ostrobothnia,daily_smokers,7.6,2024,9.1,advantaged,same_or_better_than_finland
+smoking,Smoking,08,Pirkanmaa,daily_smokers,7.4,2024,9.1,advantaged,same_or_better_than_finland
+smoking,Smoking,12,South Savo,daily_smokers,7.2,2024,9.1,advantaged,same_or_better_than_finland
+smoking,Smoking,90,City of Helsinki,daily_smokers,6.8,2024,9.1,advantaged,same_or_better_than_finland
+primary_care_access,Slow access to primary care,04,Vantaa and Kerava,primary_care_wait_over_7_days,70.4,2024,43.4,disadvantaged,worse_than_finland
+primary_care_access,Slow access to primary care,90,City of Helsinki,primary_care_wait_over_7_days,66.5,2024,43.4,disadvantaged,worse_than_finland
+primary_care_access,Slow access to primary care,18,Central Ostrobothnia,primary_care_wait_over_7_days,65.0,2024,43.4,disadvantaged,worse_than_finland
+primary_care_access,Slow access to primary care,19,North Ostrobothnia,primary_care_wait_over_7_days,60.9,2024,43.4,disadvantaged,worse_than_finland
+primary_care_access,Slow access to primary care,13,North Savo,primary_care_wait_over_7_days,57.9,2024,43.4,disadvantaged,worse_than_finland
+primary_care_access,Slow access to primary care,15,Central Finland,primary_care_wait_over_7_days,55.2,2024,43.4,disadvantaged,worse_than_finland
+primary_care_access,Slow access to primary care,07,Kanta-Häme,primary_care_wait_over_7_days,50.8,2024,43.4,disadvantaged,worse_than_finland
+primary_care_access,Slow access to primary care,12,South Savo,primary_care_wait_over_7_days,50.0,2024,43.4,middle,worse_than_finland
+primary_care_access,Slow access to primary care,01,East Uusimaa,primary_care_wait_over_7_days,49.7,2024,43.4,middle,worse_than_finland
+primary_care_access,Slow access to primary care,10,Kymenlaakso,primary_care_wait_over_7_days,47.8,2024,43.4,middle,worse_than_finland
+primary_care_access,Slow access to primary care,11,South Karelia,primary_care_wait_over_7_days,47.7,2024,43.4,middle,worse_than_finland
+primary_care_access,Slow access to primary care,17,Ostrobothnia,primary_care_wait_over_7_days,43.8,2024,43.4,middle,worse_than_finland
+primary_care_access,Slow access to primary care,05,Southwest Finland,primary_care_wait_over_7_days,39.5,2024,43.4,middle,same_or_better_than_finland
+primary_care_access,Slow access to primary care,21,Lapland,primary_care_wait_over_7_days,39.5,2024,43.4,middle,same_or_better_than_finland
+primary_care_access,Slow access to primary care,16,South Ostrobothnia,primary_care_wait_over_7_days,38.6,2024,43.4,middle,same_or_better_than_finland
+primary_care_access,Slow access to primary care,08,Pirkanmaa,primary_care_wait_over_7_days,38.4,2024,43.4,advantaged,same_or_better_than_finland
+primary_care_access,Slow access to primary care,03,West Uusimaa,primary_care_wait_over_7_days,36.3,2024,43.4,advantaged,same_or_better_than_finland
+primary_care_access,Slow access to primary care,09,Päijät-Häme,primary_care_wait_over_7_days,34.3,2024,43.4,advantaged,same_or_better_than_finland
+primary_care_access,Slow access to primary care,02,Central Uusimaa,primary_care_wait_over_7_days,32.8,2024,43.4,advantaged,same_or_better_than_finland
+primary_care_access,Slow access to primary care,06,Satakunta,primary_care_wait_over_7_days,31.8,2024,43.4,advantaged,same_or_better_than_finland
+primary_care_access,Slow access to primary care,20,Kainuu,primary_care_wait_over_7_days,27.1,2024,43.4,advantaged,same_or_better_than_finland
+primary_care_access,Slow access to primary care,14,North Karelia,primary_care_wait_over_7_days,21.1,2024,43.4,advantaged,same_or_better_than_finland

@@ -1,9 +1,9 @@
 """Equal Care Navigator - data pipeline prototype.
 
-Runs the 14 steps in order and writes the results to pipeline/output/.
+Runs the 18 steps in order and writes the results to pipeline/output/.
 
     python3 pipeline/run_pipeline.py             # run the pipeline
-    python3 pipeline/run_pipeline.py --upload    # run it, then upload the CSV results to Azure
+    python3 pipeline/run_pipeline.py --upload    # run it, then upload the results to Azure
 
      1 ingest            read every source into one common raw layout
      2 profile           measure the data before anything is changed
@@ -15,11 +15,16 @@ Runs the 14 steps in order and writes the results to pipeline/output/.
      8 completeness      list what is missing
      9 impute            labelled fallback values for missing region-year cells
     10 integrate         final sort, stable ids, analysis subset
-    11 enrich            attach each region's social and economic context
-    12 categorise        tag every figure with the equity factor it informs
-    13 measure           size of each gap, with its evidence type
-    14 publish           write all outputs, lineage and the run report
+    11 enrich            attach each region's social and economic context and population
+    12 derive            confidence intervals, multi-year averages, position against the target
+    13 categorise        tag every figure with the equity factor it informs
+    14 measure           size and certainty of each gap, with its evidence type
+    15 recommend         link each gap to a measure from the national roadmap
+    16 trends            mortality by cancer site and new treatment entitlements by region
+    17 compare_runs      what changed since the previous run
+    18 publish           write all outputs, fact sheets, lineage and the run report
 
+Settings are in pipeline/config.json.
 Only the Python standard library is used, so nothing needs to be installed.
 """
 import sys
@@ -31,8 +36,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import Context                                                    # noqa: E402
 from steps import (s01_ingest, s02_profile, s03_validate_schema, s04_standardise,   # noqa: E402
                    s05_scope_filter, s06_deduplicate, s07_quality_checks, s08_completeness,
-                   s09_impute, s10_integrate, s11_enrich, s12_categorise, s13_measure,
-                   s14_publish)
+                   s09_impute, s10_integrate, s11_enrich, s12_derive, s13_categorise,
+                   s14_measure, s15_recommend, s16_trends, s17_compare_runs, s18_publish)
 
 
 def main():
@@ -56,11 +61,15 @@ def main():
     rows = s09_impute.impute(ctx, rows)
     rows = s10_integrate.integrate(ctx, rows)
 
-    # Steps 11-14 build the equity view and write everything out.
+    # Steps 11-18 build the equity view and write everything out.
     s11_enrich.enrich(ctx)
-    s12_categorise.categorise(ctx)
-    s13_measure.measure(ctx)
-    s14_publish.publish(ctx, started)
+    s12_derive.derive(ctx)
+    s13_categorise.categorise(ctx)
+    s14_measure.measure(ctx)
+    s15_recommend.recommend(ctx)
+    s16_trends.trends(ctx)
+    s17_compare_runs.compare_runs(ctx)      # must run before publish overwrites the old files
+    s18_publish.publish(ctx, started)
 
     for name, counter in ctx.stats.items():
         print(name)

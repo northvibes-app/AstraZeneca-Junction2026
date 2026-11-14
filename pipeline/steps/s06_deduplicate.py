@@ -11,10 +11,12 @@ KEY_FIELDS = ["indicator_key", "region_code", "period", "sex", "age_group", "det
 
 
 def _preference(row):
-    """Lower is better: rows with counts first, then the more authoritative source."""
-    has_counts = row["numerator"] is not None and row["denominator"] is not None
+    """Lower is better: the row that carries more of the underlying counts wins,
+    then the more authoritative source."""
+    completeness = 0 if row["numerator"] is not None and row["denominator"] is not None \
+        else 1 if row["numerator"] is not None else 2
     source_rank = SOURCE_PRIORITY.index(row["source"]) if row["source"] in SOURCE_PRIORITY else 99
-    return (0 if has_counts else 1, source_rank)
+    return (completeness, source_rank)
 
 
 def deduplicate(ctx, rows):

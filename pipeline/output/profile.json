@@ -1,6 +1,6 @@
 {
  "Sotkanet": {
-  "rows": 134740,
+  "rows": 163119,
   "year_min": "1991",
   "year_max": "2025",
   "empty_share": {
@@ -20,7 +20,7 @@
    "scraped_at": 0.0
   },
   "distinct_values": {
-   "dataset": "23 values",
+   "dataset": "24 values",
    "sex": [
     "female",
     "male",
@@ -112,8 +112,8 @@
   }
  },
  "Finnish Cancer Registry": {
-  "rows": 28,
-  "year_min": "2024",
+  "rows": 245,
+  "year_min": "2020",
   "year_max": "2025",
   "empty_share": {
    "source": 0.0,
@@ -134,9 +134,16 @@
   "distinct_values": {
    "dataset": [
     "curated breast_screening_by_region",
-    "curated cervical_screening_equity"
+    "curated cervical_screening_equity",
+    "registry breast participation",
+    "registry cervical followup_attendance",
+    "registry cervical participation",
+    "registry colorectal followup_attendance",
+    "registry colorectal participation"
    ],
    "sex": [
+    "female",
+    "male",
     "total"
    ],
    "measure": [
@@ -148,7 +155,7 @@
   }
  },
  "Team curated": {
-  "rows": 21,
+  "rows": 15,
   "year_min": "2021",
   "year_max": "2035",
   "empty_share": {

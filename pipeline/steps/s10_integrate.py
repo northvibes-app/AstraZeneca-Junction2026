@@ -18,7 +18,7 @@ def integrate(ctx, rows):
     # Kela entitlements and deaths by age group stay in the clean layer only.
     analysis = [r for r in rows
                 if r["region_level"] in ("country", "wellbeing_county")
-                and r["kind"] in ("outcome", "context", "reference")
+                and r["kind"] in ("outcome", "context", "reference", "population")
                 and r["age_group"] == "all"
                 and (r["year"] > ANALYSIS_YEAR - ANALYSIS_WINDOW_YEARS or r["kind"] == "reference")]
     ctx.count(step, "observations in analysis subset", len(analysis))

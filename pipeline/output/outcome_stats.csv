@@ -1,0 +1,866 @@
+observation_id,indicator_key,indicator_name,region_code,region_name,year,sex,factor,factor_level,value,unit,numerator,denominator,denominator_source,ci_low,ci_high,pooled_value,pooled_years,target_status,status
+OBS0082878,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2017,female,,,97.9,index,,,,,,97.9,1,,observed
+OBS0082879,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2017,male,,,104.6,index,,,,,,104.6,1,,observed
+OBS0082881,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2018,female,,,98.2,index,,,,,,98.1,2,,observed
+OBS0082882,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2018,male,,,102.6,index,,,,,,103.6,2,,observed
+OBS0082884,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2019,female,,,100.5,index,,,,,,98.9,3,,observed
+OBS0082885,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2019,male,,,103.1,index,,,,,,103.4,3,,observed
+OBS0082887,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2020,female,,,96.5,index,,,,,,98.4,3,,observed
+OBS0082888,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2020,male,,,100.7,index,,,,,,102.1,3,,observed
+OBS0082890,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2021,female,,,101.5,index,,,,,,99.5,3,,observed
+OBS0082891,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2021,male,,,103.6,index,,,,,,102.5,3,,observed
+OBS0082893,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2022,female,,,99.6,index,,,,,,99.2,3,,observed
+OBS0082894,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2022,male,,,103.1,index,,,,,,102.5,3,,observed
+OBS0082896,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2023,female,,,101.4,index,,,,,,100.8,3,,observed
+OBS0082897,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2023,male,,,105.0,index,,,,,,103.9,3,,observed
+OBS0082899,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2024,female,,,100.0,index,,,,,,100.3,3,,observed
+OBS0082900,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2024,male,,,100.0,index,,,,,,102.7,3,,observed
+OBS0082901,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),FI,Finland,2024,total,,,100.0,index,,,,,,101.5,3,,observed
+OBS0084654,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2017,female,,,105.5,index,,,,,,105.5,1,,observed
+OBS0084655,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2017,male,,,107.6,index,,,,,,107.6,1,,observed
+OBS0084657,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2018,female,,,104.9,index,,,,,,105.2,2,,observed
+OBS0084658,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2018,male,,,114.8,index,,,,,,111.2,2,,observed
+OBS0084660,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2019,female,,,109.6,index,,,,,,106.7,3,,observed
+OBS0084661,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2019,male,,,96.3,index,,,,,,106.2,3,,observed
+OBS0084663,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2020,female,,,105.4,index,,,,,,106.6,3,,observed
+OBS0084664,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2020,male,,,101.0,index,,,,,,104.0,3,,observed
+OBS0084666,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2021,female,,,101.2,index,,,,,,105.4,3,,observed
+OBS0084667,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2021,male,,,115.2,index,,,,,,104.2,3,,observed
+OBS0084669,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2022,female,,,107.2,index,,,,,,104.6,3,,observed
+OBS0084670,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2022,male,,,103.7,index,,,,,,106.6,3,,observed
+OBS0084672,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2023,female,,,101.9,index,,,,,,103.4,3,,observed
+OBS0084673,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2023,male,,,107.6,index,,,,,,108.8,3,,observed
+OBS0084675,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2024,female,,,101.4,index,,,,,,103.5,3,,observed
+OBS0084676,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2024,male,,,103.6,index,,,,,,105.0,3,,observed
+OBS0084677,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),01,East Uusimaa,2024,total,,,103.1,index,,,,,,104.7,3,,observed
+OBS0084678,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2017,female,,,100.6,index,,,,,,100.6,1,,observed
+OBS0084679,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2017,male,,,119.8,index,,,,,,119.8,1,,observed
+OBS0084681,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2018,female,,,101.3,index,,,,,,100.9,2,,observed
+OBS0084682,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2018,male,,,119.2,index,,,,,,119.5,2,,observed
+OBS0084684,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2019,female,,,107.3,index,,,,,,103.1,3,,observed
+OBS0084685,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2019,male,,,101.2,index,,,,,,113.4,3,,observed
+OBS0084687,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2020,female,,,102.8,index,,,,,,103.8,3,,observed
+OBS0084688,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2020,male,,,101.3,index,,,,,,107.2,3,,observed
+OBS0084690,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2021,female,,,107.1,index,,,,,,105.7,3,,observed
+OBS0084691,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2021,male,,,104.8,index,,,,,,102.4,3,,observed
+OBS0084693,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2022,female,,,103.0,index,,,,,,104.3,3,,observed
+OBS0084694,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2022,male,,,98.7,index,,,,,,101.6,3,,observed
+OBS0084696,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2023,female,,,102.3,index,,,,,,104.1,3,,observed
+OBS0084697,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2023,male,,,104.0,index,,,,,,102.5,3,,observed
+OBS0084699,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2024,female,,,97.9,index,,,,,,101.1,3,,observed
+OBS0084700,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2024,male,,,96.1,index,,,,,,99.6,3,,observed
+OBS0084701,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),02,Central Uusimaa,2024,total,,,96.9,index,,,,,,100.2,3,,observed
+OBS0084702,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2017,female,,,99.8,index,,,,,,99.8,1,,observed
+OBS0084703,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2017,male,,,107.7,index,,,,,,107.7,1,,observed
+OBS0084705,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2018,female,,,104.4,index,,,,,,102.1,2,,observed
+OBS0084706,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2018,male,,,103.2,index,,,,,,105.5,2,,observed
+OBS0084708,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2019,female,,,103.7,index,,,,,,102.6,3,,observed
+OBS0084709,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2019,male,,,105.2,index,,,,,,105.4,3,,observed
+OBS0084711,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2020,female,,,101.7,index,,,,,,103.3,3,,observed
+OBS0084712,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2020,male,,,97.7,index,,,,,,102.0,3,,observed
+OBS0084714,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2021,female,,,108.3,index,,,,,,104.6,3,,observed
+OBS0084715,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2021,male,,,110.5,index,,,,,,104.5,3,,observed
+OBS0084717,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2022,female,,,101.1,index,,,,,,103.7,3,,observed
+OBS0084718,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2022,male,,,104.5,index,,,,,,104.2,3,,observed
+OBS0084720,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2023,female,,,107.3,index,,,,,,105.6,3,,observed
+OBS0084721,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2023,male,,,108.3,index,,,,,,107.8,3,,observed
+OBS0084723,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2024,female,,,100.6,index,,,,,,103.0,3,,observed
+OBS0084724,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2024,male,,,101.0,index,,,,,,104.6,3,,observed
+OBS0084725,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),03,West Uusimaa,2024,total,,,100.7,index,,,,,,103.7,3,,observed
+OBS0084726,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2017,female,,,105.8,index,,,,,,105.8,1,,observed
+OBS0084727,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2017,male,,,114.9,index,,,,,,114.9,1,,observed
+OBS0084729,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2018,female,,,104.6,index,,,,,,105.2,2,,observed
+OBS0084730,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2018,male,,,105.5,index,,,,,,110.2,2,,observed
+OBS0084732,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2019,female,,,103.1,index,,,,,,104.5,3,,observed
+OBS0084733,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2019,male,,,100.5,index,,,,,,107.0,3,,observed
+OBS0084735,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2020,female,,,99.4,index,,,,,,102.4,3,,observed
+OBS0084736,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2020,male,,,102.1,index,,,,,,102.7,3,,observed
+OBS0084738,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2021,female,,,111.3,index,,,,,,104.6,3,,observed
+OBS0084739,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2021,male,,,106.7,index,,,,,,103.1,3,,observed
+OBS0084741,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2022,female,,,106.4,index,,,,,,105.7,3,,observed
+OBS0084742,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2022,male,,,101.3,index,,,,,,103.4,3,,observed
+OBS0084744,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2023,female,,,110.5,index,,,,,,109.4,3,,observed
+OBS0084745,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2023,male,,,108.6,index,,,,,,105.5,3,,observed
+OBS0084747,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2024,female,,,106.5,index,,,,,,107.8,3,,observed
+OBS0084748,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2024,male,,,96.7,index,,,,,,102.2,3,,observed
+OBS0084749,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),04,Vantaa and Kerava,2024,total,,,100.7,index,,,,,,104.1,3,,observed
+OBS0084750,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2017,female,,,95.7,index,,,,,,95.7,1,,observed
+OBS0084751,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2017,male,,,107.3,index,,,,,,107.3,1,,observed
+OBS0084753,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2018,female,,,104.3,index,,,,,,100.0,2,,observed
+OBS0084754,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2018,male,,,103.8,index,,,,,,105.5,2,,observed
+OBS0084756,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2019,female,,,103.9,index,,,,,,101.3,3,,observed
+OBS0084757,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2019,male,,,108.0,index,,,,,,106.4,3,,observed
+OBS0084759,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2020,female,,,98.7,index,,,,,,102.3,3,,observed
+OBS0084760,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2020,male,,,109.4,index,,,,,,107.1,3,,observed
+OBS0084762,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2021,female,,,104.1,index,,,,,,102.2,3,,observed
+OBS0084763,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2021,male,,,110.2,index,,,,,,109.2,3,,observed
+OBS0084765,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2022,female,,,106.3,index,,,,,,103.0,3,,observed
+OBS0084766,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2022,male,,,100.2,index,,,,,,106.6,3,,observed
+OBS0084768,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2023,female,,,103.5,index,,,,,,104.6,3,,observed
+OBS0084769,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2023,male,,,108.1,index,,,,,,106.2,3,,observed
+OBS0084771,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2024,female,,,102.7,index,,,,,,104.2,3,,observed
+OBS0084772,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2024,male,,,101.2,index,,,,,,103.2,3,,observed
+OBS0084773,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),05,Southwest Finland,2024,total,,,101.9,index,,,,,,103.6,3,,observed
+OBS0084774,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2017,female,,,103.5,index,,,,,,103.5,1,,observed
+OBS0084775,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2017,male,,,102.4,index,,,,,,102.4,1,,observed
+OBS0084777,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2018,female,,,94.6,index,,,,,,99.0,2,,observed
+OBS0084778,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2018,male,,,102.5,index,,,,,,102.5,2,,observed
+OBS0084780,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2019,female,,,97.0,index,,,,,,98.4,3,,observed
+OBS0084781,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2019,male,,,107.2,index,,,,,,104.0,3,,observed
+OBS0084783,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2020,female,,,97.4,index,,,,,,96.3,3,,observed
+OBS0084784,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2020,male,,,92.7,index,,,,,,100.8,3,,observed
+OBS0084786,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2021,female,,,103.2,index,,,,,,99.2,3,,observed
+OBS0084787,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2021,male,,,100.7,index,,,,,,100.2,3,,observed
+OBS0084789,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2022,female,,,97.4,index,,,,,,99.3,3,,observed
+OBS0084790,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2022,male,,,104.2,index,,,,,,99.2,3,,observed
+OBS0084792,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2023,female,,,96.7,index,,,,,,99.1,3,,observed
+OBS0084793,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2023,male,,,103.0,index,,,,,,102.6,3,,observed
+OBS0084795,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2024,female,,,100.5,index,,,,,,98.2,3,,observed
+OBS0084796,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2024,male,,,108.6,index,,,,,,105.3,3,,observed
+OBS0084797,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),06,Satakunta,2024,total,,,105.0,index,,,,,,102.1,3,,observed
+OBS0084798,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2017,female,,,92.6,index,,,,,,92.6,1,,observed
+OBS0084799,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2017,male,,,108.4,index,,,,,,108.4,1,,observed
+OBS0084801,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2018,female,,,102.2,index,,,,,,97.4,2,,observed
+OBS0084802,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2018,male,,,104.8,index,,,,,,106.6,2,,observed
+OBS0084804,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2019,female,,,99.4,index,,,,,,98.1,3,,observed
+OBS0084805,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2019,male,,,97.9,index,,,,,,103.7,3,,observed
+OBS0084807,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2020,female,,,93.5,index,,,,,,98.4,3,,observed
+OBS0084808,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2020,male,,,99.8,index,,,,,,100.8,3,,observed
+OBS0084810,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2021,female,,,97.8,index,,,,,,96.9,3,,observed
+OBS0084811,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2021,male,,,100.2,index,,,,,,99.3,3,,observed
+OBS0084813,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2022,female,,,96.0,index,,,,,,95.8,3,,observed
+OBS0084814,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2022,male,,,108.6,index,,,,,,102.9,3,,observed
+OBS0084816,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2023,female,,,105.8,index,,,,,,99.9,3,,observed
+OBS0084817,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2023,male,,,107.9,index,,,,,,105.6,3,,observed
+OBS0084819,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2024,female,,,107.2,index,,,,,,103.0,3,,observed
+OBS0084820,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2024,male,,,99.4,index,,,,,,105.3,3,,observed
+OBS0084821,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),07,Kanta-Häme,2024,total,,,103.2,index,,,,,,104.3,3,,observed
+OBS0084822,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2017,female,,,100.9,index,,,,,,100.9,1,,observed
+OBS0084823,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2017,male,,,107.0,index,,,,,,107.0,1,,observed
+OBS0084825,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2018,female,,,98.4,index,,,,,,99.7,2,,observed
+OBS0084826,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2018,male,,,109.3,index,,,,,,108.2,2,,observed
+OBS0084828,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2019,female,,,98.2,index,,,,,,99.2,3,,observed
+OBS0084829,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2019,male,,,104.8,index,,,,,,107.0,3,,observed
+OBS0084831,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2020,female,,,95.0,index,,,,,,97.2,3,,observed
+OBS0084832,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2020,male,,,101.4,index,,,,,,105.2,3,,observed
+OBS0084834,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2021,female,,,101.2,index,,,,,,98.1,3,,observed
+OBS0084835,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2021,male,,,90.3,index,,,,,,98.8,3,,observed
+OBS0084837,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2022,female,,,93.9,index,,,,,,96.7,3,,observed
+OBS0084838,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2022,male,,,102.0,index,,,,,,97.9,3,,observed
+OBS0084840,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2023,female,,,100.9,index,,,,,,98.7,3,,observed
+OBS0084841,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2023,male,,,102.5,index,,,,,,98.3,3,,observed
+OBS0084843,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2024,female,,,103.5,index,,,,,,99.4,3,,observed
+OBS0084844,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2024,male,,,103.9,index,,,,,,102.8,3,,observed
+OBS0084845,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),08,Pirkanmaa,2024,total,,,103.6,index,,,,,,101.0,3,,observed
+OBS0084846,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2017,female,,,95.0,index,,,,,,95.0,1,,observed
+OBS0084847,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2017,male,,,101.8,index,,,,,,101.8,1,,observed
+OBS0084849,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2018,female,,,100.8,index,,,,,,97.9,2,,observed
+OBS0084850,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2018,male,,,107.0,index,,,,,,104.4,2,,observed
+OBS0084852,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2019,female,,,110.6,index,,,,,,102.1,3,,observed
+OBS0084853,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2019,male,,,111.0,index,,,,,,106.6,3,,observed
+OBS0084855,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2020,female,,,99.3,index,,,,,,103.6,3,,observed
+OBS0084856,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2020,male,,,108.9,index,,,,,,109.0,3,,observed
+OBS0084858,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2021,female,,,106.0,index,,,,,,105.3,3,,observed
+OBS0084859,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2021,male,,,106.3,index,,,,,,108.7,3,,observed
+OBS0084861,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2022,female,,,100.3,index,,,,,,101.9,3,,observed
+OBS0084862,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2022,male,,,110.8,index,,,,,,108.7,3,,observed
+OBS0084864,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2023,female,,,104.6,index,,,,,,103.6,3,,observed
+OBS0084865,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2023,male,,,111.8,index,,,,,,109.6,3,,observed
+OBS0084867,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2024,female,,,96.0,index,,,,,,100.3,3,,observed
+OBS0084868,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2024,male,,,109.7,index,,,,,,110.8,3,,observed
+OBS0084869,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),09,Päijät-Häme,2024,total,,,102.9,index,,,,,,105.4,3,,observed
+OBS0084870,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2017,female,,,105.3,index,,,,,,105.3,1,,observed
+OBS0084871,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2017,male,,,108.6,index,,,,,,108.6,1,,observed
+OBS0084873,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2018,female,,,98.8,index,,,,,,102.0,2,,observed
+OBS0084874,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2018,male,,,114.6,index,,,,,,111.6,2,,observed
+OBS0084876,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2019,female,,,102.3,index,,,,,,102.1,3,,observed
+OBS0084877,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2019,male,,,108.5,index,,,,,,110.6,3,,observed
+OBS0084879,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2020,female,,,106.4,index,,,,,,102.5,3,,observed
+OBS0084880,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2020,male,,,101.6,index,,,,,,108.2,3,,observed
+OBS0084882,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2021,female,,,102.9,index,,,,,,103.9,3,,observed
+OBS0084883,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2021,male,,,114.1,index,,,,,,108.1,3,,observed
+OBS0084885,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2022,female,,,96.1,index,,,,,,101.8,3,,observed
+OBS0084886,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2022,male,,,107.3,index,,,,,,107.7,3,,observed
+OBS0084888,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2023,female,,,112.7,index,,,,,,103.9,3,,observed
+OBS0084889,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2023,male,,,110.5,index,,,,,,110.6,3,,observed
+OBS0084891,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2024,female,,,101.9,index,,,,,,103.6,3,,observed
+OBS0084892,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2024,male,,,98.6,index,,,,,,105.5,3,,observed
+OBS0084893,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),10,Kymenlaakso,2024,total,,,100.1,index,,,,,,104.5,3,,observed
+OBS0084894,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2017,female,,,97.2,index,,,,,,97.2,1,,observed
+OBS0084895,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2017,male,,,96.7,index,,,,,,96.7,1,,observed
+OBS0084897,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2018,female,,,84.5,index,,,,,,90.8,2,,observed
+OBS0084898,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2018,male,,,102.3,index,,,,,,99.5,2,,observed
+OBS0084900,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2019,female,,,89.7,index,,,,,,90.5,3,,observed
+OBS0084901,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2019,male,,,99.6,index,,,,,,99.5,3,,observed
+OBS0084903,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2020,female,,,97.5,index,,,,,,90.6,3,,observed
+OBS0084904,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2020,male,,,109.0,index,,,,,,103.6,3,,observed
+OBS0084906,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2021,female,,,97.0,index,,,,,,94.7,3,,observed
+OBS0084907,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2021,male,,,103.9,index,,,,,,104.2,3,,observed
+OBS0084909,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2022,female,,,94.5,index,,,,,,96.3,3,,observed
+OBS0084910,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2022,male,,,109.1,index,,,,,,107.3,3,,observed
+OBS0084912,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2023,female,,,97.7,index,,,,,,96.4,3,,observed
+OBS0084913,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2023,male,,,112.7,index,,,,,,108.6,3,,observed
+OBS0084915,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2024,female,,,94.8,index,,,,,,95.7,3,,observed
+OBS0084916,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2024,male,,,99.5,index,,,,,,107.1,3,,observed
+OBS0084917,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),11,South Karelia,2024,total,,,97.2,index,,,,,,101.5,3,,observed
+OBS0084918,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2017,female,,,90.8,index,,,,,,90.8,1,,observed
+OBS0084919,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2017,male,,,98.7,index,,,,,,98.7,1,,observed
+OBS0084921,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2018,female,,,90.2,index,,,,,,90.5,2,,observed
+OBS0084922,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2018,male,,,89.5,index,,,,,,94.1,2,,observed
+OBS0084924,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2019,female,,,92.8,index,,,,,,91.3,3,,observed
+OBS0084925,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2019,male,,,95.7,index,,,,,,94.6,3,,observed
+OBS0084927,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2020,female,,,84.6,index,,,,,,89.2,3,,observed
+OBS0084928,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2020,male,,,92.5,index,,,,,,92.6,3,,observed
+OBS0084930,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2021,female,,,87.7,index,,,,,,88.4,3,,observed
+OBS0084931,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2021,male,,,99.5,index,,,,,,95.9,3,,observed
+OBS0084933,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2022,female,,,86.1,index,,,,,,86.1,3,,observed
+OBS0084934,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2022,male,,,97.3,index,,,,,,96.4,3,,observed
+OBS0084936,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2023,female,,,94.5,index,,,,,,89.4,3,,observed
+OBS0084937,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2023,male,,,106.5,index,,,,,,101.1,3,,observed
+OBS0084939,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2024,female,,,100.9,index,,,,,,93.8,3,,observed
+OBS0084940,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2024,male,,,101.9,index,,,,,,101.9,3,,observed
+OBS0084941,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),12,South Savo,2024,total,,,101.8,index,,,,,,98.4,3,,observed
+OBS0084942,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2017,female,,,87.0,index,,,,,,87.0,1,,observed
+OBS0084943,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2017,male,,,91.8,index,,,,,,91.8,1,,observed
+OBS0084945,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2018,female,,,96.4,index,,,,,,91.7,2,,observed
+OBS0084946,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2018,male,,,97.9,index,,,,,,94.8,2,,observed
+OBS0084948,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2019,female,,,98.4,index,,,,,,93.9,3,,observed
+OBS0084949,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2019,male,,,91.0,index,,,,,,93.6,3,,observed
+OBS0084951,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2020,female,,,89.0,index,,,,,,94.6,3,,observed
+OBS0084952,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2020,male,,,98.6,index,,,,,,95.8,3,,observed
+OBS0084954,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2021,female,,,100.0,index,,,,,,95.8,3,,observed
+OBS0084955,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2021,male,,,107.7,index,,,,,,99.1,3,,observed
+OBS0084957,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2022,female,,,91.5,index,,,,,,93.5,3,,observed
+OBS0084958,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2022,male,,,96.4,index,,,,,,100.9,3,,observed
+OBS0084960,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2023,female,,,91.2,index,,,,,,94.2,3,,observed
+OBS0084961,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2023,male,,,97.5,index,,,,,,100.5,3,,observed
+OBS0084963,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2024,female,,,95.7,index,,,,,,92.8,3,,observed
+OBS0084964,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2024,male,,,90.9,index,,,,,,94.9,3,,observed
+OBS0084965,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),13,North Savo,2024,total,,,93.4,index,,,,,,94.1,3,,observed
+OBS0084966,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2017,female,,,82.8,index,,,,,,82.8,1,,observed
+OBS0084967,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2017,male,,,92.2,index,,,,,,92.2,1,,observed
+OBS0084969,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2018,female,,,87.1,index,,,,,,84.9,2,,observed
+OBS0084970,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2018,male,,,86.9,index,,,,,,89.6,2,,observed
+OBS0084972,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2019,female,,,96.8,index,,,,,,88.9,3,,observed
+OBS0084973,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2019,male,,,92.2,index,,,,,,90.4,3,,observed
+OBS0084975,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2020,female,,,87.0,index,,,,,,90.3,3,,observed
+OBS0084976,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2020,male,,,89.3,index,,,,,,89.5,3,,observed
+OBS0084978,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2021,female,,,86.2,index,,,,,,90.0,3,,observed
+OBS0084979,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2021,male,,,100.4,index,,,,,,94.0,3,,observed
+OBS0084981,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2022,female,,,89.1,index,,,,,,87.4,3,,observed
+OBS0084982,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2022,male,,,102.1,index,,,,,,97.3,3,,observed
+OBS0084984,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2023,female,,,92.6,index,,,,,,89.3,3,,observed
+OBS0084985,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2023,male,,,102.8,index,,,,,,101.8,3,,observed
+OBS0084987,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2024,female,,,84.1,index,,,,,,88.6,3,,observed
+OBS0084988,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2024,male,,,99.2,index,,,,,,101.4,3,,observed
+OBS0084989,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),14,North Karelia,2024,total,,,92.9,index,,,,,,96.1,3,,observed
+OBS0084990,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2017,female,,,89.5,index,,,,,,89.5,1,,observed
+OBS0084991,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2017,male,,,108.5,index,,,,,,108.5,1,,observed
+OBS0084993,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2018,female,,,91.4,index,,,,,,90.5,2,,observed
+OBS0084994,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2018,male,,,95.3,index,,,,,,101.9,2,,observed
+OBS0084996,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2019,female,,,91.5,index,,,,,,90.8,3,,observed
+OBS0084997,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2019,male,,,102.9,index,,,,,,102.2,3,,observed
+OBS0084999,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2020,female,,,93.2,index,,,,,,92.0,3,,observed
+OBS0085000,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2020,male,,,92.5,index,,,,,,96.9,3,,observed
+OBS0085002,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2021,female,,,92.7,index,,,,,,92.5,3,,observed
+OBS0085003,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2021,male,,,96.7,index,,,,,,97.4,3,,observed
+OBS0085005,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2022,female,,,92.0,index,,,,,,92.6,3,,observed
+OBS0085006,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2022,male,,,96.3,index,,,,,,95.2,3,,observed
+OBS0085008,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2023,female,,,94.0,index,,,,,,92.9,3,,observed
+OBS0085009,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2023,male,,,99.6,index,,,,,,97.5,3,,observed
+OBS0085011,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2024,female,,,93.5,index,,,,,,93.2,3,,observed
+OBS0085012,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2024,male,,,91.3,index,,,,,,95.7,3,,observed
+OBS0085013,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),15,Central Finland,2024,total,,,92.5,index,,,,,,94.7,3,,observed
+OBS0085014,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2017,female,,,98.8,index,,,,,,98.8,1,,observed
+OBS0085015,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2017,male,,,109.6,index,,,,,,109.6,1,,observed
+OBS0085017,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2018,female,,,95.5,index,,,,,,97.2,2,,observed
+OBS0085018,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2018,male,,,105.9,index,,,,,,107.8,2,,observed
+OBS0085020,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2019,female,,,98.8,index,,,,,,97.7,3,,observed
+OBS0085021,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2019,male,,,108.3,index,,,,,,107.9,3,,observed
+OBS0085023,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2020,female,,,93.2,index,,,,,,95.8,3,,observed
+OBS0085024,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2020,male,,,107.4,index,,,,,,107.2,3,,observed
+OBS0085026,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2021,female,,,95.4,index,,,,,,95.8,3,,observed
+OBS0085027,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2021,male,,,111.2,index,,,,,,109.0,3,,observed
+OBS0085029,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2022,female,,,106.9,index,,,,,,98.5,3,,observed
+OBS0085030,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2022,male,,,111.9,index,,,,,,110.2,3,,observed
+OBS0085032,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2023,female,,,94.7,index,,,,,,99.0,3,,observed
+OBS0085033,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2023,male,,,104.9,index,,,,,,109.3,3,,observed
+OBS0085035,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2024,female,,,96.4,index,,,,,,99.3,3,,observed
+OBS0085036,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2024,male,,,108.9,index,,,,,,108.6,3,,observed
+OBS0085037,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),16,South Ostrobothnia,2024,total,,,103.6,index,,,,,,104.7,3,,observed
+OBS0085038,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2017,female,,,101.8,index,,,,,,101.8,1,,observed
+OBS0085039,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2017,male,,,103.1,index,,,,,,103.1,1,,observed
+OBS0085041,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2018,female,,,98.1,index,,,,,,99.9,2,,observed
+OBS0085042,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2018,male,,,106.5,index,,,,,,104.8,2,,observed
+OBS0085044,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2019,female,,,107.0,index,,,,,,102.3,3,,observed
+OBS0085045,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2019,male,,,100.5,index,,,,,,103.4,3,,observed
+OBS0085047,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2020,female,,,95.4,index,,,,,,100.2,3,,observed
+OBS0085048,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2020,male,,,104.2,index,,,,,,103.7,3,,observed
+OBS0085050,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2021,female,,,99.7,index,,,,,,100.7,3,,observed
+OBS0085051,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2021,male,,,98.1,index,,,,,,100.9,3,,observed
+OBS0085053,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2022,female,,,92.9,index,,,,,,96.0,3,,observed
+OBS0085054,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2022,male,,,103.8,index,,,,,,102.0,3,,observed
+OBS0085056,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2023,female,,,90.5,index,,,,,,94.4,3,,observed
+OBS0085057,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2023,male,,,98.9,index,,,,,,100.3,3,,observed
+OBS0085059,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2024,female,,,105.0,index,,,,,,96.1,3,,observed
+OBS0085060,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2024,male,,,107.9,index,,,,,,103.5,3,,observed
+OBS0085061,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),17,Ostrobothnia,2024,total,,,107.3,index,,,,,,100.8,3,,observed
+OBS0085062,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2017,female,,,100.9,index,,,,,,100.9,1,,observed
+OBS0085063,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2017,male,,,107.7,index,,,,,,107.7,1,,observed
+OBS0085065,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2018,female,,,98.4,index,,,,,,99.7,2,,observed
+OBS0085066,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2018,male,,,96.4,index,,,,,,102.1,2,,observed
+OBS0085068,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2019,female,,,91.3,index,,,,,,96.9,3,,observed
+OBS0085069,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2019,male,,,104.9,index,,,,,,103.0,3,,observed
+OBS0085071,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2020,female,,,94.3,index,,,,,,94.7,3,,observed
+OBS0085072,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2020,male,,,92.7,index,,,,,,98.0,3,,observed
+OBS0085074,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2021,female,,,95.2,index,,,,,,93.6,3,,observed
+OBS0085075,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2021,male,,,109.9,index,,,,,,102.5,3,,observed
+OBS0085077,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2022,female,,,96.0,index,,,,,,95.2,3,,observed
+OBS0085078,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2022,male,,,104.7,index,,,,,,102.4,3,,observed
+OBS0085080,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2023,female,,,96.4,index,,,,,,95.9,3,,observed
+OBS0085081,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2023,male,,,113.7,index,,,,,,109.4,3,,observed
+OBS0085083,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2024,female,,,103.4,index,,,,,,98.6,3,,observed
+OBS0085084,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2024,male,,,94.4,index,,,,,,104.3,3,,observed
+OBS0085085,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),18,Central Ostrobothnia,2024,total,,,99.1,index,,,,,,102.1,3,,observed
+OBS0085086,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2017,female,,,91.4,index,,,,,,91.4,1,,observed
+OBS0085087,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2017,male,,,105.1,index,,,,,,105.1,1,,observed
+OBS0085089,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2018,female,,,90.3,index,,,,,,90.8,2,,observed
+OBS0085090,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2018,male,,,93.7,index,,,,,,99.4,2,,observed
+OBS0085092,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2019,female,,,92.9,index,,,,,,91.5,3,,observed
+OBS0085093,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2019,male,,,100.4,index,,,,,,99.7,3,,observed
+OBS0085095,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2020,female,,,87.2,index,,,,,,90.1,3,,observed
+OBS0085096,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2020,male,,,97.8,index,,,,,,97.3,3,,observed
+OBS0085098,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2021,female,,,98.1,index,,,,,,92.7,3,,observed
+OBS0085099,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2021,male,,,101.3,index,,,,,,99.8,3,,observed
+OBS0085101,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2022,female,,,105.1,index,,,,,,96.8,3,,observed
+OBS0085102,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2022,male,,,98.9,index,,,,,,99.3,3,,observed
+OBS0085104,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2023,female,,,100.8,index,,,,,,101.3,3,,observed
+OBS0085105,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2023,male,,,103.7,index,,,,,,101.3,3,,observed
+OBS0085107,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2024,female,,,101.6,index,,,,,,102.5,3,,observed
+OBS0085108,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2024,male,,,93.8,index,,,,,,98.8,3,,observed
+OBS0085109,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),19,North Ostrobothnia,2024,total,,,97.8,index,,,,,,100.9,3,,observed
+OBS0085110,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2017,female,,,95.9,index,,,,,,95.9,1,,observed
+OBS0085111,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2017,male,,,77.5,index,,,,,,77.5,1,,observed
+OBS0085113,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2018,female,,,77.5,index,,,,,,86.7,2,,observed
+OBS0085114,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2018,male,,,83.0,index,,,,,,80.2,2,,observed
+OBS0085116,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2019,female,,,81.4,index,,,,,,84.9,3,,observed
+OBS0085117,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2019,male,,,86.2,index,,,,,,82.2,3,,observed
+OBS0085119,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2020,female,,,82.8,index,,,,,,80.6,3,,observed
+OBS0085120,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2020,male,,,97.9,index,,,,,,89.0,3,,observed
+OBS0085122,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2021,female,,,86.9,index,,,,,,83.7,3,,observed
+OBS0085123,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2021,male,,,88.2,index,,,,,,90.8,3,,observed
+OBS0085125,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2022,female,,,95.5,index,,,,,,88.4,3,,observed
+OBS0085126,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2022,male,,,91.7,index,,,,,,92.6,3,,observed
+OBS0085128,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2023,female,,,85.4,index,,,,,,89.3,3,,observed
+OBS0085129,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2023,male,,,85.4,index,,,,,,88.4,3,,observed
+OBS0085131,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2024,female,,,75.6,index,,,,,,85.5,3,,observed
+OBS0085132,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2024,male,,,81.7,index,,,,,,86.3,3,,observed
+OBS0085133,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),20,Kainuu,2024,total,,,79.4,index,,,,,,86.4,3,,observed
+OBS0085134,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2017,female,,,96.2,index,,,,,,96.2,1,,observed
+OBS0085135,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2017,male,,,96.5,index,,,,,,96.5,1,,observed
+OBS0085137,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2018,female,,,88.3,index,,,,,,92.2,2,,observed
+OBS0085138,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2018,male,,,95.6,index,,,,,,96.0,2,,observed
+OBS0085140,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2019,female,,,89.1,index,,,,,,91.2,3,,observed
+OBS0085141,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2019,male,,,104.6,index,,,,,,98.9,3,,observed
+OBS0085143,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2020,female,,,91.7,index,,,,,,89.7,3,,observed
+OBS0085144,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2020,male,,,99.0,index,,,,,,99.7,3,,observed
+OBS0085146,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2021,female,,,89.0,index,,,,,,89.9,3,,observed
+OBS0085147,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2021,male,,,100.2,index,,,,,,101.3,3,,observed
+OBS0085149,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2022,female,,,99.5,index,,,,,,93.4,3,,observed
+OBS0085150,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2022,male,,,107.2,index,,,,,,102.1,3,,observed
+OBS0085152,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2023,female,,,100.8,index,,,,,,96.4,3,,observed
+OBS0085153,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2023,male,,,100.9,index,,,,,,102.8,3,,observed
+OBS0085155,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2024,female,,,89.2,index,,,,,,96.5,3,,observed
+OBS0085156,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2024,male,,,89.0,index,,,,,,99.0,3,,observed
+OBS0085157,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),21,Lapland,2024,total,,,89.9,index,,,,,,98.6,3,,observed
+OBS0085158,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2017,female,,,108.7,index,,,,,,108.7,1,,observed
+OBS0085159,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2017,male,,,106.9,index,,,,,,106.9,1,,observed
+OBS0085161,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2018,female,,,109.2,index,,,,,,109.0,2,,observed
+OBS0085162,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2018,male,,,105.0,index,,,,,,106.0,2,,observed
+OBS0085164,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2019,female,,,113.1,index,,,,,,110.3,3,,observed
+OBS0085165,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2019,male,,,110.2,index,,,,,,107.4,3,,observed
+OBS0085167,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2020,female,,,106.4,index,,,,,,109.6,3,,observed
+OBS0085168,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2020,male,,,103.9,index,,,,,,106.4,3,,observed
+OBS0085170,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2021,female,,,113.0,index,,,,,,110.8,3,,observed
+OBS0085171,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2021,male,,,104.0,index,,,,,,106.0,3,,observed
+OBS0085173,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2022,female,,,106.5,index,,,,,,108.6,3,,observed
+OBS0085174,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2022,male,,,106.5,index,,,,,,104.8,3,,observed
+OBS0085176,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2023,female,,,110.8,index,,,,,,110.1,3,,observed
+OBS0085177,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2023,male,,,107.6,index,,,,,,106.0,3,,observed
+OBS0085179,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2024,female,,,106.6,index,,,,,,108.0,3,,observed
+OBS0085180,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2024,male,,,102.8,index,,,,,,105.6,3,,observed
+OBS0085181,cancer_index_age_standardised,Cancer index age-standardised (Finland = 100),90,City of Helsinki,2024,total,,,103.4,index,,,,,,105.4,3,,observed
+OBS0692304,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2020,total,language,domestic,99.2,percent,1829.0,1843.0,published,98.7,99.5,99.2,1,,observed
+OBS0692305,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2020,total,language,other_or_missing,98.2,percent,164.0,167.0,published,94.9,99.4,98.2,1,,observed
+OBS0692306,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2020,total,education,primary_or_unknown,98.3,percent,170.0,173.0,published,95.0,99.4,98.3,1,,observed
+OBS0692307,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2020,total,education,secondary,99.6,percent,929.0,933.0,published,98.9,99.8,99.6,1,,observed
+OBS0692308,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2020,total,education,tertiary,98.9,percent,894.0,904.0,published,98.0,99.4,98.9,1,,observed
+OBS0692309,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2021,total,language,domestic,94.2,percent,4375.0,4643.0,published,93.5,94.9,96.7,2,,observed
+OBS0692310,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2021,total,language,other_or_missing,94.7,percent,395.0,417.0,published,92.1,96.5,96.5,2,,observed
+OBS0692311,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2021,total,education,primary_or_unknown,93.8,percent,407.0,434.0,published,91.1,95.7,96.0,2,,observed
+OBS0692312,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2021,total,education,secondary,93.7,percent,1955.0,2086.0,published,92.6,94.7,96.7,2,,observed
+OBS0692313,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2021,total,education,tertiary,94.8,percent,2408.0,2540.0,published,93.9,95.6,96.8,2,,observed
+OBS0692314,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2022,total,language,domestic,96.3,percent,4980.0,5169.0,published,95.8,96.8,96.6,3,,observed
+OBS0692315,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2022,total,language,other_or_missing,97.4,percent,447.0,459.0,published,95.5,98.5,96.8,3,,observed
+OBS0692316,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2022,total,education,primary_or_unknown,96.5,percent,416.0,431.0,published,94.3,97.9,96.2,3,,observed
+OBS0692317,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2022,total,education,secondary,96.7,percent,2270.0,2348.0,published,95.9,97.3,96.7,3,,observed
+OBS0692318,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2022,total,education,tertiary,96.2,percent,2741.0,2849.0,published,95.4,96.9,96.6,3,,observed
+OBS0692319,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2023,total,language,domestic,88.8,percent,4870.0,5482.0,published,88.0,89.6,93.1,3,,observed
+OBS0692320,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2023,total,language,other_or_missing,87.8,percent,424.0,483.0,published,84.6,90.4,93.3,3,,observed
+OBS0692321,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2023,total,education,primary_or_unknown,89.1,percent,426.0,478.0,published,86.0,91.6,93.1,3,,observed
+OBS0692322,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2023,total,education,secondary,89.4,percent,2227.0,2491.0,published,88.1,90.6,93.3,3,,observed
+OBS0692323,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2023,total,education,tertiary,88.2,percent,2641.0,2996.0,published,86.9,89.3,93.1,3,,observed
+OBS0692324,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2024,total,language,domestic,84.8,percent,5103.0,6020.0,published,83.8,85.7,90.0,3,,observed
+OBS0692325,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2024,total,language,other_or_missing,87.1,percent,485.0,557.0,published,84.0,89.6,90.8,3,,observed
+OBS0692326,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2024,total,education,primary_or_unknown,84.8,percent,423.0,499.0,published,81.4,87.7,90.1,3,,observed
+OBS0692327,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2024,total,education,secondary,85.2,percent,2368.0,2780.0,published,83.8,86.5,90.4,3,,observed
+OBS0692328,followup_attendance_cervical,Colposcopy attendance after referral,FI,Finland,2024,total,education,tertiary,84.8,percent,2797.0,3298.0,published,83.5,86.0,89.7,3,,observed
+OBS0692329,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,female,,,78.1,percent,4462.0,5713.0,published,77.0,79.2,78.1,1,,observed
+OBS0692330,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,female,language,domestic,78.3,percent,4346.0,5553.0,published,77.2,79.3,78.3,1,,observed
+OBS0692331,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,female,language,other_or_missing,72.5,percent,116.0,160.0,published,65.1,78.8,72.5,1,,observed
+OBS0692332,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,female,education,primary_or_unknown,75.5,percent,692.0,917.0,published,72.6,78.1,75.5,1,,observed
+OBS0692333,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,female,education,secondary,77.9,percent,2064.0,2649.0,published,76.3,79.5,77.9,1,,observed
+OBS0692334,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,female,education,tertiary,79.5,percent,1706.0,2147.0,published,77.7,81.1,79.5,1,,observed
+OBS0692335,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,male,,,79.2,percent,6579.0,8307.0,published,78.3,80.1,79.2,1,,observed
+OBS0692336,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,male,language,domestic,79.5,percent,6440.0,8096.0,published,78.7,80.4,79.5,1,,observed
+OBS0692337,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,male,language,other_or_missing,65.9,percent,139.0,211.0,published,59.2,71.9,65.9,1,,observed
+OBS0692338,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,male,education,primary_or_unknown,75.7,percent,1293.0,1709.0,published,73.6,77.6,75.7,1,,observed
+OBS0692339,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,male,education,secondary,79.1,percent,3310.0,4185.0,published,77.8,80.3,79.1,1,,observed
+OBS0692340,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,male,education,tertiary,81.9,percent,1976.0,2413.0,published,80.3,83.4,81.9,1,,observed
+OBS0692342,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,total,language,domestic,79.0,percent,10786.0,13649.0,published,78.3,79.7,79.0,1,,observed
+OBS0692343,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,total,language,other_or_missing,68.7,percent,255.0,371.0,published,63.8,73.2,68.7,1,,observed
+OBS0692344,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,total,education,primary_or_unknown,75.6,percent,1985.0,2626.0,published,73.9,77.2,75.6,1,,observed
+OBS0692345,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,total,education,secondary,78.6,percent,5374.0,6834.0,published,77.6,79.6,78.6,1,,observed
+OBS0692346,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2022,total,education,tertiary,80.7,percent,3682.0,4560.0,published,79.6,81.9,80.7,1,,observed
+OBS0692347,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,female,,,77.7,percent,5369.0,6914.0,published,76.7,78.6,77.9,2,,observed
+OBS0692348,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,female,language,domestic,78.2,percent,5211.0,6663.0,published,77.2,79.2,78.2,2,,observed
+OBS0692349,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,female,language,other_or_missing,62.9,percent,158.0,251.0,published,56.8,68.7,67.7,2,,observed
+OBS0692350,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,female,education,primary_or_unknown,75.0,percent,868.0,1157.0,published,72.4,77.4,75.2,2,,observed
+OBS0692351,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,female,education,secondary,77.9,percent,2451.0,3147.0,published,76.4,79.3,77.9,2,,observed
+OBS0692352,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,female,education,tertiary,78.5,percent,2050.0,2610.0,published,76.9,80.1,79.0,2,,observed
+OBS0692353,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,male,,,79.3,percent,7602.0,9587.0,published,78.5,80.1,79.2,2,,observed
+OBS0692354,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,male,language,domestic,79.5,percent,7425.0,9341.0,published,78.7,80.3,79.5,2,,observed
+OBS0692355,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,male,language,other_or_missing,72.0,percent,177.0,246.0,published,66.0,77.2,69.0,2,,observed
+OBS0692356,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,male,education,primary_or_unknown,76.8,percent,1589.0,2070.0,published,74.9,78.5,76.2,2,,observed
+OBS0692357,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,male,education,secondary,79.9,percent,3784.0,4734.0,published,78.8,81.0,79.5,2,,observed
+OBS0692358,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,male,education,tertiary,80.1,percent,2229.0,2783.0,published,78.6,81.5,81.0,2,,observed
+OBS0692360,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,total,language,domestic,79.0,percent,12636.0,16004.0,published,78.3,79.6,79.0,2,,observed
+OBS0692361,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,total,language,other_or_missing,67.4,percent,335.0,497.0,published,63.2,71.4,68.1,2,,observed
+OBS0692362,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,total,education,primary_or_unknown,76.1,percent,2457.0,3227.0,published,74.6,77.6,75.8,2,,observed
+OBS0692363,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,total,education,secondary,79.1,percent,6235.0,7881.0,published,78.2,80.0,78.8,2,,observed
+OBS0692364,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2023,total,education,tertiary,79.3,percent,4279.0,5393.0,published,78.2,80.4,80.0,2,,observed
+OBS0692365,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,female,,,73.4,percent,4412.0,6009.0,published,72.3,74.5,76.4,3,,observed
+OBS0692366,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,female,language,domestic,73.5,percent,4231.0,5759.0,published,72.3,74.6,76.7,3,,observed
+OBS0692367,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,female,language,other_or_missing,72.4,percent,181.0,250.0,published,66.6,77.6,69.3,3,,observed
+OBS0692368,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,female,education,primary_or_unknown,68.0,percent,609.0,896.0,published,64.8,70.9,72.8,3,,observed
+OBS0692369,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,female,education,secondary,72.9,percent,2056.0,2820.0,published,71.2,74.5,76.2,3,,observed
+OBS0692370,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,female,education,tertiary,76.2,percent,1747.0,2293.0,published,74.4,77.9,78.1,3,,observed
+OBS0692371,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,male,,,72.2,percent,5832.0,8074.0,published,71.2,73.2,76.9,3,,observed
+OBS0692372,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,male,language,domestic,72.4,percent,5672.0,7829.0,published,71.4,73.4,77.1,3,,observed
+OBS0692373,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,male,language,other_or_missing,65.3,percent,160.0,245.0,published,59.2,71.0,67.7,3,,observed
+OBS0692374,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,male,education,primary_or_unknown,66.8,percent,1044.0,1564.0,published,64.4,69.0,73.1,3,,observed
+OBS0692375,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,male,education,secondary,72.8,percent,2978.0,4091.0,published,71.4,74.1,77.3,3,,observed
+OBS0692376,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,male,education,tertiary,74.8,percent,1810.0,2419.0,published,73.1,76.5,78.9,3,,observed
+OBS0692378,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,total,language,domestic,72.9,percent,9903.0,13588.0,published,72.1,73.6,77.0,3,,observed
+OBS0692379,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,total,language,other_or_missing,68.9,percent,341.0,495.0,published,64.7,72.8,68.3,3,,observed
+OBS0692380,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,total,education,primary_or_unknown,67.2,percent,1653.0,2460.0,published,65.3,69.0,73.0,3,,observed
+OBS0692381,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,total,education,secondary,72.8,percent,5034.0,6911.0,published,71.8,73.9,76.8,3,,observed
+OBS0692382,followup_attendance_colorectal,Colonoscopy attendance after a positive screening test,FI,Finland,2024,total,education,tertiary,75.5,percent,3557.0,4712.0,published,74.2,76.7,78.5,3,,observed
+OBS0732305,screening_participation_breast,Breast screening participation,FI,Finland,2020,total,language,domestic,81.6,percent,279363.0,342481.0,published,81.4,81.7,81.6,1,at_or_above_target,observed
+OBS0732306,screening_participation_breast,Breast screening participation,FI,Finland,2020,total,language,other_or_missing,61.7,percent,12169.0,19723.0,published,61.0,62.4,61.7,1,below_target,observed
+OBS0732307,screening_participation_breast,Breast screening participation,FI,Finland,2020,total,education,primary_or_unknown,67.6,percent,33647.0,49746.0,published,67.2,68.0,67.6,1,below_target,observed
+OBS0732308,screening_participation_breast,Breast screening participation,FI,Finland,2020,total,education,secondary,80.8,percent,122140.0,151099.0,published,80.6,81.0,80.8,1,at_or_above_target,observed
+OBS0732309,screening_participation_breast,Breast screening participation,FI,Finland,2020,total,education,tertiary,84.1,percent,135745.0,161359.0,published,83.9,84.3,84.1,1,at_or_above_target,observed
+OBS0732311,screening_participation_breast,Breast screening participation,FI,Finland,2021,total,language,domestic,83.3,percent,280390.0,336783.0,published,83.1,83.4,82.4,2,at_or_above_target,observed
+OBS0732312,screening_participation_breast,Breast screening participation,FI,Finland,2021,total,language,other_or_missing,63.9,percent,12660.0,19810.0,published,63.2,64.6,62.8,2,below_target,observed
+OBS0732313,screening_participation_breast,Breast screening participation,FI,Finland,2021,total,education,primary_or_unknown,68.9,percent,31077.0,45108.0,published,68.5,69.3,68.2,2,below_target,observed
+OBS0732314,screening_participation_breast,Breast screening participation,FI,Finland,2021,total,education,secondary,82.3,percent,121746.0,147954.0,published,82.1,82.5,81.5,2,at_or_above_target,observed
+OBS0732315,screening_participation_breast,Breast screening participation,FI,Finland,2021,total,education,tertiary,85.7,percent,140227.0,163531.0,published,85.6,85.9,84.9,2,at_or_above_target,observed
+OBS0732317,screening_participation_breast,Breast screening participation,FI,Finland,2022,total,language,domestic,82.9,percent,274799.0,331464.0,published,82.8,83.0,82.6,3,at_or_above_target,observed
+OBS0732318,screening_participation_breast,Breast screening participation,FI,Finland,2022,total,language,other_or_missing,61.1,percent,13217.0,21618.0,published,60.5,61.8,62.2,3,below_target,observed
+OBS0732319,screening_participation_breast,Breast screening participation,FI,Finland,2022,total,education,primary_or_unknown,66.6,percent,28163.0,42296.0,published,66.1,67.0,67.7,3,below_target,observed
+OBS0732320,screening_participation_breast,Breast screening participation,FI,Finland,2022,total,education,secondary,81.6,percent,118391.0,145136.0,published,81.4,81.8,81.6,3,at_or_above_target,observed
+OBS0732321,screening_participation_breast,Breast screening participation,FI,Finland,2022,total,education,tertiary,85.4,percent,141462.0,165650.0,published,85.2,85.6,85.1,3,at_or_above_target,observed
+OBS0732323,screening_participation_breast,Breast screening participation,FI,Finland,2023,total,language,domestic,82.9,percent,268897.0,324527.0,published,82.7,83.0,83.0,3,at_or_above_target,observed
+OBS0732324,screening_participation_breast,Breast screening participation,FI,Finland,2023,total,language,other_or_missing,60.9,percent,13565.0,22277.0,published,60.2,61.5,62.0,3,below_target,observed
+OBS0732325,screening_participation_breast,Breast screening participation,FI,Finland,2023,total,education,primary_or_unknown,65.3,percent,25438.0,38957.0,published,64.8,65.8,66.9,3,below_target,observed
+OBS0732326,screening_participation_breast,Breast screening participation,FI,Finland,2023,total,education,secondary,81.1,percent,114661.0,141325.0,published,80.9,81.3,81.7,3,at_or_above_target,observed
+OBS0732327,screening_participation_breast,Breast screening participation,FI,Finland,2023,total,education,tertiary,85.5,percent,142363.0,166522.0,published,85.3,85.7,85.5,3,at_or_above_target,observed
+OBS0732328,screening_participation_breast,Breast screening participation,FI,Finland,2024,total,,,81.6,percent,281369.0,344851.0,published,81.5,81.7,81.5,3,at_or_above_target,observed
+OBS0732329,screening_participation_breast,Breast screening participation,FI,Finland,2024,total,language,domestic,83.2,percent,266278.0,320048.0,published,83.1,83.3,83.0,3,at_or_above_target,observed
+OBS0732330,screening_participation_breast,Breast screening participation,FI,Finland,2024,total,language,other_or_missing,60.8,percent,15091.0,24803.0,published,60.2,61.4,60.9,3,below_target,observed
+OBS0732331,screening_participation_breast,Breast screening participation,FI,Finland,2024,total,education,primary_or_unknown,63.5,percent,23585.0,37116.0,published,63.1,64.0,65.1,3,below_target,observed
+OBS0732332,screening_participation_breast,Breast screening participation,FI,Finland,2024,total,education,secondary,81.2,percent,112034.0,138014.0,published,81.0,81.4,81.3,3,at_or_above_target,observed
+OBS0732333,screening_participation_breast,Breast screening participation,FI,Finland,2024,total,education,tertiary,85.9,percent,145750.0,169721.0,published,85.7,86.0,85.6,3,at_or_above_target,observed
+OBS0732334,screening_participation_breast,Breast screening participation,FI,Finland,2025,total,language,domestic,84.0,percent,265125.0,315604.0,published,83.9,84.1,83.4,3,at_or_above_target,preliminary
+OBS0732335,screening_participation_breast,Breast screening participation,FI,Finland,2025,total,language,other_or_missing,61.6,percent,16231.0,26346.0,published,61.0,62.2,61.1,3,below_target,preliminary
+OBS0732336,screening_participation_breast,Breast screening participation,FI,Finland,2025,total,education,primary_or_unknown,62.8,percent,22316.0,35516.0,published,62.3,63.3,63.9,3,below_target,preliminary
+OBS0732337,screening_participation_breast,Breast screening participation,FI,Finland,2025,total,education,secondary,81.5,percent,110125.0,135166.0,published,81.3,81.7,81.3,3,at_or_above_target,preliminary
+OBS0732338,screening_participation_breast,Breast screening participation,FI,Finland,2025,total,education,tertiary,86.9,percent,148915.0,171268.0,published,86.8,87.1,86.1,3,at_or_above_target,preliminary
+OBS0741475,screening_participation_breast,Breast screening participation,01,East Uusimaa,2024,total,,,79.8,percent,5546.0,6948.0,published,78.9,80.7,81.0,3,near_target,observed
+OBS0741508,screening_participation_breast,Breast screening participation,02,Central Uusimaa,2024,total,,,80.5,percent,10944.0,13592.0,published,79.8,81.2,80.6,3,near_target,observed
+OBS0741541,screening_participation_breast,Breast screening participation,03,West Uusimaa,2024,total,,,76.1,percent,22860.0,30039.0,published,75.6,76.6,76.3,3,below_target,observed
+OBS0741574,screening_participation_breast,Breast screening participation,04,Vantaa and Kerava,2024,total,,,76.7,percent,12323.0,16057.0,published,76.1,77.4,76.6,3,below_target,observed
+OBS0741607,screening_participation_breast,Breast screening participation,05,Southwest Finland,2024,total,,,82.7,percent,25331.0,30614.0,published,82.3,83.2,82.8,3,at_or_above_target,observed
+OBS0741640,screening_participation_breast,Breast screening participation,06,Satakunta,2024,total,,,84.9,percent,11958.0,14090.0,published,84.3,85.5,85.0,3,at_or_above_target,observed
+OBS0741670,screening_participation_breast,Breast screening participation,07,Kanta-Häme,2024,total,,,83.4,percent,9467.0,11355.0,published,82.7,84.0,83.0,3,at_or_above_target,observed
+OBS0741703,screening_participation_breast,Breast screening participation,08,Pirkanmaa,2024,total,,,83.5,percent,26449.0,31677.0,published,83.1,83.9,83.1,3,at_or_above_target,observed
+OBS0741736,screening_participation_breast,Breast screening participation,09,Päijät-Häme,2024,total,,,81.8,percent,11313.0,13832.0,published,81.1,82.4,82.5,3,at_or_above_target,observed
+OBS0741769,screening_participation_breast,Breast screening participation,10,Kymenlaakso,2024,total,,,82.0,percent,9142.0,11143.0,published,81.3,82.7,83.0,3,at_or_above_target,observed
+OBS0741802,screening_participation_breast,Breast screening participation,11,South Karelia,2024,total,,,83.2,percent,7047.0,8466.0,published,82.4,84.0,83.0,3,at_or_above_target,observed
+OBS0741835,screening_participation_breast,Breast screening participation,12,South Savo,2024,total,,,82.2,percent,7741.0,9422.0,published,81.4,82.9,83.4,3,at_or_above_target,observed
+OBS0741868,screening_participation_breast,Breast screening participation,13,North Savo,2024,total,,,85.1,percent,13785.0,16191.0,published,84.6,85.7,85.2,3,at_or_above_target,observed
+OBS0741901,screening_participation_breast,Breast screening participation,14,North Karelia,2024,total,,,84.2,percent,8940.0,10619.0,published,83.5,84.9,84.1,3,at_or_above_target,observed
+OBS0741934,screening_participation_breast,Breast screening participation,15,Central Finland,2024,total,,,85.1,percent,14073.0,16537.0,published,84.5,85.6,85.0,3,at_or_above_target,observed
+OBS0741967,screening_participation_breast,Breast screening participation,16,South Ostrobothnia,2024,total,,,85.0,percent,10069.0,11844.0,published,84.4,85.6,85.0,3,at_or_above_target,observed
+OBS0742000,screening_participation_breast,Breast screening participation,17,Ostrobothnia,2024,total,,,84.9,percent,8487.0,9991.0,published,84.2,85.6,84.4,3,at_or_above_target,observed
+OBS0742033,screening_participation_breast,Breast screening participation,18,Central Ostrobothnia,2024,total,,,85.4,percent,3329.0,3898.0,published,84.3,86.5,84.8,3,at_or_above_target,observed
+OBS0742066,screening_participation_breast,Breast screening participation,19,North Ostrobothnia,2024,total,,,85.6,percent,20168.0,23560.0,published,85.1,86.0,85.0,3,at_or_above_target,observed
+OBS0742096,screening_participation_breast,Breast screening participation,20,Kainuu,2024,total,,,84.1,percent,4033.0,4798.0,published,83.0,85.1,84.8,3,at_or_above_target,observed
+OBS0742126,screening_participation_breast,Breast screening participation,21,Lapland,2024,total,,,83.8,percent,9678.0,11548.0,published,83.1,84.5,83.0,3,at_or_above_target,observed
+OBS0742156,screening_participation_breast,Breast screening participation,90,City of Helsinki,2024,total,,,74.3,percent,28686.0,38630.0,published,73.8,74.7,73.4,3,below_target,observed
+OBS0742216,screening_participation_cervical,Cervical screening participation,FI,Finland,2020,total,language,domestic,72.2,percent,170791.0,236544.0,published,72.0,72.4,72.2,1,below_target,observed
+OBS0742217,screening_participation_cervical,Cervical screening participation,FI,Finland,2020,total,language,other_or_missing,56.6,percent,14144.0,25006.0,published,55.9,57.2,56.6,1,below_target,observed
+OBS0742218,screening_participation_cervical,Cervical screening participation,FI,Finland,2020,total,education,primary_or_unknown,51.5,percent,14407.0,27987.0,published,50.9,52.1,51.5,1,below_target,observed
+OBS0742219,screening_participation_cervical,Cervical screening participation,FI,Finland,2020,total,education,secondary,69.5,percent,71949.0,103546.0,published,69.2,69.8,69.5,1,below_target,observed
+OBS0742220,screening_participation_cervical,Cervical screening participation,FI,Finland,2020,total,education,tertiary,75.8,percent,98579.0,130017.0,published,75.6,76.1,75.8,1,below_target,observed
+OBS0742222,screening_participation_cervical,Cervical screening participation,FI,Finland,2021,total,language,domestic,74.9,percent,181381.0,242289.0,published,74.7,75.0,73.6,2,below_target,observed
+OBS0742223,screening_participation_cervical,Cervical screening participation,FI,Finland,2021,total,language,other_or_missing,58.8,percent,15346.0,26088.0,published,58.2,59.4,57.7,2,below_target,observed
+OBS0742224,screening_participation_cervical,Cervical screening participation,FI,Finland,2021,total,education,primary_or_unknown,52.9,percent,14717.0,27817.0,published,52.3,53.5,52.2,2,below_target,observed
+OBS0742225,screening_participation_cervical,Cervical screening participation,FI,Finland,2021,total,education,secondary,71.6,percent,75061.0,104763.0,published,71.4,71.9,70.5,2,below_target,observed
+OBS0742226,screening_participation_cervical,Cervical screening participation,FI,Finland,2021,total,education,tertiary,78.8,percent,106949.0,135797.0,published,78.5,79.0,77.3,2,below_target,observed
+OBS0742228,screening_participation_cervical,Cervical screening participation,FI,Finland,2022,total,language,domestic,74.3,percent,194117.0,261145.0,published,74.2,74.5,73.8,3,below_target,observed
+OBS0742229,screening_participation_cervical,Cervical screening participation,FI,Finland,2022,total,language,other_or_missing,56.6,percent,16089.0,28408.0,published,56.1,57.2,57.3,3,below_target,observed
+OBS0742230,screening_participation_cervical,Cervical screening participation,FI,Finland,2022,total,education,primary_or_unknown,52.0,percent,15735.0,30271.0,published,51.4,52.5,52.1,3,below_target,observed
+OBS0742231,screening_participation_cervical,Cervical screening participation,FI,Finland,2022,total,education,secondary,70.7,percent,80809.0,114247.0,published,70.5,71.0,70.6,3,below_target,observed
+OBS0742232,screening_participation_cervical,Cervical screening participation,FI,Finland,2022,total,education,tertiary,78.4,percent,113662.0,145035.0,published,78.2,78.6,77.7,3,below_target,observed
+OBS0742234,screening_participation_cervical,Cervical screening participation,FI,Finland,2023,total,language,domestic,75.3,percent,192995.0,256144.0,published,75.2,75.5,74.8,3,below_target,observed
+OBS0742235,screening_participation_cervical,Cervical screening participation,FI,Finland,2023,total,language,other_or_missing,57.6,percent,17731.0,30786.0,published,57.0,58.1,57.7,3,below_target,observed
+OBS0742236,screening_participation_cervical,Cervical screening participation,FI,Finland,2023,total,education,primary_or_unknown,51.8,percent,15806.0,30510.0,published,51.2,52.4,52.2,3,below_target,observed
+OBS0742237,screening_participation_cervical,Cervical screening participation,FI,Finland,2023,total,education,secondary,71.3,percent,79823.0,111926.0,published,71.1,71.6,71.2,3,below_target,observed
+OBS0742238,screening_participation_cervical,Cervical screening participation,FI,Finland,2023,total,education,tertiary,79.7,percent,115097.0,144494.0,published,79.4,79.9,79.0,3,below_target,observed
+OBS0742239,screening_participation_cervical,Cervical screening participation,FI,Finland,2024,total,,,73.4,percent,224530.0,305899,derived,73.2,73.6,72.7,3,below_target,observed
+OBS0742240,screening_participation_cervical,Cervical screening participation,FI,Finland,2024,total,language,domestic,76.2,percent,196304.0,257719.0,published,76.0,76.3,75.3,3,below_target,observed
+OBS0742241,screening_participation_cervical,Cervical screening participation,FI,Finland,2024,total,language,other_or_missing,56.3,percent,19374.0,34391.0,published,55.8,56.9,56.8,3,below_target,observed
+OBS0742242,screening_participation_cervical,Cervical screening participation,FI,Finland,2024,total,education,primary_or_unknown,50.8,percent,15927.0,31338.0,published,50.3,51.4,51.5,3,below_target,observed
+OBS0742243,screening_participation_cervical,Cervical screening participation,FI,Finland,2024,total,education,secondary,71.7,percent,80606.0,112462.0,published,71.4,71.9,71.2,3,below_target,observed
+OBS0742244,screening_participation_cervical,Cervical screening participation,FI,Finland,2024,total,education,tertiary,80.3,percent,119145.0,148310.0,published,80.1,80.5,79.5,3,at_or_above_target,observed
+OBS0742245,screening_participation_cervical,Cervical screening participation,FI,Finland,2025,total,language,domestic,76.5,percent,195090.0,254940.0,published,76.4,76.7,76.0,3,below_target,preliminary
+OBS0742246,screening_participation_cervical,Cervical screening participation,FI,Finland,2025,total,language,other_or_missing,56.8,percent,21591.0,37979.0,published,56.4,57.3,56.9,3,below_target,preliminary
+OBS0742247,screening_participation_cervical,Cervical screening participation,FI,Finland,2025,total,education,primary_or_unknown,50.3,percent,16387.0,32558.0,published,49.8,50.9,51.0,3,below_target,preliminary
+OBS0742248,screening_participation_cervical,Cervical screening participation,FI,Finland,2025,total,education,secondary,71.8,percent,80016.0,111475.0,published,71.5,72.0,71.6,3,below_target,preliminary
+OBS0742249,screening_participation_cervical,Cervical screening participation,FI,Finland,2025,total,education,tertiary,80.8,percent,120278.0,148886.0,published,80.6,81.0,80.3,3,at_or_above_target,preliminary
+OBS0752480,screening_participation_cervical,Cervical screening participation,01,East Uusimaa,2024,total,,,75.7,percent,4299.0,5679,derived,74.6,76.8,75.0,3,below_target,observed
+OBS0752514,screening_participation_cervical,Cervical screening participation,02,Central Uusimaa,2024,total,,,75.9,percent,9175.0,12088,derived,75.1,76.7,74.6,3,below_target,observed
+OBS0752548,screening_participation_cervical,Cervical screening participation,03,West Uusimaa,2024,total,,,73.6,percent,21947.0,29819,derived,73.1,74.1,72.8,3,below_target,observed
+OBS0752582,screening_participation_cervical,Cervical screening participation,04,Vantaa and Kerava,2024,total,,,70.7,percent,12611.0,17837,derived,70.0,71.4,70.1,3,below_target,observed
+OBS0752616,screening_participation_cervical,Cervical screening participation,05,Southwest Finland,2024,total,,,77.6,percent,19742.0,25441,derived,77.1,78.1,76.3,3,below_target,observed
+OBS0752650,screening_participation_cervical,Cervical screening participation,06,Satakunta,2024,total,,,71.3,percent,8099.0,11359,derived,70.5,72.1,72.1,3,below_target,observed
+OBS0752684,screening_participation_cervical,Cervical screening participation,07,Kanta-Häme,2024,total,,,70.4,percent,6074.0,8628,derived,69.4,71.4,70.6,3,below_target,observed
+OBS0752718,screening_participation_cervical,Cervical screening participation,08,Pirkanmaa,2024,total,,,71.5,percent,20096.0,28106,derived,71.0,72.0,71.4,3,below_target,observed
+OBS0752752,screening_participation_cervical,Cervical screening participation,09,Päijät-Häme,2024,total,,,68.9,percent,7163.0,10396,derived,68.0,69.8,70.2,3,below_target,observed
+OBS0752786,screening_participation_cervical,Cervical screening participation,10,Kymenlaakso,2024,total,,,76.5,percent,6718.0,8782,derived,75.6,77.4,75.6,3,below_target,observed
+OBS0752820,screening_participation_cervical,Cervical screening participation,11,South Karelia,2024,total,,,75.8,percent,5124.0,6760,derived,74.8,76.8,74.1,3,below_target,observed
+OBS0752854,screening_participation_cervical,Cervical screening participation,12,South Savo,2024,total,,,82.3,percent,5192.0,6309,derived,81.3,83.2,81.0,3,at_or_above_target,observed
+OBS0752888,screening_participation_cervical,Cervical screening participation,13,North Savo,2024,total,,,70.0,percent,8781.0,12544,derived,69.2,70.8,67.8,3,below_target,observed
+OBS0752922,screening_participation_cervical,Cervical screening participation,14,North Karelia,2024,total,,,68.0,percent,5379.0,7910,derived,67.0,69.0,66.4,3,below_target,observed
+OBS0752956,screening_participation_cervical,Cervical screening participation,15,Central Finland,2024,total,,,70.7,percent,9629.0,13620,derived,69.9,71.5,70.0,3,below_target,observed
+OBS0752990,screening_participation_cervical,Cervical screening participation,16,South Ostrobothnia,2024,total,,,82.3,percent,7644.0,9288,derived,81.5,83.1,79.0,3,at_or_above_target,observed
+OBS0753024,screening_participation_cervical,Cervical screening participation,17,Ostrobothnia,2024,total,,,72.4,percent,6050.0,8356,derived,71.4,73.4,74.2,3,below_target,observed
+OBS0753058,screening_participation_cervical,Cervical screening participation,18,Central Ostrobothnia,2024,total,,,69.2,percent,2200.0,3179,derived,67.6,70.8,72.1,3,below_target,observed
+OBS0753092,screening_participation_cervical,Cervical screening participation,19,North Ostrobothnia,2024,total,,,73.6,percent,14631.0,19879,derived,73.0,74.2,73.6,3,below_target,observed
+OBS0753126,screening_participation_cervical,Cervical screening participation,20,Kainuu,2024,total,,,78.5,percent,2632.0,3353,derived,77.1,79.9,76.6,3,below_target,observed
+OBS0753160,screening_participation_cervical,Cervical screening participation,21,Lapland,2024,total,,,79.9,percent,7005.0,8767,derived,79.1,80.7,74.7,3,near_target,observed
+OBS0753194,screening_participation_cervical,Cervical screening participation,90,City of Helsinki,2024,total,,,71.4,percent,33065.0,46310,derived,71.0,71.8,71.0,3,below_target,observed
+OBS0753195,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,female,,,81.2,percent,147376.0,181487.0,published,81.0,81.4,81.2,1,at_or_above_target,observed
+OBS0753196,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,female,language,domestic,82.2,percent,142423.0,173344.0,published,82.0,82.3,82.2,1,at_or_above_target,observed
+OBS0753197,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,female,language,other_or_missing,60.8,percent,4953.0,8143.0,published,59.8,61.9,60.8,1,below_target,observed
+OBS0753198,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,female,education,primary_or_unknown,70.1,percent,18262.0,26055.0,published,69.5,70.6,70.1,1,below_target,observed
+OBS0753199,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,female,education,secondary,81.3,percent,64344.0,79127.0,published,81.0,81.6,81.3,1,at_or_above_target,observed
+OBS0753200,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,female,education,tertiary,84.9,percent,64770.0,76305.0,published,84.6,85.1,84.9,1,at_or_above_target,observed
+OBS0753201,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,male,,,73.2,percent,126332.0,172687.0,published,72.9,73.4,73.2,1,below_target,observed
+OBS0753202,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,male,language,domestic,74.1,percent,122852.0,165875.0,published,73.9,74.3,74.1,1,below_target,observed
+OBS0753203,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,male,language,other_or_missing,51.1,percent,3480.0,6812.0,published,49.9,52.3,51.1,1,below_target,observed
+OBS0753204,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,male,education,primary_or_unknown,62.8,percent,21656.0,34486.0,published,62.3,63.3,62.8,1,below_target,observed
+OBS0753205,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,male,education,secondary,72.8,percent,59988.0,82368.0,published,72.5,73.1,72.8,1,below_target,observed
+OBS0753206,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,male,education,tertiary,80.0,percent,44688.0,55833.0,published,79.7,80.4,80.0,1,near_target,observed
+OBS0753208,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,total,language,domestic,78.2,percent,265275.0,339219.0,published,78.1,78.3,78.2,1,below_target,observed
+OBS0753209,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,total,language,other_or_missing,56.4,percent,8433.0,14955.0,published,55.6,57.2,56.4,1,below_target,observed
+OBS0753210,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,total,education,primary_or_unknown,65.9,percent,39918.0,60541.0,published,65.6,66.3,65.9,1,below_target,observed
+OBS0753211,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,total,education,secondary,77.0,percent,124332.0,161495.0,published,76.8,77.2,77.0,1,below_target,observed
+OBS0753212,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2022,total,education,tertiary,82.8,percent,109458.0,132138.0,published,82.6,83.0,82.8,1,at_or_above_target,observed
+OBS0753213,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,female,,,78.8,percent,170680.0,216606.0,published,78.6,79.0,80.0,2,below_target,observed
+OBS0753214,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,female,language,domestic,79.7,percent,165173.0,207249.0,published,79.5,79.9,81.0,2,below_target,observed
+OBS0753215,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,female,language,other_or_missing,58.9,percent,5507.0,9357.0,published,57.9,59.8,59.8,2,below_target,observed
+OBS0753216,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,female,education,primary_or_unknown,68.0,percent,21318.0,31366.0,published,67.4,68.5,69.0,2,below_target,observed
+OBS0753217,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,female,education,secondary,78.7,percent,73863.0,93884.0,published,78.4,78.9,80.0,2,below_target,observed
+OBS0753218,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,female,education,tertiary,82.6,percent,75499.0,91356.0,published,82.4,82.9,83.8,2,at_or_above_target,observed
+OBS0753219,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,male,,,69.7,percent,143623.0,206044.0,published,69.5,69.9,71.5,2,below_target,observed
+OBS0753220,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,male,language,domestic,70.6,percent,139585.0,197691.0,published,70.4,70.8,72.3,2,below_target,observed
+OBS0753221,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,male,language,other_or_missing,48.3,percent,4038.0,8353.0,published,47.3,49.4,49.7,2,below_target,observed
+OBS0753222,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,male,education,primary_or_unknown,59.4,percent,24658.0,41478.0,published,59.0,59.9,61.1,2,below_target,observed
+OBS0753223,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,male,education,secondary,69.3,percent,67572.0,97575.0,published,69.0,69.5,71.0,2,below_target,observed
+OBS0753224,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,male,education,tertiary,76.7,percent,51393.0,66991.0,published,76.4,77.0,78.3,2,below_target,observed
+OBS0753226,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,total,language,domestic,75.3,percent,304758.0,404940.0,published,75.1,75.4,76.8,2,below_target,observed
+OBS0753227,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,total,language,other_or_missing,53.9,percent,9545.0,17710.0,published,53.2,54.6,55.1,2,below_target,observed
+OBS0753228,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,total,education,primary_or_unknown,63.1,percent,45976.0,72844.0,published,62.8,63.5,64.5,2,below_target,observed
+OBS0753229,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,total,education,secondary,73.9,percent,141435.0,191459.0,published,73.7,74.1,75.5,2,below_target,observed
+OBS0753230,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2023,total,education,tertiary,80.1,percent,126892.0,158347.0,published,79.9,80.3,81.4,2,near_target,observed
+OBS0753231,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,female,,,77.7,percent,167949.0,216163.0,published,77.5,77.9,79.2,3,below_target,observed
+OBS0753232,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,female,language,domestic,78.7,percent,161710.0,205528.0,published,78.5,78.9,80.2,3,below_target,observed
+OBS0753233,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,female,language,other_or_missing,58.7,percent,6239.0,10635.0,published,57.7,59.6,59.5,3,below_target,observed
+OBS0753234,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,female,education,primary_or_unknown,65.6,percent,19138.0,29186.0,published,65.0,66.1,67.9,3,below_target,observed
+OBS0753235,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,female,education,secondary,77.7,percent,72413.0,93246.0,published,77.4,77.9,79.2,3,below_target,observed
+OBS0753236,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,female,education,tertiary,81.5,percent,76398.0,93731.0,published,81.3,81.8,83.0,3,at_or_above_target,observed
+OBS0753237,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,male,,,69.2,percent,141922.0,205202.0,published,69.0,69.4,70.7,3,below_target,observed
+OBS0753238,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,male,language,domestic,70.2,percent,137637.0,196117.0,published,70.0,70.4,71.6,3,below_target,observed
+OBS0753239,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,male,language,other_or_missing,47.2,percent,4285.0,9085.0,published,46.1,48.2,48.9,3,below_target,observed
+OBS0753240,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,male,education,primary_or_unknown,58.4,percent,23017.0,39385.0,published,58.0,58.9,60.2,3,below_target,observed
+OBS0753241,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,male,education,secondary,68.7,percent,67510.0,98325.0,published,68.4,68.9,70.3,3,below_target,observed
+OBS0753242,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,male,education,tertiary,76.1,percent,51395.0,67492.0,published,75.8,76.5,77.6,3,below_target,observed
+OBS0753243,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,total,,,73.5,percent,309871.0,421365.0,published,73.4,73.7,75.1,3,below_target,observed
+OBS0753244,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,total,language,domestic,74.5,percent,299347.0,401645.0,published,74.4,74.7,76.0,3,below_target,observed
+OBS0753245,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,total,language,other_or_missing,53.4,percent,10524.0,19720.0,published,52.7,54.1,54.6,3,below_target,observed
+OBS0753246,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,total,education,primary_or_unknown,61.5,percent,42155.0,68571.0,published,61.1,61.8,63.5,3,below_target,observed
+OBS0753247,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,total,education,secondary,73.0,percent,139923.0,191571.0,published,72.8,73.2,74.6,3,below_target,observed
+OBS0753248,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2024,total,education,tertiary,79.3,percent,127793.0,161223.0,published,79.1,79.5,80.7,3,below_target,observed
+OBS0753249,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,female,,,77.5,percent,193957.0,250275.0,published,77.3,77.7,78.0,3,below_target,preliminary
+OBS0753250,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,female,language,domestic,78.5,percent,186743.0,237923.0,published,78.3,78.7,79.0,3,below_target,preliminary
+OBS0753251,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,female,language,other_or_missing,58.4,percent,7214.0,12352.0,published,57.5,59.3,58.7,3,below_target,preliminary
+OBS0753252,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,female,education,primary_or_unknown,65.4,percent,22606.0,34573.0,published,64.9,65.9,66.3,3,below_target,preliminary
+OBS0753253,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,female,education,secondary,77.3,percent,82886.0,107225.0,published,77.0,77.6,77.9,3,below_target,preliminary
+OBS0753254,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,female,education,tertiary,81.6,percent,88465.0,108477.0,published,81.3,81.8,81.9,3,at_or_above_target,preliminary
+OBS0753255,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,male,,,68.9,percent,163094.0,236663.0,published,68.7,69.1,69.3,3,below_target,preliminary
+OBS0753256,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,male,language,domestic,69.8,percent,157717.0,225798.0,published,69.7,70.0,70.2,3,below_target,preliminary
+OBS0753257,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,male,language,other_or_missing,49.5,percent,5377.0,10865.0,published,48.5,50.4,48.3,3,below_target,preliminary
+OBS0753258,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,male,education,primary_or_unknown,58.2,percent,26713.0,45906.0,published,57.7,58.6,58.7,3,below_target,preliminary
+OBS0753259,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,male,education,secondary,68.4,percent,76885.0,112475.0,published,68.1,68.6,68.8,3,below_target,preliminary
+OBS0753260,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,male,education,tertiary,76.0,percent,59496.0,78282.0,published,75.7,76.3,76.3,3,below_target,preliminary
+OBS0753262,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,total,language,domestic,74.3,percent,344460.0,463721.0,published,74.2,74.4,74.7,3,below_target,preliminary
+OBS0753263,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,total,language,other_or_missing,54.2,percent,12591.0,23217.0,published,53.6,54.9,53.8,3,below_target,preliminary
+OBS0753264,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,total,education,primary_or_unknown,61.3,percent,49319.0,80479.0,published,60.9,61.6,62.0,3,below_target,preliminary
+OBS0753265,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,total,education,secondary,72.7,percent,159771.0,219700.0,published,72.5,72.9,73.2,3,below_target,preliminary
+OBS0753266,screening_participation_colorectal,Colorectal screening participation,FI,Finland,2025,total,education,tertiary,79.2,percent,147961.0,186759.0,published,79.0,79.4,79.5,3,below_target,preliminary
+OBS0755895,screening_participation_colorectal,Colorectal screening participation,01,East Uusimaa,2022,female,,,79.4,percent,2631.0,3314,derived,78.0,80.7,79.4,1,near_target,observed
+OBS0755896,screening_participation_colorectal,Colorectal screening participation,01,East Uusimaa,2022,male,,,71.8,percent,2305.0,3210,derived,70.2,73.3,71.8,1,below_target,observed
+OBS0755898,screening_participation_colorectal,Colorectal screening participation,01,East Uusimaa,2023,female,,,76.1,percent,3016.0,3963,derived,74.8,77.4,77.8,2,below_target,observed
+OBS0755899,screening_participation_colorectal,Colorectal screening participation,01,East Uusimaa,2023,male,,,68.3,percent,2689.0,3937,derived,66.8,69.7,70.0,2,below_target,observed
+OBS0755901,screening_participation_colorectal,Colorectal screening participation,01,East Uusimaa,2024,female,,,76.1,percent,3028.0,3979,derived,74.7,77.4,77.2,3,below_target,observed
+OBS0755902,screening_participation_colorectal,Colorectal screening participation,01,East Uusimaa,2024,male,,,67.9,percent,2651.0,3904,derived,66.4,69.4,69.3,3,below_target,observed
+OBS0755903,screening_participation_colorectal,Colorectal screening participation,01,East Uusimaa,2024,total,,,72.0,percent,5679.0,7888,derived,71.0,73.0,73.3,3,below_target,observed
+OBS0755904,screening_participation_colorectal,Colorectal screening participation,02,Central Uusimaa,2022,female,,,81.6,percent,5203.0,6376,derived,80.6,82.5,81.6,1,at_or_above_target,observed
+OBS0755905,screening_participation_colorectal,Colorectal screening participation,02,Central Uusimaa,2022,male,,,75.9,percent,4625.0,6094,derived,74.8,77.0,75.9,1,below_target,observed
+OBS0755907,screening_participation_colorectal,Colorectal screening participation,02,Central Uusimaa,2023,female,,,77.3,percent,6000.0,7762,derived,76.4,78.2,79.4,2,below_target,observed
+OBS0755908,screening_participation_colorectal,Colorectal screening participation,02,Central Uusimaa,2023,male,,,69.1,percent,5016.0,7259,derived,68.0,70.2,72.5,2,below_target,observed
+OBS0755910,screening_participation_colorectal,Colorectal screening participation,02,Central Uusimaa,2024,female,,,77.4,percent,6017.0,7774,derived,76.5,78.3,78.8,3,below_target,observed
+OBS0755911,screening_participation_colorectal,Colorectal screening participation,02,Central Uusimaa,2024,male,,,70.5,percent,5219.0,7403,derived,69.4,71.5,71.8,3,below_target,observed
+OBS0755912,screening_participation_colorectal,Colorectal screening participation,02,Central Uusimaa,2024,total,,,74.0,percent,11236.0,15184,derived,73.3,74.7,75.4,3,below_target,observed
+OBS0755913,screening_participation_colorectal,Colorectal screening participation,03,West Uusimaa,2022,female,,,78.9,percent,10840.0,13739,derived,78.2,79.6,78.9,1,below_target,observed
+OBS0755914,screening_participation_colorectal,Colorectal screening participation,03,West Uusimaa,2022,male,,,72.6,percent,9221.0,12701,derived,71.8,73.4,72.6,1,below_target,observed
+OBS0755916,screening_participation_colorectal,Colorectal screening participation,03,West Uusimaa,2023,female,,,76.5,percent,12498.0,16337,derived,75.8,77.1,77.7,2,below_target,observed
+OBS0755917,screening_participation_colorectal,Colorectal screening participation,03,West Uusimaa,2023,male,,,68.6,percent,10440.0,15219,derived,67.9,69.3,70.6,2,below_target,observed
+OBS0755919,screening_participation_colorectal,Colorectal screening participation,03,West Uusimaa,2024,female,,,74.9,percent,12452.0,16625,derived,74.2,75.6,76.8,3,below_target,observed
+OBS0755920,screening_participation_colorectal,Colorectal screening participation,03,West Uusimaa,2024,male,,,67.8,percent,10524.0,15522,derived,67.1,68.5,69.7,3,below_target,observed
+OBS0755921,screening_participation_colorectal,Colorectal screening participation,03,West Uusimaa,2024,total,,,71.5,percent,22976.0,32134,derived,71.0,72.0,73.4,3,below_target,observed
+OBS0755922,screening_participation_colorectal,Colorectal screening participation,04,Vantaa and Kerava,2022,female,,,78.4,percent,5864.0,7480,derived,77.4,79.3,78.4,1,below_target,observed
+OBS0755923,screening_participation_colorectal,Colorectal screening participation,04,Vantaa and Kerava,2022,male,,,71.6,percent,4834.0,6751,derived,70.5,72.7,71.6,1,below_target,observed
+OBS0755925,screening_participation_colorectal,Colorectal screening participation,04,Vantaa and Kerava,2023,female,,,75.1,percent,6671.0,8883,derived,74.2,76.0,76.8,2,below_target,observed
+OBS0755926,screening_participation_colorectal,Colorectal screening participation,04,Vantaa and Kerava,2023,male,,,67.8,percent,5526.0,8150,derived,66.8,68.8,69.7,2,below_target,observed
+OBS0755928,screening_participation_colorectal,Colorectal screening participation,04,Vantaa and Kerava,2024,female,,,74.8,percent,6877.0,9194,derived,73.9,75.7,76.1,3,below_target,observed
+OBS0755929,screening_participation_colorectal,Colorectal screening participation,04,Vantaa and Kerava,2024,male,,,67.3,percent,5556.0,8256,derived,66.3,68.3,68.9,3,below_target,observed
+OBS0755930,screening_participation_colorectal,Colorectal screening participation,04,Vantaa and Kerava,2024,total,,,71.3,percent,12433.0,17438,derived,70.6,72.0,72.7,3,below_target,observed
+OBS0755931,screening_participation_colorectal,Colorectal screening participation,05,Southwest Finland,2022,female,,,81.6,percent,12907.0,15817,derived,81.0,82.2,81.6,1,at_or_above_target,observed
+OBS0755932,screening_participation_colorectal,Colorectal screening participation,05,Southwest Finland,2022,male,,,72.7,percent,10725.0,14752,derived,72.0,73.4,72.7,1,below_target,observed
+OBS0755934,screening_participation_colorectal,Colorectal screening participation,05,Southwest Finland,2023,female,,,78.6,percent,14715.0,18721,derived,78.0,79.2,80.1,2,below_target,observed
+OBS0755935,screening_participation_colorectal,Colorectal screening participation,05,Southwest Finland,2023,male,,,69.3,percent,12238.0,17659,derived,68.6,70.0,71.0,2,below_target,observed
+OBS0755937,screening_participation_colorectal,Colorectal screening participation,05,Southwest Finland,2024,female,,,77.9,percent,14844.0,19055,derived,77.3,78.5,79.4,3,below_target,observed
+OBS0755938,screening_participation_colorectal,Colorectal screening participation,05,Southwest Finland,2024,male,,,68.7,percent,12099.0,17611,derived,68.0,69.4,70.2,3,below_target,observed
+OBS0755939,screening_participation_colorectal,Colorectal screening participation,05,Southwest Finland,2024,total,,,73.5,percent,26943.0,36657,derived,73.0,73.9,75.0,3,below_target,observed
+OBS0755940,screening_participation_colorectal,Colorectal screening participation,06,Satakunta,2022,female,,,80.2,percent,6273.0,7822,derived,79.3,81.1,80.2,1,near_target,observed
+OBS0755941,screening_participation_colorectal,Colorectal screening participation,06,Satakunta,2022,male,,,71.1,percent,5354.0,7530,derived,70.1,72.1,71.1,1,below_target,observed
+OBS0755943,screening_participation_colorectal,Colorectal screening participation,06,Satakunta,2023,female,,,80.3,percent,7407.0,9224,derived,79.5,81.1,80.2,2,near_target,observed
+OBS0755944,screening_participation_colorectal,Colorectal screening participation,06,Satakunta,2023,male,,,68.7,percent,6093.0,8869,derived,67.7,69.7,69.9,2,below_target,observed
+OBS0755946,screening_participation_colorectal,Colorectal screening participation,06,Satakunta,2024,female,,,77.2,percent,7080.0,9171,derived,76.3,78.0,79.2,3,below_target,observed
+OBS0755947,screening_participation_colorectal,Colorectal screening participation,06,Satakunta,2024,male,,,67.8,percent,6035.0,8901,derived,66.8,68.8,69.2,3,below_target,observed
+OBS0755948,screening_participation_colorectal,Colorectal screening participation,06,Satakunta,2024,total,,,72.6,percent,13115.0,18065,derived,71.9,73.2,74.4,3,below_target,observed
+OBS0755949,screening_participation_colorectal,Colorectal screening participation,07,Kanta-Häme,2022,female,,,82.6,percent,5128.0,6208,derived,81.6,83.5,82.6,1,at_or_above_target,observed
+OBS0755950,screening_participation_colorectal,Colorectal screening participation,07,Kanta-Häme,2022,male,,,74.0,percent,4404.0,5951,derived,72.9,75.1,74.0,1,below_target,observed
+OBS0755952,screening_participation_colorectal,Colorectal screening participation,07,Kanta-Häme,2023,female,,,79.1,percent,6005.0,7592,derived,78.2,80.0,80.8,2,near_target,observed
+OBS0755953,screening_participation_colorectal,Colorectal screening participation,07,Kanta-Häme,2023,male,,,70.9,percent,5090.0,7179,derived,69.8,71.9,72.5,2,below_target,observed
+OBS0755955,screening_participation_colorectal,Colorectal screening participation,07,Kanta-Häme,2024,female,,,78.6,percent,5766.0,7336,derived,77.6,79.5,80.1,3,below_target,observed
+OBS0755956,screening_participation_colorectal,Colorectal screening participation,07,Kanta-Häme,2024,male,,,69.9,percent,4939.0,7066,derived,68.8,71.0,71.6,3,below_target,observed
+OBS0755957,screening_participation_colorectal,Colorectal screening participation,07,Kanta-Häme,2024,total,,,74.3,percent,10705.0,14408,derived,73.6,75.0,75.9,3,below_target,observed
+OBS0755958,screening_participation_colorectal,Colorectal screening participation,08,Pirkanmaa,2022,female,,,81.4,percent,13237.0,16262,derived,80.8,82.0,81.4,1,at_or_above_target,observed
+OBS0755959,screening_participation_colorectal,Colorectal screening participation,08,Pirkanmaa,2022,male,,,73.9,percent,11291.0,15279,derived,73.2,74.6,73.9,1,below_target,observed
+OBS0755961,screening_participation_colorectal,Colorectal screening participation,08,Pirkanmaa,2023,female,,,80.4,percent,15581.0,19379,derived,79.8,81.0,80.9,2,near_target,observed
+OBS0755962,screening_participation_colorectal,Colorectal screening participation,08,Pirkanmaa,2023,male,,,70.6,percent,13071.0,18514,derived,69.9,71.3,72.2,2,below_target,observed
+OBS0755964,screening_participation_colorectal,Colorectal screening participation,08,Pirkanmaa,2024,female,,,78.3,percent,15318.0,19563,derived,77.7,78.9,80.0,3,below_target,observed
+OBS0755965,screening_participation_colorectal,Colorectal screening participation,08,Pirkanmaa,2024,male,,,70.0,percent,12740.0,18200,derived,69.3,70.7,71.5,3,below_target,observed
+OBS0755966,screening_participation_colorectal,Colorectal screening participation,08,Pirkanmaa,2024,total,,,74.3,percent,28058.0,37763,derived,73.9,74.7,75.9,3,below_target,observed
+OBS0755967,screening_participation_colorectal,Colorectal screening participation,09,Päijät-Häme,2022,female,,,84.2,percent,6308.0,7492,derived,83.4,85.0,84.2,1,at_or_above_target,observed
+OBS0755968,screening_participation_colorectal,Colorectal screening participation,09,Päijät-Häme,2022,male,,,74.3,percent,5193.0,6989,derived,73.3,75.3,74.3,1,below_target,observed
+OBS0755970,screening_participation_colorectal,Colorectal screening participation,09,Päijät-Häme,2023,female,,,80.4,percent,7280.0,9055,derived,79.6,81.2,82.3,2,near_target,observed
+OBS0755971,screening_participation_colorectal,Colorectal screening participation,09,Päijät-Häme,2023,male,,,71.6,percent,6032.0,8425,derived,70.6,72.5,72.9,2,below_target,observed
+OBS0755973,screening_participation_colorectal,Colorectal screening participation,09,Päijät-Häme,2024,female,,,80.1,percent,7163.0,8943,derived,79.3,80.9,81.6,3,near_target,observed
+OBS0755974,screening_participation_colorectal,Colorectal screening participation,09,Päijät-Häme,2024,male,,,70.0,percent,5833.0,8333,derived,69.0,71.0,72.0,3,below_target,observed
+OBS0755975,screening_participation_colorectal,Colorectal screening participation,09,Päijät-Häme,2024,total,,,75.2,percent,12996.0,17282,derived,74.6,75.8,76.9,3,below_target,observed
+OBS0755976,screening_participation_colorectal,Colorectal screening participation,10,Kymenlaakso,2022,female,,,78.1,percent,4864.0,6228,derived,77.1,79.1,78.1,1,below_target,observed
+OBS0755977,screening_participation_colorectal,Colorectal screening participation,10,Kymenlaakso,2022,male,,,69.4,percent,4165.0,6001,derived,68.2,70.6,69.4,1,below_target,observed
+OBS0755979,screening_participation_colorectal,Colorectal screening participation,10,Kymenlaakso,2023,female,,,74.4,percent,5526.0,7427,derived,73.4,75.4,76.2,2,below_target,observed
+OBS0755980,screening_participation_colorectal,Colorectal screening participation,10,Kymenlaakso,2023,male,,,64.6,percent,4762.0,7372,derived,63.5,65.7,67.0,2,below_target,observed
+OBS0755982,screening_participation_colorectal,Colorectal screening participation,10,Kymenlaakso,2024,female,,,74.2,percent,5480.0,7385,derived,73.2,75.2,75.6,3,below_target,observed
+OBS0755983,screening_participation_colorectal,Colorectal screening participation,10,Kymenlaakso,2024,male,,,65.6,percent,4618.0,7040,derived,64.5,66.7,66.5,3,below_target,observed
+OBS0755984,screening_participation_colorectal,Colorectal screening participation,10,Kymenlaakso,2024,total,,,70.0,percent,10098.0,14426,derived,69.2,70.7,71.1,3,below_target,observed
+OBS0755985,screening_participation_colorectal,Colorectal screening participation,11,South Karelia,2022,female,,,83.2,percent,4000.0,4808,derived,82.1,84.2,83.2,1,at_or_above_target,observed
+OBS0755986,screening_participation_colorectal,Colorectal screening participation,11,South Karelia,2022,male,,,74.2,percent,3456.0,4658,derived,72.9,75.4,74.2,1,below_target,observed
+OBS0755988,screening_participation_colorectal,Colorectal screening participation,11,South Karelia,2023,female,,,79.1,percent,4475.0,5657,derived,78.0,80.1,81.2,2,near_target,observed
+OBS0755989,screening_participation_colorectal,Colorectal screening participation,11,South Karelia,2023,male,,,69.7,percent,3879.0,5565,derived,68.5,70.9,72.0,2,below_target,observed
+OBS0755991,screening_participation_colorectal,Colorectal screening participation,11,South Karelia,2024,female,,,78.8,percent,4473.0,5676,derived,77.7,79.8,80.4,3,below_target,observed
+OBS0755992,screening_participation_colorectal,Colorectal screening participation,11,South Karelia,2024,male,,,69.0,percent,3768.0,5461,derived,67.8,70.2,71.0,3,below_target,observed
+OBS0755993,screening_participation_colorectal,Colorectal screening participation,11,South Karelia,2024,total,,,74.0,percent,8241.0,11136,derived,73.2,74.8,75.7,3,below_target,observed
+OBS0755994,screening_participation_colorectal,Colorectal screening participation,12,South Savo,2022,female,,,84.9,percent,4693.0,5528,derived,83.9,85.8,84.9,1,at_or_above_target,observed
+OBS0755995,screening_participation_colorectal,Colorectal screening participation,12,South Savo,2022,male,,,77.7,percent,4365.0,5618,derived,76.6,78.8,77.7,1,below_target,observed
+OBS0755997,screening_participation_colorectal,Colorectal screening participation,12,South Savo,2023,female,,,82.4,percent,5421.0,6579,derived,81.5,83.3,83.7,2,at_or_above_target,observed
+OBS0755998,screening_participation_colorectal,Colorectal screening participation,12,South Savo,2023,male,,,73.1,percent,4762.0,6514,derived,72.0,74.2,75.4,2,below_target,observed
+OBS0756000,screening_participation_colorectal,Colorectal screening participation,12,South Savo,2024,female,,,81.4,percent,5294.0,6504,derived,80.4,82.3,82.9,3,at_or_above_target,observed
+OBS0756001,screening_participation_colorectal,Colorectal screening participation,12,South Savo,2024,male,,,72.5,percent,4799.0,6619,derived,71.4,73.6,74.4,3,below_target,observed
+OBS0756002,screening_participation_colorectal,Colorectal screening participation,12,South Savo,2024,total,,,76.9,percent,10093.0,13125,derived,76.2,77.6,78.7,3,below_target,observed
+OBS0756003,screening_participation_colorectal,Colorectal screening participation,13,North Savo,2022,female,,,82.8,percent,7740.0,9348,derived,82.0,83.6,82.8,1,at_or_above_target,observed
+OBS0756004,screening_participation_colorectal,Colorectal screening participation,13,North Savo,2022,male,,,74.4,percent,6780.0,9113,derived,73.5,75.3,74.4,1,below_target,observed
+OBS0756006,screening_participation_colorectal,Colorectal screening participation,13,North Savo,2023,female,,,82.0,percent,9040.0,11024,derived,81.3,82.7,82.4,2,at_or_above_target,observed
+OBS0756007,screening_participation_colorectal,Colorectal screening participation,13,North Savo,2023,male,,,72.5,percent,7821.0,10788,derived,71.6,73.3,73.5,2,below_target,observed
+OBS0756009,screening_participation_colorectal,Colorectal screening participation,13,North Savo,2024,female,,,79.7,percent,8801.0,11043,derived,78.9,80.4,81.5,3,near_target,observed
+OBS0756010,screening_participation_colorectal,Colorectal screening participation,13,North Savo,2024,male,,,70.9,percent,7664.0,10810,derived,70.0,71.7,72.6,3,below_target,observed
+OBS0756011,screening_participation_colorectal,Colorectal screening participation,13,North Savo,2024,total,,,75.4,percent,16465.0,21837,derived,74.8,76.0,77.1,3,below_target,observed
+OBS0756012,screening_participation_colorectal,Colorectal screening participation,14,North Karelia,2022,female,,,83.0,percent,5337.0,6430,derived,82.1,83.9,83.0,1,at_or_above_target,observed
+OBS0756013,screening_participation_colorectal,Colorectal screening participation,14,North Karelia,2022,male,,,73.4,percent,4631.0,6309,derived,72.3,74.5,73.4,1,below_target,observed
+OBS0756015,screening_participation_colorectal,Colorectal screening participation,14,North Karelia,2023,female,,,80.9,percent,6237.0,7710,derived,80.0,81.8,82.0,2,at_or_above_target,observed
+OBS0756016,screening_participation_colorectal,Colorectal screening participation,14,North Karelia,2023,male,,,71.7,percent,5542.0,7729,derived,70.7,72.7,72.6,2,below_target,observed
+OBS0756018,screening_participation_colorectal,Colorectal screening participation,14,North Karelia,2024,female,,,78.1,percent,5827.0,7461,derived,77.1,79.0,80.7,3,below_target,observed
+OBS0756019,screening_participation_colorectal,Colorectal screening participation,14,North Karelia,2024,male,,,68.2,percent,5006.0,7340,derived,67.1,69.3,71.1,3,below_target,observed
+OBS0756020,screening_participation_colorectal,Colorectal screening participation,14,North Karelia,2024,total,,,73.2,percent,10833.0,14799,derived,72.5,73.9,75.9,3,below_target,observed
+OBS0756021,screening_participation_colorectal,Colorectal screening participation,15,Central Finland,2022,female,,,84.2,percent,7606.0,9033,derived,83.4,84.9,84.2,1,at_or_above_target,observed
+OBS0756022,screening_participation_colorectal,Colorectal screening participation,15,Central Finland,2022,male,,,75.9,percent,6782.0,8935,derived,75.0,76.8,75.9,1,below_target,observed
+OBS0756024,screening_participation_colorectal,Colorectal screening participation,15,Central Finland,2023,female,,,82.7,percent,9192.0,11115,derived,82.0,83.4,83.5,2,at_or_above_target,observed
+OBS0756025,screening_participation_colorectal,Colorectal screening participation,15,Central Finland,2023,male,,,72.3,percent,7714.0,10669,derived,71.4,73.1,74.1,2,below_target,observed
+OBS0756027,screening_participation_colorectal,Colorectal screening participation,15,Central Finland,2024,female,,,81.0,percent,8689.0,10727,derived,80.2,81.7,82.6,3,at_or_above_target,observed
+OBS0756028,screening_participation_colorectal,Colorectal screening participation,15,Central Finland,2024,male,,,71.9,percent,7530.0,10473,derived,71.0,72.8,73.4,3,below_target,observed
+OBS0756029,screening_participation_colorectal,Colorectal screening participation,15,Central Finland,2024,total,,,76.5,percent,16219.0,21201,derived,75.9,77.1,78.0,3,below_target,observed
+OBS0756030,screening_participation_colorectal,Colorectal screening participation,16,South Ostrobothnia,2022,female,,,82.4,percent,5641.0,6846,derived,81.5,83.3,82.4,1,at_or_above_target,observed
+OBS0756031,screening_participation_colorectal,Colorectal screening participation,16,South Ostrobothnia,2022,male,,,72.3,percent,4898.0,6775,derived,71.2,73.3,72.3,1,below_target,observed
+OBS0756033,screening_participation_colorectal,Colorectal screening participation,16,South Ostrobothnia,2023,female,,,80.2,percent,6350.0,7918,derived,79.3,81.1,81.3,2,near_target,observed
+OBS0756034,screening_participation_colorectal,Colorectal screening participation,16,South Ostrobothnia,2023,male,,,69.5,percent,5561.0,8001,derived,68.5,70.5,70.9,2,below_target,observed
+OBS0756036,screening_participation_colorectal,Colorectal screening participation,16,South Ostrobothnia,2024,female,,,79.1,percent,6381.0,8067,derived,78.2,80.0,80.6,3,near_target,observed
+OBS0756037,screening_participation_colorectal,Colorectal screening participation,16,South Ostrobothnia,2024,male,,,70.1,percent,5518.0,7872,derived,69.1,71.1,70.6,3,below_target,observed
+OBS0756038,screening_participation_colorectal,Colorectal screening participation,16,South Ostrobothnia,2024,total,,,74.6,percent,11899.0,15950,derived,73.9,75.3,75.6,3,below_target,observed
+OBS0756039,screening_participation_colorectal,Colorectal screening participation,17,Ostrobothnia,2022,female,,,81.7,percent,4238.0,5187,derived,80.6,82.7,81.7,1,at_or_above_target,observed
+OBS0756040,screening_participation_colorectal,Colorectal screening participation,17,Ostrobothnia,2022,male,,,74.4,percent,3833.0,5152,derived,73.2,75.6,74.4,1,below_target,observed
+OBS0756042,screening_participation_colorectal,Colorectal screening participation,17,Ostrobothnia,2023,female,,,79.8,percent,5125.0,6422,derived,78.8,80.8,80.8,2,near_target,observed
+OBS0756043,screening_participation_colorectal,Colorectal screening participation,17,Ostrobothnia,2023,male,,,71.6,percent,4339.0,6060,derived,70.5,72.7,73.0,2,below_target,observed
+OBS0756045,screening_participation_colorectal,Colorectal screening participation,17,Ostrobothnia,2024,female,,,79.3,percent,4876.0,6149,derived,78.3,80.3,80.3,3,near_target,observed
+OBS0756046,screening_participation_colorectal,Colorectal screening participation,17,Ostrobothnia,2024,male,,,72.5,percent,4458.0,6149,derived,71.4,73.6,72.8,3,below_target,observed
+OBS0756047,screening_participation_colorectal,Colorectal screening participation,17,Ostrobothnia,2024,total,,,75.9,percent,9334.0,12298,derived,75.1,76.6,76.6,3,below_target,observed
+OBS0756048,screening_participation_colorectal,Colorectal screening participation,18,Central Ostrobothnia,2022,female,,,79.8,percent,1699.0,2129,derived,78.0,81.5,79.8,1,near_target,observed
+OBS0756049,screening_participation_colorectal,Colorectal screening participation,18,Central Ostrobothnia,2022,male,,,72.6,percent,1520.0,2094,derived,70.6,74.5,72.6,1,below_target,observed
+OBS0756051,screening_participation_colorectal,Colorectal screening participation,18,Central Ostrobothnia,2023,female,,,77.7,percent,2083.0,2681,derived,76.1,79.2,78.8,2,below_target,observed
+OBS0756052,screening_participation_colorectal,Colorectal screening participation,18,Central Ostrobothnia,2023,male,,,68.3,percent,1713.0,2508,derived,66.5,70.1,70.4,2,below_target,observed
+OBS0756054,screening_participation_colorectal,Colorectal screening participation,18,Central Ostrobothnia,2024,female,,,78.1,percent,1926.0,2466,derived,76.4,79.7,78.5,3,below_target,observed
+OBS0756055,screening_participation_colorectal,Colorectal screening participation,18,Central Ostrobothnia,2024,male,,,68.5,percent,1686.0,2461,derived,66.6,70.3,69.8,3,below_target,observed
+OBS0756056,screening_participation_colorectal,Colorectal screening participation,18,Central Ostrobothnia,2024,total,,,73.3,percent,3612.0,4928,derived,72.0,74.5,74.2,3,below_target,observed
+OBS0756057,screening_participation_colorectal,Colorectal screening participation,19,North Ostrobothnia,2022,female,,,83.3,percent,10458.0,12555,derived,82.6,83.9,83.3,1,at_or_above_target,observed
+OBS0756058,screening_participation_colorectal,Colorectal screening participation,19,North Ostrobothnia,2022,male,,,74.4,percent,9351.0,12569,derived,73.6,75.2,74.4,1,below_target,observed
+OBS0756060,screening_participation_colorectal,Colorectal screening participation,19,North Ostrobothnia,2023,female,,,80.8,percent,12306.0,15230,derived,80.2,81.4,82.0,2,at_or_above_target,observed
+OBS0756061,screening_participation_colorectal,Colorectal screening participation,19,North Ostrobothnia,2023,male,,,71.3,percent,10477.0,14694,derived,70.6,72.0,72.8,2,below_target,observed
+OBS0756063,screening_participation_colorectal,Colorectal screening participation,19,North Ostrobothnia,2024,female,,,80.1,percent,11916.0,14876,derived,79.5,80.7,81.4,3,near_target,observed
+OBS0756064,screening_participation_colorectal,Colorectal screening participation,19,North Ostrobothnia,2024,male,,,71.2,percent,10507.0,14757,derived,70.5,71.9,72.3,3,below_target,observed
+OBS0756065,screening_participation_colorectal,Colorectal screening participation,19,North Ostrobothnia,2024,total,,,75.6,percent,22423.0,29660,derived,75.1,76.1,76.9,3,below_target,observed
+OBS0756066,screening_participation_colorectal,Colorectal screening participation,20,Kainuu,2022,female,,,83.5,percent,2477.0,2966,derived,82.1,84.8,83.5,1,at_or_above_target,observed
+OBS0756067,screening_participation_colorectal,Colorectal screening participation,20,Kainuu,2022,male,,,75.5,percent,2303.0,3050,derived,74.0,77.0,75.5,1,below_target,observed
+OBS0756069,screening_participation_colorectal,Colorectal screening participation,20,Kainuu,2023,female,,,81.5,percent,2858.0,3507,derived,80.2,82.7,82.5,2,at_or_above_target,observed
+OBS0756070,screening_participation_colorectal,Colorectal screening participation,20,Kainuu,2023,male,,,73.2,percent,2682.0,3664,derived,71.7,74.6,74.3,2,below_target,observed
+OBS0756072,screening_participation_colorectal,Colorectal screening participation,20,Kainuu,2024,female,,,81.1,percent,2810.0,3465,derived,79.8,82.4,82.0,3,near_target,observed
+OBS0756073,screening_participation_colorectal,Colorectal screening participation,20,Kainuu,2024,male,,,72.0,percent,2552.0,3544,derived,70.5,73.5,73.6,3,below_target,observed
+OBS0756074,screening_participation_colorectal,Colorectal screening participation,20,Kainuu,2024,total,,,76.5,percent,5362.0,7009,derived,75.5,77.5,77.7,3,below_target,observed
+OBS0756075,screening_participation_colorectal,Colorectal screening participation,21,Lapland,2022,female,,,82.9,percent,5709.0,6887,derived,82.0,83.8,82.9,1,at_or_above_target,observed
+OBS0756076,screening_participation_colorectal,Colorectal screening participation,21,Lapland,2022,male,,,72.4,percent,5128.0,7083,derived,71.3,73.4,72.4,1,below_target,observed
+OBS0756078,screening_participation_colorectal,Colorectal screening participation,21,Lapland,2023,female,,,79.6,percent,6566.0,8249,derived,78.7,80.5,81.2,2,near_target,observed
+OBS0756079,screening_participation_colorectal,Colorectal screening participation,21,Lapland,2023,male,,,70.3,percent,5889.0,8377,derived,69.3,71.3,71.3,2,below_target,observed
+OBS0756081,screening_participation_colorectal,Colorectal screening participation,21,Lapland,2024,female,,,78.8,percent,6309.0,8006,derived,77.9,79.7,80.4,3,below_target,observed
+OBS0756082,screening_participation_colorectal,Colorectal screening participation,21,Lapland,2024,male,,,68.7,percent,5616.0,8175,derived,67.7,69.7,70.5,3,below_target,observed
+OBS0756083,screening_participation_colorectal,Colorectal screening participation,21,Lapland,2024,total,,,73.7,percent,11925.0,16180,derived,73.0,74.4,75.4,3,below_target,observed
+OBS0756084,screening_participation_colorectal,Colorectal screening participation,90,City of Helsinki,2022,female,,,76.4,percent,14523.0,19009,derived,75.8,77.0,76.4,1,below_target,observed
+OBS0756085,screening_participation_colorectal,Colorectal screening participation,90,City of Helsinki,2022,male,,,69.4,percent,11168.0,16092,derived,68.7,70.1,69.4,1,below_target,observed
+OBS0756087,screening_participation_colorectal,Colorectal screening participation,90,City of Helsinki,2023,female,,,73.7,percent,16328.0,22155,derived,73.1,74.3,75.1,2,below_target,observed
+OBS0756088,screening_participation_colorectal,Colorectal screening participation,90,City of Helsinki,2023,male,,,65.0,percent,12287.0,18903,derived,64.3,65.7,67.2,2,below_target,observed
+OBS0756090,screening_participation_colorectal,Colorectal screening participation,90,City of Helsinki,2024,female,,,73.2,percent,16622.0,22708,derived,72.6,73.8,74.4,3,below_target,observed
+OBS0756091,screening_participation_colorectal,Colorectal screening participation,90,City of Helsinki,2024,male,,,65.2,percent,12604.0,19331,derived,64.5,65.9,66.5,3,below_target,observed
+OBS0756092,screening_participation_colorectal,Colorectal screening participation,90,City of Helsinki,2024,total,,,69.6,percent,29226.0,41991,derived,69.2,70.0,70.8,3,below_target,observed
+OBS0756107,survival_5y_breast,Five-year relative survival breast cancer,FI,Finland,2024,total,,,92.0,percent,,,,,,92.0,3,,observed
+OBS0756113,survival_5y_breast,Five-year relative survival breast cancer,01,East Uusimaa,2024,total,,,90.0,percent,,,,,,90.3,3,,observed
+OBS0756119,survival_5y_breast,Five-year relative survival breast cancer,02,Central Uusimaa,2024,total,,,92.0,percent,,,,,,91.3,3,,observed
+OBS0756125,survival_5y_breast,Five-year relative survival breast cancer,03,West Uusimaa,2024,total,,,92.0,percent,,,,,,92.0,3,,observed
+OBS0756131,survival_5y_breast,Five-year relative survival breast cancer,04,Vantaa and Kerava,2024,total,,,94.0,percent,,,,,,92.7,3,,observed
+OBS0756137,survival_5y_breast,Five-year relative survival breast cancer,05,Southwest Finland,2024,total,,,94.0,percent,,,,,,93.0,3,,observed
+OBS0756143,survival_5y_breast,Five-year relative survival breast cancer,06,Satakunta,2024,total,,,92.0,percent,,,,,,92.3,3,,observed
+OBS0756149,survival_5y_breast,Five-year relative survival breast cancer,07,Kanta-Häme,2024,total,,,92.0,percent,,,,,,92.0,3,,observed
+OBS0756155,survival_5y_breast,Five-year relative survival breast cancer,08,Pirkanmaa,2024,total,,,93.0,percent,,,,,,93.0,3,,observed
+OBS0756161,survival_5y_breast,Five-year relative survival breast cancer,09,Päijät-Häme,2024,total,,,91.0,percent,,,,,,91.3,3,,observed
+OBS0756167,survival_5y_breast,Five-year relative survival breast cancer,10,Kymenlaakso,2024,total,,,93.0,percent,,,,,,93.0,3,,observed
+OBS0756173,survival_5y_breast,Five-year relative survival breast cancer,11,South Karelia,2024,total,,,92.0,percent,,,,,,92.0,3,,observed
+OBS0756179,survival_5y_breast,Five-year relative survival breast cancer,12,South Savo,2024,total,,,91.0,percent,,,,,,90.7,3,,observed
+OBS0756185,survival_5y_breast,Five-year relative survival breast cancer,13,North Savo,2024,total,,,93.0,percent,,,,,,93.7,3,,observed
+OBS0756191,survival_5y_breast,Five-year relative survival breast cancer,14,North Karelia,2024,total,,,90.0,percent,,,,,,90.0,3,,observed
+OBS0756197,survival_5y_breast,Five-year relative survival breast cancer,15,Central Finland,2024,total,,,92.0,percent,,,,,,92.3,3,,observed
+OBS0756203,survival_5y_breast,Five-year relative survival breast cancer,16,South Ostrobothnia,2024,total,,,93.0,percent,,,,,,92.3,3,,observed
+OBS0756209,survival_5y_breast,Five-year relative survival breast cancer,17,Ostrobothnia,2024,total,,,92.0,percent,,,,,,91.3,3,,observed
+OBS0756215,survival_5y_breast,Five-year relative survival breast cancer,18,Central Ostrobothnia,2024,total,,,91.0,percent,,,,,,89.3,3,,observed
+OBS0756221,survival_5y_breast,Five-year relative survival breast cancer,19,North Ostrobothnia,2024,total,,,90.0,percent,,,,,,90.3,3,,observed
+OBS0756227,survival_5y_breast,Five-year relative survival breast cancer,20,Kainuu,2024,total,,,89.0,percent,,,,,,88.7,3,,observed
+OBS0756233,survival_5y_breast,Five-year relative survival breast cancer,21,Lapland,2024,total,,,92.0,percent,,,,,,92.0,3,,observed
+OBS0756239,survival_5y_breast,Five-year relative survival breast cancer,90,City of Helsinki,2024,total,,,91.0,percent,,,,,,91.7,3,,observed
+OBS0756254,survival_5y_cervical,Five-year relative survival cervical cancer,FI,Finland,2024,total,,,73.0,percent,,,,,,72.0,3,,observed
+OBS0756260,survival_5y_cervical,Five-year relative survival cervical cancer,01,East Uusimaa,2024,total,,,71.0,percent,,,,,,71.3,3,,observed
+OBS0756266,survival_5y_cervical,Five-year relative survival cervical cancer,02,Central Uusimaa,2024,total,,,70.0,percent,,,,,,70.3,3,,observed
+OBS0756272,survival_5y_cervical,Five-year relative survival cervical cancer,03,West Uusimaa,2024,total,,,83.0,percent,,,,,,80.3,3,,observed
+OBS0756278,survival_5y_cervical,Five-year relative survival cervical cancer,04,Vantaa and Kerava,2024,total,,,72.0,percent,,,,,,73.0,3,,observed
+OBS0756284,survival_5y_cervical,Five-year relative survival cervical cancer,05,Southwest Finland,2024,total,,,86.0,percent,,,,,,84.3,3,,observed
+OBS0756290,survival_5y_cervical,Five-year relative survival cervical cancer,06,Satakunta,2024,total,,,69.0,percent,,,,,,67.3,3,,observed
+OBS0756296,survival_5y_cervical,Five-year relative survival cervical cancer,07,Kanta-Häme,2024,total,,,81.0,percent,,,,,,80.7,3,,observed
+OBS0756302,survival_5y_cervical,Five-year relative survival cervical cancer,08,Pirkanmaa,2024,total,,,75.0,percent,,,,,,73.7,3,,observed
+OBS0756308,survival_5y_cervical,Five-year relative survival cervical cancer,09,Päijät-Häme,2024,total,,,67.0,percent,,,,,,67.7,3,,observed
+OBS0756314,survival_5y_cervical,Five-year relative survival cervical cancer,10,Kymenlaakso,2024,total,,,67.0,percent,,,,,,67.3,3,,observed
+OBS0756320,survival_5y_cervical,Five-year relative survival cervical cancer,11,South Karelia,2024,total,,,56.0,percent,,,,,,58.0,3,,observed
+OBS0756326,survival_5y_cervical,Five-year relative survival cervical cancer,12,South Savo,2024,total,,,80.0,percent,,,,,,77.7,3,,observed
+OBS0756332,survival_5y_cervical,Five-year relative survival cervical cancer,13,North Savo,2024,total,,,74.0,percent,,,,,,73.3,3,,observed
+OBS0756338,survival_5y_cervical,Five-year relative survival cervical cancer,14,North Karelia,2024,total,,,61.0,percent,,,,,,60.0,3,,observed
+OBS0756344,survival_5y_cervical,Five-year relative survival cervical cancer,15,Central Finland,2024,total,,,73.0,percent,,,,,,73.7,3,,observed
+OBS0756350,survival_5y_cervical,Five-year relative survival cervical cancer,16,South Ostrobothnia,2024,total,,,73.0,percent,,,,,,70.3,3,,observed
+OBS0756356,survival_5y_cervical,Five-year relative survival cervical cancer,17,Ostrobothnia,2024,total,,,73.0,percent,,,,,,70.7,3,,observed
+OBS0756362,survival_5y_cervical,Five-year relative survival cervical cancer,18,Central Ostrobothnia,2024,total,,,75.0,percent,,,,,,69.0,3,,observed
+OBS0756368,survival_5y_cervical,Five-year relative survival cervical cancer,19,North Ostrobothnia,2024,total,,,70.0,percent,,,,,,69.0,3,,observed
+OBS0756374,survival_5y_cervical,Five-year relative survival cervical cancer,20,Kainuu,2024,total,,,70.0,percent,,,,,,70.0,3,,observed
+OBS0756380,survival_5y_cervical,Five-year relative survival cervical cancer,21,Lapland,2024,total,,,75.0,percent,,,,,,75.0,3,,observed
+OBS0756386,survival_5y_cervical,Five-year relative survival cervical cancer,90,City of Helsinki,2024,total,,,68.0,percent,,,,,,68.0,3,,observed
+OBS0756401,survival_5y_colon,Five-year relative survival colon cancer,FI,Finland,2024,total,,,68.0,percent,,,,,,67.3,3,,observed
+OBS0756407,survival_5y_colon,Five-year relative survival colon cancer,01,East Uusimaa,2024,total,,,72.0,percent,,,,,,72.7,3,,observed
+OBS0756413,survival_5y_colon,Five-year relative survival colon cancer,02,Central Uusimaa,2024,total,,,74.0,percent,,,,,,70.7,3,,observed
+OBS0756419,survival_5y_colon,Five-year relative survival colon cancer,03,West Uusimaa,2024,total,,,70.0,percent,,,,,,69.0,3,,observed
+OBS0756425,survival_5y_colon,Five-year relative survival colon cancer,04,Vantaa and Kerava,2024,total,,,73.0,percent,,,,,,72.3,3,,observed
+OBS0756431,survival_5y_colon,Five-year relative survival colon cancer,05,Southwest Finland,2024,total,,,67.0,percent,,,,,,68.0,3,,observed
+OBS0756437,survival_5y_colon,Five-year relative survival colon cancer,06,Satakunta,2024,total,,,64.0,percent,,,,,,60.7,3,,observed
+OBS0756443,survival_5y_colon,Five-year relative survival colon cancer,07,Kanta-Häme,2024,total,,,66.0,percent,,,,,,66.3,3,,observed
+OBS0756449,survival_5y_colon,Five-year relative survival colon cancer,08,Pirkanmaa,2024,total,,,66.0,percent,,,,,,65.3,3,,observed
+OBS0756455,survival_5y_colon,Five-year relative survival colon cancer,09,Päijät-Häme,2024,total,,,63.0,percent,,,,,,64.0,3,,observed
+OBS0756461,survival_5y_colon,Five-year relative survival colon cancer,10,Kymenlaakso,2024,total,,,70.0,percent,,,,,,66.0,3,,observed
+OBS0756467,survival_5y_colon,Five-year relative survival colon cancer,11,South Karelia,2024,total,,,65.0,percent,,,,,,64.3,3,,observed
+OBS0756473,survival_5y_colon,Five-year relative survival colon cancer,12,South Savo,2024,total,,,72.0,percent,,,,,,69.7,3,,observed
+OBS0756479,survival_5y_colon,Five-year relative survival colon cancer,13,North Savo,2024,total,,,64.0,percent,,,,,,63.0,3,,observed
+OBS0756485,survival_5y_colon,Five-year relative survival colon cancer,14,North Karelia,2024,total,,,66.0,percent,,,,,,66.3,3,,observed
+OBS0756491,survival_5y_colon,Five-year relative survival colon cancer,15,Central Finland,2024,total,,,72.0,percent,,,,,,68.7,3,,observed
+OBS0756497,survival_5y_colon,Five-year relative survival colon cancer,16,South Ostrobothnia,2024,total,,,65.0,percent,,,,,,63.3,3,,observed
+OBS0756503,survival_5y_colon,Five-year relative survival colon cancer,17,Ostrobothnia,2024,total,,,71.0,percent,,,,,,70.0,3,,observed
+OBS0756509,survival_5y_colon,Five-year relative survival colon cancer,18,Central Ostrobothnia,2024,total,,,70.0,percent,,,,,,65.7,3,,observed
+OBS0756515,survival_5y_colon,Five-year relative survival colon cancer,19,North Ostrobothnia,2024,total,,,69.0,percent,,,,,,69.3,3,,observed
+OBS0756521,survival_5y_colon,Five-year relative survival colon cancer,20,Kainuu,2024,total,,,64.0,percent,,,,,,61.7,3,,observed
+OBS0756527,survival_5y_colon,Five-year relative survival colon cancer,21,Lapland,2024,total,,,73.0,percent,,,,,,72.7,3,,observed
+OBS0756533,survival_5y_colon,Five-year relative survival colon cancer,90,City of Helsinki,2024,total,,,71.0,percent,,,,,,71.3,3,,observed

@@ -1,0 +1,7 @@
+measure_id,title,applies_to,pathway_stage,cost_eur,cost_note,roadmap_page,kpi
+1.3.1,Targeted community-based communication for language groups,language,early_detection,400000,National estimate for 2026-2031,33,Participation of other-language speakers reaches the level of Finnish and Swedish speakers
+1.1.1,Co-design screening and prevention services with residents,education,early_detection,1500000,National estimate for 2026-2031,26,Participation of the group with primary education
+2.4.1,Screening quality manuals in procurement and steering,below_target,early_detection,350000,National estimate for 2026-2031,47,At least 80 % participation in every programme and every region
+2.5.1,More physician capacity in primary care through the personal doctor model,primary_care_access,first_contact,,No separate amount; part of the national personal doctor programme,51,Shorter waits for a non-urgent doctor appointment
+1.2.3,Named care coordinator model,followup,diagnostic_follow_up,100000,National estimate for 2026-2031,32,Attendance at the follow-up examination after a positive screening result
+3.1.2,National care pathways with agreed access times and public monitoring,data_gap,referral_to_treatment,25000000,5 million euros per year shared with measure 3.1.1,56,Patients start treatment within the target times

@@ -1,0 +1,44 @@
+{
+  "analysis_year": 2024,
+  "current_year": 2026,
+  "analysis_window_years": 10,
+  "screening_target_percent": 80,
+
+  "quality": {
+    "percent_tolerance": 0.1,
+    "small_cell_threshold": 30,
+    "outlier_z": 3.5,
+    "skew_ratio_for_log_scale": 5
+  },
+
+  "fallback": {
+    "max_year_distance": 2,
+    "min_regions_for_mean": 5,
+    "use_imputed_in_measures": false
+  },
+
+  "statistics": {
+    "pooled_years": 3,
+    "permutations": 5000,
+    "random_seed": 2026,
+    "significance_level": 0.05,
+    "min_invited_per_municipality": 100
+  },
+
+  "inputs": {
+    "raw_layout": ["cancer_stats_raw.csv.gz", "equity_context_raw.csv.gz"],
+    "adapted": ["breast_screening_by_region_2024.csv",
+                "cervical_screening_equity_2025_preliminary.csv",
+                "screening_by_population_group.csv",
+                "national_key_statistics.csv"]
+  },
+
+  "source_priority": ["Finnish Cancer Registry", "Team curated", "Sotkanet",
+                      "StatFin/Tilastokeskus", "Kela/avoindata.fi"],
+
+  "upload": {
+    "prefix": "pipeline-output/",
+    "files": ["facts/*.md", "equity_gaps.csv", "recommendations.csv", "outcome_stats.csv",
+              "region_profile.csv", "region_factor_levels.csv", "data_gaps.csv"]
+  }
+}

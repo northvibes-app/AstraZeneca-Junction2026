@@ -13,9 +13,12 @@ Run:  python3 pipeline/fetch_context.py
 import csv
 import gzip
 import json
-import urllib.request
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from net import ChangeLog, download      # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://sotkanet.fi/rest/1.1"
@@ -32,6 +35,13 @@ CONTEXT_INDICATORS = {
     4409: "daily smokers, %, medium education (smoking stratified by education)",
     4410: "daily smokers, %, high education (smoking stratified by education)",
     6411: "primary care doctor wait over 7 days, % (access factor)",
+    127: "population on 31 Dec (weights for regional averages)",
+    # Screening participation is already in the team's raw file, but without the count
+    # of participants. Fetching it again adds that count, which the pipeline needs for
+    # confidence intervals. The duplicate values are removed by the deduplication step.
+    3621: "breast screening participation, with participant count",
+    6103: "colorectal screening participation, with participant count",
+    3620: "cervical screening participation, with participant count",
 }
 
 RAW_COLUMNS = ["source", "source_url", "dataset", "indicator", "year", "region", "sex",
@@ -39,17 +49,17 @@ RAW_COLUMNS = ["source", "source_url", "dataset", "indicator", "year", "region",
 
 
 def get(path):
-    # The API rejects Python's default user agent, so a generic one is sent.
-    req = urllib.request.Request(f"{API}/{path}", headers={"User-Agent": "curl/8.0"})
-    with urllib.request.urlopen(req, timeout=120) as response:
-        return json.load(response)
+    """Download one API resource. Returns (parsed JSON, raw bytes)."""
+    raw = download(f"{API}/{path}")
+    return json.loads(raw), raw
 
 
 def main():
     scraped_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     # 1) Region register: id -> administrative level and names.
-    regions = get("regions")
+    changes = ChangeLog(ROOT / "Statistics/equity_context_manifest.json")
+    regions, _ = get("regions")
     with open(ROOT / "pipeline/reference/sotkanet_regions.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["region_id", "category", "code", "name_fi", "name_en"])
@@ -62,10 +72,11 @@ def main():
     # 2) Context indicators in the shared raw layout.
     rows = []
     for ind in CONTEXT_INDICATORS:
-        title = get(f"indicators/{ind}")["title"]["fi"]
+        title = get(f"indicators/{ind}")[0]["title"]["fi"]
         query = "&".join([f"indicator={ind}"] + [f"years={y}" for y in YEARS]
                          + ["genders=total", "genders=male", "genders=female"])
-        data = get(f"json?{query}")
+        data, raw = get(f"json?{query}")
+        state = changes.record(f"indicator {ind}", raw)
         for x in data:
             if x.get("value") is None or x["region"] not in region_name:
                 continue
@@ -73,13 +84,14 @@ def main():
             rows.append(["Sotkanet", "https://sotkanet.fi/sotkanet/fi/index", f"indicator {ind}",
                          title, x["year"], region_name[x["region"]], x["gender"], "", "",
                          "value", x["value"], "", json.dumps(extra), scraped_at])
-        print(f"indicator {ind}: {len(data)} values  ({title})")
+        print(f"indicator {ind}: {len(data)} values, {state} since last download  ({title})")
 
     out = ROOT / "Statistics/equity_context_raw.csv.gz"
     with gzip.open(out, "wt", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(RAW_COLUMNS)
         w.writerows(rows)
+    changes.save()
     print(f"{out.name}: {len(rows)} rows")
 
 

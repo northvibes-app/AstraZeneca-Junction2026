@@ -1,0 +1,260 @@
+year,status,programme,grouping,group,sex,measure,numerator_n,denominator_n,percent,source_url
+2020,observed,breast,education,Intermediate/secondary,total,participation,122140,151099,80.8,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2020,observed,breast,education,Primary education/unknown,total,participation,33647,49746,67.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2020,observed,breast,education,Tertiary/higher education,total,participation,135745,161359,84.1,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2020,observed,breast,education,Total,total,participation,291532,362204,80.5,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2021,observed,breast,education,Intermediate/secondary,total,participation,121746,147954,82.3,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2021,observed,breast,education,Primary education/unknown,total,participation,31077,45108,68.9,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2021,observed,breast,education,Tertiary/higher education,total,participation,140227,163531,85.7,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2021,observed,breast,education,Total,total,participation,293050,356593,82.2,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2022,observed,breast,education,Intermediate/secondary,total,participation,118391,145136,81.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2022,observed,breast,education,Primary education/unknown,total,participation,28163,42296,66.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2022,observed,breast,education,Tertiary/higher education,total,participation,141462,165650,85.4,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2022,observed,breast,education,Total,total,participation,288016,353082,81.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2023,observed,breast,education,Intermediate/secondary,total,participation,114661,141325,81.1,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2023,observed,breast,education,Primary education/unknown,total,participation,25438,38957,65.3,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2023,observed,breast,education,Tertiary/higher education,total,participation,142363,166522,85.5,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2023,observed,breast,education,Total,total,participation,282462,346804,81.4,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2024,observed,breast,education,Intermediate/secondary,total,participation,112034,138014,81.2,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2024,observed,breast,education,Primary education/unknown,total,participation,23585,37116,63.5,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2024,observed,breast,education,Tertiary/higher education,total,participation,145750,169721,85.9,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2024,observed,breast,education,Total,total,participation,281369,344851,81.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2025,preliminary,breast,education,Intermediate/secondary,total,participation,110125,135166,81.5,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/breast_preliminary.html
+2025,preliminary,breast,education,Primary education/unknown,total,participation,22316,35516,62.8,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/breast_preliminary.html
+2025,preliminary,breast,education,Tertiary/higher education,total,participation,148915,171268,86.9,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/breast_preliminary.html
+2025,preliminary,breast,education,Total,total,participation,281356,341950,82.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/breast_preliminary.html
+2020,observed,breast,native_language,Domestic,total,participation,279363,342481,81.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2020,observed,breast,native_language,Other/missing,total,participation,12169,19723,61.7,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2020,observed,breast,native_language,Total,total,participation,291532,362204,80.5,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2021,observed,breast,native_language,Domestic,total,participation,280390,336783,83.3,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2021,observed,breast,native_language,Other/missing,total,participation,12660,19810,63.9,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2021,observed,breast,native_language,Total,total,participation,293050,356593,82.2,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2022,observed,breast,native_language,Domestic,total,participation,274799,331464,82.9,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2022,observed,breast,native_language,Other/missing,total,participation,13217,21618,61.1,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2022,observed,breast,native_language,Total,total,participation,288016,353082,81.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2023,observed,breast,native_language,Domestic,total,participation,268897,324527,82.9,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2023,observed,breast,native_language,Other/missing,total,participation,13565,22277,60.9,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2023,observed,breast,native_language,Total,total,participation,282462,346804,81.4,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2024,observed,breast,native_language,Domestic,total,participation,266278,320048,83.2,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2024,observed,breast,native_language,Other/missing,total,participation,15091,24803,60.8,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2024,observed,breast,native_language,Total,total,participation,281369,344851,81.6,https://stats.cancerregistry.fi/joukkistilastot/breast.html
+2025,preliminary,breast,native_language,Domestic,total,participation,265125,315604,84.0,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/breast_preliminary.html
+2025,preliminary,breast,native_language,Other/missing,total,participation,16231,26346,61.6,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/breast_preliminary.html
+2025,preliminary,breast,native_language,Total,total,participation,281356,341950,82.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/breast_preliminary.html
+2020,observed,cervical,education,Intermediate/secondary,total,followup_attendance,929,933,99.6,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,education,Primary education/unknown,total,followup_attendance,170,173,98.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,education,Tertiary/higher education,total,followup_attendance,894,904,98.9,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,education,Total,total,followup_attendance,1993,2010,99.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Intermediate/secondary,total,followup_attendance,1955,2086,93.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Primary education/unknown,total,followup_attendance,407,434,93.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Tertiary/higher education,total,followup_attendance,2408,2540,94.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Total,total,followup_attendance,4770,5060,94.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Intermediate/secondary,total,followup_attendance,2270,2348,96.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Primary education/unknown,total,followup_attendance,416,431,96.5,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Tertiary/higher education,total,followup_attendance,2741,2849,96.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Total,total,followup_attendance,5427,5628,96.4,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Intermediate/secondary,total,followup_attendance,2227,2491,89.4,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Primary education/unknown,total,followup_attendance,426,478,89.1,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Tertiary/higher education,total,followup_attendance,2641,2996,88.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Total,total,followup_attendance,5294,5965,88.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Intermediate/secondary,total,followup_attendance,2368,2780,85.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Primary education/unknown,total,followup_attendance,423,499,84.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Tertiary/higher education,total,followup_attendance,2797,3298,84.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Total,total,followup_attendance,5588,6577,85.0,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,native_language,Domestic,total,followup_attendance,1829,1843,99.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,native_language,Other/missing,total,followup_attendance,164,167,98.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,native_language,Total,total,followup_attendance,1993,2010,99.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,native_language,Domestic,total,followup_attendance,4375,4643,94.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,native_language,Other/missing,total,followup_attendance,395,417,94.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,native_language,Total,total,followup_attendance,4770,5060,94.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,native_language,Domestic,total,followup_attendance,4980,5169,96.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,native_language,Other/missing,total,followup_attendance,447,459,97.4,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,native_language,Total,total,followup_attendance,5427,5628,96.4,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,native_language,Domestic,total,followup_attendance,4870,5482,88.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,native_language,Other/missing,total,followup_attendance,424,483,87.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,native_language,Total,total,followup_attendance,5294,5965,88.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,native_language,Domestic,total,followup_attendance,5103,6020,84.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,native_language,Other/missing,total,followup_attendance,485,557,87.1,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,native_language,Total,total,followup_attendance,5588,6577,85.0,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,education,Intermediate/secondary,total,participation,71949,103546,69.5,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,education,Primary education/unknown,total,participation,14407,27987,51.5,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,education,Tertiary/higher education,total,participation,98579,130017,75.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,education,Total,total,participation,184935,261550,70.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Intermediate/secondary,total,participation,75061,104763,71.6,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Primary education/unknown,total,participation,14717,27817,52.9,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Tertiary/higher education,total,participation,106949,135797,78.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,education,Total,total,participation,196727,268377,73.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Intermediate/secondary,total,participation,80809,114247,70.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Primary education/unknown,total,participation,15735,30271,52.0,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Tertiary/higher education,total,participation,113662,145035,78.4,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,education,Total,total,participation,210206,289553,72.6,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Intermediate/secondary,total,participation,79823,111926,71.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Primary education/unknown,total,participation,15806,30510,51.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Tertiary/higher education,total,participation,115097,144494,79.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,education,Total,total,participation,210726,286930,73.4,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Intermediate/secondary,total,participation,80606,112462,71.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Primary education/unknown,total,participation,15927,31338,50.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Tertiary/higher education,total,participation,119145,148310,80.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,education,Total,total,participation,215678,292110,73.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2025,preliminary,cervical,education,Intermediate/secondary,total,participation,80016,111475,71.8,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html
+2025,preliminary,cervical,education,Primary education/unknown,total,participation,16387,32558,50.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html
+2025,preliminary,cervical,education,Tertiary/higher education,total,participation,120278,148886,80.8,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html
+2025,preliminary,cervical,education,Total,total,participation,216681,292919,74.0,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html
+2020,observed,cervical,native_language,Domestic,total,participation,170791,236544,72.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,native_language,Other/missing,total,participation,14144,25006,56.6,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2020,observed,cervical,native_language,Total,total,participation,184935,261550,70.7,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,native_language,Domestic,total,participation,181381,242289,74.9,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,native_language,Other/missing,total,participation,15346,26088,58.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2021,observed,cervical,native_language,Total,total,participation,196727,268377,73.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,native_language,Domestic,total,participation,194117,261145,74.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,native_language,Other/missing,total,participation,16089,28408,56.6,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2022,observed,cervical,native_language,Total,total,participation,210206,289553,72.6,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,native_language,Domestic,total,participation,192995,256144,75.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,native_language,Other/missing,total,participation,17731,30786,57.6,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2023,observed,cervical,native_language,Total,total,participation,210726,286930,73.4,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,native_language,Domestic,total,participation,196304,257719,76.2,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,native_language,Other/missing,total,participation,19374,34391,56.3,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2024,observed,cervical,native_language,Total,total,participation,215678,292110,73.8,https://stats.cancerregistry.fi/joukkistilastot/cervix.html
+2025,preliminary,cervical,native_language,Domestic,total,participation,195090,254940,76.5,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html
+2025,preliminary,cervical,native_language,Other/missing,total,participation,21591,37979,56.8,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html
+2025,preliminary,cervical,native_language,Total,total,participation,216681,292919,74.0,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/cervix_preliminary.html
+2022,observed,colorectal,education,Intermediate/secondary,female,followup_attendance,2064,2649,77.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Intermediate/secondary,male,followup_attendance,3310,4185,79.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Intermediate/secondary,total,followup_attendance,5374,6834,78.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Primary education/unknown,female,followup_attendance,692,917,75.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Primary education/unknown,male,followup_attendance,1293,1709,75.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Primary education/unknown,total,followup_attendance,1985,2626,75.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Tertiary/higher education,female,followup_attendance,1706,2147,79.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Tertiary/higher education,male,followup_attendance,1976,2413,81.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Tertiary/higher education,total,followup_attendance,3682,4560,80.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Total,total,followup_attendance,11041,14020,78.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Intermediate/secondary,female,followup_attendance,2451,3147,77.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Intermediate/secondary,male,followup_attendance,3784,4734,79.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Intermediate/secondary,total,followup_attendance,6235,7881,79.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Primary education/unknown,female,followup_attendance,868,1157,75.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Primary education/unknown,male,followup_attendance,1589,2070,76.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Primary education/unknown,total,followup_attendance,2457,3227,76.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Tertiary/higher education,female,followup_attendance,2050,2610,78.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Tertiary/higher education,male,followup_attendance,2229,2783,80.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Tertiary/higher education,total,followup_attendance,4279,5393,79.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Total,total,followup_attendance,12971,16501,78.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Intermediate/secondary,female,followup_attendance,2056,2820,72.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Intermediate/secondary,male,followup_attendance,2978,4091,72.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Intermediate/secondary,total,followup_attendance,5034,6911,72.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Primary education/unknown,female,followup_attendance,609,896,68.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Primary education/unknown,male,followup_attendance,1044,1564,66.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Primary education/unknown,total,followup_attendance,1653,2460,67.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Tertiary/higher education,female,followup_attendance,1747,2293,76.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Tertiary/higher education,male,followup_attendance,1810,2419,74.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Tertiary/higher education,total,followup_attendance,3557,4712,75.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Total,total,followup_attendance,10244,14083,72.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Domestic,female,followup_attendance,4346,5553,78.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Domestic,male,followup_attendance,6440,8096,79.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Domestic,total,followup_attendance,10786,13649,79.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Other/missing,female,followup_attendance,116,160,72.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Other/missing,male,followup_attendance,139,211,65.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Other/missing,total,followup_attendance,255,371,68.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Total,total,followup_attendance,11041,14020,78.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Domestic,female,followup_attendance,5211,6663,78.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Domestic,male,followup_attendance,7425,9341,79.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Domestic,total,followup_attendance,12636,16004,79.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Other/missing,female,followup_attendance,158,251,62.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Other/missing,male,followup_attendance,177,246,72.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Other/missing,total,followup_attendance,335,497,67.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Total,total,followup_attendance,12971,16501,78.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Domestic,female,followup_attendance,4231,5759,73.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Domestic,male,followup_attendance,5672,7829,72.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Domestic,total,followup_attendance,9903,13588,72.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Other/missing,female,followup_attendance,181,250,72.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Other/missing,male,followup_attendance,160,245,65.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Other/missing,total,followup_attendance,341,495,68.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Total,total,followup_attendance,10244,14083,72.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,sex,all,female,followup_attendance,4462,5713,78.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,sex,all,male,followup_attendance,6579,8307,79.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,sex,all,total,followup_attendance,11041,14020,78.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,sex,all,female,followup_attendance,5369,6914,77.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,sex,all,male,followup_attendance,7602,9587,79.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,sex,all,total,followup_attendance,12971,16501,78.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,sex,all,female,followup_attendance,4412,6009,73.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,sex,all,male,followup_attendance,5832,8074,72.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,sex,all,total,followup_attendance,10244,14083,72.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Intermediate/secondary,female,participation,64344,79127,81.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Intermediate/secondary,male,participation,59988,82368,72.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Intermediate/secondary,total,participation,124332,161495,77.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Primary education/unknown,female,participation,18262,26055,70.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Primary education/unknown,male,participation,21656,34486,62.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Primary education/unknown,total,participation,39918,60541,65.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Tertiary/higher education,female,participation,64770,76305,84.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Tertiary/higher education,male,participation,44688,55833,80.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Tertiary/higher education,total,participation,109458,132138,82.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,education,Total,total,participation,273708,354174,77.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Intermediate/secondary,female,participation,73863,93884,78.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Intermediate/secondary,male,participation,67572,97575,69.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Intermediate/secondary,total,participation,141435,191459,73.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Primary education/unknown,female,participation,21318,31366,68.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Primary education/unknown,male,participation,24658,41478,59.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Primary education/unknown,total,participation,45976,72844,63.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Tertiary/higher education,female,participation,75499,91356,82.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Tertiary/higher education,male,participation,51393,66991,76.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Tertiary/higher education,total,participation,126892,158347,80.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,education,Total,total,participation,314303,422650,74.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Intermediate/secondary,female,participation,72413,93246,77.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Intermediate/secondary,male,participation,67510,98325,68.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Intermediate/secondary,total,participation,139923,191571,73.0,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Primary education/unknown,female,participation,19138,29186,65.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Primary education/unknown,male,participation,23017,39385,58.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Primary education/unknown,total,participation,42155,68571,61.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Tertiary/higher education,female,participation,76398,93731,81.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Tertiary/higher education,male,participation,51395,67492,76.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Tertiary/higher education,total,participation,127793,161223,79.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,education,Total,total,participation,309871,421365,73.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2025,preliminary,colorectal,education,Intermediate/secondary,female,participation,82886,107225,77.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Intermediate/secondary,male,participation,76885,112475,68.4,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Intermediate/secondary,total,participation,159771,219700,72.7,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Primary education/unknown,female,participation,22606,34573,65.4,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Primary education/unknown,male,participation,26713,45906,58.2,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Primary education/unknown,total,participation,49319,80479,61.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Tertiary/higher education,female,participation,88465,108477,81.6,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Tertiary/higher education,male,participation,59496,78282,76.0,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Tertiary/higher education,total,participation,147961,186759,79.2,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,education,Total,total,participation,357051,486938,73.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2022,observed,colorectal,native_language,Domestic,female,participation,142423,173344,82.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Domestic,male,participation,122852,165875,74.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Domestic,total,participation,265275,339219,78.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Other/missing,female,participation,4953,8143,60.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Other/missing,male,participation,3480,6812,51.1,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Other/missing,total,participation,8433,14955,56.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,native_language,Total,total,participation,273708,354174,77.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Domestic,female,participation,165173,207249,79.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Domestic,male,participation,139585,197691,70.6,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Domestic,total,participation,304758,404940,75.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Other/missing,female,participation,5507,9357,58.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Other/missing,male,participation,4038,8353,48.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Other/missing,total,participation,9545,17710,53.9,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,native_language,Total,total,participation,314303,422650,74.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Domestic,female,participation,161710,205528,78.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Domestic,male,participation,137637,196117,70.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Domestic,total,participation,299347,401645,74.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Other/missing,female,participation,6239,10635,58.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Other/missing,male,participation,4285,9085,47.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Other/missing,total,participation,10524,19720,53.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,native_language,Total,total,participation,309871,421365,73.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2025,preliminary,colorectal,native_language,Domestic,female,participation,186743,237923,78.5,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,native_language,Domestic,male,participation,157717,225798,69.8,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,native_language,Domestic,total,participation,344460,463721,74.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,native_language,Other/missing,female,participation,7214,12352,58.4,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,native_language,Other/missing,male,participation,5377,10865,49.5,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,native_language,Other/missing,total,participation,12591,23217,54.2,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,native_language,Total,total,participation,357051,486938,73.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2022,observed,colorectal,sex,all,female,participation,147376,181487,81.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,sex,all,male,participation,126332,172687,73.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2022,observed,colorectal,sex,all,total,participation,273708,354174,77.3,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,sex,all,female,participation,170680,216606,78.8,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,sex,all,male,participation,143623,206044,69.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2023,observed,colorectal,sex,all,total,participation,314303,422650,74.4,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,sex,all,female,participation,167949,216163,77.7,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,sex,all,male,participation,141922,205202,69.2,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2024,observed,colorectal,sex,all,total,participation,309871,421365,73.5,https://stats.cancerregistry.fi/joukkistilastot/colorectal.html
+2025,preliminary,colorectal,sex,all,female,participation,193957,250275,77.5,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,sex,all,male,participation,163094,236663,68.9,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html
+2025,preliminary,colorectal,sex,all,total,participation,357051,486938,73.3,https://stats.cancerregistry.fi/joukkistilastot/ennakkotilastot/colorectal_preliminary.html

@@ -5,7 +5,9 @@ Apply range, date and arithmetic rules; flag outliers and small cells.
 import statistics
 from collections import defaultdict
 
-from common import CURRENT_YEAR, OUTLIER_Z, PERCENT_TOLERANCE, SMALL_CELL_THRESHOLD
+import math
+
+from common import CURRENT_YEAR, OUTLIER_Z, PERCENT_TOLERANCE, SKEW_RATIO, SMALL_CELL_THRESHOLD
 
 
 def quality_checks(ctx, rows):
@@ -41,8 +43,14 @@ def quality_checks(ctx, rows):
         flags = []
         if row["status"] != "observed":
             flags.append(row["status"])                       # e.g. preliminary, projection
-        if row["unit"] == "percent" and num is not None and num < SMALL_CELL_THRESHOLD:
-            flags.append("small_cell")                        # unstable percentage
+        # A percentage is unstable when it rests on few people. The right yardstick is
+        # its base (the denominator). Where only the numerator is published, the base
+        # is recovered from numerator and percentage.
+        base = den
+        if base is None and num is not None and value > 0 and row["unit"] == "percent":
+            base = num / (value / 100)
+        if row["unit"] == "percent" and base is not None and base < SMALL_CELL_THRESHOLD:
+            flags.append("small_cell")
         row["_flags"] = flags
         passed.append(row)
 
@@ -57,12 +65,18 @@ def quality_checks(ctx, rows):
         if len(members) < 10:
             continue
         values = [m["value"] for m in members]
+        # Strongly right-skewed measures (for example other-language speakers per 1,000,
+        # where a few cities are far above everyone else) are judged on a log scale.
+        # Otherwise the ordinary city-countryside difference is flagged as an error.
+        log_scale = min(values) > 0 and max(values) / statistics.median(values) > SKEW_RATIO
+        if log_scale:
+            values = [math.log(v) for v in values]
         median = statistics.median(values)
         mad = statistics.median(abs(v - median) for v in values)
         if mad == 0:
             continue
-        for m in members:
-            if abs(0.6745 * (m["value"] - median) / mad) > OUTLIER_Z:
+        for m, v in zip(members, values):
+            if abs(0.6745 * (v - median) / mad) > OUTLIER_Z:
                 m["_flags"].append("outlier")
 
     for row in passed:

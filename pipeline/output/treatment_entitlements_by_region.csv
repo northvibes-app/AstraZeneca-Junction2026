@@ -1,0 +1,111 @@
+region_code,region_name,entitlement,year,new_entitlements,per_100000
+01,East Uusimaa,115 Rintasyöpä,2024,71,71.4
+01,East Uusimaa,116 Eturauhassyöpä,2024,82,82.5
+01,East Uusimaa,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,55,55.3
+01,East Uusimaa,128 Gynekologiset syövät,2024,10,10.1
+01,East Uusimaa,130 Pahanlaatuinen kasvain,2024,152,152.9
+02,Central Uusimaa,115 Rintasyöpä,2024,185,89.3
+02,Central Uusimaa,116 Eturauhassyöpä,2024,93,44.9
+02,Central Uusimaa,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,110,53.1
+02,Central Uusimaa,128 Gynekologiset syövät,2024,31,15.0
+02,Central Uusimaa,130 Pahanlaatuinen kasvain,2024,294,142.0
+03,West Uusimaa,115 Rintasyöpä,2024,471,93.8
+03,West Uusimaa,116 Eturauhassyöpä,2024,287,57.2
+03,West Uusimaa,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,207,41.2
+03,West Uusimaa,128 Gynekologiset syövät,2024,80,15.9
+03,West Uusimaa,130 Pahanlaatuinen kasvain,2024,600,119.5
+04,Vantaa and Kerava,115 Rintasyöpä,2024,238,82.1
+04,Vantaa and Kerava,116 Eturauhassyöpä,2024,149,51.4
+04,Vantaa and Kerava,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,145,50.0
+04,Vantaa and Kerava,128 Gynekologiset syövät,2024,37,12.8
+04,Vantaa and Kerava,130 Pahanlaatuinen kasvain,2024,339,117.0
+05,Southwest Finland,115 Rintasyöpä,2024,437,88.3
+05,Southwest Finland,116 Eturauhassyöpä,2024,267,54.0
+05,Southwest Finland,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,345,69.7
+05,Southwest Finland,128 Gynekologiset syövät,2024,91,18.4
+05,Southwest Finland,130 Pahanlaatuinen kasvain,2024,739,149.3
+06,Satakunta,115 Rintasyöpä,2024,220,104.1
+06,Satakunta,116 Eturauhassyöpä,2024,192,90.9
+06,Satakunta,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,140,66.3
+06,Satakunta,128 Gynekologiset syövät,2024,58,27.5
+06,Satakunta,130 Pahanlaatuinen kasvain,2024,375,177.5
+07,Kanta-Häme,115 Rintasyöpä,2024,184,108.6
+07,Kanta-Häme,116 Eturauhassyöpä,2024,145,85.6
+07,Kanta-Häme,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,114,67.3
+07,Kanta-Häme,128 Gynekologiset syövät,2024,37,21.8
+07,Kanta-Häme,130 Pahanlaatuinen kasvain,2024,301,177.6
+08,Pirkanmaa,115 Rintasyöpä,2024,505,92.6
+08,Pirkanmaa,116 Eturauhassyöpä,2024,345,63.3
+08,Pirkanmaa,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,297,54.5
+08,Pirkanmaa,128 Gynekologiset syövät,2024,90,16.5
+08,Pirkanmaa,130 Pahanlaatuinen kasvain,2024,707,129.6
+09,Päijät-Häme,115 Rintasyöpä,2024,216,105.6
+09,Päijät-Häme,116 Eturauhassyöpä,2024,205,100.2
+09,Päijät-Häme,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,137,66.9
+09,Päijät-Häme,128 Gynekologiset syövät,2024,49,23.9
+09,Päijät-Häme,130 Pahanlaatuinen kasvain,2024,328,160.3
+10,Kymenlaakso,115 Rintasyöpä,2024,163,103.5
+10,Kymenlaakso,116 Eturauhassyöpä,2024,126,80.0
+10,Kymenlaakso,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,105,66.7
+10,Kymenlaakso,128 Gynekologiset syövät,2024,50,31.8
+10,Kymenlaakso,130 Pahanlaatuinen kasvain,2024,338,214.7
+11,South Karelia,115 Rintasyöpä,2024,126,100.7
+11,South Karelia,116 Eturauhassyöpä,2024,103,82.3
+11,South Karelia,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,91,72.8
+11,South Karelia,128 Gynekologiset syövät,2024,32,25.6
+11,South Karelia,130 Pahanlaatuinen kasvain,2024,240,191.9
+12,South Savo,115 Rintasyöpä,2024,120,92.8
+12,South Savo,116 Eturauhassyöpä,2024,146,112.8
+12,South Savo,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,93,71.9
+12,South Savo,128 Gynekologiset syövät,2024,30,23.2
+12,South Savo,130 Pahanlaatuinen kasvain,2024,238,184.0
+13,North Savo,115 Rintasyöpä,2024,222,89.2
+13,North Savo,116 Eturauhassyöpä,2024,187,75.2
+13,North Savo,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,167,67.1
+13,North Savo,128 Gynekologiset syövät,2024,38,15.3
+13,North Savo,130 Pahanlaatuinen kasvain,2024,371,149.1
+14,North Karelia,115 Rintasyöpä,2024,141,87.0
+14,North Karelia,116 Eturauhassyöpä,2024,187,115.4
+14,North Karelia,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,93,57.4
+14,North Karelia,128 Gynekologiset syövät,2024,28,17.3
+14,North Karelia,130 Pahanlaatuinen kasvain,2024,237,146.2
+15,Central Finland,115 Rintasyöpä,2024,246,89.7
+15,Central Finland,116 Eturauhassyöpä,2024,229,83.5
+15,Central Finland,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,180,65.7
+15,Central Finland,128 Gynekologiset syövät,2024,43,15.7
+15,Central Finland,130 Pahanlaatuinen kasvain,2024,308,112.4
+16,South Ostrobothnia,115 Rintasyöpä,2024,153,80.6
+16,South Ostrobothnia,116 Eturauhassyöpä,2024,163,85.8
+16,South Ostrobothnia,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,135,71.1
+16,South Ostrobothnia,128 Gynekologiset syövät,2024,37,19.5
+16,South Ostrobothnia,130 Pahanlaatuinen kasvain,2024,330,173.7
+17,Ostrobothnia,115 Rintasyöpä,2024,154,86.2
+17,Ostrobothnia,116 Eturauhassyöpä,2024,181,101.3
+17,Ostrobothnia,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,90,50.3
+17,Ostrobothnia,128 Gynekologiset syövät,2024,30,16.8
+17,Ostrobothnia,130 Pahanlaatuinen kasvain,2024,300,167.8
+18,Central Ostrobothnia,115 Rintasyöpä,2024,66,97.5
+18,Central Ostrobothnia,116 Eturauhassyöpä,2024,60,88.6
+18,Central Ostrobothnia,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,38,56.1
+18,Central Ostrobothnia,128 Gynekologiset syövät,2024,4,5.9
+18,Central Ostrobothnia,130 Pahanlaatuinen kasvain,2024,87,128.5
+19,North Ostrobothnia,115 Rintasyöpä,2024,296,70.8
+19,North Ostrobothnia,116 Eturauhassyöpä,2024,260,62.2
+19,North Ostrobothnia,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,232,55.5
+19,North Ostrobothnia,128 Gynekologiset syövät,2024,64,15.3
+19,North Ostrobothnia,130 Pahanlaatuinen kasvain,2024,437,104.5
+20,Kainuu,115 Rintasyöpä,2024,78,112.0
+20,Kainuu,116 Eturauhassyöpä,2024,79,113.4
+20,Kainuu,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,47,67.5
+20,Kainuu,128 Gynekologiset syövät,2024,11,15.8
+20,Kainuu,130 Pahanlaatuinen kasvain,2024,78,112.0
+21,Lapland,115 Rintasyöpä,2024,134,76.1
+21,Lapland,116 Eturauhassyöpä,2024,109,61.9
+21,Lapland,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,119,67.6
+21,Lapland,128 Gynekologiset syövät,2024,27,15.3
+21,Lapland,130 Pahanlaatuinen kasvain,2024,282,160.1
+90,City of Helsinki,115 Rintasyöpä,2024,573,83.8
+90,City of Helsinki,116 Eturauhassyöpä,2024,302,44.2
+90,City of Helsinki,"117 Leukemiat, muut pahanlaatuiset veri- ja luuydintaudit sekä pahanlaatuiset imukudostaudit",2024,327,47.8
+90,City of Helsinki,128 Gynekologiset syövät,2024,79,11.5
+90,City of Helsinki,130 Pahanlaatuinen kasvain,2024,796,116.4

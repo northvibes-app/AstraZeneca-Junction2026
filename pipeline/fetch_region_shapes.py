@@ -12,8 +12,11 @@ The result is a small .js file the map page can load straight from disk.
 Run:  python3 pipeline/fetch_region_shapes.py
 """
 import json
-import urllib.request
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from net import get_json      # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 LAYER = "tilastointialueet:hyvinvointialue1000k_2025"
@@ -29,9 +32,7 @@ def ring_area_km2(ring):
 
 
 def main():
-    req = urllib.request.Request(URL, headers={"User-Agent": "curl/8.0"})
-    with urllib.request.urlopen(req, timeout=300) as response:
-        features = json.load(response)["features"]
+    features = get_json(URL, timeout=300)["features"]
 
     polygons = {}
     for f in features:

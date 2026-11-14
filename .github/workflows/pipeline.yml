@@ -1,0 +1,31 @@
+# Runs the tests and the whole data pipeline on every push and pull request.
+# The pipeline stops with an error if any input row is unaccounted for, so a
+# green run means: tests pass and the reconciliation balances.
+name: Data pipeline
+
+on:
+  push:
+    paths: ["pipeline/**", "Statistics/**", ".github/workflows/pipeline.yml"]
+  pull_request:
+    paths: ["pipeline/**", "Statistics/**", ".github/workflows/pipeline.yml"]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests
+        run: python -m unittest discover -s pipeline/tests -v
+      - name: Run the pipeline (no upload, no network needed)
+        run: python pipeline/run_pipeline.py
+      - name: Keep the run report
+        uses: actions/upload-artifact@v4
+        with:
+          name: run-report
+          path: |
+            pipeline/output/run_report.md
+            pipeline/output/quarantine.csv
+            pipeline/output/changes_since_last_run.csv

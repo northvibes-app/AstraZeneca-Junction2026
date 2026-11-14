@@ -114,7 +114,7 @@ table.plain td{text-align:left;border-bottom:1px solid var(--line);border-radius
 
   <section class="card">
     <h2>Patterns between regions <span class="tag">evidence B</span></h2>
-    <p class="sub">Rank correlation across the 22 regions between a region's disadvantage on a factor and its result. Negative: the more disadvantaged the region, the lower the value. For the cancer index a lower value is better; for everything else higher is better. Values between −0.4 and 0.4 are no pattern.</p>
+    <p class="sub">Rank correlation across the 22 regions between a region's disadvantage on a factor and its result. Negative: the more disadvantaged the region, the lower the value. For the cancer index a lower value is better; for everything else higher is better. Regional figures are averaged over the latest three years. A ✓ marks patterns that survive correction for the number of comparisons.</p>
     <div class="legend">
       <span><i style="background:var(--neg-3)"></i>−0.6 or below</span><span><i style="background:var(--neg-2)"></i>−0.4 to −0.6</span><span><i style="background:var(--neg-1)"></i>−0.2 to −0.4</span>
       <span><i style="background:var(--zero)"></i>−0.2 to 0.2</span>
@@ -204,12 +204,14 @@ document.getElementById('matrix').replaceChildren(
   ...outcomes.map(o=>{const any=B.find(g=>g.indicator_key===o);
     return el('tr',{},el('td',{class:'l'},any.indicator_name.replace(' (Finland = 100)','')+' '+any.year),factors.map(f=>{
       const g=B.find(x=>x.indicator_key===o&&x.factor===f);if(!g)return el('td',{},'–');
-      const td=el('td',{class:cls(Number(g.spearman_rho))},Number(g.spearman_rho).toFixed(2));
-      hover(td,(FACTOR[f]||f)+' · '+g.indicator_name+'\nDisadvantaged third: '+g.worse_value+'\nAdvantaged third: '+g.better_value+'\nDifference: '+g.gap+'\nRank correlation: '+g.spearman_rho+' ('+g.n_regions+' regions)');
+      const td=el('td',{class:cls(Number(g.spearman_rho))},Number(g.spearman_rho).toFixed(2)+(g.robust==='yes'?' ✓':''));
+      if(g.robust==='yes')td.style.fontWeight='800';
+      hover(td,(FACTOR[f]||f)+' · '+g.indicator_name+'\nDisadvantaged third: '+g.worse_value+'\nAdvantaged third: '+g.better_value+'\nDifference: '+g.gap+'\nRank correlation: '+g.spearman_rho+' ('+g.n_regions+' regions)\nAdjusted p-value: '+g.p_adjusted+(g.robust==='yes'?' (survives correction)':' (no robust pattern)'));
       return td;}));}));
 const strong=B.filter(g=>Math.abs(g.spearman_rho)>=0.4).sort((a,b)=>Math.abs(b.spearman_rho)-Math.abs(a.spearman_rho));
-document.getElementById('matrixFinding').textContent=strong.length+' of '+B.length+' combinations reach 0.4 in size. Strongest: '+
-  strong.slice(0,3).map(g=>(FACTOR[g.factor]||g.factor).toLowerCase()+' and '+g.indicator_name.toLowerCase()+' ('+g.spearman_rho+')').join('; ')+'.';
+const robust=B.filter(g=>g.robust==='yes');
+document.getElementById('matrixFinding').textContent=strong.length+' of '+B.length+' combinations reach 0.4 in size, but with '+B.length+' comparisons some of that is chance. After correction for multiple comparisons '+robust.length+' remain (marked ✓): '+
+  (robust.map(g=>(FACTOR[g.factor]||g.factor).toLowerCase()+' and '+g.indicator_name.toLowerCase()+' ('+g.spearman_rho+')').join('; ')||'none')+'.';
 
 /* region categories */
 const L=P.region_factor_levels,rf=[...new Set(L.map(r=>r.factor))],regs=[...new Set(L.map(r=>r.region_name))].sort();
