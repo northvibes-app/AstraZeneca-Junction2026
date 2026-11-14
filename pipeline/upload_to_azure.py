@@ -4,10 +4,11 @@ Run on its own:        python3 pipeline/upload_to_azure.py
 Or after the pipeline: python3 pipeline/run_pipeline.py --upload
 
 The access link (a SAS URL) is a secret: anyone who has it can write to the
-container. It must never be committed to git. It is read from
+container. It is read from
   1. the environment variable AZURE_BLOB_SAS_URL, or
-  2. the line after "Blob SAS URL" in a local data.txt in the repository root.
-     data.txt is listed in .gitignore and stays on your machine.
+  2. the line after "Blob SAS URL" in data.txt in the repository root.
+The team keeps data.txt in this public repository for the hackathon; the link in it
+expires on 15 November 2026. For anything longer-lived, use the environment variable.
 This script never prints the link.
 
 What is uploaded is listed in pipeline/config.json under "upload". The fact sheets
