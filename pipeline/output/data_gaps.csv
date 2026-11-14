@@ -47,7 +47,6 @@ no_open_data,referral,,,,,Time from first primary care contact to specialist ref
 no_open_data,diagnosis,,,,,Time from referral to diagnosis by region and cancer type. Needed to locate delays along the pathway,none,
 no_open_data,treatment_start,,,,,Time from diagnosis to treatment start and share within target time. Goal 3 indicator of the National Cancer Strategy,none,
 no_open_data,early_detection,,,,,Stage at diagnosis by region and by education or income. Strategy target of 70 % diagnosed at stage I-II cannot be monitored,none,
-no_open_data,early_detection,,,,,Breast and colorectal screening participation by education and native language. Only cervical screening is published by group,none,
 no_open_data,early_detection,,,,,Screening participation by income group. Income is only available as a regional rate,none,
 no_open_data,diagnosis,,,,,Date of first symptom or first contact before diagnosis. Strategy p. 30: this information is not collected systematically,none,
 no_open_data,early_detection,,,,,Stage at diagnosis for the 60 % of cases without a clinical notification. Strategy p. 30: stage data covers only about 40 % of cases,none,

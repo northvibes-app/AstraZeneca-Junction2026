@@ -12,6 +12,9 @@ from collections import defaultdict
 from datetime import datetime, timezone
 
 from common import ANALYSIS_YEAR, OBS_COLUMNS, OUT, REF, SCREENING_TARGET, write_csv
+from decision_report import priorities_fact_sheet, write_decisions
+from pathway_evidence import COLUMNS as WAITING_COLUMNS, fact_sheet as waiting_fact_sheet
+from relevance import COLUMNS as RELEVANCE_COLUMNS
 
 from .s14_measure import GAP_COLUMNS
 
@@ -130,7 +133,9 @@ def _write_facts(ctx):
 
     lines = ["# What the open data cannot show", "",
              "No open, comparable data exists for the following. The pipeline reports these as "
-             "gaps and never fills them with estimates.", ""]
+             "gaps and never fills them with estimates. Single waiting-time figures from individual "
+             "hospitals and one study are listed separately in the fact sheet on waiting times; they do "
+             "not close these gaps.", ""]
     lines += [f"- {g['pathway_stage'].replace('_', ' ').capitalize()}: {g['description']}"
               for g in res["data_gaps"] if g["gap_type"] == "no_open_data"]
     (facts / "data_gaps.md").write_text("\n".join(lines) + "\n" + footer, encoding="utf-8")
@@ -149,6 +154,17 @@ def _write_facts(ctx):
         lines += ["", "Observed cancer deaths per year, all cancers:", ""]
         lines += [f"- {x['year']}: {x['deaths']}" for x in deaths]
     (facts / "goal3.md").write_text("\n".join(lines) + "\n" + footer, encoding="utf-8")
+    # Waiting times: single figures from hospitals, one study and providers, each labelled
+    # with how much it can carry. Hand-collected research, not part of the open statistics.
+    if res["waiting_times"]:
+        (facts / "waiting_times.md").write_text(
+            waiting_fact_sheet(res["waiting_times"])
+            + "\nSources are given with each line. Collected by hand by the project team; processed by "
+              "the Equal Care Navigator data pipeline.\n", encoding="utf-8")
+    # Priorities: every gap sorted by relevance, ordered by the three tasks of the challenge.
+    measures = {m["measure_id"]: m for m in ctx.ref.measures}
+    (facts / "priorities.md").write_text(
+        priorities_fact_sheet(res["decision_tree"], res["gap_relevance"], measures) + footer, encoding="utf-8")
     ctx.count("18 publish", "fact sheets written", len(list(facts.glob("*.md"))))
 
 
@@ -162,6 +178,15 @@ def publish(ctx, started):
     """Write every output and a run report, and check that no row went missing."""
     step, res = "18 publish", ctx.results
     OUT.mkdir(parents=True, exist_ok=True)
+
+    # Hand-collected waiting times. They are not observations, so they are not part of
+    # the row reconciliation below; the file is still recorded with its checksum.
+    if res["waiting_times"]:
+        ctx.count(step, "waiting-time figures read", len(res["waiting_times"]))
+        ctx.count(step, "of which usable as evidence",
+                  sum(r["usable_as_evidence"] == "yes" for r in res["waiting_times"]))
+    else:
+        ctx.count(step, "waiting-time file missing")
 
     # Clean layer: every observation that passed all checks (compressed, it is large).
     with gzip.open(OUT / "observations_clean.csv.gz", "wt", newline="", encoding="utf-8") as f:
@@ -178,6 +203,8 @@ def publish(ctx, started):
     write_csv(OUT / "national_trends.csv", res["national_trends"])
     write_csv(OUT / "treatment_entitlements_by_region.csv", res["treatment_entitlements"])
     write_csv(OUT / "data_gaps.csv", res["data_gaps"])
+    write_csv(OUT / "waiting_times.csv", res["waiting_times"], WAITING_COLUMNS)
+    write_csv(OUT / "gap_relevance.csv", res["gap_relevance"], RELEVANCE_COLUMNS)
     write_csv(OUT / "changes_since_last_run.csv", res["run_changes"],
               ["change", "indicator_key", "region_code", "period", "sex", "age_group", "detail",
                "measure", "factor", "factor_level", "previous_value", "new_value"])
@@ -240,9 +267,13 @@ def publish(ctx, started):
               "region_factor_levels": res["region_factor_levels"],
               "data_gaps": res["data_gaps"], "quarantine": ctx.quarantine,
               "goal3_targets": load_goal3_targets(), "national_trends": res["national_trends"],
+              "waiting_times": res["waiting_times"], "gap_relevance": res["gap_relevance"],
               "imputed": [{k: r[k] for k in ("indicator_name", "region_name", "year", "value",
                                              "unit", "imputation_method", "imputation_basis")}
                           for r in res["analysis"] if r["status"] == "imputed"]}
+    # The decision tree's own record: rules, every decision with its reasons, relevance of every gap.
+    write_decisions(res["decision_tree"], res["decisions"], res["gap_relevance"],
+                    {m["measure_id"]: m for m in ctx.ref.measures}, lineage)
     (OUT / "pipeline-data.js").write_text(
         "window.PIPELINE = " + json.dumps(bundle, ensure_ascii=False) + ";\n", encoding="utf-8")
 

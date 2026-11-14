@@ -1,6 +1,6 @@
 {
- "run_started_utc": "2026-11-14T10:28:50+00:00",
- "run_finished_utc": "2026-11-14T10:29:12+00:00",
+ "run_started_utc": "2026-11-14T11:46:24+00:00",
+ "run_finished_utc": "2026-11-14T11:46:45+00:00",
  "analysis_year": 2024,
  "inputs": [
   {
@@ -38,6 +38,12 @@
    "rows": 21,
    "bytes": 4554,
    "sha256": "b75d3768fd20cf01d3cd2d759849a82265a323181fdaf38529220d532ae3f544"
+  },
+  {
+   "file": "research/finland_cancer_waiting_times.csv",
+   "rows": 25,
+   "bytes": 9158,
+   "sha256": "24266ed35c100dcfeb720d1b13ad227af27cd29d17ad703a5dafe92133d58df1"
   }
  ],
  "reconciliation": {
@@ -98,7 +104,7 @@
   "08 completeness": {
    "indicators checked for region-year coverage": 13,
    "gaps: region-year missing": 44,
-   "gaps: no open data": 8
+   "gaps: no open data": 7
   },
   "09 impute": {
    "values imputed": 44,
@@ -136,7 +142,12 @@
   "15 recommend": {
    "gaps without a recommendation: not clearly above zero": 5,
    "national recommendations": 9,
-   "regional recommendations": 29
+   "regional recommendations": 29,
+   "gaps with relevance uncertain": 53,
+   "gaps with relevance medium": 33,
+   "gaps with relevance high": 6,
+   "gaps with relevance low": 23,
+   "gaps with relevance not_measurable": 13
   },
   "16 trends": {
    "cancer sites with a mortality series": 18,
@@ -146,7 +157,9 @@
    "figures unchanged": 6600
   },
   "18 publish": {
-   "fact sheets written": 26,
+   "waiting-time figures read": 25,
+   "of which usable as evidence": 15,
+   "fact sheets written": 28,
    "rows read": 833394,
    "rows accounted for": 833394
   }

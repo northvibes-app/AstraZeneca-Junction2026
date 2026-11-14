@@ -34,8 +34,10 @@ from pathlib import Path
 
 RULES_FILE = Path(__file__).resolve().parent / "rules.json"
 STATUSES = ("active", "draft", "retired")
-REQUIRED = ("rule_id", "subject", "condition", "measure_id", "fit", "evidence_type",
-            "trigger", "evidence_reference", "version", "status")
+REQUIRED = ("rule_id", "subject", "condition", "evidence_reference", "version", "status")
+# A subject decides one of two things, and its rules must carry the matching fields.
+DECIDES = {"measure": ("measure_id", "fit", "evidence_type", "trigger"),   # which roadmap measure applies
+           "relevance": ("level", "reason")}                               # how relevant a gap is
 
 
 def load_rules(path=RULES_FILE, known_measures=None):
@@ -52,6 +54,14 @@ def load_rules(path=RULES_FILE, known_measures=None):
         seen.add(name)
         if rule["subject"] not in tree["subjects"]:
             raise ValueError(f"Rule {name}: unknown subject '{rule['subject']}'")
+        decides = tree["subjects"][rule["subject"]].get("decides", "measure")
+        if decides not in DECIDES:
+            raise ValueError(f"Subject {rule['subject']}: decides must be one of {', '.join(DECIDES)}")
+        missing = [f for f in DECIDES[decides] if f not in rule]
+        if missing:
+            raise ValueError(f"Rule {name}: missing {', '.join(missing)}")
+        if decides == "relevance" and rule["level"] not in tree.get("levels", {}):
+            raise ValueError(f"Rule {name}: unknown level '{rule['level']}'")
         if rule["status"] not in STATUSES:
             raise ValueError(f"Rule {name}: status must be one of {', '.join(STATUSES)}")
         unknown = set(rule["condition"]) - set(tree["subjects"][rule["subject"]]["fields"])
@@ -59,7 +69,7 @@ def load_rules(path=RULES_FILE, known_measures=None):
             raise ValueError(f"Rule {name}: condition uses unknown fields {', '.join(sorted(unknown))}")
         if not rule["condition"] and not rule.get("otherwise"):
             raise ValueError(f"Rule {name}: an empty condition is only allowed with \"otherwise\": true")
-        if known_measures is not None and rule["measure_id"] not in known_measures:
+        if known_measures is not None and decides == "measure" and rule["measure_id"] not in known_measures:
             raise ValueError(f"Rule {name}: measure {rule['measure_id']} is not in measures.csv")
     for name, subject in tree["subjects"].items():
         if subject["match"] not in ("first", "all"):
@@ -98,9 +108,28 @@ def decide(tree, subject, fact):
         path.append((rule["rule_id"], True,
                      "no earlier rule applied" if rule.get("otherwise") else "condition met"))
         # Fields that are missing from the fact stay visible as {name} instead of failing.
-        text = rule["trigger"].format_map(_Keep(fact))
+        text = rule.get("trigger", rule.get("reason", "")).format_map(_Keep(fact))
         fired.append({"rule": rule, "trigger": text})
     return fired, path
+
+
+def band(tree, name, value):
+    """Turn a number into 'large', 'medium' or 'small' using the thresholds in rules.json.
+
+    name is 'size_points' or 'reach_people'. A missing value gives 'unknown'.
+    """
+    if value is None or value == "":
+        return "unknown"
+    limits, value = tree["bands"][name], abs(float(value))
+    return "large" if value >= limits["large"] else "medium" if value >= limits["medium"] else "small"
+
+
+def challenge_position(tree, pathway_stage):
+    """Where a pathway stage sits in the challenge: (stage of the challenge, bottleneck)."""
+    entry = tree["challenge_pathway"]["stages"].get(pathway_stage or "")
+    if entry is None:
+        raise ValueError(f"Pathway stage '{pathway_stage}' has no place in challenge_pathway (rules.json)")
+    return entry["challenge_stage"], entry["bottleneck"]
 
 
 class _Keep(dict):
@@ -123,7 +152,9 @@ def describe(tree):
                 condition = "otherwise"
             state = "" if rule["status"] == "active" else f"  [{rule['status']}]"
             lines.append(f"  {rule['rule_id']:3} {condition}")
-            lines.append(f"        -> measure {rule['measure_id']} ({rule['fit']}, evidence {rule['evidence_type']}){state}")
+            result = (f"relevance: {rule['level']}" if "level" in rule
+                      else f"measure {rule['measure_id']} ({rule['fit']}, evidence {rule['evidence_type']})")
+            lines.append(f"        -> {result}{state}")
     return "\n".join(lines)
 
 
@@ -143,8 +174,9 @@ def main(arguments):
     if not fired:
         print("Result: no rule applies, no recommendation.")
     for hit in fired:
-        print(f"Result: measure {hit['rule']['measure_id']} by rule {hit['rule']['rule_id']} "
-              f"({hit['rule']['fit']}) - {hit['trigger']}")
+        rule = hit["rule"]
+        what = f"relevance {rule['level']}" if "level" in rule else f"measure {rule['measure_id']} ({rule['fit']})"
+        print(f"Result: {what} by rule {rule['rule_id']} - {hit['trigger']}")
     return 0
 
 

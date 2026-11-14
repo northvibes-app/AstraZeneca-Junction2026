@@ -1,6 +1,6 @@
 # Pipeline run report
 
-Run finished 2026-11-14T10:29:12+00:00 (21 s). Analysis year 2024.
+Run finished 2026-11-14T11:46:45+00:00 (21 s). Analysis year 2024.
 
 ## Reconciliation
 
@@ -58,7 +58,7 @@ Run finished 2026-11-14T10:29:12+00:00 (21 s). Analysis year 2024.
 ### 08 completeness
 - indicators checked for region-year coverage: 13
 - gaps: region-year missing: 44
-- gaps: no open data: 8
+- gaps: no open data: 7
 
 ### 09 impute
 - values imputed: 44
@@ -97,6 +97,11 @@ Run finished 2026-11-14T10:29:12+00:00 (21 s). Analysis year 2024.
 - gaps without a recommendation: not clearly above zero: 5
 - national recommendations: 9
 - regional recommendations: 29
+- gaps with relevance uncertain: 53
+- gaps with relevance medium: 33
+- gaps with relevance high: 6
+- gaps with relevance low: 23
+- gaps with relevance not_measurable: 13
 
 ### 16 trends
 - cancer sites with a mortality series: 18
@@ -106,6 +111,8 @@ Run finished 2026-11-14T10:29:12+00:00 (21 s). Analysis year 2024.
 - figures unchanged: 6,600
 
 ### 18 publish
-- fact sheets written: 26
+- waiting-time figures read: 25
+- of which usable as evidence: 15
+- fact sheets written: 28
 - rows read: 833,394
 - rows accounted for: 833,394

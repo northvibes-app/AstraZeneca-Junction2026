@@ -156,7 +156,7 @@ The prototype splits the six design steps into 18 smaller ones. It uses only the
 ```
 python3 pipeline/run_pipeline.py                      # run all 18 steps, about 25 seconds
 python3 pipeline/run_pipeline.py --upload             # run, then upload fact sheets and CSVs to Azure
-python3 -m unittest discover -s pipeline/tests -v     # 29 unit tests
+python3 -m unittest discover -s pipeline/tests -v     # 58 unit tests
 ```
 
 Refreshing the inputs needs a network connection and is separate from the run:
@@ -185,7 +185,7 @@ Each fetch script retries on network errors and reports per source whether the d
 | 12 | derive | Measure | Base of each percentage, 95 % confidence interval, three-year average, position against the 80 % screening target |
 | 13 | categorise | Categorise | Per factor: thirds of regions (relative) and worse or better than Finland (absolute); tags every outcome with factor and evidence type |
 | 14 | measure | Measure | Gaps between groups with confidence interval (A); regional comparison, population-weighted, with permutation test and correction for multiple comparisons (B); the same across municipalities; documented barriers (C) |
-| 15 | recommend | Measure | Asks the decision tree (`decision_tree/rules.json`) which roadmap measure applies to each gap; adds cost, page, success indicator and the rule that decided |
+| 15 | recommend | Measure | Asks the decision tree (`decision_tree/rules.json`) which roadmap measure applies to each gap; adds cost, page, success indicator and the rule that decided. Then gives every gap a relevance level and its place in the challenge |
 | 16 | trends | Measure | Deaths by cancer site and year; new treatment entitlements per region |
 | 17 | compare_runs | Publish | Lists every analysis figure that is new, gone or different since the previous run |
 | 18 | publish | Publish | Writes all outputs, fact sheets, lineage and a run report; fails if any input row is unaccounted for |
@@ -236,6 +236,25 @@ The second command shows, rule by rule, why each one did or did not apply.
 | R3 | Region clearly below 80 %, neither of the two | 2.4.1 | direct |
 | R4 | Region in the disadvantaged third for primary care waits | 2.5.1 More physician capacity in primary care | direct |
 
+### Relevance of each gap (step 15)
+
+Problem factors are sorted by role first. Education, native language, sex, income, employment and region say **who** is affected. Screening participation, follow-up attendance, waiting times and survival say **what** goes worse. A gap is always one of each. Every gap the pipeline knows of, whatever its source, is then given a level by the decision tree (subject `gap_relevance`):
+
+| Rule | Condition | Level |
+| --- | --- | --- |
+| P1 | Measured and clearly larger than chance, at least 15 points, at least 2,000 people | high |
+| P2 | Measured and clearly larger than chance, at least 5 points | medium |
+| P3 | Measured and clearly larger than chance, smaller than 5 points | low |
+| P4 | Pattern between areas that survives the correction, at least 5 points | medium |
+| P5 | Pattern between areas that survives the correction, smaller | low |
+| P6 | Could be chance, or rests on a single source | uncertain |
+| P7 | Described in strategy texts only | not_measurable |
+| P8 | No open data | not_measurable |
+
+"Measured and clearly larger than chance" covers a difference between two groups whose 95 % interval lies above zero, and a region whose whole interval lies below the 80 % target. The thresholds (15 and 5 points; 20,000 and 2,000 people) are judgement calls and are set in `rules.json` under `bands`. `not_measurable` is a level of its own and does not mean unimportant.
+
+Each gap also gets its place in the challenge: the pathway stage (detection, referral from primary to specialist care, diagnosis, treatment initiation) and which of the three named bottlenecks it belongs to. That mapping is in `rules.json` under `challenge_pathway`.
+
 A national gap leads to a recommendation only if the newest full year shows it and its confidence interval lies above zero. "Closest match" means the roadmap has no measure aimed exactly at that gap. Costs are the roadmap's national estimates for 2026–2031, not regional budgets. Every recommendation is a proposal to evaluate; the effect of a measure is not known from this data.
 
 ### Inputs
@@ -248,6 +267,7 @@ A national gap leads to a recommendation only if the newest full year shows it a
 | `Statistics/breast_screening_by_region_2024.csv` | Breast screening with invited and attended counts |
 | `Statistics/cervical_screening_equity_2025_preliminary.csv` | Cervical screening by education and native language |
 | `Statistics/national_key_statistics.csv` | National figures, targets and projections |
+| `research/finland_cancer_waiting_times.csv` | Hand-collected waiting times: legal limits, national targets, figures from single hospitals and one study, statements by private providers. Not observations; read only in step 18 |
 
 Lookup tables for regions, indicators, equity factors, roadmap measures, documented barriers and known data gaps are in `pipeline/reference/`.
 
@@ -262,7 +282,11 @@ Lookup tables for regions, indicators, equity factors, roadmap measures, documen
 | `observations_by_factor.csv` | Outcome figures tagged with factor, level and evidence type |
 | `observations_analysis.csv` | National and regional figures, including fallback values |
 | `national_trends.csv`, `treatment_entitlements_by_region.csv` | Deaths by cancer site and year; new treatment entitlements per region |
-| `facts/*.md` | 25 plain-language fact sheets: one per region, plus gaps, national recommendations and data gaps. Meant for document search |
+| `facts/*.md` | 28 plain-language fact sheets: one per region, plus gaps, national recommendations, data gaps, Goal 3, waiting times and priorities. Meant for document search |
+| `facts/priorities.md` | The gaps by relevance, ordered by the three tasks of the challenge: identify, locate, recommend |
+| `gap_relevance.csv` | Every gap with its relevance level, the rule that decided, size, number of people, pathway stage, bottleneck and linked measures |
+| `../../decision_tree/output/decisions.md` | The decision tree's full record: all rules, every case checked with the reason each rule did or did not apply, and the relevance of every gap |
+| `waiting_times.csv` | Every waiting-time figure with its kind (`legal_limit`, `target`, `measured`, `provider_statement`, `single_case`, `no_data`), whether it is usable as evidence, and for measured times from referral to first treatment whether they are within the national guidance |
 | `data_gaps.csv`, `quarantine.csv`, `changes_since_last_run.csv` | What is missing, what was rejected, what changed since the last run |
 | `profile.json`, `lineage.json`, `run_report.md` | Input profile, provenance and step counts of the run |
 | `pipeline-data.js` | The same results for `pipeline/region_map.html` and `pipeline/test_visualisation.html` |

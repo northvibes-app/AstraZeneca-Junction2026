@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "description": "Decision rules that link a measured gap to a measure from the national implementation roadmap 2026-2031. The rules decide; the AI model only explains the result. Every proposal is something to evaluate, not a proven remedy: the data shows where a gap is, not what causes it.",
+  "version": "1.1",
+  "description": "Decision rules for the Equal Care Navigator. Part 1 links a measured gap to a measure from the national implementation roadmap 2026-2031. Part 2 sorts every gap by how relevant it is for a decision. The rules decide; the AI model only explains the result. Every proposal is something to evaluate, not a proven remedy: the data shows where a gap is, not what causes it.",
   "subjects": {
     "group_gap": {
       "description": "A gap measured directly between two population groups for all of Finland (evidence type A), newest full year only.",
@@ -9,14 +9,16 @@
         "indicator_family": "screening_participation, followup_attendance or other",
         "factor": "education, language or sex",
         "robust": "yes if the 95 % confidence interval of the gap lies above zero, otherwise no"
-      }
+      },
+      "decides": "measure"
     },
     "pathway_data": {
       "description": "Whether open data exists for the stages referral, diagnosis and start of treatment.",
       "match": "first",
       "fields": {
         "pathway_data_missing": "yes if at least one of these stages has no open data, otherwise no"
-      }
+      },
+      "decides": "measure"
     },
     "region_below_target": {
       "description": "A wellbeing services county that is clearly below the 80 % participation target in at least one screening programme.",
@@ -24,13 +26,25 @@
       "fields": {
         "language_level": "disadvantaged if the county is in the third with the most other-language speakers, otherwise middle or advantaged",
         "education_level": "disadvantaged if the county is in the third with the lowest education level, otherwise middle or advantaged"
-      }
+      },
+      "decides": "measure"
     },
     "region_access": {
       "description": "Every wellbeing services county, whatever its screening participation.",
       "match": "all",
       "fields": {
         "primary_care_access_level": "disadvantaged if the county is in the third with the longest waits for a non-urgent doctor appointment"
+      },
+      "decides": "measure"
+    },
+    "gap_relevance": {
+      "description": "Any gap the project knows of: a difference between population groups, a region below the screening target, a pattern between areas, a waiting time above the national guidance, a barrier documented in strategy texts, or missing data.",
+      "decides": "relevance",
+      "match": "first",
+      "fields": {
+        "evidence": "group_measured_robust (difference between groups, 95 % interval above zero); target_shortfall (region clearly below the 80 % target); regional_pattern_robust (pattern between areas that survives the correction for many comparisons); group_measured_uncertain; regional_pattern_not_robust; single_source_measured (one hospital or one study); documented_only (strategy texts); no_open_data",
+        "size": "large, medium, small or unknown, from the bands for size_points",
+        "reach": "large, medium, small or unknown, from the bands for reach_people"
       }
     }
   },
@@ -38,7 +52,11 @@
     {
       "rule_id": "N1",
       "subject": "group_gap",
-      "condition": {"indicator_family": "screening_participation", "factor": "education", "robust": "yes"},
+      "condition": {
+        "indicator_family": "screening_participation",
+        "factor": "education",
+        "robust": "yes"
+      },
       "measure_id": "1.1.1",
       "fit": "direct",
       "evidence_type": "A",
@@ -50,7 +68,11 @@
     {
       "rule_id": "N2",
       "subject": "group_gap",
-      "condition": {"indicator_family": "screening_participation", "factor": "language", "robust": "yes"},
+      "condition": {
+        "indicator_family": "screening_participation",
+        "factor": "language",
+        "robust": "yes"
+      },
       "measure_id": "1.3.1",
       "fit": "direct",
       "evidence_type": "A",
@@ -62,7 +84,11 @@
     {
       "rule_id": "N3",
       "subject": "group_gap",
-      "condition": {"indicator_family": "screening_participation", "factor": "sex", "robust": "yes"},
+      "condition": {
+        "indicator_family": "screening_participation",
+        "factor": "sex",
+        "robust": "yes"
+      },
       "measure_id": "2.4.1",
       "fit": "closest match",
       "evidence_type": "A",
@@ -74,7 +100,14 @@
     {
       "rule_id": "N4",
       "subject": "group_gap",
-      "condition": {"indicator_family": "followup_attendance", "factor": ["education", "language"], "robust": "yes"},
+      "condition": {
+        "indicator_family": "followup_attendance",
+        "factor": [
+          "education",
+          "language"
+        ],
+        "robust": "yes"
+      },
       "measure_id": "1.2.3",
       "fit": "closest match",
       "evidence_type": "A",
@@ -86,7 +119,9 @@
     {
       "rule_id": "N5",
       "subject": "pathway_data",
-      "condition": {"pathway_data_missing": "yes"},
+      "condition": {
+        "pathway_data_missing": "yes"
+      },
       "measure_id": "3.1.2",
       "fit": "direct",
       "evidence_type": "data gap",
@@ -98,7 +133,9 @@
     {
       "rule_id": "R1",
       "subject": "region_below_target",
-      "condition": {"language_level": "disadvantaged"},
+      "condition": {
+        "language_level": "disadvantaged"
+      },
       "measure_id": "1.3.1",
       "fit": "direct",
       "evidence_type": "B",
@@ -110,7 +147,9 @@
     {
       "rule_id": "R2",
       "subject": "region_below_target",
-      "condition": {"education_level": "disadvantaged"},
+      "condition": {
+        "education_level": "disadvantaged"
+      },
       "measure_id": "1.1.1",
       "fit": "direct",
       "evidence_type": "B",
@@ -135,7 +174,9 @@
     {
       "rule_id": "R4",
       "subject": "region_access",
-      "condition": {"primary_care_access_level": "disadvantaged"},
+      "condition": {
+        "primary_care_access_level": "disadvantaged"
+      },
       "measure_id": "2.5.1",
       "fit": "direct",
       "evidence_type": "B",
@@ -143,6 +184,213 @@
       "evidence_reference": "region_factor_levels.csv: factor primary_care_access",
       "version": "1.0",
       "status": "active"
+    },
+    {
+      "rule_id": "P1",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": [
+          "group_measured_robust",
+          "target_shortfall"
+        ],
+        "size": "large",
+        "reach": [
+          "large",
+          "medium"
+        ]
+      },
+      "level": "high",
+      "reason": "Measured and clearly larger than chance; {size_text}; {reach_text}",
+      "evidence_reference": "equity_gaps.csv: robust, gap, people_in_worse_group; outcome_stats.csv: target_status",
+      "version": "1.0",
+      "status": "active"
+    },
+    {
+      "rule_id": "P2",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": [
+          "group_measured_robust",
+          "target_shortfall"
+        ],
+        "size": [
+          "large",
+          "medium"
+        ]
+      },
+      "level": "medium",
+      "reason": "Measured and clearly larger than chance; {size_text}; {reach_text}",
+      "evidence_reference": "equity_gaps.csv: robust, gap, people_in_worse_group; outcome_stats.csv: target_status",
+      "version": "1.0",
+      "status": "active"
+    },
+    {
+      "rule_id": "P3",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": [
+          "group_measured_robust",
+          "target_shortfall"
+        ]
+      },
+      "level": "low",
+      "reason": "Measured and clearly larger than chance, but small; {size_text}; {reach_text}",
+      "evidence_reference": "equity_gaps.csv: robust, gap; outcome_stats.csv: target_status",
+      "version": "1.0",
+      "status": "active"
+    },
+    {
+      "rule_id": "P4",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": "regional_pattern_robust",
+        "size": [
+          "large",
+          "medium"
+        ]
+      },
+      "level": "medium",
+      "reason": "A pattern between areas that survives the correction for many comparisons; {size_text}. It describes areas, not individual people",
+      "evidence_reference": "equity_gaps.csv: evidence type B and B-municipality, p_adjusted",
+      "version": "1.0",
+      "status": "active"
+    },
+    {
+      "rule_id": "P5",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": "regional_pattern_robust"
+      },
+      "level": "low",
+      "reason": "A pattern between areas that survives the correction for many comparisons, but small; {size_text}. It describes areas, not individual people",
+      "evidence_reference": "equity_gaps.csv: evidence type B and B-municipality, p_adjusted",
+      "version": "1.0",
+      "status": "active"
+    },
+    {
+      "rule_id": "P6",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": [
+          "group_measured_uncertain",
+          "regional_pattern_not_robust",
+          "single_source_measured"
+        ]
+      },
+      "level": "uncertain",
+      "reason": "{uncertain_text}; {size_text}",
+      "evidence_reference": "equity_gaps.csv: robust = no or empty; waiting_times.csv: kind = measured",
+      "version": "1.0",
+      "status": "active"
+    },
+    {
+      "rule_id": "P7",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": "documented_only"
+      },
+      "level": "not_measurable",
+      "reason": "Described in national strategy texts; no open data measures it",
+      "evidence_reference": "equity_gaps.csv: evidence type C; pipeline/reference/documented_barriers.csv",
+      "version": "1.0",
+      "status": "active"
+    },
+    {
+      "rule_id": "P8",
+      "subject": "gap_relevance",
+      "condition": {
+        "evidence": "no_open_data"
+      },
+      "level": "not_measurable",
+      "reason": "No open data exists, so neither size nor reach can be stated",
+      "evidence_reference": "data_gaps.csv: gap_type = no_open_data",
+      "version": "1.0",
+      "status": "active"
     }
-  ]
+  ],
+  "levels": {
+    "high": "Measured directly, clearly larger than chance, large, and many people affected. Act on it first.",
+    "medium": "Measured and clearly larger than chance, but smaller, affecting fewer people, or only visible as a pattern between areas.",
+    "low": "Measured and clearly larger than chance, but small.",
+    "uncertain": "A difference is visible but could be chance, or rests on a single source. Watch it; do not act on it alone.",
+    "not_measurable": "No open data allows a measurement. This is not the same as unimportant: the problem may be large. The first step is to make it measurable."
+  },
+  "bands": {
+    "note": "Thresholds that turn a number into large, medium or small. They are judgement calls of the project team and can be changed here.",
+    "size_points": {
+      "large": 15,
+      "medium": 5,
+      "meaning": "Difference in percentage points between the two groups, or distance to the 80 % target."
+    },
+    "reach_people": {
+      "large": 20000,
+      "medium": 2000,
+      "meaning": "People in the disadvantaged group who are affected in one year, for example invited to screening."
+    }
+  },
+  "challenge_pathway": {
+    "note": "Where each pathway stage used in the data sits in the AstraZeneca challenge: its four pathway points (detection, referral from primary to specialist care, diagnosis, treatment initiation) and its three named bottlenecks.",
+    "stages": {
+      "": {
+        "challenge_stage": "before the pathway (prevention)",
+        "bottleneck": "none of the three"
+      },
+      "early_detection": {
+        "challenge_stage": "detection",
+        "bottleneck": "late detection"
+      },
+      "diagnostic_follow_up": {
+        "challenge_stage": "diagnosis",
+        "bottleneck": "late detection"
+      },
+      "symptom_to_diagnosis": {
+        "challenge_stage": "referral from primary to specialist care",
+        "bottleneck": "transition from primary to specialist care"
+      },
+      "first_contact": {
+        "challenge_stage": "referral from primary to specialist care",
+        "bottleneck": "transition from primary to specialist care"
+      },
+      "first_contact_to_referral": {
+        "challenge_stage": "referral from primary to specialist care",
+        "bottleneck": "transition from primary to specialist care"
+      },
+      "first_contact_and_treatment": {
+        "challenge_stage": "referral from primary to specialist care",
+        "bottleneck": "transition from primary to specialist care"
+      },
+      "referral": {
+        "challenge_stage": "referral from primary to specialist care",
+        "bottleneck": "transition from primary to specialist care"
+      },
+      "diagnosis": {
+        "challenge_stage": "diagnosis",
+        "bottleneck": "transition from primary to specialist care"
+      },
+      "treatment_start": {
+        "challenge_stage": "treatment initiation",
+        "bottleneck": "time from diagnosis to treatment"
+      },
+      "referral_to_treatment": {
+        "challenge_stage": "treatment initiation",
+        "bottleneck": "time from diagnosis to treatment"
+      },
+      "treatment": {
+        "challenge_stage": "after treatment has started",
+        "bottleneck": "none of the three"
+      },
+      "treatment_outcome": {
+        "challenge_stage": "outcome of the whole pathway",
+        "bottleneck": "none of the three"
+      },
+      "disease_burden": {
+        "challenge_stage": "outcome of the whole pathway",
+        "bottleneck": "none of the three"
+      },
+      "mortality": {
+        "challenge_stage": "outcome of the whole pathway",
+        "bottleneck": "none of the three"
+      }
+    }
+  }
 }
