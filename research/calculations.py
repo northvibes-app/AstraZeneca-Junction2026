@@ -331,6 +331,14 @@ def write_report(rows, assumptions):
     for key, v in assumptions.items():
         source = f"[link]({v['source']})" if v["source"] else "-"
         lines.append(f"| `{key}` | {v['pessimistic']} | {v['central']} | {v['optimistic']} | {v['basis']} | {source} |")
+    # The complete result table, so that the report holds every figure the CSV holds.
+    shown = [c for c in COLUMNS if c != "group"]
+    lines += ["", "## All results", "",
+              "Every row of `research/calculation_results.csv`. Amounts in euros per screening year unless the "
+              "column says otherwise. 1.1.1 is the education measure, 1.3.1 the native-language measure.", "",
+              "| " + " | ".join(shown) + " |", "| " + " | ".join("---" for _ in shown) + " |"]
+    for r in rows:
+        lines.append("| " + " | ".join(str(r.get(c, "")) for c in shown) + " |")
     lines += ["", "Counts of invited people, participants and findings: Finnish Cancer Registry, screening statistics "
               "2024, in `research/screening_yield_2024.csv`. Measure budgets: `pipeline/reference/measures.csv`.", ""]
     (HERE / "calculation_results.md").write_text("\n".join(lines), encoding="utf-8")
