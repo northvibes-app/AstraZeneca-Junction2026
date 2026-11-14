@@ -1,0 +1,1 @@
+azcopy copy "https://northvibesrag.blob.core.windows.net/rag-documents?sp=racwl&st=2026-11-13T22:45:37Z&se=2026-11-15T14:00:37Z&spr=https&sv=2026-02-06&sr=c&sig=4EB111hzo5oVWHOq7dyfxNdRqzSKr4kgf6iaxk1ib7c%3D" "$HOME\Downloads\rag-documents" --recursive=true
