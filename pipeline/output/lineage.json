@@ -1,6 +1,6 @@
 {
- "run_started_utc": "2026-11-14T04:41:45+00:00",
- "run_finished_utc": "2026-11-14T04:42:53+00:00",
+ "run_started_utc": "2026-11-14T10:28:50+00:00",
+ "run_finished_utc": "2026-11-14T10:29:12+00:00",
  "analysis_year": 2024,
  "inputs": [
   {
@@ -18,14 +18,14 @@
   {
    "file": "breast_screening_by_region_2024.csv",
    "rows": 23,
-   "bytes": 2336,
-   "sha256": "a3ed64e9b4d11aff65cc5e00bf86cc562449ebbf321c498292ccf02568379d4e"
+   "bytes": 2312,
+   "sha256": "f141598ac588a02b3bc0b6000f4815ccf0d86e790795d3572dba89dd8a0b3109"
   },
   {
    "file": "cervical_screening_equity_2025_preliminary.csv",
    "rows": 5,
-   "bytes": 890,
-   "sha256": "41f7a782fa1445342d03fb76de15af1d4ff959dd99a6a1950334660a17e1382a"
+   "bytes": 884,
+   "sha256": "53b072c5d07c64420f6cdcf30dd3e59a65346d725b37f114d63e4075edfeba49"
   },
   {
    "file": "screening_by_population_group.csv",
@@ -36,8 +36,8 @@
   {
    "file": "national_key_statistics.csv",
    "rows": 21,
-   "bytes": 4576,
-   "sha256": "e7c35191e68fb6f849fedb762891645e47c65b48ea08474b6af1d8f507fe6c33"
+   "bytes": 4554,
+   "sha256": "b75d3768fd20cf01d3cd2d759849a82265a323181fdaf38529220d532ae3f544"
   }
  ],
  "reconciliation": {
